@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">Tutorial</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+<link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
+</head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/myrmx/myrmex" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual" data-toc-name="tutorial">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html" data-ice="link">Deploying an Express application in Lambda</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#starting-with-an-express-application" data-ice="link">Starting with an Express application</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#adding-myrmex-to-the-project" data-ice="link">Adding Myrmex to the project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#install-myrmex-in-the-express-project" data-ice="link">Install Myrmex in the Express project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#creation-of-iam-roles" data-ice="link">Creation of IAM roles</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#creation-of-the-lambda" data-ice="link">Creation of the Lambda</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#creation-of-the-api" data-ice="link">Creation of the API</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#deployment" data-ice="link">Deployment</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;" data-link="manual/tutorial/lambda-profiling.html"><a href="manual/tutorial/lambda-profiling.html" data-ice="link">Creating Lambdas to inspect their execution environment</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-profiling.html"><a href="manual/tutorial/lambda-profiling.html#creation-of-three-lambdas-sharing-the-same-code" data-ice="link">Creation of three Lambdas sharing the same code</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-profiling.html"><a href="manual/tutorial/lambda-profiling.html#testing-the-lambdas-in-aws" data-ice="link">Testing the Lambdas in AWS</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html" data-ice="link">Creating APIs for a space delivery company</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#the-need-one-application-several-apis-exposing-various-functionalities" data-ice="link">The need: one application, several APIs exposing various functionalities</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#the-creation-of-the-application-with-myrmex" data-ice="link">The creation of the application with Myrmex</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#initialization-of-the-project" data-ice="link">Initialization of the project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-lambda-containing-the-application-logic" data-ice="link">Creation of the Lambda containing the application logic</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-lambda-s-execution-role" data-ice="link">Creation of the Lambda&apos;s execution role</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-node-modules-that-can-be-packaged-in-the-lambda" data-ice="link">Creation of node modules that can be packaged in the Lambda</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-a-lambda" data-ice="link">Creation of a Lambda</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-endpoints-and-apis" data-ice="link">Creation of the endpoints and APIs</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-apis" data-ice="link">Creation of the APIs</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-invocation-role" data-ice="link">Creation of the invocation role</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-endpoints" data-ice="link">Creation of the endpoints</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#deployment" data-ice="link">Deployment</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#altogether" data-ice="link">Altogether</a></li>
+</ul>
+  </div>
+<div data-ice="manual" data-toc-name="usage">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html" data-ice="link">Getting started</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#configuring-aws" data-ice="link">Configuring AWS</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#permissions-needed-to-deploy-the-project-in-aws" data-ice="link">Permissions needed to deploy the project in AWS</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#installing-the-myrmex-command-line" data-ice="link">Installing the Myrmex command line</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#creating-a-new-project" data-ice="link">Creating a new project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#installing-plugins" data-ice="link">Installing plugins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#project-configuration" data-ice="link">Project configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#the-myrmex-json-file" data-ice="link">The myrmex.json file</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#splitting-the-configuration-into-various-files" data-ice="link">Splitting the configuration into various files</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#using-environment-variables-to-override-the-configuration" data-ice="link">Using environment variables to override the configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#defining-the-configuration-programmatically" data-ice="link">Defining the configuration programmatically</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html" data-ice="link">IAM plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#create-policy" data-ice="link">create-policy</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#create-role" data-ice="link">create-role</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#deploy-policies" data-ice="link">deploy-policies</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#deploy-roles" data-ice="link">deploy-roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#definition-of-iam-policies" data-ice="link">Definition of IAM policies</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#definition-of-iam-roles" data-ice="link">Definition of IAM roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#hooks-and-extensions" data-ice="link">Hooks and extensions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#hooks" data-ice="link">Hooks</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#extensions" data-ice="link">Extensions</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html" data-ice="link">Lambda plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#project-anatomy" data-ice="link">Project anatomy</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#create-lambda" data-ice="link">create-lambda</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#create-node-module" data-ice="link">create-node-module</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#deploy-lambdas" data-ice="link">deploy-lambdas</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#install-lambdas-locally" data-ice="link">install-lambdas-locally</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#test-lambda-locally" data-ice="link">test-lambda-locally</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#test-lambda" data-ice="link">test-lambda</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html" data-ice="link">API Gateway Plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#project-anatomy" data-ice="link">Project anatomy</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#create-api" data-ice="link">create-api</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#create-model" data-ice="link">create-model</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#create-endpoint" data-ice="link">create-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-api" data-ice="link">inspect-api</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-endpoint" data-ice="link">inspect-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#deploy-apis" data-ice="link">deploy-apis</a></li>
+</ul>
+  </div>
+<div data-ice="manual" data-toc-name="advanced">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-advanced" data-section-count="&#x25A0;&#x25A0;" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html" data-ice="link">Creating plugins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#plugin-definition" data-ice="link">Plugin definition</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#anatomy-of-a-plugin" data-ice="link">Anatomy of a plugin</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#the-myrmex-instance" data-ice="link">The Myrmex instance</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#initialization-by-the-myrmex-command-line" data-ice="link">Initialization by the Myrmex command line</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#registration-of-plugins" data-ice="link">Registration of plugins</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#events-mecanism" data-ice="link">Events mecanism</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#extensions" data-ice="link">Extensions</a></li>
+</ul>
+  </div>
+<div data-ice="manual" data-toc-name="reference">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-reference" data-section-count="&#x25A0;" data-link="identifiers.html"><a href="identifiers.html" data-ice="link">Reference</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown">
+  <div class="manual-breadcrumb-list">
+    <a href="./manual/./index.html">Manual</a>
+    <span>&#xBB;</span>
+    <span data-ice="title">Tutorial</span>
+  </div>
+  <div data-ice="content"><h1 id="creating-apis-for-a-space-delivery-company">Creating APIs for a space delivery company</h1>
+<h2 id="the-need-one-application-several-apis-exposing-various-functionalities">The need: one application, several APIs exposing various functionalities</h2>
+<blockquote>
+<p>The code generated by this example is available <a href="https://github.com/myrmexjs/myrmex/tree/master/demo/planet-express">here</a>.</p>
+</blockquote>
+<p><em>Planet Express</em> is a space delivery company that have two types of customers :</p>
+<ul>
+<li><strong>Senders</strong> like <em>MomCorp</em> and the <em>Slurm factory</em> that use <em>Planet Express</em> services to deliver products</li>
+<li><strong>Recipients</strong> like the <em>Luna Park</em> or the <em>Mars Vegas Casinos</em> that receive these products</li>
+</ul>
+<p><em>Planet Express</em>, as a <em>futurist</em> company, wants to provide <em>serverless APIs</em>, web and mobile applications for their
+customers.</p>
+<ul>
+<li><strong>Senders</strong> need an API to create and track deliveries</li>
+<li><strong>Recipients</strong> need an API to track and validate the reception of deliveries</li>
+<li><em>Planet Express</em> also needs an API for its <strong>Back Office</strong> application that manage all deliveries</li>
+</ul>
+<p>Following REST principles, a simplified API implementing these functionalities should expose these endpoints :</p>
+<ul>
+<li><code>PUT /delivery</code> to create of a new delivery</li>
+<li><code>GET /delivery/{id}</code> to allow to track a delivery</li>
+<li><code>PATCH /delivery/{id}</code> to modify a delivery</li>
+<li><code>DELETE /delivery/{id}</code> to delete a delivery</li>
+</ul>
+<p>We state that a <strong>sender</strong> cannot modify a delivery once created and a <strong>recipient</strong> deletes a delivery when it receives it.</p>
+<p><em>Planet Express</em> wants to provide an <code>Swagger</code> specification to document the endpoints for development teams that integrate
+the services.</p>
+<p>To avoid exposing and documenting endpoints not needed by some API consumers, <em>Planet Express</em> wants a specific API for each
+type of client application : <code>sender</code>, <code>recipient</code> and <code>back-office</code>.</p>
+<p>These three APIs belong to the same application and share the same code base. The <code>back-office</code> API will provide access to
+all functionalities while the consumers of the <code>sender</code> and the <code>recipient</code> APIs will only have access to endpoints that are
+useful for them.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:center"><code>sender</code></th>
+<th style="text-align:center"><code>recipient</code></th>
+<th style="text-align:center"><code>back-office</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>POST /delivery</code></td>
+<td style="text-align:center">X</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET /delivery/{id}</code></td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>PATCH /delivery/{id}</code></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">X</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>DELETE /delivery/{id}</code></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">X</td>
+<td style="text-align:center">X</td>
+</tr>
+</tbody>
+</table>
+<p>We will not see the implementation of authentication and authorization here. Neither will we see the implementation of the
+data access. These are aspects of the application that do not rely on Myrmex. They are implemented in <code>node.js</code> modules that
+could run in any execution environment.</p>
+<h2 id="the-creation-of-the-application-with-myrmex">The creation of the application with Myrmex</h2>
+<p>For each command used in the following sections, it is possible to see its documentation using <code>myrmex &lt;command&gt; -h</code>. Note
+that the Myrmex cli itself only contains the command <code>myrmex new</code>. Other commands are injected by Myrmex plugins when the
+cli is executed in the project folder.</p>
+<h3 id="initialization-of-the-project">Initialization of the project</h3>
+<p>We create a new Myrmex project named <code>planet-express</code>.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g @myrmex/cli
+myrmex new planet-express @myrmex/iam @myrmex/api-gateway @myrmex/lambda
+cd planet-express</code>
+</code></pre>
+<h3 id="creation-of-the-lambda-containing-the-application-logic">Creation of the Lambda containing the application logic</h3>
+<p>We are free to use as many Lambdas as we want in a Myrmex project. For example, we could associate one specific Lambda for each endpoint. But the
+<em>Planet Express</em> development team choose to put all the logic of the application in one single Lambda. Parameters provided by API Gateway will allow
+the lambda to know which portions of code to execute.</p>
+<blockquote>
+<p>The implementation of the Lambda and of the modules is out of the scope of this tutorial. We will create them and leave them empty. This will give
+an overview of the structure of a Myrmex project and show the integration of Lambdas with API Gateway. Myrmex helps you to organize and deploy serverless
+projects, but it does not interfere about how you write Node.js code.</p>
+</blockquote>
+<h4 id="creation-of-the-lambda-s-execution-role">Creation of the Lambda&apos;s execution role</h4>
+<p>The Lambda needs to be associated to an IAM role that defines its authorizations in AWS. It could be authorized to access DynamoDB, RDS or S3 depending on the
+implementation of the application. For now, we use a role that allows the Lambda to write logs in CloudWatch.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-role PlanetExpressLambdaExecution --model LambdaBasicExecutionRole</code>
+</code></pre>
+<h4 id="creation-of-node-modules-that-can-be-packaged-in-the-lambda">Creation of node modules that can be packaged in the Lambda</h4>
+<p>Myrmex allows the creation of node modules that can be embedded in the package of the Lambda. The development team decided that they will need two modules:</p>
+<ul>
+<li>A logging module that should allow to write logs in various backends (Cloudfront, S3, a database, etc ...)</li>
+<li>A module that manage the access to the application data (DynamoDB, Sequelize, mongoose, etc ...)</li>
+</ul>
+<p>The data access module uses the logging module. We indicate this dependency so that if a Lambda requires the data access module, it will include the logging
+module in its package too.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-node-module log
+myrmex create-node-module data-access --dependency log</code>
+</code></pre>
+<p>The implementation of the modules will not be detailed here, but they are &quot;common&quot; <code>node.js</code> modules that could be used in any execution environment.</p>
+<h4 id="creation-of-a-lambda">Creation of a Lambda</h4>
+<p>We create a Lambda, specifying its configuration and its dependencies.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-lambda api-generic --runtime nodejs6.10 --timeout 20 --memory 256 --role PlanetExpressLambdaExecution --dependencies data-access,log</code>
+</code></pre>
+<h3 id="creation-of-the-endpoints-and-apis">Creation of the endpoints and APIs</h3>
+<p>Now that we have a Lambda able to perform the operations needed by our application, we can define the endpoints that
+integrate with it and expose them in various APIs.</p>
+<h4 id="creation-of-the-apis">Creation of the APIs</h4>
+<p>We create one API for each type of client application.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-api back-office --title &quot;Back Office&quot; --desc &quot;Planet Express API for Back Office&quot;
+myrmex create-api sender      --title &quot;Sender&quot;      --desc &quot;Planet Express API for sender application&quot;
+myrmex create-api recipient   --title &quot;Recipient&quot;   --desc &quot;Planet Express API for recipient application&quot;</code>
+</code></pre>
+<h4 id="creation-of-the-invocation-role">Creation of the invocation role</h4>
+<p>The API endpoints need to be associated to an IAM role that allows to invoke the Lambda.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-role PlanetExpressLambdaInvocation -m APIGatewayLambdaInvocation</code>
+</code></pre>
+<h4 id="creation-of-the-endpoints">Creation of the endpoints</h4>
+<p>We create the four endpoints and associate them to the APIs that have to expose them.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-endpoint /delivery/{id} get --apis back-office,recipient,sender --summary &quot;View a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
+myrmex create-endpoint /delivery/{id} patch --apis back-office --summary &quot;Update a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
+myrmex create-endpoint /delivery post --apis back-office,sender --summary &quot;Create a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
+myrmex create-endpoint /delivery/{id} delete --apis back-office,recipient --summary &quot;Delete a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic</code>
+</code></pre>
+<h3 id="deployment">Deployment</h3>
+<p>We deploy the stage <code>v0</code> of the three APIs on the <code>DEV</code> environment.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --environment DEV --deploy-lambdas all --alias &quot;&quot;</code>
+</code></pre>
+<h2 id="altogether">Altogether</h2>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g @myrmex/cli
+myrmex new planet-express @myrmex/iam @myrmex/api-gateway @myrmex/lambda
+cd planet-express
+
+myrmex create-role PlanetExpressLambdaExecution --model LambdaBasicExecutionRole
+
+myrmex create-node-module log
+myrmex create-node-module data-access --dependency log
+
+myrmex create-lambda api-generic --runtime nodejs6.10 --timeout 20 --memory 256 --role PlanetExpressLambdaExecution --dependencies data-access,log
+
+myrmex create-api back-office --title &quot;Back Office&quot; --desc &quot;Planet Express API for Back Office&quot;
+myrmex create-api sender      --title &quot;Sender&quot;      --desc &quot;Planet Express API for sender application&quot;
+myrmex create-api recipient   --title &quot;Recipient&quot;   --desc &quot;Planet Express API for recipient application&quot;
+
+myrmex create-role PlanetExpressLambdaInvocation -m APIGatewayLambdaInvocation
+
+myrmex create-endpoint /delivery/{id} get --apis back-office,recipient,sender --summary &quot;View a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
+myrmex create-endpoint /delivery/{id} patch --apis back-office --summary &quot;Update a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
+myrmex create-endpoint /delivery post --apis back-office,sender --summary &quot;Create a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
+myrmex create-endpoint /delivery/{id} delete --apis back-office,recipient --summary &quot;Delete a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
+
+myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --environment DEV --deploy-lambdas all --alias &quot;&quot;</code>
+</code></pre>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

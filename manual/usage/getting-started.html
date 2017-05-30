@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">Usage</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+<link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
+</head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/myrmx/myrmex" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual" data-toc-name="tutorial">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html" data-ice="link">Deploying an Express application in Lambda</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#starting-with-an-express-application" data-ice="link">Starting with an Express application</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#adding-myrmex-to-the-project" data-ice="link">Adding Myrmex to the project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#install-myrmex-in-the-express-project" data-ice="link">Install Myrmex in the Express project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#creation-of-iam-roles" data-ice="link">Creation of IAM roles</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#creation-of-the-lambda" data-ice="link">Creation of the Lambda</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#creation-of-the-api" data-ice="link">Creation of the API</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/express.html"><a href="manual/tutorial/express.html#deployment" data-ice="link">Deployment</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;" data-link="manual/tutorial/lambda-profiling.html"><a href="manual/tutorial/lambda-profiling.html" data-ice="link">Creating Lambdas to inspect their execution environment</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-profiling.html"><a href="manual/tutorial/lambda-profiling.html#creation-of-three-lambdas-sharing-the-same-code" data-ice="link">Creation of three Lambdas sharing the same code</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-profiling.html"><a href="manual/tutorial/lambda-profiling.html#testing-the-lambdas-in-aws" data-ice="link">Testing the Lambdas in AWS</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html" data-ice="link">Creating APIs for a space delivery company</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#the-need-one-application-several-apis-exposing-various-functionalities" data-ice="link">The need: one application, several APIs exposing various functionalities</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#the-creation-of-the-application-with-myrmex" data-ice="link">The creation of the application with Myrmex</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#initialization-of-the-project" data-ice="link">Initialization of the project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-lambda-containing-the-application-logic" data-ice="link">Creation of the Lambda containing the application logic</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-lambda-s-execution-role" data-ice="link">Creation of the Lambda&apos;s execution role</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-node-modules-that-can-be-packaged-in-the-lambda" data-ice="link">Creation of node modules that can be packaged in the Lambda</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-a-lambda" data-ice="link">Creation of a Lambda</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-endpoints-and-apis" data-ice="link">Creation of the endpoints and APIs</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-apis" data-ice="link">Creation of the APIs</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-invocation-role" data-ice="link">Creation of the invocation role</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#creation-of-the-endpoints" data-ice="link">Creation of the endpoints</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#deployment" data-ice="link">Deployment</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/planet-express.html"><a href="manual/tutorial/planet-express.html#altogether" data-ice="link">Altogether</a></li>
+</ul>
+  </div>
+<div data-ice="manual" data-toc-name="usage">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html" data-ice="link">Getting started</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#configuring-aws" data-ice="link">Configuring AWS</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#permissions-needed-to-deploy-the-project-in-aws" data-ice="link">Permissions needed to deploy the project in AWS</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#installing-the-myrmex-command-line" data-ice="link">Installing the Myrmex command line</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#creating-a-new-project" data-ice="link">Creating a new project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#installing-plugins" data-ice="link">Installing plugins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#project-configuration" data-ice="link">Project configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#the-myrmex-json-file" data-ice="link">The myrmex.json file</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#splitting-the-configuration-into-various-files" data-ice="link">Splitting the configuration into various files</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#using-environment-variables-to-override-the-configuration" data-ice="link">Using environment variables to override the configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/getting-started.html"><a href="manual/usage/getting-started.html#defining-the-configuration-programmatically" data-ice="link">Defining the configuration programmatically</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html" data-ice="link">IAM plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#create-policy" data-ice="link">create-policy</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#create-role" data-ice="link">create-role</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#deploy-policies" data-ice="link">deploy-policies</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#deploy-roles" data-ice="link">deploy-roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#definition-of-iam-policies" data-ice="link">Definition of IAM policies</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#definition-of-iam-roles" data-ice="link">Definition of IAM roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#hooks-and-extensions" data-ice="link">Hooks and extensions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#hooks" data-ice="link">Hooks</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#extensions" data-ice="link">Extensions</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html" data-ice="link">Lambda plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#project-anatomy" data-ice="link">Project anatomy</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#create-lambda" data-ice="link">create-lambda</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#create-node-module" data-ice="link">create-node-module</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#deploy-lambdas" data-ice="link">deploy-lambdas</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#install-lambdas-locally" data-ice="link">install-lambdas-locally</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#test-lambda-locally" data-ice="link">test-lambda-locally</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/lambda-plugin.html"><a href="manual/usage/lambda-plugin.html#test-lambda" data-ice="link">test-lambda</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html" data-ice="link">API Gateway Plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#project-anatomy" data-ice="link">Project anatomy</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#create-api" data-ice="link">create-api</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#create-model" data-ice="link">create-model</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#create-endpoint" data-ice="link">create-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-api" data-ice="link">inspect-api</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-endpoint" data-ice="link">inspect-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#deploy-apis" data-ice="link">deploy-apis</a></li>
+</ul>
+  </div>
+<div data-ice="manual" data-toc-name="advanced">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-advanced" data-section-count="&#x25A0;&#x25A0;" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html" data-ice="link">Creating plugins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#plugin-definition" data-ice="link">Plugin definition</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#anatomy-of-a-plugin" data-ice="link">Anatomy of a plugin</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#the-myrmex-instance" data-ice="link">The Myrmex instance</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#initialization-by-the-myrmex-command-line" data-ice="link">Initialization by the Myrmex command line</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#registration-of-plugins" data-ice="link">Registration of plugins</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#events-mecanism" data-ice="link">Events mecanism</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/advanced/creating-plugins.html"><a href="manual/advanced/creating-plugins.html#extensions" data-ice="link">Extensions</a></li>
+</ul>
+  </div>
+<div data-ice="manual" data-toc-name="reference">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-reference" data-section-count="&#x25A0;" data-link="identifiers.html"><a href="identifiers.html" data-ice="link">Reference</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown">
+  <div class="manual-breadcrumb-list">
+    <a href="./manual/./index.html">Manual</a>
+    <span>&#xBB;</span>
+    <span data-ice="title">Usage</span>
+  </div>
+  <div data-ice="content"><h1 id="getting-started">Getting started</h1>
+<h2 id="configuring-aws">Configuring AWS</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>To work with Myrmex and its main plugins, you should to have some notions about:</p>
+<ul>
+<li>AWS IAM</li>
+<li>AWS Lambda</li>
+<li>Amazon API Gateway</li>
+<li>OpenAPI (aka Swagger) specification</li>
+<li>Node.js</li>
+</ul>
+<p>Myrmex aims to experiment quickly, but to really be efficient, it is necessary to know the AWS services that works with Myrmex.</p>
+<h3 id="permissions-needed-to-deploy-the-project-in-aws">Permissions needed to deploy the project in AWS</h3>
+<p>Myrmex plugins that manage AWS resources need to have permissions to execute commands that communicate with the AWS API. When a
+command needs these permissions, Myrmex will use the AWS credentials provided by the environment.</p>
+<p>To begin to work with Myrmex, the following policies can be used:</p>
+<ul>
+<li><code>IAMFullAccess</code></li>
+<li><code>AWSLambdaFullAccess</code></li>
+<li><code>AmazonAPIGatewayAdministrator</code></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p><strong>Prerequisites</strong>: <code>node</code> (version 4 minimum) and <code>npm</code> (version 4 recommended) must be installed.</p>
+<h3 id="installing-the-myrmex-command-line">Installing the Myrmex command line</h3>
+<p>The <code>myrmex</code> command line has its own npm module. Install it globally.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
+</code></pre>
+<p>We can check that the <code>myrmex</code> command line is correctly installed.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint"># This command will show the available options and sub-commands
+myrmex -h</code>
+</code></pre>
+<p>At this point, there is only one sub-command available: <code>myrmex new</code>. When creating a project, other subcommands will be
+provided by Myrmex plugins.</p>
+<h3 id="creating-a-new-project">Creating a new project</h3>
+<p><code>myrmex new</code> is the command that creates new projects. If it is called without argument and/or option, it will provide a prompt
+to define the configuration of the project.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint"># Using the command without option and argument,
+# the user will be prompted to give information about the project configuration
+myrmex new</code>
+</code></pre>
+<p>The prompt will ask to choose a project name and to select the plugins to install among <code>@myrmex/iam</code>, <code>@myrmex/lambda</code> and
+<code>@myrmex/api-gateway</code>. The plugin selection depend on the project. It is easy to install a plugin later if it is not done at
+this step (see next section).</p>
+<p><code>myrmex new</code> will perform 3 operations:</p>
+<ul>
+<li>create a project folder</li>
+<li>install the latest version of Myrmex and the project&apos;s plugins</li>
+<li>create a <code>myrmex.json</code> configuration file</li>
+</ul>
+<p>Once the project is created we can enter its folder. Using <code>myrmex -h</code> we can see that new <code>myrmex</code> sub-commands are available.
+They are provided by plugins that have been installed in the project.</p>
+<h3 id="installing-plugins">Installing plugins</h3>
+<p><code>myrmex new</code> propose a selection of plugins to install but it is possible to install them or other plugins separately. Myrmex
+plugins are npm packages. So the following command will install the plugin <code>@myrmex/api-gateway</code>:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/api-gateway --save-dev</code>
+</code></pre>
+<p>To be loaded by Myrmex, the plugin needs to be referenced in the <code>myrmex.json</code> file, in the <code>plugins</code> section:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-serverless-application&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/api-gateway&quot;
+  ]
+}</code>
+</code></pre>
+<p>It is possible to disable a plugin by removing it from the <code>myrmex.json</code> file.</p>
+<h2 id="project-configuration">Project configuration</h2>
+<p>Myrmex can be configured in different ways.</p>
+<h3 id="the-myrmex-json-file">The <code>myrmex.json</code> file</h3>
+<p>In the root directory of a Myrmex project, there is a <code>myrmex.json</code> file that contains the configuration of the project.</p>
+<p>A <code>myrmex.json</code> file looks like this:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-serverless-application&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/iam&quot;,
+    &quot;@myrmex/api-gateway&quot;,
+    &quot;@myrmex/lambda&quot;
+  ],
+  &quot;config&quot;: {
+    &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+    &quot;myNestedConfig&quot;: {
+      &quot;level1&quot;: 42,
+      &quot;level2&quot;: {
+        &quot;key1&quot;: true,
+        &quot;key2&quot;: false
+      }
+    }
+  }
+}</code>
+</code></pre>
+<ul>
+<li><code>name</code>: the identifier of the project.</li>
+<li><code>plugins</code>: the list of plugins that Myrmex has to register. A Myrmex plugin can be a node module installed via npm or
+defined in the project. A plugin installed via npm but specified here will not be registered by Myrmex.</li>
+<li><code>config</code>: the configuration of the project. Each plugin can use the it and inject default values in it.</li>
+</ul>
+<p>The command <code>myrmex show-config</code> allows to see the current configuration of a project. This is the response of this command for
+the previous <code>myrmex.json</code> file.</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+  &quot;myNestedConfig&quot;: {
+    &quot;level1&quot;: 42,
+    &quot;level2&quot;: {
+      &quot;key1&quot;: true,
+      &quot;key2&quot;: false
+    }
+  },
+  &quot;iam&quot;: {
+    &quot;policiesPath&quot;: &quot;iam/policies&quot;,
+    &quot;rolesPath&quot;: &quot;iam/roles&quot;
+  },
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;lambda&quot;: {
+    &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
+    &quot;modulesPath&quot;: &quot;lambda/modules&quot;
+  }
+}</code>
+</code></pre>
+<p>This example shows that the three plugins injected the configuration to define the location of the content that
+they manage. It is possible to override this configuration in the <code>myrmex.json</code> file.</p>
+<h3 id="splitting-the-configuration-into-various-files">Splitting the configuration into various files</h3>
+<p>If a project has a many configuration keys, it is possible to split the configuration object into various files in a folder
+named <code>config</code>.</p>
+<p>For the previous example, to define the same configuration that in the previous example, the directory structure will look
+like this:</p>
+<pre><code class="lang-text"><code class="source-code prettyprint">project-root
+&#x251C;&#x2500;&#x2500; myrmex.json
+&#x2514;&#x2500;&#x2500; config
+    &#x2514;&#x2500;&#x2500; myNestedConfig.json</code>
+</code></pre>
+<p>The <code>myrmex.json</code> file:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;planet-express&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/iam&quot;,
+    &quot;@myrmex/api-gateway&quot;,
+    &quot;@myrmex/lambda&quot;
+  ],
+  &quot;config&quot;: {
+    &quot;myConfigKey&quot;: &quot;my-config-value&quot;
+  }
+}</code>
+</code></pre>
+<p>The file <code>config/myNestedConfig.json</code>:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;level1&quot;: 42,
+  &quot;level2&quot;: {
+    &quot;key1&quot;: true,
+    &quot;key2&quot;: false
+  }
+}</code>
+</code></pre>
+<p>The command <code>myrmex show-config</code> will give the same response:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+  &quot;myNestedConfig&quot;: {
+    &quot;level1&quot;: 42,
+    &quot;level2&quot;: {
+      &quot;key1&quot;: true,
+      &quot;key2&quot;: false
+    }
+  },
+  &quot;iam&quot;: {
+    &quot;policiesPath&quot;: &quot;iam/policies&quot;,
+    &quot;rolesPath&quot;: &quot;iam/roles&quot;
+  },
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;lambda&quot;: {
+    &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
+    &quot;modulesPath&quot;: &quot;lambda/modules&quot;
+  }
+}</code>
+</code></pre>
+<h3 id="using-environment-variables-to-override-the-configuration">Using environment variables to override the configuration</h3>
+<p>It is also possible to define configuration via environment variables. Any environment variable that starts with <code>MYRMEX_</code>
+is injected as a configuration key/value. An underscore is used to resolve nested keys.</p>
+<blockquote>
+<p>Because <code>_</code> is used to resolve nested key, this technique cannot work with configuration keys containing a <code>_</code>.</p>
+</blockquote>
+<p>For example, the configuration of <code>myNestedConfig.level1</code> can be overrided using the environment variable
+<code>MYRMEX_myNestedConfig_level1</code>:</p>
+<pre><code><code class="source-code prettyprint">export MYRMEX_myNestedConfig_level1=43
+myrmex show-config</code>
+</code></pre><p>Result:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+  &quot;myNestedConfig&quot;: {
+    &quot;level1&quot;: &quot;43&quot;,
+    &quot;level2&quot;: {
+      &quot;key1&quot;: true,
+      &quot;key2&quot;: false
+    }
+  },
+  &quot;iam&quot;: {
+    &quot;policiesPath&quot;: &quot;iam/policies&quot;,
+    &quot;rolesPath&quot;: &quot;iam/roles&quot;
+  },
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;lambda&quot;: {
+    &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
+    &quot;modulesPath&quot;: &quot;lambda/modules&quot;
+  }
+}</code>
+</code></pre>
+<blockquote>
+<p>Configuration values defined via an environment variable are always of type <code>String</code>  </p>
+</blockquote>
+<h3 id="defining-the-configuration-programmatically">Defining the configuration programmatically</h3>
+<p>All json configuration files in Myrmex are loaded using the Node.js <code>require()</code> function. This means that they all can be
+replaced by a javascript file that exposes the desired configuration.</p>
+<p>For example, the previous <code>myrmex.json</code> file can be replaced by this <code>myrmex.js</code> file:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">module.exports = {
+  name: &apos;planet-express&apos;,
+  plugins: [
+    &apos;@myrmex/iam&apos;,
+    &apos;@myrmex/api-gateway&apos;,
+    &apos;@myrmex/lambda&apos;
+  ],
+  config: {
+    myConfigKey: process.env.MY_ENVIRONMENT_VARIABLE || &apos;my-default-value&apos;
+  }
+}</code>
+</code></pre>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
