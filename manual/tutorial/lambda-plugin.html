@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">Tutorial</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/myrmx/myrmex" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual" data-toc-name="tutorial">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html" data-ice="link">Getting started</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#configuring-aws" data-ice="link">Configuring AWS</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#permissions-needed-to-deploy-the-project-in-aws" data-ice="link">Permissions needed to deploy the project in AWS</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#installing-the-myrmex-command-line" data-ice="link">Installing the Myrmex command line</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#creating-a-new-project" data-ice="link">Creating a new project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#installing-plugins" data-ice="link">Installing plugins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#project-configuration" data-ice="link">Project configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#the-myrmex-json-file" data-ice="link">The myrmex.json file</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#splitting-the-configuration-into-various-files" data-ice="link">Splitting the configuration into various files</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#using-environment-variables-to-override-the-configuration" data-ice="link">Using environment variables to override the configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#defining-the-configuration-programmatically" data-ice="link">Defining the configuration programmatically</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html" data-ice="link">IAM plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#create-policy" data-ice="link">create-policy</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#create-role" data-ice="link">create-role</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#deploy-policies" data-ice="link">deploy-policies</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#deploy-roles" data-ice="link">deploy-roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#definition-of-iam-policies" data-ice="link">Definition of IAM policies</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#definition-of-iam-roles" data-ice="link">Definition of IAM roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#hooks-and-extensions" data-ice="link">Hooks and extensions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#hooks" data-ice="link">Hooks</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#extensions" data-ice="link">Extensions</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html" data-ice="link">Lambda plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#project-anatomy" data-ice="link">Project anatomy</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#create-lambda" data-ice="link">create-lambda</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#create-node-module" data-ice="link">create-node-module</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#deploy-lambdas" data-ice="link">deploy-lambdas</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#install-lambdas-locally" data-ice="link">install-lambdas-locally</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#test-lambda-locally" data-ice="link">test-lambda-locally</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#test-lambda" data-ice="link">test-lambda</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html" data-ice="link">API Gateway Plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#project-anatomy" data-ice="link">Project anatomy</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#create-api" data-ice="link">create-api</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#create-model" data-ice="link">create-model</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#create-endpoint" data-ice="link">create-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#inspect-api" data-ice="link">inspect-api</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#inspect-endpoint" data-ice="link">inspect-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#deploy-apis" data-ice="link">deploy-apis</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html" data-ice="link">Creating plugins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#plugin-definition" data-ice="link">Plugin definition</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#anatomy-of-a-plugin" data-ice="link">Anatomy of a plugin</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#the-myrmex-instance" data-ice="link">The Myrmex instance</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#initialization-by-the-myrmex-command-line" data-ice="link">Initialization by the Myrmex command line</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#registration-of-plugins" data-ice="link">Registration of plugins</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#events-mecanism" data-ice="link">Events mecanism</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#extensions" data-ice="link">Extensions</a></li>
+</ul>
+  </div>
+<div data-ice="manual" data-toc-name="reference">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-reference" data-section-count="&#x25A0;" data-link="identifiers.html"><a href="identifiers.html" data-ice="link">Reference</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown">
+  <div class="manual-breadcrumb-list">
+    <a href="./manual/./index.html">Manual</a>
+    <span>&#xBB;</span>
+    <span data-ice="title">Tutorial</span>
+  </div>
+  <div data-ice="content"><h1 id="lambda-plugin">Lambda plugin</h1>
+<p>The Lambda plugin allows to define and deploy Lambdas. It should work with any runtime but has been tested mostly with
+Node.js and secondly with Python.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To use the <code>@myrmex/lambda</code> plugin, it is necessary to have a minimal knowledge about
+<a href="https://aws.amazon.com/lambda/">AWS Lambda</a>.</p>
+<p>An AWS user or role that uses the plugin <code>@myrmex/lambda</code> must have access to Lambda administration. The AWS policy
+<code>AWSLambdaFullAccess</code> gives all necessary permissions.</p>
+<h2 id="installation">Installation</h2>
+<p>Install the npm module in a Myrmex project:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/lambda</code>
+</code></pre>
+<p>Then enable the plugin in the <code>myrmex.json</code> file:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-app&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/lambda&quot;
+  ]
+}</code>
+</code></pre>
+<p>Once the plugin is installed and enabled in the project, the <code>myrmex</code> command line will provide new sub-commands to manage and
+deploy Lambdas.</p>
+<h2 id="project-anatomy">Project anatomy</h2>
+<p>By default, the content managed by the Lambda plugin is located in an <code>lambda</code> directory in the root directory of the
+project.</p>
+<p>Out of the box, for the Node.js runtime, the Lambda plugin allows to separate the definition of Lambdas from the logic of the
+application by providing a specific place to write node modules but it is not mandatory to use it. <code>@myrmex/lambda</code> helps to
+define and deploy Lambdas but the developer is responsible of the implementation of the application. Other plugins built on
+top of the Lambda plugin may be more opinionated.</p>
+<p>The directory <code>lambda/lambdas</code> contains the Lambdas definitions. For each of its sub-directory is considered as a
+Lambda definition. It must contains a <code>config.json</code> file and the code of the Lambda. The name of the subdirectory is used
+as the Lambda identifier.</p>
+<p>The <code>config.json</code> file allows to define the runtime, the timeout, the memory, the role and other properties of the Lambda.
+The content of the <code>params</code> property is used as the argument of the following methods from the AWS SDK:</p>
+<ul>
+<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#createFunction-property"><code>createFunction()</code></a></li>
+<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionCode-property"><code>updateFunctionCode()</code></a></li>
+<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionConfiguration-property"><code>updateFunctionConfiguration()</code></a></li>
+</ul>
+<p>By default, for the Node.js runtime, the directory <code>lambda/modules</code> contains the node modules of the project. For example,
+some of these modules could be named <code>log</code>, or <code>data-access</code> or <code>authorization</code> etc...</p>
+<p>Each module should have a clear responsibility so that each Lambda can embed only the code it needs. This is a recommendation
+but the developer is free to organize the code as he want. The Lambda plugin does not force you to use a specific project
+organization.</p>
+<p>This is what a project structure could look like:</p>
+<pre><code class="lang-text"><code class="source-code prettyprint">lambda
+&#x251C;&#x2500;&#x2500; lambdas                         The Lambdas defined by the application
+|   &#x251C;&#x2500;&#x2500; my-nodejs-lambda            The name of this directory is the identifier of a Lambda
+|   |   &#x251C;&#x2500;&#x2500; config.json             The configuration of the Lambda (runtime, memory, timeout, execution role...)
+|   |   &#x251C;&#x2500;&#x2500; index.js                A node module that exposes the handler
+|   |   &#x2514;&#x2500;&#x2500; package.json            It is possible to install the dependencies of the Lambda here
+|   &#x2514;&#x2500;&#x2500; my-python-lambda            Several runtimes can coexist in a project
+|       &#x251C;&#x2500;&#x2500; config.json
+|       &#x2514;&#x2500;&#x2500; lambda_function.py
+&#x2514;&#x2500;&#x2500; modules                         The node modules of the application - they can be added as a dependency of a Lambda in its
+    |                               package.json file
+    &#x251C;&#x2500;&#x2500; authorization               The name of this directory is the identifier of a module
+    |   &#x251C;&#x2500;&#x2500; package.json            Package file of the module
+    |   &#x251C;&#x2500;&#x2500; index.js                Main file of the module
+    |   &#x2514;&#x2500;&#x2500; test                    If you wish, you can write the code to test the module in this directory
+    &#x251C;&#x2500;&#x2500; data-access
+    |   &#x251C;&#x2500;&#x2500; package.json
+    |   &#x2514;&#x2500;&#x2500; index.js
+    &#x2514;&#x2500;&#x2500; log
+        &#x251C;&#x2500;&#x2500; package.json
+        &#x2514;&#x2500;&#x2500; index.js</code>
+</code></pre>
+<p>Example of <code>config.json</code> file:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;params&quot;: {
+    &quot;Timeout&quot;: 30,
+    &quot;MemorySize&quot;: 256,
+    &quot;Role&quot;: &quot;arn:aws:iam::123456789012:role/MyRole&quot;,
+    &quot;Runtime&quot;: &quot;nodejs6.10&quot;,
+    &quot;Handler&quot;: &quot;index.handler&quot;
+  }
+}</code>
+</code></pre>
+<p>The <code>package.json</code> of a module or a Lambda can declare dependencies with other modules using file paths in the <code>dependencies</code>
+property:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;data-access&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;dependencies&quot;: {
+    &quot;log&quot;: &quot;../log&quot;
+  }
+}</code>
+</code></pre>
+<p>In this case, <code>require(&apos;log&apos;)</code> will load the module <code>log</code> installed in <code>lambda/modules/data-access/node_modules/log</code>.</p>
+<p>It is recommended to use relative paths for portability.</p>
+<p>It is recommended to use a recent version of <code>npm</code> to minimize the size of the Lambda packages and facilitate the
+configuration of nested dependencies. Indeed, <code>npm@2</code> can behave in an unexpected manner with nested dependencies when using
+relative file paths.</p>
+<h2 id="commands">Commands</h2>
+<h3 id="create-lambda">create-lambda</h3>
+<pre><code><code class="source-code prettyprint">create-lambda [options] [identifier]
+
+  Options:
+    -r, --runtime &lt;nodejs|nodejs4.3|nodejs6.10|python2.7|python3.6&gt;  select the runtime
+    -t, --timeout &lt;timeout&gt;                                          select the timeout (in seconds)
+    -m, --memory &lt;memory&gt;                                            select the memory (in MB)
+    -d --dependencies &lt;modules-names&gt;                                select the project modules that must be included in the Lambda (only for nodejs runtimes)
+    --role &lt;role&gt;                                                    select the execution role (enter the ARN)</code>
+</code></pre><p>Create a new Lambda. By default the location of Lambdas is <code>lambda/lambdas/&lt;identifier&gt;/</code>.</p>
+<h3 id="create-node-module">create-node-module</h3>
+<p><em>For the Node.js runtime only.</em></p>
+<pre><code><code class="source-code prettyprint">create-node-module [options] [name]
+
+  Options:
+    -d, --dependencies &lt;dependent-modules&gt;  select the node modules that are dependencies of this new one</code>
+</code></pre><p>Prepare a new Node.js module. By default the location of modules is <code>lambda/modules/&lt;name&gt;/</code>.</p>
+<p>The creation of nodes modules is just a suggestion to organize the code of a project. The idea is to maintain each component
+of the application in its own node module to select only relevant components when deploying Lambdas.</p>
+<p>Every Lambda can declare its modules dependencies using <a href="https://docs.npmjs.com/files/package.json#local-paths">local paths</a>
+in its <code>package.json</code> file. Every module can also declare dependencies to other modules that way.</p>
+<p>When Myrmex deploys a Lambda, it executes <code>npm install</code> and the dependencies are installed in the <code>node_modules</code> folder.</p>
+<h3 id="deploy-lambdas">deploy-lambdas</h3>
+<pre><code><code class="source-code prettyprint">deploy-lambdas [options] [lambda-identifiers...]
+
+  Options:
+    --all                            deploy all lambdas of the project
+    -r, --region [region]            select the AWS region
+    -e, --environment [environment]  select the environment
+    -a, --alias [alias]              select the alias to apply</code>
+</code></pre><p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a version
+in Amazon Lambda and apply an alias. Setting the option to an empty string (<code>--alias &quot;&quot;</code>) will skip this.</p>
+<h3 id="install-lambdas-locally">install-lambdas-locally</h3>
+<pre><code><code class="source-code prettyprint">install-lambdas-locally [lambda-identifiers...]</code>
+</code></pre><p>Deletes the <code>node_modules</code> folder of one or several lambda and runs <code>npm install</code> to re-install it.</p>
+<h3 id="test-lambda-locally">test-lambda-locally</h3>
+<pre><code><code class="source-code prettyprint">test-lambda-locally [options] [lambda-identifier]
+
+  Options:
+    -e, --event &lt;event-name&gt;  Event example to use</code>
+</code></pre><p>Executes a Lambda locally. The event option allows to select the example object that will be passed as the first argument.
+Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the context
+object is passed as the second argument.</p>
+<h3 id="test-lambda">test-lambda</h3>
+<pre><code><code class="source-code prettyprint">test-lambda [options] [lambda-identifier]
+
+  Options:
+    --event &lt;event-name&gt;             Event example to use
+    -r, --region [region]            select the AWS region
+    -e, --environment [environment]  select the environment
+    -a, --alias [alias]              select the alias to test</code>
+</code></pre><p>Executes a Lambda deployed in AWS. The event option allows to select the example object that will be passed as the first
+argument. Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the
+context object is passed as the second argument.</p>
+<p>Setting the option <code>--alias</code> to an empty string (<code>--alias &quot;&quot;</code>) will invoke the <code>LATEST</code> version of the Lambda.</p>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

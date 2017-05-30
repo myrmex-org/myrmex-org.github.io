@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">Tutorial</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/myrmx/myrmex" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual" data-toc-name="tutorial">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html" data-ice="link">Getting started</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#configuring-aws" data-ice="link">Configuring AWS</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#permissions-needed-to-deploy-the-project-in-aws" data-ice="link">Permissions needed to deploy the project in AWS</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#installing-the-myrmex-command-line" data-ice="link">Installing the Myrmex command line</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#creating-a-new-project" data-ice="link">Creating a new project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#installing-plugins" data-ice="link">Installing plugins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#project-configuration" data-ice="link">Project configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#the-myrmex-json-file" data-ice="link">The myrmex.json file</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#splitting-the-configuration-into-various-files" data-ice="link">Splitting the configuration into various files</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#using-environment-variables-to-override-the-configuration" data-ice="link">Using environment variables to override the configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#defining-the-configuration-programmatically" data-ice="link">Defining the configuration programmatically</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html" data-ice="link">IAM plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#create-policy" data-ice="link">create-policy</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#create-role" data-ice="link">create-role</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#deploy-policies" data-ice="link">deploy-policies</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#deploy-roles" data-ice="link">deploy-roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#definition-of-iam-policies" data-ice="link">Definition of IAM policies</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#definition-of-iam-roles" data-ice="link">Definition of IAM roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#hooks-and-extensions" data-ice="link">Hooks and extensions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#hooks" data-ice="link">Hooks</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#extensions" data-ice="link">Extensions</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html" data-ice="link">Lambda plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#project-anatomy" data-ice="link">Project anatomy</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#create-lambda" data-ice="link">create-lambda</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#create-node-module" data-ice="link">create-node-module</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#deploy-lambdas" data-ice="link">deploy-lambdas</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#install-lambdas-locally" data-ice="link">install-lambdas-locally</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#test-lambda-locally" data-ice="link">test-lambda-locally</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#test-lambda" data-ice="link">test-lambda</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html" data-ice="link">API Gateway Plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#project-anatomy" data-ice="link">Project anatomy</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#create-api" data-ice="link">create-api</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#create-model" data-ice="link">create-model</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#create-endpoint" data-ice="link">create-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#inspect-api" data-ice="link">inspect-api</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#inspect-endpoint" data-ice="link">inspect-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#deploy-apis" data-ice="link">deploy-apis</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html" data-ice="link">Creating plugins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#plugin-definition" data-ice="link">Plugin definition</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#anatomy-of-a-plugin" data-ice="link">Anatomy of a plugin</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#the-myrmex-instance" data-ice="link">The Myrmex instance</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#initialization-by-the-myrmex-command-line" data-ice="link">Initialization by the Myrmex command line</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#registration-of-plugins" data-ice="link">Registration of plugins</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#events-mecanism" data-ice="link">Events mecanism</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#extensions" data-ice="link">Extensions</a></li>
+</ul>
+  </div>
+<div data-ice="manual" data-toc-name="reference">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-reference" data-section-count="&#x25A0;" data-link="identifiers.html"><a href="identifiers.html" data-ice="link">Reference</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown">
+  <div class="manual-breadcrumb-list">
+    <a href="./manual/./index.html">Manual</a>
+    <span>&#xBB;</span>
+    <span data-ice="title">Tutorial</span>
+  </div>
+  <div data-ice="content"><h1 id="api-gateway-plugin">API Gateway Plugin</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To use the <code>@myrmex/api-gateway</code> plugin, it is necessary to have a minimal knowledge about <a href="https://aws.amazon.com/api-gateway/">Amazon API
+Gateway</a> and the <a href="http://swagger.io/specification/">Swagger v2.0</a> specification.</p>
+<p><code>@myrmex/api-gateway</code> uses the API Gateway Import API feature.</p>
+<h2 id="installation">Installation</h2>
+<p>Install the npm module in a Myrmex project:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/api-gateway</code>
+</code></pre>
+<p>Then enable the plugin in the <code>myrmex.json</code> file:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-app&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/api-gateway&quot;
+  ]
+}</code>
+</code></pre>
+<p>Once the plugin is installed and enabled, the <code>myrmex</code> command line will provide new sub-commands to manage and deploy APIs.</p>
+<h2 id="project-anatomy">Project anatomy</h2>
+<p>By default, the content managed by <code>@myrmex/api-gateway</code> is located in an <code>api-gateway</code> directory in the root directory of the
+project.</p>
+<p>A project configuration is composed of a list of APIs and a list of endpoints. Each endpoint specification contains the list
+of APIs where it must be exposed. Therefore, an endpoint <code>GET /my-resource/{id}</code> can be exposed by a <code>mobile-app</code> API and a
+<code>back-office</code> API, while another endpoint <code>PUT /my-resource</code> can be exposed by the <code>back-office</code> API only. This allows to
+create different APIs for different purposes while sharing some functionalities.</p>
+<p>The directory <code>api-gateway/apis</code> contains the API definitions. Each of its sub-directory has the name of an API identifier and
+contains a Swagger specification file (without the endpoints definitions).</p>
+<p>The directory <code>api-gateway/endpoints</code> contains the endpoints definitions. The structure of its sub-directories represents url
+paths and HTTP methods. Each HTTP method directory contains the definition of an endpoint. An endpoint definition is composed
+of its Swagger specification in a <code>spec.json</code> file.</p>
+<p>As an example is more easy to understand, that is what a project structure could looks like:</p>
+<pre><code class="lang-text"><code class="source-code prettyprint">api-gateway
+&#x251C;&#x2500;&#x2500; apis                              The APIs defined by the application
+|   &#x251C;&#x2500;&#x2500; back-office                   The name of this directory is the identifier of an API
+|   |   &#x2514;&#x2500;&#x2500; spec.json                 The API&apos;s Swagger specification (without endpoints definitions)
+|   &#x2514;&#x2500;&#x2500; mobile-app
+|       &#x2514;&#x2500;&#x2500; spec.json
+&#x2514;&#x2500;&#x2500; endpoints                         The endpoints defined by the application
+    &#x251C;&#x2500;&#x2500; resource-a                    Creates the path /resource-a
+    |   &#x251C;&#x2500;&#x2500; {id}                      Creates the path /resource-a/{id}
+    |   |   &#x251C;&#x2500;&#x2500; GET                   Creates the HTTP method GET for the path /resource-a/{id}
+    |   |   |   &#x2514;&#x2500;&#x2500; spec.json         The Swagger specification of the endpoint GET /resource-a/{id}
+    |   |   &#x2514;&#x2500;&#x2500; PATCH
+    |   |       &#x2514;&#x2500;&#x2500; spec.json
+    |   &#x2514;&#x2500;&#x2500; PUT
+    |       &#x2514;&#x2500;&#x2500; spec.json
+    &#x2514;&#x2500;&#x2500; resource-b
+        &#x251C;&#x2500;&#x2500; GET
+        |   &#x2514;&#x2500;&#x2500; spec.json
+        &#x2514;&#x2500;&#x2500; resource-c
+            &#x2514;&#x2500;&#x2500; GET
+                &#x2514;&#x2500;&#x2500; spec.json</code>
+</code></pre>
+<p>This project contains 2 APIs:</p>
+<ul>
+<li><code>back-office</code></li>
+<li><code>mobile-app</code></li>
+</ul>
+<p>5 endpoints are available:</p>
+<ul>
+<li><code>GET /resource-a/{id}</code></li>
+<li><code>PATCH /resource-a/{id}</code></li>
+<li><code>PUT /resource-a</code></li>
+<li><code>GET /resource-b</code></li>
+<li><code>GET /resource-b/resource-c</code></li>
+</ul>
+<p>To associate an endpoint to one or more APIs, it is possible to enrich the endpoint specification (<code>spec.json</code> file) with a
+list of API identifiers, in a Myrmex extension to Swagger.</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;x-myrmex&quot;: {
+    &quot;apis&quot;: [
+      &quot;back-office&quot;,
+      &quot;mobile-app&quot;
+    ]
+  }
+  ... rest of the endpoint specification
+}</code>
+</code></pre>
+<p><code>@myrmex/api-gateway</code> uses the API Gateway Import API feature. Therefore, the configuration of AWS-specific authorization
+and API Gateway-specific API integrations is done with the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html">API Gateway extensions to
+Swagger</a>.</p>
+<h2 id="commands">Commands</h2>
+<h3 id="create-api">create-api</h3>
+<pre><code><code class="source-code prettyprint">create-api [options] [api-identifier]
+
+  Options:
+    -t, --title &lt;title&gt;       The title of the API
+    -d, --desc &lt;description&gt;  A description of the API</code>
+</code></pre><p>Create a new API. By default the location of API definitions is <code>api-gateway/apis/&lt;api-dentifier&gt;/</code>. The API definition is a
+file named <code>spec.json</code> that contains a <a href="http://swagger.io/specification/#swagger-object-14">Swagger object</a>. The command line
+will to create a simple base configuration. It is possible to write a full Swagger definition here, but the plugin
+<code>@myrmex/api-gateway</code> is designed to separate API definitions into pieces and generate full definitions when needed.</p>
+<h3 id="create-model">create-model</h3>
+<pre><code><code class="source-code prettyprint">create-model [name]</code>
+</code></pre><p>Create a new model. By default the location of models is <code>api-gateway/model/model.json</code>. Models can be referenced as input
+or output of API endpoints but are not mandatory.</p>
+<h3 id="create-endpoint">create-endpoint</h3>
+<pre><code><code class="source-code prettyprint">create-endpoint [options] [resource-path] [http-method]
+
+  Options:
+    -a, --apis &lt;api-identifiers&gt;          The identifiers of APIs that expose the endpoint separated by &quot;,&quot;
+    -s, --summary &lt;endpoint summary&gt;      A short summary of what the operation does
+    --auth &lt;authentication-type&gt;          The type of authentication used to call the endpoint (aws_iam|none)
+    -i --integration &lt;integration-type&gt;   The type of integration (lambda|http|mock|aws-service)
+    -r, --role &lt;role&gt;                     select the role to invoke integration</code>
+</code></pre><p>Create a new endpoint. By default the location of endpoints definitions is
+<code>api-gateway/endpoints/&lt;resource-path&gt;/&lt;http-method&gt;/</code>. The endpoint definition is a file named <code>spec.json</code> that contains a
+<a href="http://swagger.io/specification/#path-item-object-32">Swagger path item object</a>. The command line will help to create a
+simple base configuration. Then, the developer can complete the definition using the Swagger specification and the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html">API
+Gateway extentions to Swagger</a>.</p>
+<p>The definition of an endpoint can be added to one or more APIs using a Myrmex extention to Swagger:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;x-myrmex&quot;: {
+    &quot;apis&quot;: [
+      &quot;&lt;api-identifier-a&gt;&quot;,
+      &quot;&lt;api-identifier-b&gt;&quot;
+    ]
+  }
+  ... rest of the endpoint specification
+}</code>
+</code></pre>
+<h3 id="inspect-api">inspect-api</h3>
+<pre><code><code class="source-code prettyprint">inspect-api [options] [api-identifier]
+
+  Options:
+    -c, --colors                  highlight output
+    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code>
+</code></pre><p>Generate the Swagger definition of an API and print it. There are three different versions of the specification:</p>
+<ul>
+<li>The <code>doc</code> version only contains parts of the definitions that belong to the Swagger specification.</li>
+<li>The <code>aws</code> version is the definition that is sent to AWS API gateway when performing a deployment.</li>
+<li>The <code>complete</code> version contains everything that is defined in the project, including the Myrmex extensions to Swagger.</li>
+</ul>
+<h3 id="inspect-endpoint">inspect-endpoint</h3>
+<pre><code><code class="source-code prettyprint">inspect-endpoint [options] [resource-path] [http-method]
+
+  Options:
+    -c, --colors                  highlight output
+    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code>
+</code></pre><p>Generate the Swagger definition of an endpoint and print it. There are three different versions of the specification:</p>
+<ul>
+<li>The <code>doc</code> version only contains parts of the definitions that belong to the Swagger specification.</li>
+<li>The <code>aws</code> version is the definition that is sent to AWS API gateway when performing a deployment.</li>
+<li>The <code>complete</code> version contains everything that is defined in the project, including the Myrmex extensions to Swagger.</li>
+</ul>
+<h3 id="deploy-apis">deploy-apis</h3>
+<pre><code><code class="source-code prettyprint">deploy-apis [options] [api-identifiers...]
+
+  Options:
+    -r, --region [region]            select the AWS region
+    -e, --environment [environment]  select the environment
+    -s, --stage [stage]              select the API stage</code>
+</code></pre><p>Deploy one or more APIs in API Gateway. The <code>--environment</code> option is used as a prefix to the API name in API Gateway. It can
+be useful to deploy APIs several time in the same AWS account. Values for <code>--environment</code> could be <code>PROD</code> or <code>DEV</code> or <code>JOHN</code>
+to be able to deploy the API for production, development or a developer environment.</p>
+<blockquote>
+<p>The use of <code>--environment</code> can seem redundant with <code>--stage</code>, but when deploying an API Gateway stage, it is not to
+possible to access to the testing tools of the AWS console. These tools are available only for the ultimate version of the
+API. Using <code>--environment</code> can allow several developers to use the testing tools of the AWS console simultaneously.
+<code>--environment</code> also allows to use <code>--stage</code> for other purposes like API versioning (with values like <code>v1</code>, <code>v2</code>,
+<code>2017-01-01</code> ...).</p>
+</blockquote>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

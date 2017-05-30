@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container manual-root manual-index" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/myrmx/myrmex" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual" data-toc-name="tutorial">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html" data-ice="link">Getting started</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#configuring-aws" data-ice="link">Configuring AWS</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#permissions-needed-to-deploy-the-project-in-aws" data-ice="link">Permissions needed to deploy the project in AWS</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#installing-the-myrmex-command-line" data-ice="link">Installing the Myrmex command line</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#creating-a-new-project" data-ice="link">Creating a new project</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#installing-plugins" data-ice="link">Installing plugins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#project-configuration" data-ice="link">Project configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#the-myrmex-json-file" data-ice="link">The myrmex.json file</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#splitting-the-configuration-into-various-files" data-ice="link">Splitting the configuration into various files</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#using-environment-variables-to-override-the-configuration" data-ice="link">Using environment variables to override the configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/getting-started.html"><a href="manual/tutorial/getting-started.html#defining-the-configuration-programmatically" data-ice="link">Defining the configuration programmatically</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html" data-ice="link">IAM plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#create-policy" data-ice="link">create-policy</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#create-role" data-ice="link">create-role</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#deploy-policies" data-ice="link">deploy-policies</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#deploy-roles" data-ice="link">deploy-roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#definition-of-iam-policies" data-ice="link">Definition of IAM policies</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#definition-of-iam-roles" data-ice="link">Definition of IAM roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#hooks-and-extensions" data-ice="link">Hooks and extensions</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#hooks" data-ice="link">Hooks</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/iam-plugin.html"><a href="manual/tutorial/iam-plugin.html#extensions" data-ice="link">Extensions</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html" data-ice="link">Lambda plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#project-anatomy" data-ice="link">Project anatomy</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#create-lambda" data-ice="link">create-lambda</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#create-node-module" data-ice="link">create-node-module</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#deploy-lambdas" data-ice="link">deploy-lambdas</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#install-lambdas-locally" data-ice="link">install-lambdas-locally</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#test-lambda-locally" data-ice="link">test-lambda-locally</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/lambda-plugin.html"><a href="manual/tutorial/lambda-plugin.html#test-lambda" data-ice="link">test-lambda</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html" data-ice="link">API Gateway Plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#project-anatomy" data-ice="link">Project anatomy</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#commands" data-ice="link">Commands</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#create-api" data-ice="link">create-api</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#create-model" data-ice="link">create-model</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#create-endpoint" data-ice="link">create-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#inspect-api" data-ice="link">inspect-api</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#inspect-endpoint" data-ice="link">inspect-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/api-gateway-plugin.html"><a href="manual/tutorial/api-gateway-plugin.html#deploy-apis" data-ice="link">deploy-apis</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html" data-ice="link">Creating plugins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#plugin-definition" data-ice="link">Plugin definition</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#anatomy-of-a-plugin" data-ice="link">Anatomy of a plugin</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#the-myrmex-instance" data-ice="link">The Myrmex instance</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#initialization-by-the-myrmex-command-line" data-ice="link">Initialization by the Myrmex command line</a></li>
+<li data-ice="manualNav" class="indent-h4" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#registration-of-plugins" data-ice="link">Registration of plugins</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#events-mecanism" data-ice="link">Events mecanism</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/tutorial/creating-plugins.html"><a href="manual/tutorial/creating-plugins.html#extensions" data-ice="link">Extensions</a></li>
+</ul>
+  </div>
+<div data-ice="manual" data-toc-name="reference">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-reference" data-section-count="&#x25A0;" data-link="identifiers.html"><a href="identifiers.html" data-ice="link">Reference</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown">
+  
+
+  <p class="manual-badge" data-ice="manualBadge"><img src="./manual-badge.svg"></p>
+
+  <div class="manual-cards">
+    
+  <div class="manual-card-wrap" data-ice="cards">
+      <h1 data-ice="label" class="manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;"><span data-ice="label-inner">Getting started</span></h1>
+      <div class="manual-card">
+        <div data-ice="card"><h1>Getting started</h1><h2>Configuring AWS</h2><h3>Prerequisites</h3><p>To work with Myrmex and its main plugins, you should to have some notions about:</p><ul>
+<li>AWS IAM</li>
+<li>AWS Lambda</li>
+<li>Amazon API Gateway</li>
+<li>OpenAPI (aka Swagger) specification</li>
+<li>Node.js</li>
+</ul><p>Myrmex aims to experiment quickly, but to really be efficient, it is necessary to know the AWS services that works with Myrmex.</p><h3>Permissions needed to deploy the project in AWS</h3><p>Myrmex plugins that manage AWS resources need to have permissions to execute commands that communicate with the AWS API. When a
+command needs these permissions, Myrmex will use the AWS credentials provided by the environment.</p><p>To begin to work with Myrmex, the following policies can be used:</p><ul>
+<li><code>IAMFullAccess</code></li>
+<li><code>AWSLambdaFullAccess</code></li>
+<li><code>AmazonAPIGatewayAdministrator</code></li>
+</ul><h2>Installation</h2><p><strong>Prerequisites</strong>: <code>node</code> (version 4 minimum) and <code>npm</code> (version 4 recommended) must be installed.</p><h3>Installing the Myrmex command line</h3><p>The <code>myrmex</code> command line has its own npm module. Install it globally.</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
+</code></pre><p>We can check that the <code>myrmex</code> command line is correctly installed.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># This command will show the available options and sub-commands
+myrmex -h</code>
+</code></pre><p>At this point, there is only one sub-command available: <code>myrmex new</code>. When creating a project, other subcommands will be
+provided by Myrmex plugins.</p><h3>Creating a new project</h3><p><code>myrmex new</code> is the command that creates new projects. If it is called without argument and/or option, it will provide a prompt
+to define the configuration of the project.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># Using the command without option and argument,
+# the user will be prompted to give information about the project configuration
+myrmex new</code>
+</code></pre><p>The prompt will ask to choose a project name and to select the plugins to install among <code>@myrmex/iam</code>, <code>@myrmex/lambda</code> and
+<code>@myrmex/api-gateway</code>. The plugin selection depend on the project. It is easy to install a plugin later if it is not done at
+this step (see next section).</p><p><code>myrmex new</code> will perform 3 operations:</p><ul>
+<li>create a project folder</li>
+<li>install the latest version of Myrmex and the project&apos;s plugins</li>
+<li>create a <code>myrmex.json</code> configuration file</li>
+</ul><p>Once the project is created we can enter its folder. Using <code>myrmex -h</code> we can see that new <code>myrmex</code> sub-commands are available.
+They are provided by plugins that have been installed in the project.</p><h3>Installing plugins</h3><p><code>myrmex new</code> propose a selection of plugins to install but it is possible to install them or other plugins separately. Myrmex
+plugins are npm packages. So the following command will install the plugin <code>@myrmex/api-gateway</code>:</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/api-gateway --save-dev</code>
+</code></pre><p>To be loaded by Myrmex, the plugin needs to be referenced in the <code>myrmex.json</code> file, in the <code>plugins</code> section:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-serverless-application&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/api-gateway&quot;
+  ]
+}</code>
+</code></pre><p>It is possible to disable a plugin by removing it from the <code>myrmex.json</code> file.</p><h2>Project configuration</h2><p>Myrmex can be configured in different ways.</p><h3>The <code>myrmex.json</code> file</h3><p>In the root directory of a Myrmex project, there is a <code>myrmex.json</code> file that contains the configuration of the project.</p><p>A <code>myrmex.json</code> file looks like this:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-serverless-application&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/iam&quot;,
+    &quot;@myrmex/api-gateway&quot;,
+    &quot;@myrmex/lambda&quot;
+  ],
+  &quot;config&quot;: {
+    &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+    &quot;myNestedConfig&quot;: {
+      &quot;level1&quot;: 42,
+      &quot;level2&quot;: {
+        &quot;key1&quot;: true,
+        &quot;key2&quot;: false
+      }
+    }
+  }
+}</code>
+</code></pre><ul>
+<li><code>name</code>: the identifier of the project.</li>
+<li><code>plugins</code>: the list of plugins that Myrmex has to register. A Myrmex plugin can be a node module installed via npm or
+defined in the project. A plugin installed via npm but specified here will not be registered by Myrmex.</li>
+<li><code>config</code>: the configuration of the project. Each plugin can use the it and inject default values in it.</li>
+</ul><p>The command <code>myrmex show-config</code> allows to see the current configuration of a project. This is the response of this command for
+the previous <code>myrmex.json</code> file.</p><pre><code class="lang-json"><code class="source-code prettyprint">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+  &quot;myNestedConfig&quot;: {
+    &quot;level1&quot;: 42,
+    &quot;level2&quot;: {
+      &quot;key1&quot;: true,
+      &quot;key2&quot;: false
+    }
+  },
+  &quot;iam&quot;: {
+    &quot;policiesPath&quot;: &quot;iam/policies&quot;,
+    &quot;rolesPath&quot;: &quot;iam/roles&quot;
+  },
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;lambda&quot;: {
+    &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
+    &quot;modulesPath&quot;: &quot;lambda/modules&quot;
+  }
+}</code>
+</code></pre><p>This example shows that the three plugins injected the configuration to define the location of the content that
+they manage. It is possible to override this configuration in the <code>myrmex.json</code> file.</p><h3>Splitting the configuration into various files</h3><p>If a project has a many configuration keys, it is possible to split the configuration object into various files in a folder
+named <code>config</code>.</p><p>For the previous example, to define the same configuration that in the previous example, the directory structure will look
+like this:</p><pre><code class="lang-text"><code class="source-code prettyprint">project-root
+&#x251C;&#x2500;&#x2500; myrmex.json
+&#x2514;&#x2500;&#x2500; config
+    &#x2514;&#x2500;&#x2500; myNestedConfig.json</code>
+</code></pre><p>The <code>myrmex.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;planet-express&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/iam&quot;,
+    &quot;@myrmex/api-gateway&quot;,
+    &quot;@myrmex/lambda&quot;
+  ],
+  &quot;config&quot;: {
+    &quot;myConfigKey&quot;: &quot;my-config-value&quot;
+  }
+}</code>
+</code></pre><p>The file <code>config/myNestedConfig.json</code>:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;level1&quot;: 42,
+  &quot;level2&quot;: {
+    &quot;key1&quot;: true,
+    &quot;key2&quot;: false
+  }
+}</code>
+</code></pre><p>The command <code>myrmex show-config</code> will give the same response:</p><pre><code class="lang-json"><code class="source-code prettyprint">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+  &quot;myNestedConfig&quot;: {
+    &quot;level1&quot;: 42,
+    &quot;level2&quot;: {
+      &quot;key1&quot;: true,
+      &quot;key2&quot;: false
+    }
+  },
+  &quot;iam&quot;: {
+    &quot;policiesPath&quot;: &quot;iam/policies&quot;,
+    &quot;rolesPath&quot;: &quot;iam/roles&quot;
+  },
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;lambda&quot;: {
+    &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
+    &quot;modulesPath&quot;: &quot;lambda/modules&quot;
+  }
+}</code>
+</code></pre><h3>Using environment variables to override the configuration</h3><p>It is also possible to define configuration via environment variables. Any environment variable that starts with <code>MYRMEX_</code>
+is injected as a configuration key/value. An underscore is used to resolve nested keys.</p><blockquote>
+<p>Because <code>_</code> is used to resolve nested key, this technique cannot work with configuration keys containing a <code>_</code>.</p>
+</blockquote><p>For example, the configuration of <code>myNestedConfig.level1</code> can be overrided using the environment variable
+<code>MYRMEX_myNestedConfig_level1</code>:</p><pre><code><code class="source-code prettyprint">export MYRMEX_myNestedConfig_level1=43
+myrmex show-config</code>
+</code></pre><p>Result:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+  &quot;myNestedConfig&quot;: {
+    &quot;level1&quot;: &quot;43&quot;,
+    &quot;level2&quot;: {
+      &quot;key1&quot;: true,
+      &quot;key2&quot;: false
+    }
+  },
+  &quot;iam&quot;: {
+    &quot;policiesPath&quot;: &quot;iam/policies&quot;,
+    &quot;rolesPath&quot;: &quot;iam/roles&quot;
+  },
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;lambda&quot;: {
+    &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
+    &quot;modulesPath&quot;: &quot;lambda/modules&quot;
+  }
+}</code>
+</code></pre><blockquote>
+<p>Configuration values defined via an environment variable are always of type <code>String</code>  </p>
+</blockquote><h3>Defining the configuration programmatically</h3><p>All json configuration files in Myrmex are loaded using the Node.js <code>require()</code> function. This means that they all can be
+replaced by a javascript file that exposes the desired configuration.</p><p>For example, the previous <code>myrmex.json</code> file can be replaced by this <code>myrmex.js</code> file:</p><pre><code class="lang-javascript"><code class="source-code prettyprint">module.exports = {
+  name: &apos;planet-express&apos;,
+  plugins: [
+    &apos;@myrmex/iam&apos;,
+    &apos;@myrmex/api-gateway&apos;,
+    &apos;@myrmex/lambda&apos;
+  ],
+  config: {
+    myConfigKey: process.env.MY_ENVIRONMENT_VARIABLE || &apos;my-default-value&apos;
+  }
+}</code>
+</code></pre></div>
+        <a data-ice="link" href="manual/tutorial/getting-started.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
+      <h1 data-ice="label" class="manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;"><span data-ice="label-inner">IAM plugin</span></h1>
+      <div class="manual-card">
+        <div data-ice="card"><h1>IAM plugin</h1><p>The IAM plugin allows to define and deploy AWS policies and roles. It can be used to avoid referencing IAM roles ARNs and
+simplify the configuration of other plugins.</p><h2>Prerequisites</h2><p>To use the <code>@myrmex/iam</code> plugin, it is necessary to have a minimal knowledge about <a href="https://aws.amazon.com/iam/">AWS Identity and Access Management</a>.</p><p>An AWS user or role that uses the plugin <code>@myrmex/iam</code> must have access to IAM administration. The AWS policy <code>IAMFullAccess</code>
+gives all necessary permissions.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/iam --save-dev</code>
+</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-app&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/iam&quot;
+  ]
+}</code>
+</code></pre><h2>Commands</h2><h3>create-policy</h3><p>Usage:</p><pre><code><code class="source-code prettyprint">create-policy [identifier]</code>
+</code></pre><p>Create a new IAM policy in <code>iam/policies/&lt;identifier&gt;.json</code>. The command does not configure the policy but just prepare the
+file in the right place. By default it is <code>iam/policies/&lt;identifier&gt;.json</code>.</p><h3>create-role</h3><p>Usage:</p><pre><code><code class="source-code prettyprint">create-role [options] [identifier]
+
+  Options:
+    -m, --model &lt;model-identifier&gt;       select a model to quickly create the role configuration
+    -p, --policies &lt;policy-identifiers&gt;  select the policies to attach to the role</code>
+</code></pre><p>Create a new IAM role. By default the location of roles is <code>iam/roles/&lt;identifier&gt;.json</code>.</p><p>Two predefined role configuration are available:</p><ul>
+<li><code>APIGatewayLambdaInvocation</code>: The <code>AWSLambdaRole</code> policy is attached to it and it can be associated to API Gateway
+ endpoints.</li>
+<li><code>LambdaBasicExecutionRole</code>: The <code>AWSLambdaBasicExecutionRole</code> is attached to it and it can be associated to Lambda
+ functions.</li>
+</ul><p>It is possible to define custom policies and <code>trust-relationship</code> configuration. Is is also possible to reference
+policies from the Myrmex project.</p><p>Roles can be referenced by other plugins to facilitate the deployment of Myrmex applications: by defining roles in the Myrmex
+project, deploying some resources like Lambda functions or API definitions can be done on various environments without
+needing to define specific configuration to reference different roles ARN.</p><h3>deploy-policies</h3><p>Usage:</p><pre><code><code class="source-code prettyprint">deploy-policies [options] [policy-identifiers]
+
+  Options:
+    -e, --environment [environment]  An environment identifier that will be used as a prefix
+    -s, --stage [stage]              A stage identifier that will be used as a suffix</code>
+</code></pre><p>Deploy one or more policies in AWS. The <code>--environment</code> option is used as a prefix and the <code>--stage</code> option as a suffix.</p><h3>deploy-roles</h3><p>Usage:</p><pre><code><code class="source-code prettyprint">deploy-roles [options] [role-identifiers]
+
+  Options:
+    -e, --environment [environment]  An environment identifier that will be used as a prefix
+    -s, --stage [stage]              A stage identifier that will be used as a suffix</code>
+</code></pre><p>Deploy one or more roles in AWS. The <code>environment</code> option is used as a prefix and the <code>stage</code> option as a suffix.</p><h2>Definition of IAM policies</h2><p>The policies managed by Myrmex are nothing more than IAM policy definitions stored as JSON file. This allows to manage the
+permissions needed by an application alongside the code.</p><p>Every time Myrmex has to deploy a policy, it checks if it needs to be created or updated and perform the appropriate action
+if needed. If a policy already has 5 version (the maximum allowed by AWS), the oldest one will be deleted (unless it as been
+defined as the default one).</p><h2>Definition of IAM roles</h2><p>AWS roles can be configured with JSON files with <code>@myrmex/iam</code>. The structure looks like this:</p><pre><code><code class="source-code prettyprint">{
+  &quot;description&quot;: &quot;Description of the role&quot;,
+  &quot;managed-policies&quot;: [
+    &lt;policy-identifier&gt;
+  ],
+  &quot;inline-policies&quot;: [
+    &lt;policy-definition&gt;
+  ],
+  &quot;trust-relationship&quot;: {
+    &quot;Version&quot;: &quot;2012-10-17&quot;,
+    &quot;Statement&quot;: [{
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Principal&quot;: {
+        &quot;Service&quot;: &quot;&lt;service-identifier&gt;&quot;
+      },
+      &quot;Action&quot;: &quot;sts:AssumeRole&quot;
+    }]
+  }
+}</code>
+</code></pre><p>The <em>managed-policies</em> section contains a list of identifiers of IAM policies already deployed in AWS associated to the role.
+During the deployment of a role, Myrmex will look for policies matching the identifiers in <em>managed-policies</em>, trying
+combinations with the <em>environment</em> and the <em>stage</em> options:</p><ul>
+<li><code>&lt;environment&gt;_&lt;identifier&gt;_&lt;stage&gt;</code></li>
+<li><code>&lt;environment&gt;_&lt;identifier&gt;</code></li>
+<li><code>&lt;identifier&gt;</code></li>
+</ul><p>The <em>inline-policies</em> section contains a list of AIM policy definitions associated to the role.</p><p>The <em>trust-relationship</em> section contains the policy that describe the trusted entities that can assume the role</p><h2>Hooks and extensions</h2><h3>Hooks</h3><p><code>beforePoliciesLoad()</code></p><p><code>beforePolicyLoad(definitionFilePath, name)</code></p><p><code>afterPolicyLoad(policy)</code></p><p><code>afterPoliciesLoad(policies)</code></p><p><code>beforeRolesLoad()</code></p><p><code>beforeRoleLoad(definitionFilePath, name)</code></p><p><code>afterRoleLoad(role)</code></p><p><code>afterRolesLoad(roles)</code></p><p><code>beforeDeployPolicy(policy)</code></p><p><code>beforeDeployRole(role)</code></p><h3>Extensions</h3><p><code>myrmex.call(&apos;iam:getRoles&apos;)</code> returns the roles managed in the current Myrmex project.</p><p><code>myrmex.call(&apos;iam:getAWSRole&apos;)</code> returns the roles available in AWS.</p><p><code>myrmex.call(&apos;iam:retrieveRoleArn&apos;, identifier, context)</code> retrieve the ARN of an IAM role using its identifier. Tries
+combinations with the <code>environment</code> and the <code>stage</code> properties of the <code>context</code> parameter in this order:</p><ul>
+<li><code>&lt;environment&gt;_&lt;identifier&gt;_&lt;stage&gt;</code></li>
+<li><code>&lt;environment&gt;_&lt;identifier&gt;</code></li>
+<li><code>&lt;identifier&gt;</code>.</li>
+</ul></div>
+        <a data-ice="link" href="manual/tutorial/iam-plugin.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
+      <h1 data-ice="label" class="manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;"><span data-ice="label-inner">Lambda plugin</span></h1>
+      <div class="manual-card">
+        <div data-ice="card"><h1>Lambda plugin</h1><p>The Lambda plugin allows to define and deploy Lambdas. It should work with any runtime but has been tested mostly with
+Node.js and secondly with Python.</p><h2>Prerequisites</h2><p>To use the <code>@myrmex/lambda</code> plugin, it is necessary to have a minimal knowledge about
+<a href="https://aws.amazon.com/lambda/">AWS Lambda</a>.</p><p>An AWS user or role that uses the plugin <code>@myrmex/lambda</code> must have access to Lambda administration. The AWS policy
+<code>AWSLambdaFullAccess</code> gives all necessary permissions.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/lambda</code>
+</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-app&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/lambda&quot;
+  ]
+}</code>
+</code></pre><p>Once the plugin is installed and enabled in the project, the <code>myrmex</code> command line will provide new sub-commands to manage and
+deploy Lambdas.</p><h2>Project anatomy</h2><p>By default, the content managed by the Lambda plugin is located in an <code>lambda</code> directory in the root directory of the
+project.</p><p>Out of the box, for the Node.js runtime, the Lambda plugin allows to separate the definition of Lambdas from the logic of the
+application by providing a specific place to write node modules but it is not mandatory to use it. <code>@myrmex/lambda</code> helps to
+define and deploy Lambdas but the developer is responsible of the implementation of the application. Other plugins built on
+top of the Lambda plugin may be more opinionated.</p><p>The directory <code>lambda/lambdas</code> contains the Lambdas definitions. For each of its sub-directory is considered as a
+Lambda definition. It must contains a <code>config.json</code> file and the code of the Lambda. The name of the subdirectory is used
+as the Lambda identifier.</p><p>The <code>config.json</code> file allows to define the runtime, the timeout, the memory, the role and other properties of the Lambda.
+The content of the <code>params</code> property is used as the argument of the following methods from the AWS SDK:</p><ul>
+<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#createFunction-property"><code>createFunction()</code></a></li>
+<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionCode-property"><code>updateFunctionCode()</code></a></li>
+<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionConfiguration-property"><code>updateFunctionConfiguration()</code></a></li>
+</ul><p>By default, for the Node.js runtime, the directory <code>lambda/modules</code> contains the node modules of the project. For example,
+some of these modules could be named <code>log</code>, or <code>data-access</code> or <code>authorization</code> etc...</p><p>Each module should have a clear responsibility so that each Lambda can embed only the code it needs. This is a recommendation
+but the developer is free to organize the code as he want. The Lambda plugin does not force you to use a specific project
+organization.</p><p>This is what a project structure could look like:</p><pre><code class="lang-text"><code class="source-code prettyprint">lambda
+&#x251C;&#x2500;&#x2500; lambdas                         The Lambdas defined by the application
+|   &#x251C;&#x2500;&#x2500; my-nodejs-lambda            The name of this directory is the identifier of a Lambda
+|   |   &#x251C;&#x2500;&#x2500; config.json             The configuration of the Lambda (runtime, memory, timeout, execution role...)
+|   |   &#x251C;&#x2500;&#x2500; index.js                A node module that exposes the handler
+|   |   &#x2514;&#x2500;&#x2500; package.json            It is possible to install the dependencies of the Lambda here
+|   &#x2514;&#x2500;&#x2500; my-python-lambda            Several runtimes can coexist in a project
+|       &#x251C;&#x2500;&#x2500; config.json
+|       &#x2514;&#x2500;&#x2500; lambda_function.py
+&#x2514;&#x2500;&#x2500; modules                         The node modules of the application - they can be added as a dependency of a Lambda in its
+    |                               package.json file
+    &#x251C;&#x2500;&#x2500; authorization               The name of this directory is the identifier of a module
+    |   &#x251C;&#x2500;&#x2500; package.json            Package file of the module
+    |   &#x251C;&#x2500;&#x2500; index.js                Main file of the module
+    |   &#x2514;&#x2500;&#x2500; test                    If you wish, you can write the code to test the module in this directory
+    &#x251C;&#x2500;&#x2500; data-access
+    |   &#x251C;&#x2500;&#x2500; package.json
+    |   &#x2514;&#x2500;&#x2500; index.js
+    &#x2514;&#x2500;&#x2500; log
+        &#x251C;&#x2500;&#x2500; package.json
+        &#x2514;&#x2500;&#x2500; index.js</code>
+</code></pre><p>Example of <code>config.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;params&quot;: {
+    &quot;Timeout&quot;: 30,
+    &quot;MemorySize&quot;: 256,
+    &quot;Role&quot;: &quot;arn:aws:iam::123456789012:role/MyRole&quot;,
+    &quot;Runtime&quot;: &quot;nodejs6.10&quot;,
+    &quot;Handler&quot;: &quot;index.handler&quot;
+  }
+}</code>
+</code></pre><p>The <code>package.json</code> of a module or a Lambda can declare dependencies with other modules using file paths in the <code>dependencies</code>
+property:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;data-access&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;dependencies&quot;: {
+    &quot;log&quot;: &quot;../log&quot;
+  }
+}</code>
+</code></pre><p>In this case, <code>require(&apos;log&apos;)</code> will load the module <code>log</code> installed in <code>lambda/modules/data-access/node_modules/log</code>.</p><p>It is recommended to use relative paths for portability.</p><p>It is recommended to use a recent version of <code>npm</code> to minimize the size of the Lambda packages and facilitate the
+configuration of nested dependencies. Indeed, <code>npm@2</code> can behave in an unexpected manner with nested dependencies when using
+relative file paths.</p><h2>Commands</h2><h3>create-lambda</h3><pre><code><code class="source-code prettyprint">create-lambda [options] [identifier]
+
+  Options:
+    -r, --runtime &lt;nodejs|nodejs4.3|nodejs6.10|python2.7|python3.6&gt;  select the runtime
+    -t, --timeout &lt;timeout&gt;                                          select the timeout (in seconds)
+    -m, --memory &lt;memory&gt;                                            select the memory (in MB)
+    -d --dependencies &lt;modules-names&gt;                                select the project modules that must be included in the Lambda (only for nodejs runtimes)
+    --role &lt;role&gt;                                                    select the execution role (enter the ARN)</code>
+</code></pre><p>Create a new Lambda. By default the location of Lambdas is <code>lambda/lambdas/&lt;identifier&gt;/</code>.</p><h3>create-node-module</h3><p><em>For the Node.js runtime only.</em></p><pre><code><code class="source-code prettyprint">create-node-module [options] [name]
+
+  Options:
+    -d, --dependencies &lt;dependent-modules&gt;  select the node modules that are dependencies of this new one</code>
+</code></pre><p>Prepare a new Node.js module. By default the location of modules is <code>lambda/modules/&lt;name&gt;/</code>.</p><p>The creation of nodes modules is just a suggestion to organize the code of a project. The idea is to maintain each component
+of the application in its own node module to select only relevant components when deploying Lambdas.</p><p>Every Lambda can declare its modules dependencies using <a href="https://docs.npmjs.com/files/package.json#local-paths">local paths</a>
+in its <code>package.json</code> file. Every module can also declare dependencies to other modules that way.</p><p>When Myrmex deploys a Lambda, it executes <code>npm install</code> and the dependencies are installed in the <code>node_modules</code> folder.</p><h3>deploy-lambdas</h3><pre><code><code class="source-code prettyprint">deploy-lambdas [options] [lambda-identifiers...]
+
+  Options:
+    --all                            deploy all lambdas of the project
+    -r, --region [region]            select the AWS region
+    -e, --environment [environment]  select the environment
+    -a, --alias [alias]              select the alias to apply</code>
+</code></pre><p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a version
+in Amazon Lambda and apply an alias. Setting the option to an empty string (<code>--alias &quot;&quot;</code>) will skip this.</p><h3>install-lambdas-locally</h3><pre><code><code class="source-code prettyprint">install-lambdas-locally [lambda-identifiers...]</code>
+</code></pre><p>Deletes the <code>node_modules</code> folder of one or several lambda and runs <code>npm install</code> to re-install it.</p><h3>test-lambda-locally</h3><pre><code><code class="source-code prettyprint">test-lambda-locally [options] [lambda-identifier]
+
+  Options:
+    -e, --event &lt;event-name&gt;  Event example to use</code>
+</code></pre><p>Executes a Lambda locally. The event option allows to select the example object that will be passed as the first argument.
+Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the context
+object is passed as the second argument.</p><h3>test-lambda</h3><pre><code><code class="source-code prettyprint">test-lambda [options] [lambda-identifier]
+
+  Options:
+    --event &lt;event-name&gt;             Event example to use
+    -r, --region [region]            select the AWS region
+    -e, --environment [environment]  select the environment
+    -a, --alias [alias]              select the alias to test</code>
+</code></pre><p>Executes a Lambda deployed in AWS. The event option allows to select the example object that will be passed as the first
+argument. Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the
+context object is passed as the second argument.</p><p>Setting the option <code>--alias</code> to an empty string (<code>--alias &quot;&quot;</code>) will invoke the <code>LATEST</code> version of the Lambda.</p></div>
+        <a data-ice="link" href="manual/tutorial/lambda-plugin.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
+      <h1 data-ice="label" class="manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;&#x25A0;"><span data-ice="label-inner">API Gateway Plugin</span></h1>
+      <div class="manual-card">
+        <div data-ice="card"><h1>API Gateway Plugin</h1><h2>Prerequisites</h2><p>To use the <code>@myrmex/api-gateway</code> plugin, it is necessary to have a minimal knowledge about <a href="https://aws.amazon.com/api-gateway/">Amazon API
+Gateway</a> and the <a href="http://swagger.io/specification/">Swagger v2.0</a> specification.</p><p><code>@myrmex/api-gateway</code> uses the API Gateway Import API feature.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/api-gateway</code>
+</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-app&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/api-gateway&quot;
+  ]
+}</code>
+</code></pre><p>Once the plugin is installed and enabled, the <code>myrmex</code> command line will provide new sub-commands to manage and deploy APIs.</p><h2>Project anatomy</h2><p>By default, the content managed by <code>@myrmex/api-gateway</code> is located in an <code>api-gateway</code> directory in the root directory of the
+project.</p><p>A project configuration is composed of a list of APIs and a list of endpoints. Each endpoint specification contains the list
+of APIs where it must be exposed. Therefore, an endpoint <code>GET /my-resource/{id}</code> can be exposed by a <code>mobile-app</code> API and a
+<code>back-office</code> API, while another endpoint <code>PUT /my-resource</code> can be exposed by the <code>back-office</code> API only. This allows to
+create different APIs for different purposes while sharing some functionalities.</p><p>The directory <code>api-gateway/apis</code> contains the API definitions. Each of its sub-directory has the name of an API identifier and
+contains a Swagger specification file (without the endpoints definitions).</p><p>The directory <code>api-gateway/endpoints</code> contains the endpoints definitions. The structure of its sub-directories represents url
+paths and HTTP methods. Each HTTP method directory contains the definition of an endpoint. An endpoint definition is composed
+of its Swagger specification in a <code>spec.json</code> file.</p><p>As an example is more easy to understand, that is what a project structure could looks like:</p><pre><code class="lang-text"><code class="source-code prettyprint">api-gateway
+&#x251C;&#x2500;&#x2500; apis                              The APIs defined by the application
+|   &#x251C;&#x2500;&#x2500; back-office                   The name of this directory is the identifier of an API
+|   |   &#x2514;&#x2500;&#x2500; spec.json                 The API&apos;s Swagger specification (without endpoints definitions)
+|   &#x2514;&#x2500;&#x2500; mobile-app
+|       &#x2514;&#x2500;&#x2500; spec.json
+&#x2514;&#x2500;&#x2500; endpoints                         The endpoints defined by the application
+    &#x251C;&#x2500;&#x2500; resource-a                    Creates the path /resource-a
+    |   &#x251C;&#x2500;&#x2500; {id}                      Creates the path /resource-a/{id}
+    |   |   &#x251C;&#x2500;&#x2500; GET                   Creates the HTTP method GET for the path /resource-a/{id}
+    |   |   |   &#x2514;&#x2500;&#x2500; spec.json         The Swagger specification of the endpoint GET /resource-a/{id}
+    |   |   &#x2514;&#x2500;&#x2500; PATCH
+    |   |       &#x2514;&#x2500;&#x2500; spec.json
+    |   &#x2514;&#x2500;&#x2500; PUT
+    |       &#x2514;&#x2500;&#x2500; spec.json
+    &#x2514;&#x2500;&#x2500; resource-b
+        &#x251C;&#x2500;&#x2500; GET
+        |   &#x2514;&#x2500;&#x2500; spec.json
+        &#x2514;&#x2500;&#x2500; resource-c
+            &#x2514;&#x2500;&#x2500; GET
+                &#x2514;&#x2500;&#x2500; spec.json</code>
+</code></pre><p>This project contains 2 APIs:</p><ul>
+<li><code>back-office</code></li>
+<li><code>mobile-app</code></li>
+</ul><p>5 endpoints are available:</p><ul>
+<li><code>GET /resource-a/{id}</code></li>
+<li><code>PATCH /resource-a/{id}</code></li>
+<li><code>PUT /resource-a</code></li>
+<li><code>GET /resource-b</code></li>
+<li><code>GET /resource-b/resource-c</code></li>
+</ul><p>To associate an endpoint to one or more APIs, it is possible to enrich the endpoint specification (<code>spec.json</code> file) with a
+list of API identifiers, in a Myrmex extension to Swagger.</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;x-myrmex&quot;: {
+    &quot;apis&quot;: [
+      &quot;back-office&quot;,
+      &quot;mobile-app&quot;
+    ]
+  }
+  ... rest of the endpoint specification
+}</code>
+</code></pre><p><code>@myrmex/api-gateway</code> uses the API Gateway Import API feature. Therefore, the configuration of AWS-specific authorization
+and API Gateway-specific API integrations is done with the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html">API Gateway extensions to
+Swagger</a>.</p><h2>Commands</h2><h3>create-api</h3><pre><code><code class="source-code prettyprint">create-api [options] [api-identifier]
+
+  Options:
+    -t, --title &lt;title&gt;       The title of the API
+    -d, --desc &lt;description&gt;  A description of the API</code>
+</code></pre><p>Create a new API. By default the location of API definitions is <code>api-gateway/apis/&lt;api-dentifier&gt;/</code>. The API definition is a
+file named <code>spec.json</code> that contains a <a href="http://swagger.io/specification/#swagger-object-14">Swagger object</a>. The command line
+will to create a simple base configuration. It is possible to write a full Swagger definition here, but the plugin
+<code>@myrmex/api-gateway</code> is designed to separate API definitions into pieces and generate full definitions when needed.</p><h3>create-model</h3><pre><code><code class="source-code prettyprint">create-model [name]</code>
+</code></pre><p>Create a new model. By default the location of models is <code>api-gateway/model/model.json</code>. Models can be referenced as input
+or output of API endpoints but are not mandatory.</p><h3>create-endpoint</h3><pre><code><code class="source-code prettyprint">create-endpoint [options] [resource-path] [http-method]
+
+  Options:
+    -a, --apis &lt;api-identifiers&gt;          The identifiers of APIs that expose the endpoint separated by &quot;,&quot;
+    -s, --summary &lt;endpoint summary&gt;      A short summary of what the operation does
+    --auth &lt;authentication-type&gt;          The type of authentication used to call the endpoint (aws_iam|none)
+    -i --integration &lt;integration-type&gt;   The type of integration (lambda|http|mock|aws-service)
+    -r, --role &lt;role&gt;                     select the role to invoke integration</code>
+</code></pre><p>Create a new endpoint. By default the location of endpoints definitions is
+<code>api-gateway/endpoints/&lt;resource-path&gt;/&lt;http-method&gt;/</code>. The endpoint definition is a file named <code>spec.json</code> that contains a
+<a href="http://swagger.io/specification/#path-item-object-32">Swagger path item object</a>. The command line will help to create a
+simple base configuration. Then, the developer can complete the definition using the Swagger specification and the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html">API
+Gateway extentions to Swagger</a>.</p><p>The definition of an endpoint can be added to one or more APIs using a Myrmex extention to Swagger:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;x-myrmex&quot;: {
+    &quot;apis&quot;: [
+      &quot;&lt;api-identifier-a&gt;&quot;,
+      &quot;&lt;api-identifier-b&gt;&quot;
+    ]
+  }
+  ... rest of the endpoint specification
+}</code>
+</code></pre><h3>inspect-api</h3><pre><code><code class="source-code prettyprint">inspect-api [options] [api-identifier]
+
+  Options:
+    -c, --colors                  highlight output
+    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code>
+</code></pre><p>Generate the Swagger definition of an API and print it. There are three different versions of the specification:</p><ul>
+<li>The <code>doc</code> version only contains parts of the definitions that belong to the Swagger specification.</li>
+<li>The <code>aws</code> version is the definition that is sent to AWS API gateway when performing a deployment.</li>
+<li>The <code>complete</code> version contains everything that is defined in the project, including the Myrmex extensions to Swagger.</li>
+</ul><h3>inspect-endpoint</h3><pre><code><code class="source-code prettyprint">inspect-endpoint [options] [resource-path] [http-method]
+
+  Options:
+    -c, --colors                  highlight output
+    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code>
+</code></pre><p>Generate the Swagger definition of an endpoint and print it. There are three different versions of the specification:</p><ul>
+<li>The <code>doc</code> version only contains parts of the definitions that belong to the Swagger specification.</li>
+<li>The <code>aws</code> version is the definition that is sent to AWS API gateway when performing a deployment.</li>
+<li>The <code>complete</code> version contains everything that is defined in the project, including the Myrmex extensions to Swagger.</li>
+</ul><h3>deploy-apis</h3><pre><code><code class="source-code prettyprint">deploy-apis [options] [api-identifiers...]
+
+  Options:
+    -r, --region [region]            select the AWS region
+    -e, --environment [environment]  select the environment
+    -s, --stage [stage]              select the API stage</code>
+</code></pre><p>Deploy one or more APIs in API Gateway. The <code>--environment</code> option is used as a prefix to the API name in API Gateway. It can
+be useful to deploy APIs several time in the same AWS account. Values for <code>--environment</code> could be <code>PROD</code> or <code>DEV</code> or <code>JOHN</code>
+to be able to deploy the API for production, development or a developer environment.</p><blockquote>
+<p>The use of <code>--environment</code> can seem redundant with <code>--stage</code>, but when deploying an API Gateway stage, it is not to
+possible to access to the testing tools of the AWS console. These tools are available only for the ultimate version of the
+API. Using <code>--environment</code> can allow several developers to use the testing tools of the AWS console simultaneously.
+<code>--environment</code> also allows to use <code>--stage</code> for other purposes like API versioning (with values like <code>v1</code>, <code>v2</code>,
+<code>2017-01-01</code> ...).</p>
+</blockquote></div>
+        <a data-ice="link" href="manual/tutorial/api-gateway-plugin.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
+      <h1 data-ice="label" class="manual-color manual-color-tutorial" data-section-count="&#x25A0;&#x25A0;"><span data-ice="label-inner">Creating plugins</span></h1>
+      <div class="manual-card">
+        <div data-ice="card"><h1>Creating plugins</h1><h2>Plugin definition</h2><p>The Myrmex core is the node module <code>@myrmex/core</code>. It exports an object (referred as the <em>Myrmex instance</em>) that is based on
+<a href="https://github.com/AlexisNo/pebo#readme">Pebo</a> that is a kind of event emitter.</p><p>Myrmex plugins use the <em>Myrmex instance</em> to interact with each other. A Myrmex plugin can be published on npm to be used by
+anyone, or it can be a project specific plugin.</p><p>Myrmex plugins can make use of the following functionalities:</p><ul>
+<li>Listen for events fired by other plugins</li>
+<li>Fire events that can be listened by other plugins</li>
+<li>Attach functions to the <em>Myrmex instance</em> (refered as <em>extensions</em>)</li>
+</ul><h3>Anatomy of a plugin</h3><p>A plugin is node module that exports an object that has to respect a specific structure to be used by the <em>Myrmex instance</em>.</p><p>Here is a quick overview of an object exported by a Myrmex plugin.</p><pre><code class="lang-javascript"><code class="source-code prettyprint">{
+  // An unique identifier that should be carefully chosen to not enter in conflict with other plugins
+  name: `my-plugin-identifier`,
+  version: `0.0.0`,
+
+  // If the plugin is configurable, this place is suggested to define default values
+  // This configuration can be overwritten for a project in the file
+  // `project-root/config/my-plugin-identifier.json`
+  config: {                 // These values will be accessible using
+    key1: &apos;defaultValue1&apos;,  // `myrmex.getConfig(&quot;my-plugin-identifier.key1&quot;)`
+    key2: {                 // `myrmex.getConfig(&quot;my-plugin-identifier.key2&quot;)`
+      a: &apos;defaultValue2A&apos;,  // `myrmex.getConfig(&quot;my-plugin-identifier.key2.a&quot;)`
+      b: &apos;defaultValue2B&apos;   // `myrmex.getConfig(&quot;my-plugin-identifier.key2.b&quot;)`
+    }
+  },
+
+  hooks: {
+    // These functions are event listeners that will be called
+    // when events &quot;eventNameA&quot; and &quot;eventNameB&quot; are fired by Myrmex
+    // More details about events below
+    eventNameA: function (argA, argB) {
+      return Promise.resolve()
+    },
+    eventNameB: function () {
+      return Promise.resolve()
+    }
+  ],
+
+  extensions: {
+    // These functions will be registered in the Myrmex instance
+    // so they will be accessible by other plugins
+    // More details about extensions below
+    extensionNameA: function() {}
+    extensionNameB: function() {}
+  }
+}</code>
+</code></pre><h3>The Myrmex instance</h3><p>Before describing events and extensions, we should have a quick overview about the initialization of the <em>Myrmex instance</em> and
+the registration of plugins.</p><h4>Initialization by the Myrmex command line</h4><p>When the Myrmex command line is called. It checks if it is called from a Myrmex project by searching for a <code>package.json</code> file
+containing a dependency to <code>@myrmex/core</code> in the current path.</p><p>Once a <code>@myrmex/core</code> module have been found, the Myrmex command line loads it and receives an object: the <em>Myrmex instance</em>.</p><p>The Myrmex command line then loads the project configuration (including the list of plugins) and applies it to the <em>Myrmex
+instance</em>. Each plugin is loaded and registered in the <em>Myrmex instance</em>.</p><h4>Registration of plugins</h4><p>When the <em>Myrmex instance</em> registers a plugin, it basically performs three operations:</p><ul>
+<li>Checks if it there is a list of hooks and create the <em>event listeners</em>.</li>
+<li>Checks if it there are <em>extensions</em> and add them to the Myrmex instance.</li>
+<li>Create a reference of itself in a <code>myrmex</code> property that is added to the plugin.</li>
+</ul><p>So, once a plugin has been registered by the <em>Myrmex instance</em>, it has a new <code>myrmex</code> property that contains the <em>Myrmex
+instance</em>. It can be used to fire events or call <em>extensions</em> that have been provided by other plugins.</p><h3>Events mecanism</h3><p>The event mecanism of Myrmex is designed to allow code injection and works with asynchronous operations.</p><p>From the <em>event emitter</em> point of view, when the <em>Myrmex instance</em> fires an event, it returns a promise of an array containing
+the arguments of the event. These arguments have eventually been transformed by <em>event listeners</em>.</p><p>From the <em>event listener</em> point of view, when the listener function is called, it has the possibility to alter the parameters
+of the event. If the event listener has to perform asynchronous operations to alter theses parameters, it should return a
+Promise that resolves once the modification is done.</p><p>Therefore, an <em>emitter</em> can wait for all <em>listeners</em> to eventually alter the event parameters to continue its task.</p><p>Here is a dummy example:</p><pre><code class="lang-javascript"><code class="source-code prettyprint">// The Myrmex instance is accessible via the `myrmex` property of a plugin once it has been registered
+const myrmex = require(&apos;./plugin-index.js&apos;).myrmex;
+
+// Create an event listener
+myrmex.when(&apos;MyEvent&apos;, (myArg1, myArg2) =&gt; {
+  myArg.propB += &apos; transformed by an event listener&apos;;
+  myArg.propC = &apos;property added by an event listener&apos;;
+  return Promise.resolve();
+});
+
+// We define two objects that will be passed as the event arguments
+// Passing literals is not recommended because JavaScript will copy them when passing them as arguments
+// Myrmex would not be able to retrieve modifications applied to them
+const eventArg1 = {
+  propA: &apos;original property&apos;,
+  propB: &apos;original property&apos;
+}
+const eventArg2 = {
+  propA: &apos;original property&apos;
+}
+
+myrmex.fire(&apos;MyEvent&apos;, eventArg1, eventArg2)
+.then(arg =&gt; {
+  console.log(arg[0]);
+  //  {
+  //    propA: &apos;original property&apos;,
+  //    propB: &apos;original property transformed by an event listener&apos;,
+  //    propC: &apos;property added by an event listener&apos;
+  //  }
+  console.log(arg[1]);
+  //  {
+  //    propA: &apos;original property&apos;
+  //  }
+});</code>
+</code></pre><p>Using this mecanism, Myrmex plugins can create their own events and listen for other plugins events. Several plugins can
+listen for the same event and use and/or modify its arguments.</p><blockquote>
+<p>For example, before configuring the integration request of API endpoints, the <code>@myrmex/api-gateway</code> plugin fires and event
+that allows other plugins to be notified about it. Theses plugins have the opportunity to inject data in the event&apos;s argument
+so the plugin <code>@myrmex/api-gateway</code> can generate a compete API specification.</p>
+</blockquote><p>Note that it is not recommended to call <code>myrmex.when()</code> directly when writing a plugin. We prefer to use the <code>hooks</code> property
+of the object exported by the plugin to organize the code and be sure that the listeners are attached to the events during
+the registration of the plugin.</p><h3>Extensions</h3><p>@todo</p></div>
+        <a data-ice="link" href="manual/tutorial/creating-plugins.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
+      <h1 data-ice="label" class="manual-color manual-color-reference" data-section-count="&#x25A0;"><span data-ice="label-inner">References</span></h1>
+      <div class="manual-card">
+        <div data-ice="card"><h1>References</h1>
+
+
+
+
+
+
+</div>
+        <a data-ice="link" href="identifiers.html"></a>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
