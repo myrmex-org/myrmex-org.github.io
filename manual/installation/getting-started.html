@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">Usage</title>
+  <title data-ice="title">Installation</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -146,157 +146,240 @@
   <div class="manual-breadcrumb-list">
     <a href="./manual/./index.html">Manual</a>
     <span>&#xBB;</span>
-    <span data-ice="title">Usage</span>
+    <span data-ice="title">Installation</span>
   </div>
-  <div data-ice="content"><h1 id="lambda-plugin">Lambda plugin</h1>
-<p>The Lambda plugin allows to define and deploy Lambdas. It should work with any runtime but has been tested mostly with
-Node.js and secondly with Python.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>To use the <code>@myrmex/lambda</code> plugin, it is necessary to have a minimal knowledge about
-<a href="https://aws.amazon.com/lambda/">AWS Lambda</a>.</p>
-<p>An AWS user or role that uses the plugin <code>@myrmex/lambda</code> must have access to Lambda administration. The AWS policy
-<code>AWSLambdaFullAccess</code> gives all necessary permissions.</p>
+  <div data-ice="content"><h1 id="getting-started">Getting started</h1>
+<h2 id="configuring-aws">Configuring AWS</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>To work with Myrmex and its main plugins, you should to have some notions about:</p>
+<ul>
+<li>AWS IAM</li>
+<li>AWS Lambda</li>
+<li>Amazon API Gateway</li>
+<li>OpenAPI (aka Swagger) specification</li>
+<li>Node.js</li>
+</ul>
+<p>Myrmex aims to experiment quickly, but to really be efficient, it is necessary to know the AWS services that works with Myrmex.</p>
+<h3 id="permissions-needed-to-deploy-the-project-in-aws">Permissions needed to deploy the project in AWS</h3>
+<p>Myrmex plugins that manage AWS resources need to have permissions to execute commands that communicate with the AWS API. When a
+command needs these permissions, Myrmex will use the AWS credentials provided by the environment.</p>
+<p>To begin to work with Myrmex, the following policies can be used:</p>
+<ul>
+<li><code>IAMFullAccess</code></li>
+<li><code>AWSLambdaFullAccess</code></li>
+<li><code>AmazonAPIGatewayAdministrator</code></li>
+</ul>
 <h2 id="installation">Installation</h2>
-<p>Install the npm module in a Myrmex project:</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/lambda</code>
+<p><strong>Prerequisites</strong>: <code>node</code> (version 4 minimum) and <code>npm</code> (version 4 recommended) must be installed.</p>
+<h3 id="installing-the-myrmex-command-line">Installing the Myrmex command line</h3>
+<p>The <code>myrmex</code> command line has its own npm module. Install it globally.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
 </code></pre>
-<p>Then enable the plugin in the <code>myrmex.json</code> file:</p>
+<p>We can check that the <code>myrmex</code> command line is correctly installed.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint"># This command will show the available options and sub-commands
+myrmex -h</code>
+</code></pre>
+<p>At this point, there is only one sub-command available: <code>myrmex new</code>. When creating a project, other subcommands will be
+provided by Myrmex plugins.</p>
+<h3 id="creating-a-new-project">Creating a new project</h3>
+<p><code>myrmex new</code> is the command that creates new projects. If it is called without argument and/or option, it will provide a prompt
+to define the configuration of the project.</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint"># Using the command without option and argument,
+# the user will be prompted to give information about the project configuration
+myrmex new</code>
+</code></pre>
+<p>The prompt will ask to choose a project name and to select the plugins to install among <code>@myrmex/iam</code>, <code>@myrmex/lambda</code> and
+<code>@myrmex/api-gateway</code>. The plugin selection depend on the project. It is easy to install a plugin later if it is not done at
+this step (see next section).</p>
+<p><code>myrmex new</code> will perform 3 operations:</p>
+<ul>
+<li>create a project folder</li>
+<li>install the latest version of Myrmex and the project&apos;s plugins</li>
+<li>create a <code>myrmex.json</code> configuration file</li>
+</ul>
+<p>Once the project is created we can enter its folder. Using <code>myrmex -h</code> we can see that new <code>myrmex</code> sub-commands are available.
+They are provided by plugins that have been installed in the project.</p>
+<h3 id="installing-plugins">Installing plugins</h3>
+<p><code>myrmex new</code> propose a selection of plugins to install but it is possible to install them or other plugins separately. Myrmex
+plugins are npm packages. So the following command will install the plugin <code>@myrmex/api-gateway</code>:</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/api-gateway --save-dev</code>
+</code></pre>
+<p>To be loaded by Myrmex, the plugin needs to be referenced in the <code>myrmex.json</code> file, in the <code>plugins</code> section:</p>
 <pre><code class="lang-json"><code class="source-code prettyprint">{
-  &quot;name&quot;: &quot;my-app&quot;,
+  &quot;name&quot;: &quot;my-serverless-application&quot;,
   &quot;plugins&quot;: [
-    &quot;@myrmex/lambda&quot;
+    &quot;@myrmex/api-gateway&quot;
   ]
 }</code>
 </code></pre>
-<p>Once the plugin is installed and enabled in the project, the <code>myrmex</code> command line will provide new sub-commands to manage and
-deploy Lambdas.</p>
-<h2 id="project-anatomy">Project anatomy</h2>
-<p>By default, the content managed by the Lambda plugin is located in an <code>lambda</code> directory in the root directory of the
-project.</p>
-<p>Out of the box, for the Node.js runtime, the Lambda plugin allows to separate the definition of Lambdas from the logic of the
-application by providing a specific place to write node modules but it is not mandatory to use it. <code>@myrmex/lambda</code> helps to
-define and deploy Lambdas but the developer is responsible of the implementation of the application. Other plugins built on
-top of the Lambda plugin may be more opinionated.</p>
-<p>The directory <code>lambda/lambdas</code> contains the Lambdas definitions. For each of its sub-directory is considered as a
-Lambda definition. It must contains a <code>config.json</code> file and the code of the Lambda. The name of the subdirectory is used
-as the Lambda identifier.</p>
-<p>The <code>config.json</code> file allows to define the runtime, the timeout, the memory, the role and other properties of the Lambda.
-The content of the <code>params</code> property is used as the argument of the following methods from the AWS SDK:</p>
+<p>It is possible to disable a plugin by removing it from the <code>myrmex.json</code> file.</p>
+<h2 id="project-configuration">Project configuration</h2>
+<p>Myrmex can be configured in different ways.</p>
+<h3 id="the-myrmex-json-file">The <code>myrmex.json</code> file</h3>
+<p>In the root directory of a Myrmex project, there is a <code>myrmex.json</code> file that contains the configuration of the project.</p>
+<p>A <code>myrmex.json</code> file looks like this:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-serverless-application&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/iam&quot;,
+    &quot;@myrmex/api-gateway&quot;,
+    &quot;@myrmex/lambda&quot;
+  ],
+  &quot;config&quot;: {
+    &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+    &quot;myNestedConfig&quot;: {
+      &quot;level1&quot;: 42,
+      &quot;level2&quot;: {
+        &quot;key1&quot;: true,
+        &quot;key2&quot;: false
+      }
+    }
+  }
+}</code>
+</code></pre>
 <ul>
-<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#createFunction-property"><code>createFunction()</code></a></li>
-<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionCode-property"><code>updateFunctionCode()</code></a></li>
-<li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionConfiguration-property"><code>updateFunctionConfiguration()</code></a></li>
+<li><code>name</code>: the identifier of the project.</li>
+<li><code>plugins</code>: the list of plugins that Myrmex has to register. A Myrmex plugin can be a node module installed via npm or
+defined in the project. A plugin installed via npm but specified here will not be registered by Myrmex.</li>
+<li><code>config</code>: the configuration of the project. Each plugin can use the it and inject default values in it.</li>
 </ul>
-<p>By default, for the Node.js runtime, the directory <code>lambda/modules</code> contains the node modules of the project. For example,
-some of these modules could be named <code>log</code>, or <code>data-access</code> or <code>authorization</code> etc...</p>
-<p>Each module should have a clear responsibility so that each Lambda can embed only the code it needs. This is a recommendation
-but the developer is free to organize the code as he want. The Lambda plugin does not force you to use a specific project
-organization.</p>
-<p>This is what a project structure could look like:</p>
-<pre><code class="lang-text"><code class="source-code prettyprint">lambda
-&#x251C;&#x2500;&#x2500; lambdas                         The Lambdas defined by the application
-|   &#x251C;&#x2500;&#x2500; my-nodejs-lambda            The name of this directory is the identifier of a Lambda
-|   |   &#x251C;&#x2500;&#x2500; config.json             The configuration of the Lambda (runtime, memory, timeout, execution role...)
-|   |   &#x251C;&#x2500;&#x2500; index.js                A node module that exposes the handler
-|   |   &#x2514;&#x2500;&#x2500; package.json            It is possible to install the dependencies of the Lambda here
-|   &#x2514;&#x2500;&#x2500; my-python-lambda            Several runtimes can coexist in a project
-|       &#x251C;&#x2500;&#x2500; config.json
-|       &#x2514;&#x2500;&#x2500; lambda_function.py
-&#x2514;&#x2500;&#x2500; modules                         The node modules of the application - they can be added as a dependency of a Lambda in its
-    |                               package.json file
-    &#x251C;&#x2500;&#x2500; authorization               The name of this directory is the identifier of a module
-    |   &#x251C;&#x2500;&#x2500; package.json            Package file of the module
-    |   &#x251C;&#x2500;&#x2500; index.js                Main file of the module
-    |   &#x2514;&#x2500;&#x2500; test                    If you wish, you can write the code to test the module in this directory
-    &#x251C;&#x2500;&#x2500; data-access
-    |   &#x251C;&#x2500;&#x2500; package.json
-    |   &#x2514;&#x2500;&#x2500; index.js
-    &#x2514;&#x2500;&#x2500; log
-        &#x251C;&#x2500;&#x2500; package.json
-        &#x2514;&#x2500;&#x2500; index.js</code>
-</code></pre>
-<p>Example of <code>config.json</code> file:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
-  &quot;params&quot;: {
-    &quot;Timeout&quot;: 30,
-    &quot;MemorySize&quot;: 256,
-    &quot;Role&quot;: &quot;arn:aws:iam::123456789012:role/MyRole&quot;,
-    &quot;Runtime&quot;: &quot;nodejs6.10&quot;,
-    &quot;Handler&quot;: &quot;index.handler&quot;
+<p>The command <code>myrmex show-config</code> allows to see the current configuration of a project. This is the response of this command for
+the previous <code>myrmex.json</code> file.</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+  &quot;myNestedConfig&quot;: {
+    &quot;level1&quot;: 42,
+    &quot;level2&quot;: {
+      &quot;key1&quot;: true,
+      &quot;key2&quot;: false
+    }
+  },
+  &quot;iam&quot;: {
+    &quot;policiesPath&quot;: &quot;iam/policies&quot;,
+    &quot;rolesPath&quot;: &quot;iam/roles&quot;
+  },
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;lambda&quot;: {
+    &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
+    &quot;modulesPath&quot;: &quot;lambda/modules&quot;
   }
 }</code>
 </code></pre>
-<p>The <code>package.json</code> of a module or a Lambda can declare dependencies with other modules using file paths in the <code>dependencies</code>
-property:</p>
+<p>This example shows that the three plugins injected the configuration to define the location of the content that
+they manage. It is possible to override this configuration in the <code>myrmex.json</code> file.</p>
+<h3 id="splitting-the-configuration-into-various-files">Splitting the configuration into various files</h3>
+<p>If a project has a many configuration keys, it is possible to split the configuration object into various files in a folder
+named <code>config</code>.</p>
+<p>For the previous example, to define the same configuration that in the previous example, the directory structure will look
+like this:</p>
+<pre><code class="lang-text"><code class="source-code prettyprint">project-root
+&#x251C;&#x2500;&#x2500; myrmex.json
+&#x2514;&#x2500;&#x2500; config
+    &#x2514;&#x2500;&#x2500; myNestedConfig.json</code>
+</code></pre>
+<p>The <code>myrmex.json</code> file:</p>
 <pre><code class="lang-json"><code class="source-code prettyprint">{
-  &quot;name&quot;: &quot;data-access&quot;,
-  &quot;version&quot;: &quot;0.0.0&quot;,
-  &quot;dependencies&quot;: {
-    &quot;log&quot;: &quot;../log&quot;
+  &quot;name&quot;: &quot;planet-express&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/iam&quot;,
+    &quot;@myrmex/api-gateway&quot;,
+    &quot;@myrmex/lambda&quot;
+  ],
+  &quot;config&quot;: {
+    &quot;myConfigKey&quot;: &quot;my-config-value&quot;
   }
 }</code>
 </code></pre>
-<p>In this case, <code>require(&apos;log&apos;)</code> will load the module <code>log</code> installed in <code>lambda/modules/data-access/node_modules/log</code>.</p>
-<p>It is recommended to use relative paths for portability.</p>
-<p>It is recommended to use a recent version of <code>npm</code> to minimize the size of the Lambda packages and facilitate the
-configuration of nested dependencies. Indeed, <code>npm@2</code> can behave in an unexpected manner with nested dependencies when using
-relative file paths.</p>
-<h2 id="commands">Commands</h2>
-<h3 id="create-lambda">create-lambda</h3>
-<pre><code><code class="source-code prettyprint">create-lambda [options] [identifier]
-
-  Options:
-    -r, --runtime &lt;nodejs|nodejs4.3|nodejs6.10|python2.7|python3.6&gt;  select the runtime
-    -t, --timeout &lt;timeout&gt;                                          select the timeout (in seconds)
-    -m, --memory &lt;memory&gt;                                            select the memory (in MB)
-    -d --dependencies &lt;modules-names&gt;                                select the project modules that must be included in the Lambda (only for nodejs runtimes)
-    --role &lt;role&gt;                                                    select the execution role (enter the ARN)</code>
-</code></pre><p>Create a new Lambda. By default the location of Lambdas is <code>lambda/lambdas/&lt;identifier&gt;/</code>.</p>
-<h3 id="create-node-module">create-node-module</h3>
-<p><em>For the Node.js runtime only.</em></p>
-<pre><code><code class="source-code prettyprint">create-node-module [options] [name]
-
-  Options:
-    -d, --dependencies &lt;dependent-modules&gt;  select the node modules that are dependencies of this new one</code>
-</code></pre><p>Prepare a new Node.js module. By default the location of modules is <code>lambda/modules/&lt;name&gt;/</code>.</p>
-<p>The creation of nodes modules is just a suggestion to organize the code of a project. The idea is to maintain each component
-of the application in its own node module to select only relevant components when deploying Lambdas.</p>
-<p>Every Lambda can declare its modules dependencies using <a href="https://docs.npmjs.com/files/package.json#local-paths">local paths</a>
-in its <code>package.json</code> file. Every module can also declare dependencies to other modules that way.</p>
-<p>When Myrmex deploys a Lambda, it executes <code>npm install</code> and the dependencies are installed in the <code>node_modules</code> folder.</p>
-<h3 id="deploy-lambdas">deploy-lambdas</h3>
-<pre><code><code class="source-code prettyprint">deploy-lambdas [options] [lambda-identifiers...]
-
-  Options:
-    --all                            deploy all lambdas of the project
-    -r, --region [region]            select the AWS region
-    -e, --environment [environment]  select the environment
-    -a, --alias [alias]              select the alias to apply</code>
-</code></pre><p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a version
-in Amazon Lambda and apply an alias. Setting the option to an empty string (<code>--alias &quot;&quot;</code>) will skip this.</p>
-<h3 id="install-lambdas-locally">install-lambdas-locally</h3>
-<pre><code><code class="source-code prettyprint">install-lambdas-locally [lambda-identifiers...]</code>
-</code></pre><p>Deletes the <code>node_modules</code> folder of one or several lambda and runs <code>npm install</code> to re-install it.</p>
-<h3 id="test-lambda-locally">test-lambda-locally</h3>
-<pre><code><code class="source-code prettyprint">test-lambda-locally [options] [lambda-identifier]
-
-  Options:
-    -e, --event &lt;event-name&gt;  Event example to use</code>
-</code></pre><p>Executes a Lambda locally. The event option allows to select the example object that will be passed as the first argument.
-Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the context
-object is passed as the second argument.</p>
-<h3 id="test-lambda">test-lambda</h3>
-<pre><code><code class="source-code prettyprint">test-lambda [options] [lambda-identifier]
-
-  Options:
-    --event &lt;event-name&gt;             Event example to use
-    -r, --region [region]            select the AWS region
-    -e, --environment [environment]  select the environment
-    -a, --alias [alias]              select the alias to test</code>
-</code></pre><p>Executes a Lambda deployed in AWS. The event option allows to select the example object that will be passed as the first
-argument. Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the
-context object is passed as the second argument.</p>
-<p>Setting the option <code>--alias</code> to an empty string (<code>--alias &quot;&quot;</code>) will invoke the <code>LATEST</code> version of the Lambda.</p>
+<p>The file <code>config/myNestedConfig.json</code>:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;level1&quot;: 42,
+  &quot;level2&quot;: {
+    &quot;key1&quot;: true,
+    &quot;key2&quot;: false
+  }
+}</code>
+</code></pre>
+<p>The command <code>myrmex show-config</code> will give the same response:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+  &quot;myNestedConfig&quot;: {
+    &quot;level1&quot;: 42,
+    &quot;level2&quot;: {
+      &quot;key1&quot;: true,
+      &quot;key2&quot;: false
+    }
+  },
+  &quot;iam&quot;: {
+    &quot;policiesPath&quot;: &quot;iam/policies&quot;,
+    &quot;rolesPath&quot;: &quot;iam/roles&quot;
+  },
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;lambda&quot;: {
+    &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
+    &quot;modulesPath&quot;: &quot;lambda/modules&quot;
+  }
+}</code>
+</code></pre>
+<h3 id="using-environment-variables-to-override-the-configuration">Using environment variables to override the configuration</h3>
+<p>It is also possible to define configuration via environment variables. Any environment variable that starts with <code>MYRMEX_</code>
+is injected as a configuration key/value. An underscore is used to resolve nested keys.</p>
+<blockquote>
+<p>Because <code>_</code> is used to resolve nested key, this technique cannot work with configuration keys containing a <code>_</code>.</p>
+</blockquote>
+<p>For example, the configuration of <code>myNestedConfig.level1</code> can be overrided using the environment variable
+<code>MYRMEX_myNestedConfig_level1</code>:</p>
+<pre><code><code class="source-code prettyprint">export MYRMEX_myNestedConfig_level1=43
+myrmex show-config</code>
+</code></pre><p>Result:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+  &quot;myNestedConfig&quot;: {
+    &quot;level1&quot;: &quot;43&quot;,
+    &quot;level2&quot;: {
+      &quot;key1&quot;: true,
+      &quot;key2&quot;: false
+    }
+  },
+  &quot;iam&quot;: {
+    &quot;policiesPath&quot;: &quot;iam/policies&quot;,
+    &quot;rolesPath&quot;: &quot;iam/roles&quot;
+  },
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;lambda&quot;: {
+    &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
+    &quot;modulesPath&quot;: &quot;lambda/modules&quot;
+  }
+}</code>
+</code></pre>
+<blockquote>
+<p>Configuration values defined via an environment variable are always of type <code>String</code>  </p>
+</blockquote>
+<h3 id="defining-the-configuration-programmatically">Defining the configuration programmatically</h3>
+<p>All json configuration files in Myrmex are loaded using the Node.js <code>require()</code> function. This means that they all can be
+replaced by a javascript file that exposes the desired configuration.</p>
+<p>For example, the previous <code>myrmex.json</code> file can be replaced by this <code>myrmex.js</code> file:</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">module.exports = {
+  name: &apos;planet-express&apos;,
+  plugins: [
+    &apos;@myrmex/iam&apos;,
+    &apos;@myrmex/api-gateway&apos;,
+    &apos;@myrmex/lambda&apos;
+  ],
+  config: {
+    myConfigKey: process.env.MY_ENVIRONMENT_VARIABLE || &apos;my-default-value&apos;
+  }
+}</code>
+</code></pre>
 </div>
 </div>
 </div>
