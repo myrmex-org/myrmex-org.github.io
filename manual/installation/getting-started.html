@@ -88,6 +88,15 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-api" data-ice="link">inspect-api</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-endpoint" data-ice="link">inspect-endpoint</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#deploy-apis" data-ice="link">deploy-apis</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html" data-ice="link">CORS Plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#principle" data-ice="link">Principle</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#configuration" data-ice="link">Configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#global-configuration" data-ice="link">Global configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-level-configuration" data-ice="link">API level configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#resource-path-level-configuration" data-ice="link">Resource path level configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-resource-path-level-configuration" data-ice="link">API resource path level configuration</a></li>
 </ul>
   </div>
 <div data-ice="manual" data-toc-name="advanced">
@@ -161,16 +170,17 @@
 </ul>
 <p>Myrmex aims to experiment quickly, but to really be efficient, it is necessary to know the AWS services that works with Myrmex.</p>
 <h3 id="permissions-needed-to-deploy-the-project-in-aws">Permissions needed to deploy the project in AWS</h3>
-<p>Myrmex plugins that manage AWS resources need to have permissions to execute commands that communicate with the AWS API. When a
-command needs these permissions, Myrmex will use the AWS credentials provided by the environment.</p>
+<p>Myrmex plugins that manage AWS resources need to have permissions to execute commands that communicate with the AWS API.</p>
 <p>To begin to work with Myrmex, the following policies can be used:</p>
 <ul>
 <li><code>IAMFullAccess</code></li>
 <li><code>AWSLambdaFullAccess</code></li>
 <li><code>AmazonAPIGatewayAdministrator</code></li>
 </ul>
+<p><a href="http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html">The AWS credentials can be set following the documentation from the AWS SDK for
+Node.js</a></p>
 <h2 id="installation">Installation</h2>
-<p><strong>Prerequisites</strong>: <code>node</code> (version 4 minimum) and <code>npm</code> (version 4 recommended) must be installed.</p>
+<p><strong>Prerequisites</strong>: <code>node</code> (version 4 minimum) must be installed.</p>
 <h3 id="installing-the-myrmex-command-line">Installing the Myrmex command line</h3>
 <p>The <code>myrmex</code> command line has its own npm module. Install it globally.</p>
 <pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
@@ -180,7 +190,8 @@ command needs these permissions, Myrmex will use the AWS credentials provided by
 myrmex -h</code>
 </code></pre>
 <p>At this point, there is only one sub-command available: <code>myrmex new</code>. When creating a project, other subcommands will be
-provided by Myrmex plugins.</p>
+provided by Myrmex plugins. For every subcommand, every option that is not provided via the command line will provide a
+prompt to set its value. This way, every Myrmex command can be scripted and is completely interactive at the same time.</p>
 <h3 id="creating-a-new-project">Creating a new project</h3>
 <p><code>myrmex new</code> is the command that creates new projects. If it is called without argument and/or option, it will provide a prompt
 to define the configuration of the project.</p>

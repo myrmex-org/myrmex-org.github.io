@@ -88,6 +88,15 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-api" data-ice="link">inspect-api</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-endpoint" data-ice="link">inspect-endpoint</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#deploy-apis" data-ice="link">deploy-apis</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html" data-ice="link">CORS Plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#principle" data-ice="link">Principle</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#configuration" data-ice="link">Configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#global-configuration" data-ice="link">Global configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-level-configuration" data-ice="link">API level configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#resource-path-level-configuration" data-ice="link">Resource path level configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-resource-path-level-configuration" data-ice="link">API resource path level configuration</a></li>
 </ul>
   </div>
 <div data-ice="manual" data-toc-name="advanced">
@@ -274,6 +283,9 @@ in its <code>package.json</code> file. Every module can also declare dependencie
     -a, --alias [alias]              select the alias to apply</code>
 </code></pre><p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a version
 in Amazon Lambda and apply an alias. Setting the option to an empty string (<code>--alias &quot;&quot;</code>) will skip this.</p>
+<blockquote>
+<p>When deploying Node.js Lambdas, it is recommended to have a recent version of npm installed (&gt;= 4)</p>
+</blockquote>
 <h3 id="install-lambdas-locally">install-lambdas-locally</h3>
 <pre><code><code class="source-code prettyprint">install-lambdas-locally [lambda-identifiers...]</code>
 </code></pre><p>Deletes the <code>node_modules</code> folder of one or several lambda and runs <code>npm install</code> to re-install it.</p>

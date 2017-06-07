@@ -5009,7 +5009,7 @@
     "importPath": "myrmex/packages/cli/src/load-project.js",
     "importStyle": null,
     "description": "Check if the script is called from a myrmex project and return the root directory",
-    "lineNumber": 50,
+    "lineNumber": 55,
     "params": [],
     "return": {
       "nullable": null,
@@ -5035,7 +5035,7 @@
     "importPath": "myrmex/packages/cli/src/load-project.js",
     "importStyle": null,
     "description": "Load the @myrmex/core module installed in the project",
-    "lineNumber": 80,
+    "lineNumber": 85,
     "params": [],
     "return": {
       "nullable": null,
@@ -5060,7 +5060,7 @@
     "importPath": "myrmex/packages/cli/src/load-project.js",
     "importStyle": null,
     "description": "Check if the directory in which the command is launched contains a myrmex.json configuration file and return it",
-    "lineNumber": 97,
+    "lineNumber": 102,
     "params": [],
     "return": {
       "nullable": null,

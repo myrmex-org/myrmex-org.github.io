@@ -88,6 +88,15 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-api" data-ice="link">inspect-api</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-endpoint" data-ice="link">inspect-endpoint</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#deploy-apis" data-ice="link">deploy-apis</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html" data-ice="link">CORS Plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#principle" data-ice="link">Principle</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#configuration" data-ice="link">Configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#global-configuration" data-ice="link">Global configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-level-configuration" data-ice="link">API level configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#resource-path-level-configuration" data-ice="link">Resource path level configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-resource-path-level-configuration" data-ice="link">API resource path level configuration</a></li>
 </ul>
   </div>
 <div data-ice="manual" data-toc-name="advanced">
@@ -224,7 +233,10 @@ module.exports.handler = function(event, context, cb) {
 };</code>
 </code></pre>
 <p>We can execute the lambdas locally to test them.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex test-lambda-locally config-128
+<pre><code class="lang-bash"><code class="source-code prettyprint"># Install dependencies of the Lambdas
+myrmex install-lambdas-locally config-128 config-512 config-1536
+# Execute Lambdas locally
+myrmex test-lambda-locally config-128
 myrmex test-lambda-locally config-512
 myrmex test-lambda-locally config-1536</code>
 </code></pre>
@@ -237,8 +249,8 @@ myrmex test-lambda-locally config-1536</code>
 myrmex test-lambda config-512 --region us-east-1 --environment DEV --alias v0
 myrmex test-lambda config-1536 --region us-east-1 --environment DEV --alias v0</code>
 </code></pre>
-<p>Check the result of the functions to have insights about the execution environment of Lambdas. Observe the variations when calling several times the same
-function.</p>
+<p>Check the result of the functions to have insights about the execution environment of Lambdas. Observe the variations
+when calling several times the same function.</p>
 <blockquote>
 <blockquote>
 <blockquote>

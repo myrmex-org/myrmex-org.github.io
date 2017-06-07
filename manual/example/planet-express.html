@@ -88,6 +88,15 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-api" data-ice="link">inspect-api</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-endpoint" data-ice="link">inspect-endpoint</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#deploy-apis" data-ice="link">deploy-apis</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html" data-ice="link">CORS Plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#principle" data-ice="link">Principle</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#configuration" data-ice="link">Configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#global-configuration" data-ice="link">Global configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-level-configuration" data-ice="link">API level configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#resource-path-level-configuration" data-ice="link">Resource path level configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-resource-path-level-configuration" data-ice="link">API resource path level configuration</a></li>
 </ul>
   </div>
 <div data-ice="manual" data-toc-name="advanced">
@@ -252,7 +261,7 @@ implementation of the application. For now, we use a role that allows the Lambda
 <p>The data access module uses the logging module. We indicate this dependency so that if a Lambda requires the data access module, it will include the logging
 module in its package too.</p>
 <pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-node-module log
-myrmex create-node-module data-access --dependency log</code>
+myrmex create-node-module data-access --dependencies log</code>
 </code></pre>
 <p>The implementation of the modules will not be detailed here, but they are &quot;common&quot; <code>node.js</code> modules that could be used in any execution environment.</p>
 <h4 id="creation-of-a-lambda">Creation of a Lambda</h4>
@@ -291,7 +300,7 @@ cd planet-express
 myrmex create-role PlanetExpressLambdaExecution --model LambdaBasicExecutionRole
 
 myrmex create-node-module log
-myrmex create-node-module data-access --dependency log
+myrmex create-node-module data-access --dependencies log
 
 myrmex create-lambda api-generic --runtime nodejs6.10 --timeout 20 --memory 256 --role PlanetExpressLambdaExecution --dependencies data-access,log
 

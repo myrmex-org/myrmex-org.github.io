@@ -88,6 +88,15 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-api" data-ice="link">inspect-api</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#inspect-endpoint" data-ice="link">inspect-endpoint</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/api-gateway-plugin.html"><a href="manual/usage/api-gateway-plugin.html#deploy-apis" data-ice="link">deploy-apis</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html" data-ice="link">CORS Plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#principle" data-ice="link">Principle</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#configuration" data-ice="link">Configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#global-configuration" data-ice="link">Global configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-level-configuration" data-ice="link">API level configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#resource-path-level-configuration" data-ice="link">Resource path level configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-resource-path-level-configuration" data-ice="link">API resource path level configuration</a></li>
 </ul>
   </div>
 <div data-ice="manual" data-toc-name="advanced">
@@ -163,16 +172,17 @@
 <li>Amazon API Gateway</li>
 <li>OpenAPI (aka Swagger) specification</li>
 <li>Node.js</li>
-</ul><p>Myrmex aims to experiment quickly, but to really be efficient, it is necessary to know the AWS services that works with Myrmex.</p><h3>Permissions needed to deploy the project in AWS</h3><p>Myrmex plugins that manage AWS resources need to have permissions to execute commands that communicate with the AWS API. When a
-command needs these permissions, Myrmex will use the AWS credentials provided by the environment.</p><p>To begin to work with Myrmex, the following policies can be used:</p><ul>
+</ul><p>Myrmex aims to experiment quickly, but to really be efficient, it is necessary to know the AWS services that works with Myrmex.</p><h3>Permissions needed to deploy the project in AWS</h3><p>Myrmex plugins that manage AWS resources need to have permissions to execute commands that communicate with the AWS API.</p><p>To begin to work with Myrmex, the following policies can be used:</p><ul>
 <li><code>IAMFullAccess</code></li>
 <li><code>AWSLambdaFullAccess</code></li>
 <li><code>AmazonAPIGatewayAdministrator</code></li>
-</ul><h2>Installation</h2><p><strong>Prerequisites</strong>: <code>node</code> (version 4 minimum) and <code>npm</code> (version 4 recommended) must be installed.</p><h3>Installing the Myrmex command line</h3><p>The <code>myrmex</code> command line has its own npm module. Install it globally.</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
+</ul><p><a href="http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html">The AWS credentials can be set following the documentation from the AWS SDK for
+Node.js</a></p><h2>Installation</h2><p><strong>Prerequisites</strong>: <code>node</code> (version 4 minimum) must be installed.</p><h3>Installing the Myrmex command line</h3><p>The <code>myrmex</code> command line has its own npm module. Install it globally.</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
 </code></pre><p>We can check that the <code>myrmex</code> command line is correctly installed.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># This command will show the available options and sub-commands
 myrmex -h</code>
 </code></pre><p>At this point, there is only one sub-command available: <code>myrmex new</code>. When creating a project, other subcommands will be
-provided by Myrmex plugins.</p><h3>Creating a new project</h3><p><code>myrmex new</code> is the command that creates new projects. If it is called without argument and/or option, it will provide a prompt
+provided by Myrmex plugins. For every subcommand, every option that is not provided via the command line will provide a
+prompt to set its value. This way, every Myrmex command can be scripted and is completely interactive at the same time.</p><h3>Creating a new project</h3><p><code>myrmex new</code> is the command that creates new projects. If it is called without argument and/or option, it will provide a prompt
 to define the configuration of the project.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># Using the command without option and argument,
 # the user will be prompted to give information about the project configuration
 myrmex new</code>
@@ -495,7 +505,9 @@ in its <code>package.json</code> file. Every module can also declare dependencie
     -e, --environment [environment]  select the environment
     -a, --alias [alias]              select the alias to apply</code>
 </code></pre><p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a version
-in Amazon Lambda and apply an alias. Setting the option to an empty string (<code>--alias &quot;&quot;</code>) will skip this.</p><h3>install-lambdas-locally</h3><pre><code><code class="source-code prettyprint">install-lambdas-locally [lambda-identifiers...]</code>
+in Amazon Lambda and apply an alias. Setting the option to an empty string (<code>--alias &quot;&quot;</code>) will skip this.</p><blockquote>
+<p>When deploying Node.js Lambdas, it is recommended to have a recent version of npm installed (&gt;= 4)</p>
+</blockquote><h3>install-lambdas-locally</h3><pre><code><code class="source-code prettyprint">install-lambdas-locally [lambda-identifiers...]</code>
 </code></pre><p>Deletes the <code>node_modules</code> folder of one or several lambda and runs <code>npm install</code> to re-install it.</p><h3>test-lambda-locally</h3><pre><code><code class="source-code prettyprint">test-lambda-locally [options] [lambda-identifier]
 
   Options:
@@ -643,6 +655,102 @@ API. Using <code>--environment</code> can allow several developers to use the te
       </div>
     </div>
 <div class="manual-card-wrap" data-ice="cards">
+      <h1 data-ice="label" class="manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;"><span data-ice="label-inner">CORS Plugin</span></h1>
+      <div class="manual-card">
+        <div data-ice="card"><h1>CORS Plugin</h1><h2>Prerequisites</h2><p>The <code>@myrmex/cors</code> plugin gives the possibility to easily define CORS configuration for the <code>@myrmex/api-gateway</code> plugin.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/cors</code>
+</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-app&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/api-gateway&quot;,
+    &quot;@myrmex/cors&quot;
+  ]
+}</code>
+</code></pre><p>The plugin does not provide new, commands but it allows to define CORS configuration at various levels in the project.</p><h2>Principle</h2><p>The plugin <code>@myrmex/cors</code> aims to simplify the configuration of CORS by consuming simple configuration files and
+automatically creating OPTIONS http methods for APIs and adding http headers to endpoints.</p><p><code>@myrmex/cors</code> supports the pseudo http method <code>ANY</code> available in API Gateway to define DELETE, GET, HEAD, PATCH, POST and PUT
+method with a single configuration. <code>@myrmex/cors</code> uses it to apply the configuration correctly but it will not be present in
+http responses.</p><h2>Configuration</h2><p>There are four possible levels of configuration in this order of precedence:</p><ul>
+<li>Global configuration</li>
+<li>API level configuration</li>
+<li>Resource path level configuration</li>
+<li>API resource path level configuration</li>
+</ul><h3>Global configuration</h3><p>The global configuration applies by default for all endpoints of all APIs.</p><p>Using <code>myrmex show-config</code>, it is possible to see the default values:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;cors&quot;: {
+    &quot;Access-Control-Allow-Methods&quot;: &quot;DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT,ANY&quot;,
+    &quot;Access-Control-Allow-Headers&quot;: &quot;*&quot;,
+    &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;
+  }
+}</code>
+</code></pre><p>By default, all methods, all origins and all headers are allowed. This configuration allows to quickly experiment, but it
+can be overwritten to restrict the access to the maximum. For example, to allow the access to the APIs only for the domain
+<code>www.example.com</code>, it is possible to set this configuration in the file <code>myrmex.json</code> at the root of the project:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;name&quot;: &quot;my-app&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/api-gateway&quot;,
+    &quot;@myrmex/cors&quot;
+  ],
+  &quot;config&quot;: {
+    &quot;cors&quot;: {
+      &quot;Access-Control-Allow-Origin&quot;: &quot;https://www.example.com&quot;
+    }
+  }
+}</code>
+</code></pre><blockquote>
+<p>There are <a href="/manual/installation/getting-started.html#project-configuration">several ways</a> to set this kind of configuration
+in Myrmex.</p>
+</blockquote><p>The command <code>myrmex show-config</code> shows the new configuration:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;apiGateway&quot;: {
+    &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
+    &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
+    &quot;modelsPath&quot;: &quot;api-gateway/models&quot;
+  },
+  &quot;cors&quot;: {
+    &quot;Access-Control-Allow-Methods&quot;: &quot;DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT,ANY&quot;,
+    &quot;Access-Control-Allow-Headers&quot;: &quot;*&quot;,
+    &quot;Access-Control-Allow-Origin&quot;: &quot;https://www.example.com&quot;
+  }
+}</code>
+</code></pre><h3>API level configuration</h3><p>To override the global configuration for a specific API, it is possible to use a Myrmex extension to Swagger in the
+<code>spec.json</code> file of the API. If we want to configure an API that has the identifier <code>back-office</code> to accept request only from
+<a href="https://admin.example.com">https://admin.example.com</a>, we can complete the file <code>/api-gateway/apis/back-office/spec.json</code> like this:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;x-myrmex&quot;: {
+    &quot;cors&quot;: {
+      &quot;Access-Control-Allow-Origin&quot;: &quot;https://admin.example.com&quot;
+    }
+  },
+  &quot;swagger&quot;: &quot;2.0&quot;,
+  &quot;info&quot;: {
+    &quot;title&quot;: &quot;my-api&quot;,
+    &quot;description&quot;: &quot;An API built with Myrmex&quot;
+  },
+}</code>
+</code></pre><p>This configuration will apply to all resource paths of the API.</p><h3>Resource path level configuration</h3><p>To define a specific configuration for a resource path, it is possible to create to create a <code>cors.json</code> file in the resource
+path.</p><p>To forbid the access to all http methods of the resource path <code>/my/resource/path</code>, we can create a file
+<code>/api-gateway/endpoints/my/resource/path/cors.json</code> with the following content:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;default&quot;: {
+    &quot;Access-Control-Allow-Methods&quot;: &quot;&quot;
+  }
+}</code>
+</code></pre><h3>API resource path level configuration</h3><p>The <code>cors.json</code> file at the resource path level accepts API specific configurations. Following the previous example, if we
+want the API that has the identifier <code>back-office</code> to allow <code>GET</code> and <code>POST</code> request from <a href="https://admin.example.com">https://admin.example.com</a>, we can
+complete the file <code>/api-gateway/endpoints/my/resource/path/cors.json</code> like this:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;default&quot;: {
+    &quot;Access-Control-Allow-Methods&quot;: &quot;&quot;
+  },
+  &quot;back-office&quot;: {
+    &quot;Access-Control-Allow-Methods&quot;: &quot;GET,POST&quot;,
+    &quot;Access-Control-Allow-Origin&quot;: &quot;https://admin.example.com&quot;
+  }
+}</code>
+</code></pre></div>
+        <a data-ice="link" href="manual/usage/cors-plugin.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
       <h1 data-ice="label" class="manual-color manual-color-advanced" data-section-count="&#x25A0;&#x25A0;"><span data-ice="label-inner">Creating plugins</span></h1>
       <div class="manual-card">
         <div data-ice="card"><h1>Creating plugins</h1><h2>Plugin definition</h2><p>The Myrmex core is the node module <code>@myrmex/core</code>. It exports an object (referred as the <em>Myrmex instance</em>) that is based on
@@ -759,12 +867,12 @@ cd express-app &amp;&amp; npm install</code>
 </code></pre><p>Visit <a href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a> to check that the application runs correctly locally.</p><h2>Adding Myrmex to the project</h2><p>Be sure that the Myrmex cli is installed.</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
 </code></pre><h3>Install Myrmex in the Express project</h3><pre><code class="lang-bash"><code class="source-code prettyprint"># For the prompt &quot;What is your project name?&quot;, leave it empty, so Myrmex will be installed in the same directory that Express
 # We will need the plugins @myrmex/iam @myrmex/api-gateway and @myrmex/lambda
-myrmex new @myrmex/iam @myrmex/api-gateway @myrmex/lambda</code>
+myrmex new</code>
 </code></pre><p>Myrmex and its plugins will be installed in the section <code>devDependencies</code> of the file <code>package.json</code>.</p><h3>Creation of IAM roles</h3><p>We create two IAM roles: one to allow Lambda to write in cloudwatch and the other to allow API Gateway to invoke Lambda.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-role MyExpressAppLambdaExecution --model LambdaBasicExecutionRole
 myrmex create-role MyExpressAppLambdaInvocation --model APIGatewayLambdaInvocation</code>
-</code></pre><h3>Creation of the Lambda</h3><p>We create a new Lambda managed by Myrmex.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-lambda serverless-express --timeout 30 --memory 256 --role MyExpressAppLambdaExecution</code>
-</code></pre><p>We have to do a small alteration to the <code>package.json</code> of the Express application to tell node that <code>app.js</code> is the file that has to be loaded when
-<code>require()</code> is used.</p><pre><code class="lang-json"><code class="source-code prettyprint">// in /package.json
+</code></pre><h3>Creation of the Lambda</h3><p>We create a new Lambda managed by Myrmex.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-lambda serverless-express --runtime nodejs6.10 --timeout 30 --memory 256 --role MyExpressAppLambdaExecution</code>
+</code></pre><p>We have to do a small alteration to the <code>package.json</code> of the Express application to tell node that <code>app.js</code> is the file that
+has to be loaded when <code>require()</code> is used.</p><pre><code class="lang-json"><code class="source-code prettyprint">// in /package.json
 {
   &quot;name&quot;: &quot;express-app&quot;,
   &quot;version&quot;: &quot;0.0.0&quot;,
@@ -773,8 +881,8 @@ myrmex create-role MyExpressAppLambdaInvocation --model APIGatewayLambdaInvocati
 }</code>
 </code></pre><p>In the <code>package.json</code> of the Lambda, we define the Express application as a dependency</p><pre><code class="lang-bash"><code class="source-code prettyprint"># in /lambda/lambdas/serverless-express
 npm install ../../.. --save</code>
-</code></pre><p><a href="https://github.com/awslabs/aws-serverless-express">aws-serverless-express</a> is a npm package that wrap an Express application to process requests from
-API Gateway with Lambda integration. We add it as a dependency of our Lambda.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># in /lambda/lambdas/serverless-express
+</code></pre><p><a href="https://github.com/awslabs/aws-serverless-express">aws-serverless-express</a> is a npm package that wrap an Express application
+to process requests from API Gateway with Lambda integration. We add it as a dependency of our Lambda.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># in /lambda/lambdas/serverless-express
 npm install aws-serverless-express --save</code>
 </code></pre><p>Then we can alter the code of <code>index.js</code> from the Lambda to correctly expose the handler.</p><pre><code class="lang-javascript"><code class="source-code prettyprint">// in /lambda/lambdas/serverless-express/index.js
 &apos;use strict&apos;;
@@ -783,13 +891,16 @@ const app = require(&apos;express-app&apos;);
 const server = awsServerlessExpress.createServer(app);
 
 exports.handler = (event, context) =&gt; awsServerlessExpress.proxy(server, event, context);</code>
-</code></pre><h3>Creation of the API</h3><p>We create an API with two endpoints using <code>ANY</code> method and Lambda proxy integration: one to handle the root url, and another for the rest.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-api serverless-express --title &quot;Serverless Express&quot; --desc &quot;An Express application served by API Gateway and Lambda&quot;
+</code></pre><h3>Creation of the API</h3><p>We create an API with two endpoints using <code>ANY</code> method and Lambda proxy integration: one to handle the root url, and another
+for the rest.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-api serverless-express --title &quot;Serverless Express&quot; --desc &quot;An Express application served by API Gateway and Lambda&quot;
 myrmex create-endpoint / ANY --apis serverless-express --summary &quot;Proxy to Lambda&quot; --auth none --integration lambda-proxy --lambda serverless-express --role MyExpressAppLambdaInvocation
 myrmex create-endpoint /{proxy+} ANY --apis serverless-express --summary &quot;Proxy to Lambda&quot; --auth none --integration lambda-proxy --lambda serverless-express --role MyExpressAppLambdaInvocation</code>
-</code></pre><h3>Deployment</h3><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex deploy-apis serverless-express --region us-east-1 --environment DEV --stage v0 --deploy-lambdas all</code>
-</code></pre><p>The deployment messages will give you the url of the application. It will have the form <code>https://{your-api-id}.execute-api.us-east-1.amazonaws.com/v0</code>.
-You can test the root url and the url <code>https://{your-api-id}.execute-api.us-east-1.amazonaws.com/v0/users</code> that is also declared in the sample application
-generated by <code>express-generator</code>. You can also test some bad urls and observe that you receive an error 404.</p></div>
+</code></pre><h3>Deployment</h3><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex deploy-apis serverless-express --region us-east-1 --environment DEV --stage v0 --deploy-lambdas all --alias &quot;&quot;</code>
+</code></pre><p>The deployment messages will give you the url of the application. It will have the form
+<code>https://{your-api-id}.execute-api.us-east-1.amazonaws.com/v0</code>.
+You can test the root url and the url <code>https://{your-api-id}.execute-api.us-east-1.amazonaws.com/v0/users</code> that is also
+declared in the sample application generated by <code>express-generator</code>. You can also test some bad urls and observe that you
+receive an error 404.</p></div>
         <a data-ice="link" href="manual/example/express.html"></a>
       </div>
     </div>
@@ -855,15 +966,18 @@ module.exports.handler = function(event, context, cb) {
   console.log(JSON.stringify(inspect));
   cb(null, inspect);
 };</code>
-</code></pre><p>We can execute the lambdas locally to test them.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex test-lambda-locally config-128
+</code></pre><p>We can execute the lambdas locally to test them.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># Install dependencies of the Lambdas
+myrmex install-lambdas-locally config-128 config-512 config-1536
+# Execute Lambdas locally
+myrmex test-lambda-locally config-128
 myrmex test-lambda-locally config-512
 myrmex test-lambda-locally config-1536</code>
 </code></pre><h2>Testing the Lambdas in AWS</h2><p>Lets deploy in AWS!</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex deploy-lambdas config-128 config-1536 config-512 --region us-east-1 --environment DEV --alias v0</code>
 </code></pre><p>Now we can execute the Lambdas in AWS using Myrmex, but you can also use the AWS console if you prefer.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex test-lambda config-128 --region us-east-1 --environment DEV --alias v0
 myrmex test-lambda config-512 --region us-east-1 --environment DEV --alias v0
 myrmex test-lambda config-1536 --region us-east-1 --environment DEV --alias v0</code>
-</code></pre><p>Check the result of the functions to have insights about the execution environment of Lambdas. Observe the variations when calling several times the same
-function.</p><blockquote>
+</code></pre><p>Check the result of the functions to have insights about the execution environment of Lambdas. Observe the variations
+when calling several times the same function.</p><blockquote>
 <blockquote>
 <blockquote>
 <p>TODO: explain results and add a module to profile the use of require() with/without warm up of a Lambda.</p>
@@ -950,7 +1064,7 @@ implementation of the application. For now, we use a role that allows the Lambda
 <li>A module that manage the access to the application data (DynamoDB, Sequelize, mongoose, etc ...)</li>
 </ul><p>The data access module uses the logging module. We indicate this dependency so that if a Lambda requires the data access module, it will include the logging
 module in its package too.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-node-module log
-myrmex create-node-module data-access --dependency log</code>
+myrmex create-node-module data-access --dependencies log</code>
 </code></pre><p>The implementation of the modules will not be detailed here, but they are &quot;common&quot; <code>node.js</code> modules that could be used in any execution environment.</p><h4>Creation of a Lambda</h4><p>We create a Lambda, specifying its configuration and its dependencies.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-lambda api-generic --runtime nodejs6.10 --timeout 20 --memory 256 --role PlanetExpressLambdaExecution --dependencies data-access,log</code>
 </code></pre><h3>Creation of the endpoints and APIs</h3><p>Now that we have a Lambda able to perform the operations needed by our application, we can define the endpoints that
 integrate with it and expose them in various APIs.</p><h4>Creation of the APIs</h4><p>We create one API for each type of client application.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-api back-office --title &quot;Back Office&quot; --desc &quot;Planet Express API for Back Office&quot;
@@ -969,7 +1083,7 @@ cd planet-express
 myrmex create-role PlanetExpressLambdaExecution --model LambdaBasicExecutionRole
 
 myrmex create-node-module log
-myrmex create-node-module data-access --dependency log
+myrmex create-node-module data-access --dependencies log
 
 myrmex create-lambda api-generic --runtime nodejs6.10 --timeout 20 --memory 256 --role PlanetExpressLambdaExecution --dependencies data-access,log
 
