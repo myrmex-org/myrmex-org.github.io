@@ -1356,10 +1356,10 @@
                                           }
                                         },
                                         "extra": {
-                                          "rawValue": "-e, --environment [environment]",
-                                          "raw": "'-e, --environment [environment]'"
+                                          "rawValue": "-e, --environment <environment>",
+                                          "raw": "'-e, --environment <environment>'"
                                         },
-                                        "value": "-e, --environment [environment]"
+                                        "value": "-e, --environment <environment>"
                                       }
                                     },
                                     {
@@ -2214,10 +2214,10 @@
                                           }
                                         },
                                         "extra": {
-                                          "rawValue": "-s, --stage [stage]",
-                                          "raw": "'-s, --stage [stage]'"
+                                          "rawValue": "-s, --stage <stage>",
+                                          "raw": "'-s, --stage <stage>'"
                                         },
-                                        "value": "-s, --stage [stage]"
+                                        "value": "-s, --stage <stage>"
                                       }
                                     },
                                     {
@@ -11206,7 +11206,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "-e, --environment [environment]",
+      "value": "-e, --environment <environment>",
       "start": 810,
       "end": 843,
       "loc": {
@@ -12900,7 +12900,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "-s, --stage [stage]",
+      "value": "-s, --stage <stage>",
       "start": 1321,
       "end": 1342,
       "loc": {

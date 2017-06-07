@@ -1762,10 +1762,10 @@
                                           }
                                         },
                                         "extra": {
-                                          "rawValue": "-r, --region [region]",
-                                          "raw": "'-r, --region [region]'"
+                                          "rawValue": "-r, --region <region>",
+                                          "raw": "'-r, --region <region>'"
                                         },
-                                        "value": "-r, --region [region]"
+                                        "value": "-r, --region <region>"
                                       }
                                     },
                                     {
@@ -2191,10 +2191,10 @@
                                           }
                                         },
                                         "extra": {
-                                          "rawValue": "-e, --environment [environment]",
-                                          "raw": "'-e, --environment [environment]'"
+                                          "rawValue": "-e, --environment <environment>",
+                                          "raw": "'-e, --environment <environment>'"
                                         },
-                                        "value": "-e, --environment [environment]"
+                                        "value": "-e, --environment <environment>"
                                       }
                                     },
                                     {
@@ -2913,10 +2913,10 @@
                                           }
                                         },
                                         "extra": {
-                                          "rawValue": "-a, --alias [alias]",
-                                          "raw": "'-a, --alias [alias]'"
+                                          "rawValue": "-a, --alias <alias>",
+                                          "raw": "'-a, --alias <alias>'"
                                         },
-                                        "value": "-a, --alias [alias]"
+                                        "value": "-a, --alias <alias>"
                                       }
                                     },
                                     {
@@ -15379,7 +15379,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "-r, --region [region]",
+      "value": "-r, --region <region>",
       "start": 1043,
       "end": 1066,
       "loc": {
@@ -16212,7 +16212,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "-e, --environment [environment]",
+      "value": "-e, --environment <environment>",
       "start": 1320,
       "end": 1353,
       "loc": {
@@ -17672,7 +17672,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "-a, --alias [alias]",
+      "value": "-a, --alias <alias>",
       "start": 1738,
       "end": 1759,
       "loc": {

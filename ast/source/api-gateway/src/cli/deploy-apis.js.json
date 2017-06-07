@@ -1252,10 +1252,10 @@
                                           }
                                         },
                                         "extra": {
-                                          "rawValue": "-r, --region [region]",
-                                          "raw": "'-r, --region [region]'"
+                                          "rawValue": "-r, --region <region>",
+                                          "raw": "'-r, --region <region>'"
                                         },
-                                        "value": "-r, --region [region]"
+                                        "value": "-r, --region <region>"
                                       }
                                     },
                                     {
@@ -1681,10 +1681,10 @@
                                           }
                                         },
                                         "extra": {
-                                          "rawValue": "-e, --environment [environment]",
-                                          "raw": "'-e, --environment [environment]'"
+                                          "rawValue": "-e, --environment <environment>",
+                                          "raw": "'-e, --environment <environment>'"
                                         },
-                                        "value": "-e, --environment [environment]"
+                                        "value": "-e, --environment <environment>"
                                       }
                                     },
                                     {
@@ -2403,10 +2403,10 @@
                                           }
                                         },
                                         "extra": {
-                                          "rawValue": "-s, --stage [stage]",
-                                          "raw": "'-s, --stage [stage]'"
+                                          "rawValue": "-s, --stage <stage>",
+                                          "raw": "'-s, --stage <stage>'"
                                         },
-                                        "value": "-s, --stage [stage]"
+                                        "value": "-s, --stage <stage>"
                                       }
                                     },
                                     {
@@ -18532,7 +18532,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "-r, --region [region]",
+      "value": "-r, --region <region>",
       "start": 736,
       "end": 759,
       "loc": {
@@ -19365,7 +19365,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "-e, --environment [environment]",
+      "value": "-e, --environment <environment>",
       "start": 1013,
       "end": 1046,
       "loc": {
@@ -20825,7 +20825,7 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "-s, --stage [stage]",
+      "value": "-s, --stage <stage>",
       "start": 1431,
       "end": 1452,
       "loc": {
