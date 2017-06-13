@@ -5,16 +5,17 @@
   <base data-ice="baseUrl" href="../../">
   <title data-ice="title">Example</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   
   
   <script src="script/manual.js"></script>
 <link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="icon" type="image/png" sizes="32x32" href="manual/asset/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="manual/asset/favicon-16x16.png">
 <body class="layout-container manual-root" data-ice="rootContainer">
 
-<header>
+<header><a href="./index.html" class="myrmex-home">Myrmex</a>
   <a href="./">Home</a>
   
   <a href="identifiers.html">Reference</a>
@@ -246,10 +247,9 @@ that the Myrmex cli itself only contains the command <code>myrmex new</code>. Ot
 cli is executed in the project folder.</p>
 <h3 id="initialization-of-the-project">Initialization of the project</h3>
 <p>We create a new Myrmex project named <code>planet-express</code>.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g @myrmex/cli
+<pre><code class="shell">npm install -g @myrmex/cli
 myrmex new planet-express @myrmex/iam @myrmex/api-gateway @myrmex/lambda
-cd planet-express</code>
-</code></pre>
+cd planet-express</code></pre>
 <h3 id="creation-of-the-lambda-containing-the-application-logic">Creation of the Lambda containing the application logic</h3>
 <p>We are free to use as many Lambdas as we want in a Myrmex project. For example, we could associate one specific Lambda for each endpoint. But the
 <em>Planet Express</em> development team choose to put all the logic of the application in one single Lambda. Parameters provided by API Gateway will allow
@@ -262,8 +262,7 @@ projects, but it does not interfere about how you write Node.js code.</p>
 <h4 id="creation-of-the-lambda-s-execution-role">Creation of the Lambda&apos;s execution role</h4>
 <p>The Lambda needs to be associated to an IAM role that defines its authorizations in AWS. It could be authorized to access DynamoDB, RDS or S3 depending on the
 implementation of the application. For now, we use a role that allows the Lambda to write logs in CloudWatch.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-role PlanetExpressLambdaExecution --model LambdaBasicExecutionRole</code>
-</code></pre>
+<pre><code class="shell">myrmex create-role PlanetExpressLambdaExecution --model LambdaBasicExecutionRole</code></pre>
 <h4 id="creation-of-node-modules-that-can-be-packaged-in-the-lambda">Creation of node modules that can be packaged in the Lambda</h4>
 <p>Myrmex allows the creation of node modules that can be embedded in the package of the Lambda. The development team decided that they will need two modules:</p>
 <ul>
@@ -272,40 +271,34 @@ implementation of the application. For now, we use a role that allows the Lambda
 </ul>
 <p>The data access module uses the logging module. We indicate this dependency so that if a Lambda requires the data access module, it will include the logging
 module in its package too.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-node-module log
-myrmex create-node-module data-access --dependencies log</code>
-</code></pre>
+<pre><code class="shell">myrmex create-node-module log
+myrmex create-node-module data-access --dependencies log</code></pre>
 <p>The implementation of the modules will not be detailed here, but they are &quot;common&quot; <code>node.js</code> modules that could be used in any execution environment.</p>
 <h4 id="creation-of-a-lambda">Creation of a Lambda</h4>
 <p>We create a Lambda, specifying its configuration and its dependencies.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-lambda api-generic --runtime nodejs6.10 --timeout 20 --memory 256 --role PlanetExpressLambdaExecution --dependencies data-access,log</code>
-</code></pre>
+<pre><code class="shell">myrmex create-lambda api-generic --runtime nodejs6.10 --timeout 20 --memory 256 --role PlanetExpressLambdaExecution --dependencies data-access,log</code></pre>
 <h3 id="creation-of-the-endpoints-and-apis">Creation of the endpoints and APIs</h3>
 <p>Now that we have a Lambda able to perform the operations needed by our application, we can define the endpoints that
 integrate with it and expose them in various APIs.</p>
 <h4 id="creation-of-the-apis">Creation of the APIs</h4>
 <p>We create one API for each type of client application.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-api back-office --title &quot;Back Office&quot; --desc &quot;Planet Express API for Back Office&quot;
+<pre><code class="shell">myrmex create-api back-office --title &quot;Back Office&quot; --desc &quot;Planet Express API for Back Office&quot;
 myrmex create-api sender      --title &quot;Sender&quot;      --desc &quot;Planet Express API for sender application&quot;
-myrmex create-api recipient   --title &quot;Recipient&quot;   --desc &quot;Planet Express API for recipient application&quot;</code>
-</code></pre>
+myrmex create-api recipient   --title &quot;Recipient&quot;   --desc &quot;Planet Express API for recipient application&quot;</code></pre>
 <h4 id="creation-of-the-invocation-role">Creation of the invocation role</h4>
 <p>The API endpoints need to be associated to an IAM role that allows to invoke the Lambda.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-role PlanetExpressLambdaInvocation -m APIGatewayLambdaInvocation</code>
-</code></pre>
+<pre><code class="shell">myrmex create-role PlanetExpressLambdaInvocation -m APIGatewayLambdaInvocation</code></pre>
 <h4 id="creation-of-the-endpoints">Creation of the endpoints</h4>
 <p>We create the four endpoints and associate them to the APIs that have to expose them.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-endpoint /delivery/{id} get --apis back-office,recipient,sender --summary &quot;View a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
+<pre><code class="shell">myrmex create-endpoint /delivery/{id} get --apis back-office,recipient,sender --summary &quot;View a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
 myrmex create-endpoint /delivery/{id} patch --apis back-office --summary &quot;Update a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
 myrmex create-endpoint /delivery post --apis back-office,sender --summary &quot;Create a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
-myrmex create-endpoint /delivery/{id} delete --apis back-office,recipient --summary &quot;Delete a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic</code>
-</code></pre>
+myrmex create-endpoint /delivery/{id} delete --apis back-office,recipient --summary &quot;Delete a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic</code></pre>
 <h3 id="deployment">Deployment</h3>
 <p>We deploy the stage <code>v0</code> of the three APIs on the <code>DEV</code> environment.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --environment DEV --deploy-lambdas all --alias &quot;&quot;</code>
-</code></pre>
+<pre><code class="shell">myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --environment DEV --deploy-lambdas all --alias &quot;&quot;</code></pre>
 <h2 id="altogether">Altogether</h2>
-<pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g @myrmex/cli
+<pre><code class="shell">npm install -g @myrmex/cli
 myrmex new planet-express @myrmex/iam @myrmex/api-gateway @myrmex/lambda
 cd planet-express
 
@@ -327,8 +320,7 @@ myrmex create-endpoint /delivery/{id} patch --apis back-office --summary &quot;U
 myrmex create-endpoint /delivery post --apis back-office,sender --summary &quot;Create a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
 myrmex create-endpoint /delivery/{id} delete --apis back-office,recipient --summary &quot;Delete a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
 
-myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --environment DEV --deploy-lambdas all --alias &quot;&quot;</code>
-</code></pre>
+myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --environment DEV --deploy-lambdas all --alias &quot;&quot;</code></pre>
 </div>
 </div>
 </div>
@@ -339,7 +331,7 @@ myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --
 
 <script src="script/search_index.js"></script>
 <script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></head>
 <script src="script/inherited-summary.js"></script>
 <script src="script/test-summary.js"></script>
 <script src="script/inner-link.js"></script>

@@ -5,16 +5,17 @@
   <base data-ice="baseUrl" href="../../">
   <title data-ice="title">Advanced</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   
   
   <script src="script/manual.js"></script>
 <link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="icon" type="image/png" sizes="32x32" href="manual/asset/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="manual/asset/favicon-16x16.png">
 <body class="layout-container manual-root" data-ice="rootContainer">
 
-<header>
+<header><a href="./index.html" class="myrmex-home">Myrmex</a>
   <a href="./">Home</a>
   
   <a href="identifiers.html">Reference</a>
@@ -184,7 +185,7 @@ anyone, or it can be a project specific plugin.</p>
 <h3 id="anatomy-of-a-plugin">Anatomy of a plugin</h3>
 <p>A plugin is node module that exports an object that has to respect a specific structure to be used by the <em>Myrmex instance</em>.</p>
 <p>Here is a quick overview of an object exported by a Myrmex plugin.</p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">{
+<pre><code class="javascript">{
   // An unique identifier that should be carefully chosen to not enter in conflict with other plugins
   name: `my-plugin-identifier`,
   version: `0.0.0`,
@@ -219,8 +220,7 @@ anyone, or it can be a project specific plugin.</p>
     extensionNameA: function() {}
     extensionNameB: function() {}
   }
-}</code>
-</code></pre>
+}</code></pre>
 <h3 id="the-myrmex-instance">The Myrmex instance</h3>
 <p>Before describing events and extensions, we should have a quick overview about the initialization of the <em>Myrmex instance</em> and
 the registration of plugins.</p>
@@ -248,7 +248,7 @@ of the event. If the event listener has to perform asynchronous operations to al
 Promise that resolves once the modification is done.</p>
 <p>Therefore, an <em>emitter</em> can wait for all <em>listeners</em> to eventually alter the event parameters to continue its task.</p>
 <p>Here is a dummy example:</p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">// The Myrmex instance is accessible via the `myrmex` property of a plugin once it has been registered
+<pre><code class="javascript">// The Myrmex instance is accessible via the `myrmex` property of a plugin once it has been registered
 const myrmex = require(&apos;./plugin-index.js&apos;).myrmex;
 
 // Create an event listener
@@ -281,8 +281,7 @@ myrmex.fire(&apos;MyEvent&apos;, eventArg1, eventArg2)
   //  {
   //    propA: &apos;original property&apos;
   //  }
-});</code>
-</code></pre>
+});</code></pre>
 <p>Using this mecanism, Myrmex plugins can create their own events and listen for other plugins events. Several plugins can
 listen for the same event and use and/or modify its arguments.</p>
 <blockquote>
@@ -305,7 +304,7 @@ the registration of the plugin.</p>
 
 <script src="script/search_index.js"></script>
 <script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></head>
 <script src="script/inherited-summary.js"></script>
 <script src="script/test-summary.js"></script>
 <script src="script/inner-link.js"></script>

@@ -5,16 +5,17 @@
   <base data-ice="baseUrl" href="../../">
   <title data-ice="title">Usage</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   
   
   <script src="script/manual.js"></script>
 <link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="icon" type="image/png" sizes="32x32" href="manual/asset/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="manual/asset/favicon-16x16.png">
 <body class="layout-container manual-root" data-ice="rootContainer">
 
-<header>
+<header><a href="./index.html" class="myrmex-home">Myrmex</a>
   <a href="./">Home</a>
   
   <a href="identifiers.html">Reference</a>
@@ -176,16 +177,14 @@ Gateway</a> and the <a href="http://swagger.io/specification/">Swagger v2.0</a> 
 <p><code>@myrmex/api-gateway</code> uses the API Gateway Import API feature.</p>
 <h2 id="installation">Installation</h2>
 <p>Install the npm module in a Myrmex project:</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/api-gateway</code>
-</code></pre>
+<pre><code class="shell">npm install @myrmex/api-gateway</code></pre>
 <p>Then enable the plugin in the <code>myrmex.json</code> file:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/api-gateway&quot;
   ]
-}</code>
-</code></pre>
+}</code></pre>
 <p>Once the plugin is installed and enabled, the <code>myrmex</code> command line will provide new sub-commands to manage and deploy APIs.</p>
 <h2 id="project-anatomy">Project anatomy</h2>
 <p>By default, the content managed by <code>@myrmex/api-gateway</code> is located in an <code>api-gateway</code> directory in the root directory of the
@@ -200,7 +199,7 @@ contains a Swagger specification file (without the endpoints definitions).</p>
 paths and HTTP methods. Each HTTP method directory contains the definition of an endpoint. An endpoint definition is composed
 of its Swagger specification in a <code>spec.json</code> file.</p>
 <p>As an example is more easy to understand, that is what a project structure could looks like:</p>
-<pre><code class="lang-text"><code class="source-code prettyprint">api-gateway
+<pre><code class="shell">api-gateway
 &#x251C;&#x2500;&#x2500; apis                              The APIs defined by the application
 |   &#x251C;&#x2500;&#x2500; back-office                   The name of this directory is the identifier of an API
 |   |   &#x2514;&#x2500;&#x2500; spec.json                 The API&apos;s Swagger specification (without endpoints definitions)
@@ -220,8 +219,7 @@ of its Swagger specification in a <code>spec.json</code> file.</p>
         |   &#x2514;&#x2500;&#x2500; spec.json
         &#x2514;&#x2500;&#x2500; resource-c
             &#x2514;&#x2500;&#x2500; GET
-                &#x2514;&#x2500;&#x2500; spec.json</code>
-</code></pre>
+                &#x2514;&#x2500;&#x2500; spec.json</code></pre>
 <p>This project contains 2 APIs:</p>
 <ul>
 <li><code>back-office</code></li>
@@ -237,7 +235,7 @@ of its Swagger specification in a <code>spec.json</code> file.</p>
 </ul>
 <p>To associate an endpoint to one or more APIs, it is possible to enrich the endpoint specification (<code>spec.json</code> file) with a
 list of API identifiers, in a Myrmex extension to Swagger.</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;x-myrmex&quot;: {
     &quot;apis&quot;: [
       &quot;back-office&quot;,
@@ -245,42 +243,41 @@ list of API identifiers, in a Myrmex extension to Swagger.</p>
     ]
   }
   ... rest of the endpoint specification
-}</code>
-</code></pre>
+}</code></pre>
 <p><code>@myrmex/api-gateway</code> uses the API Gateway Import API feature. Therefore, the configuration of AWS-specific authorization
 and API Gateway-specific API integrations is done with the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html">API Gateway extensions to
 Swagger</a>.</p>
 <h2 id="commands">Commands</h2>
 <h3 id="create-api">create-api</h3>
-<pre><code><code class="source-code prettyprint">create-api [options] [api-identifier]
+<pre><code class="shell">create-api [options] [api-identifier]
 
   Options:
     -t, --title &lt;title&gt;       The title of the API
-    -d, --desc &lt;description&gt;  A description of the API</code>
-</code></pre><p>Create a new API. By default the location of API definitions is <code>api-gateway/apis/&lt;api-dentifier&gt;/</code>. The API definition is a
+    -d, --desc &lt;description&gt;  A description of the API</code></pre>
+<p>Create a new API. By default the location of API definitions is <code>api-gateway/apis/&lt;api-dentifier&gt;/</code>. The API definition is a
 file named <code>spec.json</code> that contains a <a href="http://swagger.io/specification/#swagger-object-14">Swagger object</a>. The command line
 will to create a simple base configuration. It is possible to write a full Swagger definition here, but the plugin
 <code>@myrmex/api-gateway</code> is designed to separate API definitions into pieces and generate full definitions when needed.</p>
 <h3 id="create-model">create-model</h3>
-<pre><code><code class="source-code prettyprint">create-model [name]</code>
-</code></pre><p>Create a new model. By default the location of models is <code>api-gateway/model/model.json</code>. Models can be referenced as input
+<pre><code class="shell">create-model [name]</code></pre>
+<p>Create a new model. By default the location of models is <code>api-gateway/model/model.json</code>. Models can be referenced as input
 or output of API endpoints but are not mandatory.</p>
 <h3 id="create-endpoint">create-endpoint</h3>
-<pre><code><code class="source-code prettyprint">create-endpoint [options] [resource-path] [http-method]
+<pre><code class="shell">create-endpoint [options] [resource-path] [http-method]
 
   Options:
     -a, --apis &lt;api-identifiers&gt;          The identifiers of APIs that expose the endpoint separated by &quot;,&quot;
     -s, --summary &lt;endpoint summary&gt;      A short summary of what the operation does
     --auth &lt;authentication-type&gt;          The type of authentication used to call the endpoint (aws_iam|none)
     -i --integration &lt;integration-type&gt;   The type of integration (lambda|http|mock|aws-service)
-    -r, --role &lt;role&gt;                     select the role to invoke integration</code>
-</code></pre><p>Create a new endpoint. By default the location of endpoints definitions is
+    -r, --role &lt;role&gt;                     select the role to invoke integration</code></pre>
+<p>Create a new endpoint. By default the location of endpoints definitions is
 <code>api-gateway/endpoints/&lt;resource-path&gt;/&lt;http-method&gt;/</code>. The endpoint definition is a file named <code>spec.json</code> that contains a
 <a href="http://swagger.io/specification/#path-item-object-32">Swagger path item object</a>. The command line will help to create a
 simple base configuration. Then, the developer can complete the definition using the Swagger specification and the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html">API
 Gateway extentions to Swagger</a>.</p>
 <p>The definition of an endpoint can be added to one or more APIs using a Myrmex extention to Swagger:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;x-myrmex&quot;: {
     &quot;apis&quot;: [
       &quot;&lt;api-identifier-a&gt;&quot;,
@@ -288,40 +285,39 @@ Gateway extentions to Swagger</a>.</p>
     ]
   }
   ... rest of the endpoint specification
-}</code>
-</code></pre>
+}</code></pre>
 <h3 id="inspect-api">inspect-api</h3>
-<pre><code><code class="source-code prettyprint">inspect-api [options] [api-identifier]
+<pre><code class="shell">inspect-api [options] [api-identifier]
 
   Options:
     -c, --colors                  highlight output
-    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code>
-</code></pre><p>Generate the Swagger definition of an API and print it. There are three different versions of the specification:</p>
+    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code></pre>
+<p>Generate the Swagger definition of an API and print it. There are three different versions of the specification:</p>
 <ul>
 <li>The <code>doc</code> version only contains parts of the definitions that belong to the Swagger specification.</li>
 <li>The <code>aws</code> version is the definition that is sent to AWS API gateway when performing a deployment.</li>
 <li>The <code>complete</code> version contains everything that is defined in the project, including the Myrmex extensions to Swagger.</li>
 </ul>
 <h3 id="inspect-endpoint">inspect-endpoint</h3>
-<pre><code><code class="source-code prettyprint">inspect-endpoint [options] [resource-path] [http-method]
+<pre><code class="shell">inspect-endpoint [options] [resource-path] [http-method]
 
   Options:
     -c, --colors                  highlight output
-    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code>
-</code></pre><p>Generate the Swagger definition of an endpoint and print it. There are three different versions of the specification:</p>
+    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code></pre>
+<p>Generate the Swagger definition of an endpoint and print it. There are three different versions of the specification:</p>
 <ul>
 <li>The <code>doc</code> version only contains parts of the definitions that belong to the Swagger specification.</li>
 <li>The <code>aws</code> version is the definition that is sent to AWS API gateway when performing a deployment.</li>
 <li>The <code>complete</code> version contains everything that is defined in the project, including the Myrmex extensions to Swagger.</li>
 </ul>
 <h3 id="deploy-apis">deploy-apis</h3>
-<pre><code><code class="source-code prettyprint">deploy-apis [options] [api-identifiers...]
+<pre><code class="shell">deploy-apis [options] [api-identifiers...]
 
   Options:
     -r, --region &lt;region&gt;            select the AWS region
     -e, --environment &lt;environment&gt;  select the environment
-    -s, --stage &lt;stage&gt;              select the API stage</code>
-</code></pre><p>Deploy one or more APIs in API Gateway. The <code>--environment</code> option is used as a prefix to the API name in API Gateway. It can
+    -s, --stage &lt;stage&gt;              select the API stage</code></pre>
+<p>Deploy one or more APIs in API Gateway. The <code>--environment</code> option is used as a prefix to the API name in API Gateway. It can
 be useful to deploy APIs several time in the same AWS account. Values for <code>--environment</code> could be <code>PROD</code> or <code>DEV</code> or <code>JOHN</code>
 to be able to deploy the API for production, development or a developer environment.</p>
 <blockquote>
@@ -341,7 +337,7 @@ API. Using <code>--environment</code> can allow several developers to use the te
 
 <script src="script/search_index.js"></script>
 <script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></head>
 <script src="script/inherited-summary.js"></script>
 <script src="script/test-summary.js"></script>
 <script src="script/inner-link.js"></script>

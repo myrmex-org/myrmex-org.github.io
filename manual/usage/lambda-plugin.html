@@ -5,16 +5,17 @@
   <base data-ice="baseUrl" href="../../">
   <title data-ice="title">Usage</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   
   
   <script src="script/manual.js"></script>
 <link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="icon" type="image/png" sizes="32x32" href="manual/asset/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="manual/asset/favicon-16x16.png">
 <body class="layout-container manual-root" data-ice="rootContainer">
 
-<header>
+<header><a href="./index.html" class="myrmex-home">Myrmex</a>
   <a href="./">Home</a>
   
   <a href="identifiers.html">Reference</a>
@@ -179,16 +180,14 @@ Node.js and secondly with Python.</p>
 <code>AWSLambdaFullAccess</code> gives all necessary permissions.</p>
 <h2 id="installation">Installation</h2>
 <p>Install the npm module in a Myrmex project:</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/lambda</code>
-</code></pre>
+<pre><code class="shell">npm install @myrmex/lambda</code></pre>
 <p>Then enable the plugin in the <code>myrmex.json</code> file:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/lambda&quot;
   ]
-}</code>
-</code></pre>
+}</code></pre>
 <p>Once the plugin is installed and enabled in the project, the <code>myrmex</code> command line will provide new sub-commands to manage and
 deploy Lambdas.</p>
 <h2 id="project-anatomy">Project anatomy</h2>
@@ -214,7 +213,7 @@ some of these modules could be named <code>log</code>, or <code>data-access</cod
 but the developer is free to organize the code as he want. The Lambda plugin does not force you to use a specific project
 organization.</p>
 <p>This is what a project structure could look like:</p>
-<pre><code class="lang-text"><code class="source-code prettyprint">lambda
+<pre><code class="shell">lambda
 &#x251C;&#x2500;&#x2500; lambdas                         The Lambdas defined by the application
 |   &#x251C;&#x2500;&#x2500; my-nodejs-lambda            The name of this directory is the identifier of a Lambda
 |   |   &#x251C;&#x2500;&#x2500; config.json             The configuration of the Lambda (runtime, memory, timeout, execution role...)
@@ -234,10 +233,9 @@ organization.</p>
     |   &#x2514;&#x2500;&#x2500; index.js
     &#x2514;&#x2500;&#x2500; log
         &#x251C;&#x2500;&#x2500; package.json
-        &#x2514;&#x2500;&#x2500; index.js</code>
-</code></pre>
+        &#x2514;&#x2500;&#x2500; index.js</code></pre>
 <p>Example of <code>config.json</code> file:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;params&quot;: {
     &quot;Timeout&quot;: 30,
     &quot;MemorySize&quot;: 256,
@@ -245,18 +243,16 @@ organization.</p>
     &quot;Runtime&quot;: &quot;nodejs6.10&quot;,
     &quot;Handler&quot;: &quot;index.handler&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 <p>The <code>package.json</code> of a module or a Lambda can declare dependencies with other modules using file paths in the <code>dependencies</code>
 property:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;name&quot;: &quot;data-access&quot;,
   &quot;version&quot;: &quot;0.0.0&quot;,
   &quot;dependencies&quot;: {
     &quot;log&quot;: &quot;../log&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 <p>In this case, <code>require(&apos;log&apos;)</code> will load the module <code>log</code> installed in <code>lambda/modules/data-access/node_modules/log</code>.</p>
 <p>It is recommended to use relative paths for portability.</p>
 <p>It is recommended to use a recent version of <code>npm</code> to minimize the size of the Lambda packages and facilitate the
@@ -267,13 +263,12 @@ relative file paths.</p>
 <code>@myrmex/lambda</code> plugin.</p>
 <h3 id="default-values">Default values</h3>
 <p>Using <code>myrmex show-config</code> after installing the plugin, we can see the default configuration:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;lambda&quot;: {
     &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
     &quot;modulesPath&quot;: &quot;lambda/modules&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 <h3 id="-lambda-lambdaspath-"><code>lambda.lambdasPath</code></h3>
 <p>Path to the folder that contains Lambdas. Default value: <code>lambda/lambdas</code>.</p>
 <h3 id="-lambda-modulespath-"><code>lambda.modulesPath</code></h3>
@@ -286,7 +281,7 @@ when not provided via the command line and the configured value is used as the d
 only be available as <code>LATEST</code>.</p>
 <h3 id="example">Example</h3>
 <p>Using the <code>myrmex.json</code> file, the plugin configuration can be defined like this:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;name&quot;: &quot;A Myrmex project&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/lambda&quot;
@@ -298,80 +293,78 @@ only be available as <code>LATEST</code>.</p>
       &quot;alias&quot;: &quot;&quot;
     }
   }
-}</code>
-</code></pre>
+}</code></pre>
 <h2 id="commands">Commands</h2>
 <h3 id="create-lambda">create-lambda</h3>
-<pre><code><code class="source-code prettyprint">create-lambda [options] [identifier]
+<pre><code class="shell">create-lambda [options] [identifier]
 
   Options:
     -r, --runtime &lt;nodejs|nodejs4.3|nodejs6.10|python2.7|python3.6&gt;  select the runtime
     -t, --timeout &lt;timeout&gt;                                          select the timeout (in seconds)
     -m, --memory &lt;memory&gt;                                            select the memory (in MB)
     -d --dependencies &lt;modules-names&gt;                                select the project modules that must be included in the Lambda (only for nodejs runtimes)
-    --role &lt;role&gt;                                                    select the execution role (enter the ARN)</code>
-</code></pre><p>Create a new Lambda. By default the location of Lambdas is <code>lambda/lambdas/&lt;identifier&gt;/</code>.</p>
+    --role &lt;role&gt;                                                    select the execution role (enter the ARN)</code></pre>
+<p>Create a new Lambda. By default the location of Lambdas is <code>lambda/lambdas/&lt;identifier&gt;/</code>.</p>
 <h3 id="create-node-module">create-node-module</h3>
 <p><em>For the Node.js runtime only.</em></p>
-<pre><code><code class="source-code prettyprint">create-node-module [options] [name]
+<pre><code class="shell">create-node-module [options] [name]
 
   Options:
-    -d, --dependencies &lt;dependent-modules&gt;  select the node modules that are dependencies of this new one</code>
-</code></pre><p>Prepare a new Node.js module. By default the location of modules is <code>lambda/modules/&lt;name&gt;/</code>.</p>
+    -d, --dependencies &lt;dependent-modules&gt;  select the node modules that are dependencies of this new one</code></pre>
+<p>Prepare a new Node.js module. By default the location of modules is <code>lambda/modules/&lt;name&gt;/</code>.</p>
 <p>The creation of nodes modules is just a suggestion to organize the code of a project. The idea is to maintain each component
 of the application in its own node module to select only relevant components when deploying Lambdas.</p>
 <p>Every Lambda can declare its modules dependencies using <a href="https://docs.npmjs.com/files/package.json#local-paths">local paths</a>
 in its <code>package.json</code> file. Every module can also declare dependencies to other modules that way.</p>
 <p>When Myrmex deploys a Lambda, it executes <code>npm install</code> and the dependencies are installed in the <code>node_modules</code> folder.</p>
 <h3 id="deploy-lambdas">deploy-lambdas</h3>
-<pre><code><code class="source-code prettyprint">deploy-lambdas [options] [lambda-identifiers...]
+<pre><code class="shell">deploy-lambdas [options] [lambda-identifiers...]
 
   Options:
     --all                            deploy all lambdas of the project
     -r, --region &lt;region&gt;            select the AWS region
     -e, --environment &lt;environment&gt;  select the environment
-    -a, --alias &lt;alias&gt;              select the alias to apply</code>
-</code></pre><p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a version
+    -a, --alias &lt;alias&gt;              select the alias to apply</code></pre>
+<p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a version
 in Amazon Lambda and apply an alias. Setting the option to an empty string (<code>--alias &quot;&quot;</code>) will skip this.</p>
 <blockquote>
 <p>When deploying Node.js Lambdas, it is recommended to have a recent version of npm installed (&gt;= 4)</p>
 </blockquote>
 <h3 id="install-lambdas-locally">install-lambdas-locally</h3>
-<pre><code><code class="source-code prettyprint">install-lambdas-locally [lambda-identifiers...]</code>
-</code></pre><p>Deletes the <code>node_modules</code> folder of one or several lambda and runs <code>npm install</code> to re-install it.</p>
+<pre><code class="shell">install-lambdas-locally [lambda-identifiers...]</code></pre>
+<p>Deletes the <code>node_modules</code> folder of one or several lambda and runs <code>npm install</code> to re-install it.</p>
 <h3 id="test-lambda-locally">test-lambda-locally</h3>
-<pre><code><code class="source-code prettyprint">test-lambda-locally [options] [lambda-identifier]
+<pre><code class="shell">test-lambda-locally [options] [lambda-identifier]
 
   Options:
-    -e, --event &lt;event-name&gt;  Event example to use</code>
-</code></pre><p>Executes a Lambda locally. The event option allows to select the example object that will be passed as the first argument.
-Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the context
+    -e, --event &lt;event-name&gt;  Event example to use</code></pre>
+<p>Executes a Lambda locally. The event option allows to select the example object that will be passed as the first argument.
+Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the conshell
 object is passed as the second argument.</p>
 <h3 id="test-lambda">test-lambda</h3>
-<pre><code><code class="source-code prettyprint">test-lambda [options] [lambda-identifier]
+<pre><code class="shell">test-lambda [options] [lambda-identifier]
 
   Options:
     --event &lt;event-name&gt;             Event example to use
     -r, --region &lt;region&gt;            select the AWS region
     -e, --environment &lt;environment&gt;  select the environment
-    -a, --alias &lt;alias&gt;              select the alias to test</code>
-</code></pre><p>Executes a Lambda deployed in AWS. The event option allows to select the example object that will be passed as the first
+    -a, --alias &lt;alias&gt;              select the alias to test</code></pre>
+<p>Executes a Lambda deployed in AWS. The event option allows to select the example object that will be passed as the first
 argument. Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the
-context object is passed as the second argument.</p>
+conshell object is passed as the second argument.</p>
 <p>Setting the option <code>--alias</code> to an empty string (<code>--alias &quot;&quot;</code>) will invoke the <code>LATEST</code> version of the Lambda.</p>
 <h2 id="integration-with-myrmex-api-gateway-">Integration with <code>@myrmex/api-gateway</code></h2>
 <p><code>@myrmex/lambda</code> add some functionalities to  <code>@myrmex/api-gateway</code> when both are installed in the same project.</p>
 <h3 id="associate-a-lambda-with-an-api-endpoint">Associate a Lambda with an API endpoint</h3>
 <p>In the <a href="/manual/usage/api-gateway-plugin.html#project-anatomy"><code>spec.json</code></a> file that describes an endpoint, a new extension
 to Swagger is available to select a Lambda that must be used for the endpoint integration.</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;x-myrmex&quot;: {
     &quot;apis&quot;: [],
     &quot;lambda&quot;: &quot;lambda-identifier&quot;
   }
   ... rest of the endpoint specification
-}</code>
-</code></pre>
+}</code></pre>
 <h3 id="new-option-for-myrmex-create-endpoint-">New option for <code>myrmex create-endpoint</code></h3>
 <p>When calling <a href="/manual/usage/api-gateway-plugin.html#create-endpoint"><code>myrmex create-endpoint</code></a>, a new option
 <code>--lambda &lt;lambda-identifier&gt;</code> is available. This option accepts the identifier of a Lambda managed by <code>@myrmex/lambda</code>.</p>
@@ -402,7 +395,7 @@ will appear to set the value the configured value is used as the default value.<
 
 <script src="script/search_index.js"></script>
 <script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></head>
 <script src="script/inherited-summary.js"></script>
 <script src="script/test-summary.js"></script>
 <script src="script/inner-link.js"></script>

@@ -5,16 +5,17 @@
   <base data-ice="baseUrl" href="../../">
   <title data-ice="title">Usage</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   
   
   <script src="script/manual.js"></script>
 <link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="icon" type="image/png" sizes="32x32" href="manual/asset/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="manual/asset/favicon-16x16.png">
 <body class="layout-container manual-root" data-ice="rootContainer">
 
-<header>
+<header><a href="./index.html" class="myrmex-home">Myrmex</a>
   <a href="./">Home</a>
   
   <a href="identifiers.html">Reference</a>
@@ -178,36 +179,34 @@ simplify the configuration of other plugins.</p>
 gives all necessary permissions.</p>
 <h2 id="installation">Installation</h2>
 <p>Install the npm module in a Myrmex project:</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/iam --save-dev</code>
-</code></pre>
+<pre><code class="shell">npm install @myrmex/iam --save-dev</code></pre>
 <p>Then enable the plugin in the <code>myrmex.json</code> file:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/iam&quot;
   ]
-}</code>
-</code></pre>
+}</code></pre>
 <h2 id="commands">Commands</h2>
 <h3 id="create-policy">create-policy</h3>
 <p>Usage:</p>
-<pre><code><code class="source-code prettyprint">create-policy [identifier]</code>
-</code></pre><p>Create a new IAM policy in <code>iam/policies/&lt;identifier&gt;.json</code>. The command does not configure the policy but just prepare the
+<pre><code class="shell">create-policy [identifier]</code></pre>
+<p>Create a new IAM policy in <code>iam/policies/&lt;identifier&gt;.json</code>. The command does not configure the policy but just prepare the
 file in the right place. By default it is <code>iam/policies/&lt;identifier&gt;.json</code>.</p>
 <h3 id="create-role">create-role</h3>
 <p>Usage:</p>
-<pre><code><code class="source-code prettyprint">create-role [options] [identifier]
+<pre><code class="shell">create-role [options] [identifier]
 
   Options:
     -m, --model &lt;model-identifier&gt;       select a model to quickly create the role configuration
-    -p, --policies &lt;policy-identifiers&gt;  select the policies to attach to the role</code>
-</code></pre><p>Create a new IAM role. By default the location of roles is <code>iam/roles/&lt;identifier&gt;.json</code>.</p>
+    -p, --policies &lt;policy-identifiers&gt;  select the policies to attach to the role</code></pre>
+<p>Create a new IAM role. By default the location of roles is <code>iam/roles/&lt;identifier&gt;.json</code>.</p>
 <p>Two predefined role configuration are available:</p>
 <ul>
-<li><code>APIGatewayLambdaInvocation</code>: The <code>AWSLambdaRole</code> policy is attached to it and it can be associated to API Gateway
+<li><code>APIGatewayLambdaInvocation</code>: The AWS policy <code>AWSLambdaRole</code> is attached to it and it can be associated to API Gateway
  endpoints.</li>
-<li><code>LambdaBasicExecutionRole</code>: The <code>AWSLambdaBasicExecutionRole</code> is attached to it and it can be associated to Lambda
- functions.</li>
+<li><code>LambdaBasicExecutionRole</code>: The AWS policy <code>AWSLambdaBasicExecutionRole</code> is attached to it and it can be associated to
+ Lambda functions.</li>
 </ul>
 <p>It is possible to define custom policies and <code>trust-relationship</code> configuration. Is is also possible to reference
 policies from the Myrmex project.</p>
@@ -216,20 +215,20 @@ project, deploying some resources like Lambda functions or API definitions can b
 needing to define specific configuration to reference different roles ARN.</p>
 <h3 id="deploy-policies">deploy-policies</h3>
 <p>Usage:</p>
-<pre><code><code class="source-code prettyprint">deploy-policies [options] [policy-identifiers]
+<pre><code class="shell">deploy-policies [options] [policy-identifiers]
 
   Options:
     -e, --environment [environment]  An environment identifier that will be used as a prefix
-    -s, --stage [stage]              A stage identifier that will be used as a suffix</code>
-</code></pre><p>Deploy one or more policies in AWS. The <code>--environment</code> option is used as a prefix and the <code>--stage</code> option as a suffix.</p>
+    -s, --stage [stage]              A stage identifier that will be used as a suffix</code></pre>
+<p>Deploy one or more policies in AWS. The <code>--environment</code> option is used as a prefix and the <code>--stage</code> option as a suffix.</p>
 <h3 id="deploy-roles">deploy-roles</h3>
 <p>Usage:</p>
-<pre><code><code class="source-code prettyprint">deploy-roles [options] [role-identifiers]
+<pre><code class="shell">deploy-roles [options] [role-identifiers]
 
   Options:
     -e, --environment [environment]  An environment identifier that will be used as a prefix
-    -s, --stage [stage]              A stage identifier that will be used as a suffix</code>
-</code></pre><p>Deploy one or more roles in AWS. The <code>environment</code> option is used as a prefix and the <code>stage</code> option as a suffix.</p>
+    -s, --stage [stage]              A stage identifier that will be used as a suffix</code></pre>
+<p>Deploy one or more roles in AWS. The <code>environment</code> option is used as a prefix and the <code>stage</code> option as a suffix.</p>
 <h2 id="definition-of-iam-policies">Definition of IAM policies</h2>
 <p>The policies managed by Myrmex are nothing more than IAM policy definitions stored as JSON file. This allows to manage the
 permissions needed by an application alongside the code.</p>
@@ -238,13 +237,13 @@ if needed. If a policy already has 5 version (the maximum allowed by AWS), the o
 defined as the default one).</p>
 <h2 id="definition-of-iam-roles">Definition of IAM roles</h2>
 <p>AWS roles can be configured with JSON files with <code>@myrmex/iam</code>. The structure looks like this:</p>
-<pre><code><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;description&quot;: &quot;Description of the role&quot;,
   &quot;managed-policies&quot;: [
-    &lt;policy-identifier&gt;
+    &quot;&lt;policy-identifier&gt;&quot;
   ],
   &quot;inline-policies&quot;: [
-    &lt;policy-definition&gt;
+    &quot;&lt;policy-definition&gt;&quot;
   ],
   &quot;trust-relationship&quot;: {
     &quot;Version&quot;: &quot;2012-10-17&quot;,
@@ -256,8 +255,8 @@ defined as the default one).</p>
       &quot;Action&quot;: &quot;sts:AssumeRole&quot;
     }]
   }
-}</code>
-</code></pre><p>The <em>managed-policies</em> section contains a list of identifiers of IAM policies already deployed in AWS associated to the role.
+}</code></pre>
+<p>The <em>managed-policies</em> section contains a list of identifiers of IAM policies already deployed in AWS associated to the role.
 During the deployment of a role, Myrmex will look for policies matching the identifiers in <em>managed-policies</em>, trying
 combinations with the <em>environment</em> and the <em>stage</em> options:</p>
 <ul>
@@ -299,7 +298,7 @@ combinations with the <code>environment</code> and the <code>stage</code> proper
 
 <script src="script/search_index.js"></script>
 <script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></head>
 <script src="script/inherited-summary.js"></script>
 <script src="script/test-summary.js"></script>
 <script src="script/inner-link.js"></script>

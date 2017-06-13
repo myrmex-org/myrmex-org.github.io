@@ -5,16 +5,17 @@
   <base data-ice="baseUrl" href="../../">
   <title data-ice="title">Installation</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   
   
   <script src="script/manual.js"></script>
 <link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="icon" type="image/png" sizes="32x32" href="manual/asset/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="manual/asset/favicon-16x16.png">
 <body class="layout-container manual-root" data-ice="rootContainer">
 
-<header>
+<header><a href="./index.html" class="myrmex-home">Myrmex</a>
   <a href="./">Home</a>
   
   <a href="identifiers.html">Reference</a>
@@ -195,22 +196,19 @@ Node.js</a></p>
 <p><strong>Prerequisites</strong>: <code>node</code> (version 4 minimum) must be installed.</p>
 <h3 id="installing-the-myrmex-command-line">Installing the Myrmex command line</h3>
 <p>The <code>myrmex</code> command line has its own npm module. Install it globally.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
-</code></pre>
+<pre><code class="shell">npm install -g myrmex</code></pre>
 <p>We can check that the <code>myrmex</code> command line is correctly installed.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint"># This command will show the available options and sub-commands
-myrmex -h</code>
-</code></pre>
+<pre><code class="shell"># This command will show the available options and sub-commands
+myrmex -h</code></pre>
 <p>At this point, there is only one sub-command available: <code>myrmex new</code>. When creating a project, other subcommands will be
 provided by Myrmex plugins. For every subcommand, every option that is not provided via the command line will provide a
 prompt to set its value. This way, every Myrmex command can be scripted and is completely interactive at the same time.</p>
 <h3 id="creating-a-new-project">Creating a new project</h3>
 <p><code>myrmex new</code> is the command that creates new projects. If it is called without argument and/or option, it will provide a prompt
 to define the configuration of the project.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint"># Using the command without option and argument,
+<pre><code class="shell"># Using the command without option and argument,
 # the user will be prompted to give information about the project configuration
-myrmex new</code>
-</code></pre>
+myrmex new</code></pre>
 <p>The prompt will ask to choose a project name and to select the plugins to install among <code>@myrmex/iam</code>, <code>@myrmex/lambda</code> and
 <code>@myrmex/api-gateway</code>. The plugin selection depend on the project. It is easy to install a plugin later if it is not done at
 this step (see next section).</p>
@@ -225,23 +223,21 @@ They are provided by plugins that have been installed in the project.</p>
 <h3 id="installing-plugins">Installing plugins</h3>
 <p><code>myrmex new</code> propose a selection of plugins to install but it is possible to install them or other plugins separately. Myrmex
 plugins are npm packages. So the following command will install the plugin <code>@myrmex/api-gateway</code>:</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/api-gateway --save-dev</code>
-</code></pre>
+<pre><code class="shell">npm install @myrmex/api-gateway --save-dev</code></pre>
 <p>To be loaded by Myrmex, the plugin needs to be referenced in the <code>myrmex.json</code> file, in the <code>plugins</code> section:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;name&quot;: &quot;my-serverless-application&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/api-gateway&quot;
   ]
-}</code>
-</code></pre>
+}</code></pre>
 <p>It is possible to disable a plugin by removing it from the <code>myrmex.json</code> file.</p>
 <h2 id="project-configuration">Project configuration</h2>
 <p>Myrmex can be configured in different ways.</p>
 <h3 id="the-myrmex-json-file">The <code>myrmex.json</code> file</h3>
 <p>In the root directory of a Myrmex project, there is a <code>myrmex.json</code> file that contains the configuration of the project.</p>
 <p>A <code>myrmex.json</code> file looks like this:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;name&quot;: &quot;my-serverless-application&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/iam&quot;,
@@ -258,8 +254,7 @@ plugins are npm packages. So the following command will install the plugin <code
       }
     }
   }
-}</code>
-</code></pre>
+}</code></pre>
 <ul>
 <li><code>name</code>: the identifier of the project.</li>
 <li><code>plugins</code>: the list of plugins that Myrmex has to register. A Myrmex plugin can be a node module installed via npm or
@@ -268,7 +263,7 @@ defined in the project. A plugin installed via npm but specified here will not b
 </ul>
 <p>The command <code>myrmex show-config</code> allows to see the current configuration of a project. This is the response of this command for
 the previous <code>myrmex.json</code> file.</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+<pre><code class="json">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
   &quot;myNestedConfig&quot;: {
     &quot;level1&quot;: 42,
     &quot;level2&quot;: {
@@ -289,8 +284,7 @@ the previous <code>myrmex.json</code> file.</p>
     &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
     &quot;modulesPath&quot;: &quot;lambda/modules&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 <p>This example shows that the three plugins injected the configuration to define the location of the content that
 they manage. It is possible to override this configuration in the <code>myrmex.json</code> file.</p>
 <h3 id="splitting-the-configuration-into-various-files">Splitting the configuration into various files</h3>
@@ -298,13 +292,12 @@ they manage. It is possible to override this configuration in the <code>myrmex.j
 named <code>config</code>.</p>
 <p>For the previous example, to define the same configuration that in the previous example, the directory structure will look
 like this:</p>
-<pre><code class="lang-text"><code class="source-code prettyprint">project-root
+<pre><code class="shell">project-root
 &#x251C;&#x2500;&#x2500; myrmex.json
 &#x2514;&#x2500;&#x2500; config
-    &#x2514;&#x2500;&#x2500; myNestedConfig.json</code>
-</code></pre>
+    &#x2514;&#x2500;&#x2500; myNestedConfig.json</code></pre>
 <p>The <code>myrmex.json</code> file:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;name&quot;: &quot;planet-express&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/iam&quot;,
@@ -314,19 +307,17 @@ like this:</p>
   &quot;config&quot;: {
     &quot;myConfigKey&quot;: &quot;my-config-value&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 <p>The file <code>config/myNestedConfig.json</code>:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;level1&quot;: 42,
   &quot;level2&quot;: {
     &quot;key1&quot;: true,
     &quot;key2&quot;: false
   }
-}</code>
-</code></pre>
+}</code></pre>
 <p>The command <code>myrmex show-config</code> will give the same response:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+<pre><code class="json">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
   &quot;myNestedConfig&quot;: {
     &quot;level1&quot;: 42,
     &quot;level2&quot;: {
@@ -347,8 +338,7 @@ like this:</p>
     &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
     &quot;modulesPath&quot;: &quot;lambda/modules&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 <h3 id="using-environment-variables-to-override-the-configuration">Using environment variables to override the configuration</h3>
 <p>It is also possible to define configuration via environment variables. Any environment variable that starts with <code>MYRMEX_</code>
 is injected as a configuration key/value. An underscore is used to resolve nested keys.</p>
@@ -357,10 +347,10 @@ is injected as a configuration key/value. An underscore is used to resolve neste
 </blockquote>
 <p>For example, the configuration of <code>myNestedConfig.level1</code> can be overrided using the environment variable
 <code>MYRMEX_myNestedConfig_level1</code>:</p>
-<pre><code><code class="source-code prettyprint">export MYRMEX_myNestedConfig_level1=43
-myrmex show-config</code>
-</code></pre><p>Result:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="shell">export MYRMEX_myNestedConfig_level1=43
+myrmex show-config</code></pre>
+<p>Result:</p>
+<pre><code class="json">{
   &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
   &quot;myNestedConfig&quot;: {
     &quot;level1&quot;: &quot;43&quot;,
@@ -382,16 +372,15 @@ myrmex show-config</code>
     &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
     &quot;modulesPath&quot;: &quot;lambda/modules&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 <blockquote>
-<p>Configuration values defined via an environment variable are always of type <code>String</code>  </p>
+<p>Configuration values defined via an environment variable are always of type <code>String</code></p>
 </blockquote>
 <h3 id="defining-the-configuration-programmatically">Defining the configuration programmatically</h3>
 <p>All json configuration files in Myrmex are loaded using the Node.js <code>require()</code> function. This means that they all can be
 replaced by a javascript file that exposes the desired configuration.</p>
 <p>For example, the previous <code>myrmex.json</code> file can be replaced by this <code>myrmex.js</code> file:</p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">module.exports = {
+<pre><code class="javascript">module.exports = {
   name: &apos;planet-express&apos;,
   plugins: [
     &apos;@myrmex/iam&apos;,
@@ -401,8 +390,7 @@ replaced by a javascript file that exposes the desired configuration.</p>
   config: {
     myConfigKey: process.env.MY_ENVIRONMENT_VARIABLE || &apos;my-default-value&apos;
   }
-}</code>
-</code></pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -413,7 +401,7 @@ replaced by a javascript file that exposes the desired configuration.</p>
 
 <script src="script/search_index.js"></script>
 <script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></head>
 <script src="script/inherited-summary.js"></script>
 <script src="script/test-summary.js"></script>
 <script src="script/inner-link.js"></script>

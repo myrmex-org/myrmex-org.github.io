@@ -5,16 +5,17 @@
   <base data-ice="baseUrl" href="../../">
   <title data-ice="title">Example</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   
   
   <script src="script/manual.js"></script>
 <link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="icon" type="image/png" sizes="32x32" href="manual/asset/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="manual/asset/favicon-16x16.png">
 <body class="layout-container manual-root" data-ice="rootContainer">
 
-<header>
+<header><a href="./index.html" class="myrmex-home">Myrmex</a>
   <a href="./">Home</a>
   
   <a href="identifiers.html">Reference</a>
@@ -176,74 +177,62 @@ recommend to do that in a real case scenario. You should use <code>Express</code
 </blockquote>
 <h2 id="starting-with-an-express-application">Starting with an Express application</h2>
 <p>We will start by creating a basic Express application following <a href="https://expressjs.com/en/starter/generator.html">the documentation</a>.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint"># Installation of express-generator
+<pre><code class="shell"># Installation of express-generator
 npm install express-generator -g
 # Creation of a basic application
 express --view=pug express-app
 # Installation of dependencies
-cd express-app &amp;&amp; npm install</code>
-</code></pre>
+cd express-app &amp;&amp; npm install</code></pre>
 <p>We start the application locally to check that everything works correctly.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">set DEBUG=express-app:* &amp; npm start</code>
-</code></pre>
+<pre><code class="shell">set DEBUG=express-app:* &amp; npm start</code></pre>
 <p>Visit <a href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a> to check that the application runs correctly locally.</p>
 <h2 id="adding-myrmex-to-the-project">Adding Myrmex to the project</h2>
 <p>Be sure that the Myrmex cli is installed.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
-</code></pre>
+<pre><code class="shell">npm install -g myrmex</code></pre>
 <h3 id="install-myrmex-in-the-express-project">Install Myrmex in the Express project</h3>
-<pre><code class="lang-bash"><code class="source-code prettyprint"># For the prompt &quot;What is your project name?&quot;, leave it empty, so Myrmex will be installed in the same directory that Express
+<pre><code class="shell"># For the prompt &quot;What is your project name?&quot;, leave it empty, so Myrmex will be installed in the same directory that Express
 # We will need the plugins @myrmex/iam @myrmex/api-gateway and @myrmex/lambda
-myrmex new</code>
-</code></pre>
+myrmex new</code></pre>
 <p>Myrmex and its plugins will be installed in the section <code>devDependencies</code> of the file <code>package.json</code>.</p>
 <h3 id="creation-of-iam-roles">Creation of IAM roles</h3>
 <p>We create two IAM roles: one to allow Lambda to write in cloudwatch and the other to allow API Gateway to invoke Lambda.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-role MyExpressAppLambdaExecution --model LambdaBasicExecutionRole
-myrmex create-role MyExpressAppLambdaInvocation --model APIGatewayLambdaInvocation</code>
-</code></pre>
+<pre><code class="shell">myrmex create-role MyExpressAppLambdaExecution --model LambdaBasicExecutionRole
+myrmex create-role MyExpressAppLambdaInvocation --model APIGatewayLambdaInvocation</code></pre>
 <h3 id="creation-of-the-lambda">Creation of the Lambda</h3>
 <p>We create a new Lambda managed by Myrmex.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-lambda serverless-express --runtime nodejs6.10 --timeout 30 --memory 256 --role MyExpressAppLambdaExecution</code>
-</code></pre>
+<pre><code class="shell">myrmex create-lambda serverless-express --runtime nodejs6.10 --timeout 30 --memory 256 --role MyExpressAppLambdaExecution</code></pre>
 <p>We have to do a small alteration to the <code>package.json</code> of the Express application to tell node that <code>app.js</code> is the file that
 has to be loaded when <code>require()</code> is used.</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">// in /package.json
+<pre><code class="json">// in /package.json
 {
   &quot;name&quot;: &quot;express-app&quot;,
   &quot;version&quot;: &quot;0.0.0&quot;,
   &quot;main&quot;: &quot;app.js&quot;,
   ...
-}</code>
-</code></pre>
+}</code></pre>
 <p>In the <code>package.json</code> of the Lambda, we define the Express application as a dependency</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint"># in /lambda/lambdas/serverless-express
-npm install ../../.. --save</code>
-</code></pre>
+<pre><code class="shell"># in /lambda/lambdas/serverless-express
+npm install ../../.. --save</code></pre>
 <p><a href="https://github.com/awslabs/aws-serverless-express">aws-serverless-express</a> is a npm package that wrap an Express application
 to process requests from API Gateway with Lambda integration. We add it as a dependency of our Lambda.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint"># in /lambda/lambdas/serverless-express
-npm install aws-serverless-express --save</code>
-</code></pre>
+<pre><code class="shell"># in /lambda/lambdas/serverless-express
+npm install aws-serverless-express --save</code></pre>
 <p>Then we can alter the code of <code>index.js</code> from the Lambda to correctly expose the handler.</p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">// in /lambda/lambdas/serverless-express/index.js
+<pre><code class="javascript">// in /lambda/lambdas/serverless-express/index.js
 &apos;use strict&apos;;
 const awsServerlessExpress = require(&apos;aws-serverless-express&apos;);
 const app = require(&apos;express-app&apos;);
 const server = awsServerlessExpress.createServer(app);
 
-exports.handler = (event, context) =&gt; awsServerlessExpress.proxy(server, event, context);</code>
-</code></pre>
+exports.handler = (event, context) =&gt; awsServerlessExpress.proxy(server, event, context);</code></pre>
 <h3 id="creation-of-the-api">Creation of the API</h3>
 <p>We create an API with two endpoints using <code>ANY</code> method and Lambda proxy integration: one to handle the root url, and another
 for the rest.</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-api serverless-express --title &quot;Serverless Express&quot; --desc &quot;An Express application served by API Gateway and Lambda&quot;
+<pre><code class="shell">myrmex create-api serverless-express --title &quot;Serverless Express&quot; --desc &quot;An Express application served by API Gateway and Lambda&quot;
 myrmex create-endpoint / ANY --apis serverless-express --summary &quot;Proxy to Lambda&quot; --auth none --integration lambda-proxy --lambda serverless-express --role MyExpressAppLambdaInvocation
-myrmex create-endpoint /{proxy+} ANY --apis serverless-express --summary &quot;Proxy to Lambda&quot; --auth none --integration lambda-proxy --lambda serverless-express --role MyExpressAppLambdaInvocation</code>
-</code></pre>
+myrmex create-endpoint /{proxy+} ANY --apis serverless-express --summary &quot;Proxy to Lambda&quot; --auth none --integration lambda-proxy --lambda serverless-express --role MyExpressAppLambdaInvocation</code></pre>
 <h3 id="deployment">Deployment</h3>
-<pre><code class="lang-bash"><code class="source-code prettyprint">myrmex deploy-apis serverless-express --region us-east-1 --environment DEV --stage v0 --deploy-lambdas all --alias &quot;&quot;</code>
-</code></pre>
+<pre><code class="shell">myrmex deploy-apis serverless-express --region us-east-1 --environment DEV --stage v0 --deploy-lambdas all --alias &quot;&quot;</code></pre>
 <p>The deployment messages will give you the url of the application. It will have the form
 <code>https://{your-api-id}.execute-api.us-east-1.amazonaws.com/v0</code>.
 You can test the root url and the url <code>https://{your-api-id}.execute-api.us-east-1.amazonaws.com/v0/users</code> that is also
@@ -259,7 +248,7 @@ receive an error 404.</p>
 
 <script src="script/search_index.js"></script>
 <script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></head>
 <script src="script/inherited-summary.js"></script>
 <script src="script/test-summary.js"></script>
 <script src="script/inner-link.js"></script>

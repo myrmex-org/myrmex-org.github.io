@@ -5,16 +5,17 @@
   <base data-ice="baseUrl" href="./">
   <title data-ice="title">Manual</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   
   
   <script src="script/manual.js"></script>
 <link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="icon" type="image/png" sizes="32x32" href="manual/asset/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="manual/asset/favicon-16x16.png">
 <body class="layout-container manual-root manual-index" data-ice="rootContainer">
 
-<header>
+<header><a href="./index.html" class="myrmex-home">Myrmex</a>
   <a href="./">Home</a>
   
   <a href="identifiers.html">Reference</a>
@@ -189,16 +190,13 @@
 <li><code>AWSLambdaFullAccess</code></li>
 <li><code>AmazonAPIGatewayAdministrator</code></li>
 </ul><p><a href="http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html">The AWS credentials can be set following the documentation from the AWS SDK for
-Node.js</a></p><h2>Installation</h2><p><strong>Prerequisites</strong>: <code>node</code> (version 4 minimum) must be installed.</p><h3>Installing the Myrmex command line</h3><p>The <code>myrmex</code> command line has its own npm module. Install it globally.</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
-</code></pre><p>We can check that the <code>myrmex</code> command line is correctly installed.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># This command will show the available options and sub-commands
-myrmex -h</code>
-</code></pre><p>At this point, there is only one sub-command available: <code>myrmex new</code>. When creating a project, other subcommands will be
+Node.js</a></p><h2>Installation</h2><p><strong>Prerequisites</strong>: <code>node</code> (version 4 minimum) must be installed.</p><h3>Installing the Myrmex command line</h3><p>The <code>myrmex</code> command line has its own npm module. Install it globally.</p><pre><code class="shell">npm install -g myrmex</code></pre><p>We can check that the <code>myrmex</code> command line is correctly installed.</p><pre><code class="shell"># This command will show the available options and sub-commands
+myrmex -h</code></pre><p>At this point, there is only one sub-command available: <code>myrmex new</code>. When creating a project, other subcommands will be
 provided by Myrmex plugins. For every subcommand, every option that is not provided via the command line will provide a
 prompt to set its value. This way, every Myrmex command can be scripted and is completely interactive at the same time.</p><h3>Creating a new project</h3><p><code>myrmex new</code> is the command that creates new projects. If it is called without argument and/or option, it will provide a prompt
-to define the configuration of the project.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># Using the command without option and argument,
+to define the configuration of the project.</p><pre><code class="shell"># Using the command without option and argument,
 # the user will be prompted to give information about the project configuration
-myrmex new</code>
-</code></pre><p>The prompt will ask to choose a project name and to select the plugins to install among <code>@myrmex/iam</code>, <code>@myrmex/lambda</code> and
+myrmex new</code></pre><p>The prompt will ask to choose a project name and to select the plugins to install among <code>@myrmex/iam</code>, <code>@myrmex/lambda</code> and
 <code>@myrmex/api-gateway</code>. The plugin selection depend on the project. It is easy to install a plugin later if it is not done at
 this step (see next section).</p><p><code>myrmex new</code> will perform 3 operations:</p><ul>
 <li>create a project folder</li>
@@ -206,14 +204,12 @@ this step (see next section).</p><p><code>myrmex new</code> will perform 3 opera
 <li>create a <code>myrmex.json</code> configuration file</li>
 </ul><p>Once the project is created we can enter its folder. Using <code>myrmex -h</code> we can see that new <code>myrmex</code> sub-commands are available.
 They are provided by plugins that have been installed in the project.</p><h3>Installing plugins</h3><p><code>myrmex new</code> propose a selection of plugins to install but it is possible to install them or other plugins separately. Myrmex
-plugins are npm packages. So the following command will install the plugin <code>@myrmex/api-gateway</code>:</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/api-gateway --save-dev</code>
-</code></pre><p>To be loaded by Myrmex, the plugin needs to be referenced in the <code>myrmex.json</code> file, in the <code>plugins</code> section:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+plugins are npm packages. So the following command will install the plugin <code>@myrmex/api-gateway</code>:</p><pre><code class="shell">npm install @myrmex/api-gateway --save-dev</code></pre><p>To be loaded by Myrmex, the plugin needs to be referenced in the <code>myrmex.json</code> file, in the <code>plugins</code> section:</p><pre><code class="json">{
   &quot;name&quot;: &quot;my-serverless-application&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/api-gateway&quot;
   ]
-}</code>
-</code></pre><p>It is possible to disable a plugin by removing it from the <code>myrmex.json</code> file.</p><h2>Project configuration</h2><p>Myrmex can be configured in different ways.</p><h3>The <code>myrmex.json</code> file</h3><p>In the root directory of a Myrmex project, there is a <code>myrmex.json</code> file that contains the configuration of the project.</p><p>A <code>myrmex.json</code> file looks like this:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+}</code></pre><p>It is possible to disable a plugin by removing it from the <code>myrmex.json</code> file.</p><h2>Project configuration</h2><p>Myrmex can be configured in different ways.</p><h3>The <code>myrmex.json</code> file</h3><p>In the root directory of a Myrmex project, there is a <code>myrmex.json</code> file that contains the configuration of the project.</p><p>A <code>myrmex.json</code> file looks like this:</p><pre><code class="json">{
   &quot;name&quot;: &quot;my-serverless-application&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/iam&quot;,
@@ -230,14 +226,13 @@ plugins are npm packages. So the following command will install the plugin <code
       }
     }
   }
-}</code>
-</code></pre><ul>
+}</code></pre><ul>
 <li><code>name</code>: the identifier of the project.</li>
 <li><code>plugins</code>: the list of plugins that Myrmex has to register. A Myrmex plugin can be a node module installed via npm or
 defined in the project. A plugin installed via npm but specified here will not be registered by Myrmex.</li>
 <li><code>config</code>: the configuration of the project. Each plugin can use the it and inject default values in it.</li>
 </ul><p>The command <code>myrmex show-config</code> allows to see the current configuration of a project. This is the response of this command for
-the previous <code>myrmex.json</code> file.</p><pre><code class="lang-json"><code class="source-code prettyprint">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+the previous <code>myrmex.json</code> file.</p><pre><code class="json">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
   &quot;myNestedConfig&quot;: {
     &quot;level1&quot;: 42,
     &quot;level2&quot;: {
@@ -258,15 +253,13 @@ the previous <code>myrmex.json</code> file.</p><pre><code class="lang-json"><cod
     &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
     &quot;modulesPath&quot;: &quot;lambda/modules&quot;
   }
-}</code>
-</code></pre><p>This example shows that the three plugins injected the configuration to define the location of the content that
+}</code></pre><p>This example shows that the three plugins injected the configuration to define the location of the content that
 they manage. It is possible to override this configuration in the <code>myrmex.json</code> file.</p><h3>Splitting the configuration into various files</h3><p>If a project has a many configuration keys, it is possible to split the configuration object into various files in a folder
 named <code>config</code>.</p><p>For the previous example, to define the same configuration that in the previous example, the directory structure will look
-like this:</p><pre><code class="lang-text"><code class="source-code prettyprint">project-root
+like this:</p><pre><code class="shell">project-root
 &#x251C;&#x2500;&#x2500; myrmex.json
 &#x2514;&#x2500;&#x2500; config
-    &#x2514;&#x2500;&#x2500; myNestedConfig.json</code>
-</code></pre><p>The <code>myrmex.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+    &#x2514;&#x2500;&#x2500; myNestedConfig.json</code></pre><p>The <code>myrmex.json</code> file:</p><pre><code class="json">{
   &quot;name&quot;: &quot;planet-express&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/iam&quot;,
@@ -276,15 +269,13 @@ like this:</p><pre><code class="lang-text"><code class="source-code prettyprint"
   &quot;config&quot;: {
     &quot;myConfigKey&quot;: &quot;my-config-value&quot;
   }
-}</code>
-</code></pre><p>The file <code>config/myNestedConfig.json</code>:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+}</code></pre><p>The file <code>config/myNestedConfig.json</code>:</p><pre><code class="json">{
   &quot;level1&quot;: 42,
   &quot;level2&quot;: {
     &quot;key1&quot;: true,
     &quot;key2&quot;: false
   }
-}</code>
-</code></pre><p>The command <code>myrmex show-config</code> will give the same response:</p><pre><code class="lang-json"><code class="source-code prettyprint">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
+}</code></pre><p>The command <code>myrmex show-config</code> will give the same response:</p><pre><code class="json">  &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
   &quot;myNestedConfig&quot;: {
     &quot;level1&quot;: 42,
     &quot;level2&quot;: {
@@ -305,14 +296,12 @@ like this:</p><pre><code class="lang-text"><code class="source-code prettyprint"
     &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
     &quot;modulesPath&quot;: &quot;lambda/modules&quot;
   }
-}</code>
-</code></pre><h3>Using environment variables to override the configuration</h3><p>It is also possible to define configuration via environment variables. Any environment variable that starts with <code>MYRMEX_</code>
+}</code></pre><h3>Using environment variables to override the configuration</h3><p>It is also possible to define configuration via environment variables. Any environment variable that starts with <code>MYRMEX_</code>
 is injected as a configuration key/value. An underscore is used to resolve nested keys.</p><blockquote>
 <p>Because <code>_</code> is used to resolve nested key, this technique cannot work with configuration keys containing a <code>_</code>.</p>
 </blockquote><p>For example, the configuration of <code>myNestedConfig.level1</code> can be overrided using the environment variable
-<code>MYRMEX_myNestedConfig_level1</code>:</p><pre><code><code class="source-code prettyprint">export MYRMEX_myNestedConfig_level1=43
-myrmex show-config</code>
-</code></pre><p>Result:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+<code>MYRMEX_myNestedConfig_level1</code>:</p><pre><code class="shell">export MYRMEX_myNestedConfig_level1=43
+myrmex show-config</code></pre><p>Result:</p><pre><code class="json">{
   &quot;myConfigKey&quot;: &quot;my-config-value&quot;,
   &quot;myNestedConfig&quot;: {
     &quot;level1&quot;: &quot;43&quot;,
@@ -334,11 +323,10 @@ myrmex show-config</code>
     &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
     &quot;modulesPath&quot;: &quot;lambda/modules&quot;
   }
-}</code>
-</code></pre><blockquote>
-<p>Configuration values defined via an environment variable are always of type <code>String</code>  </p>
+}</code></pre><blockquote>
+<p>Configuration values defined via an environment variable are always of type <code>String</code></p>
 </blockquote><h3>Defining the configuration programmatically</h3><p>All json configuration files in Myrmex are loaded using the Node.js <code>require()</code> function. This means that they all can be
-replaced by a javascript file that exposes the desired configuration.</p><p>For example, the previous <code>myrmex.json</code> file can be replaced by this <code>myrmex.js</code> file:</p><pre><code class="lang-javascript"><code class="source-code prettyprint">module.exports = {
+replaced by a javascript file that exposes the desired configuration.</p><p>For example, the previous <code>myrmex.json</code> file can be replaced by this <code>myrmex.js</code> file:</p><pre><code class="javascript">module.exports = {
   name: &apos;planet-express&apos;,
   plugins: [
     &apos;@myrmex/iam&apos;,
@@ -348,8 +336,7 @@ replaced by a javascript file that exposes the desired configuration.</p><p>For 
   config: {
     myConfigKey: process.env.MY_ENVIRONMENT_VARIABLE || &apos;my-default-value&apos;
   }
-}</code>
-</code></pre></div>
+}</code></pre></div>
         <a data-ice="link" href="manual/installation/getting-started.html"></a>
       </div>
     </div>
@@ -358,48 +345,42 @@ replaced by a javascript file that exposes the desired configuration.</p><p>For 
       <div class="manual-card">
         <div data-ice="card"><h1>IAM plugin</h1><p>The IAM plugin allows to define and deploy AWS policies and roles. It can be used to avoid referencing IAM roles ARNs and
 simplify the configuration of other plugins.</p><h2>Prerequisites</h2><p>To use the <code>@myrmex/iam</code> plugin, it is necessary to have a minimal knowledge about <a href="https://aws.amazon.com/iam/">AWS Identity and Access Management</a>.</p><p>An AWS user or role that uses the plugin <code>@myrmex/iam</code> must have access to IAM administration. The AWS policy <code>IAMFullAccess</code>
-gives all necessary permissions.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/iam --save-dev</code>
-</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+gives all necessary permissions.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="shell">npm install @myrmex/iam --save-dev</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/iam&quot;
   ]
-}</code>
-</code></pre><h2>Commands</h2><h3>create-policy</h3><p>Usage:</p><pre><code><code class="source-code prettyprint">create-policy [identifier]</code>
-</code></pre><p>Create a new IAM policy in <code>iam/policies/&lt;identifier&gt;.json</code>. The command does not configure the policy but just prepare the
-file in the right place. By default it is <code>iam/policies/&lt;identifier&gt;.json</code>.</p><h3>create-role</h3><p>Usage:</p><pre><code><code class="source-code prettyprint">create-role [options] [identifier]
+}</code></pre><h2>Commands</h2><h3>create-policy</h3><p>Usage:</p><pre><code class="shell">create-policy [identifier]</code></pre><p>Create a new IAM policy in <code>iam/policies/&lt;identifier&gt;.json</code>. The command does not configure the policy but just prepare the
+file in the right place. By default it is <code>iam/policies/&lt;identifier&gt;.json</code>.</p><h3>create-role</h3><p>Usage:</p><pre><code class="shell">create-role [options] [identifier]
 
   Options:
     -m, --model &lt;model-identifier&gt;       select a model to quickly create the role configuration
-    -p, --policies &lt;policy-identifiers&gt;  select the policies to attach to the role</code>
-</code></pre><p>Create a new IAM role. By default the location of roles is <code>iam/roles/&lt;identifier&gt;.json</code>.</p><p>Two predefined role configuration are available:</p><ul>
-<li><code>APIGatewayLambdaInvocation</code>: The <code>AWSLambdaRole</code> policy is attached to it and it can be associated to API Gateway
+    -p, --policies &lt;policy-identifiers&gt;  select the policies to attach to the role</code></pre><p>Create a new IAM role. By default the location of roles is <code>iam/roles/&lt;identifier&gt;.json</code>.</p><p>Two predefined role configuration are available:</p><ul>
+<li><code>APIGatewayLambdaInvocation</code>: The AWS policy <code>AWSLambdaRole</code> is attached to it and it can be associated to API Gateway
  endpoints.</li>
-<li><code>LambdaBasicExecutionRole</code>: The <code>AWSLambdaBasicExecutionRole</code> is attached to it and it can be associated to Lambda
- functions.</li>
+<li><code>LambdaBasicExecutionRole</code>: The AWS policy <code>AWSLambdaBasicExecutionRole</code> is attached to it and it can be associated to
+ Lambda functions.</li>
 </ul><p>It is possible to define custom policies and <code>trust-relationship</code> configuration. Is is also possible to reference
 policies from the Myrmex project.</p><p>Roles can be referenced by other plugins to facilitate the deployment of Myrmex applications: by defining roles in the Myrmex
 project, deploying some resources like Lambda functions or API definitions can be done on various environments without
-needing to define specific configuration to reference different roles ARN.</p><h3>deploy-policies</h3><p>Usage:</p><pre><code><code class="source-code prettyprint">deploy-policies [options] [policy-identifiers]
+needing to define specific configuration to reference different roles ARN.</p><h3>deploy-policies</h3><p>Usage:</p><pre><code class="shell">deploy-policies [options] [policy-identifiers]
 
   Options:
     -e, --environment [environment]  An environment identifier that will be used as a prefix
-    -s, --stage [stage]              A stage identifier that will be used as a suffix</code>
-</code></pre><p>Deploy one or more policies in AWS. The <code>--environment</code> option is used as a prefix and the <code>--stage</code> option as a suffix.</p><h3>deploy-roles</h3><p>Usage:</p><pre><code><code class="source-code prettyprint">deploy-roles [options] [role-identifiers]
+    -s, --stage [stage]              A stage identifier that will be used as a suffix</code></pre><p>Deploy one or more policies in AWS. The <code>--environment</code> option is used as a prefix and the <code>--stage</code> option as a suffix.</p><h3>deploy-roles</h3><p>Usage:</p><pre><code class="shell">deploy-roles [options] [role-identifiers]
 
   Options:
     -e, --environment [environment]  An environment identifier that will be used as a prefix
-    -s, --stage [stage]              A stage identifier that will be used as a suffix</code>
-</code></pre><p>Deploy one or more roles in AWS. The <code>environment</code> option is used as a prefix and the <code>stage</code> option as a suffix.</p><h2>Definition of IAM policies</h2><p>The policies managed by Myrmex are nothing more than IAM policy definitions stored as JSON file. This allows to manage the
+    -s, --stage [stage]              A stage identifier that will be used as a suffix</code></pre><p>Deploy one or more roles in AWS. The <code>environment</code> option is used as a prefix and the <code>stage</code> option as a suffix.</p><h2>Definition of IAM policies</h2><p>The policies managed by Myrmex are nothing more than IAM policy definitions stored as JSON file. This allows to manage the
 permissions needed by an application alongside the code.</p><p>Every time Myrmex has to deploy a policy, it checks if it needs to be created or updated and perform the appropriate action
 if needed. If a policy already has 5 version (the maximum allowed by AWS), the oldest one will be deleted (unless it as been
-defined as the default one).</p><h2>Definition of IAM roles</h2><p>AWS roles can be configured with JSON files with <code>@myrmex/iam</code>. The structure looks like this:</p><pre><code><code class="source-code prettyprint">{
+defined as the default one).</p><h2>Definition of IAM roles</h2><p>AWS roles can be configured with JSON files with <code>@myrmex/iam</code>. The structure looks like this:</p><pre><code class="json">{
   &quot;description&quot;: &quot;Description of the role&quot;,
   &quot;managed-policies&quot;: [
-    &lt;policy-identifier&gt;
+    &quot;&lt;policy-identifier&gt;&quot;
   ],
   &quot;inline-policies&quot;: [
-    &lt;policy-definition&gt;
+    &quot;&lt;policy-definition&gt;&quot;
   ],
   &quot;trust-relationship&quot;: {
     &quot;Version&quot;: &quot;2012-10-17&quot;,
@@ -411,8 +392,7 @@ defined as the default one).</p><h2>Definition of IAM roles</h2><p>AWS roles can
       &quot;Action&quot;: &quot;sts:AssumeRole&quot;
     }]
   }
-}</code>
-</code></pre><p>The <em>managed-policies</em> section contains a list of identifiers of IAM policies already deployed in AWS associated to the role.
+}</code></pre><p>The <em>managed-policies</em> section contains a list of identifiers of IAM policies already deployed in AWS associated to the role.
 During the deployment of a role, Myrmex will look for policies matching the identifiers in <em>managed-policies</em>, trying
 combinations with the <em>environment</em> and the <em>stage</em> options:</p><ul>
 <li><code>&lt;environment&gt;_&lt;identifier&gt;_&lt;stage&gt;</code></li>
@@ -433,14 +413,12 @@ combinations with the <code>environment</code> and the <code>stage</code> proper
         <div data-ice="card"><h1>Lambda plugin</h1><p>The Lambda plugin allows to define and deploy Lambdas. It should work with any runtime but has been tested mostly with
 Node.js and secondly with Python.</p><h2>Prerequisites</h2><p>To use the <code>@myrmex/lambda</code> plugin, it is necessary to have a minimal knowledge about
 <a href="https://aws.amazon.com/lambda/">AWS Lambda</a>.</p><p>An AWS user or role that uses the plugin <code>@myrmex/lambda</code> must have access to Lambda administration. The AWS policy
-<code>AWSLambdaFullAccess</code> gives all necessary permissions.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/lambda</code>
-</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+<code>AWSLambdaFullAccess</code> gives all necessary permissions.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="shell">npm install @myrmex/lambda</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/lambda&quot;
   ]
-}</code>
-</code></pre><p>Once the plugin is installed and enabled in the project, the <code>myrmex</code> command line will provide new sub-commands to manage and
+}</code></pre><p>Once the plugin is installed and enabled in the project, the <code>myrmex</code> command line will provide new sub-commands to manage and
 deploy Lambdas.</p><h2>Project anatomy</h2><p>By default, the content managed by the Lambda plugin is located in an <code>lambda</code> directory in the root directory of the
 project.</p><p>Out of the box, for the Node.js runtime, the Lambda plugin allows to separate the definition of Lambdas from the logic of the
 application by providing a specific place to write node modules but it is not mandatory to use it. <code>@myrmex/lambda</code> helps to
@@ -455,7 +433,7 @@ The content of the <code>params</code> property is used as the argument of the f
 </ul><p>By default, for the Node.js runtime, the directory <code>lambda/modules</code> contains the node modules of the project. For example,
 some of these modules could be named <code>log</code>, or <code>data-access</code> or <code>authorization</code> etc...</p><p>Each module should have a clear responsibility so that each Lambda can embed only the code it needs. This is a recommendation
 but the developer is free to organize the code as he want. The Lambda plugin does not force you to use a specific project
-organization.</p><p>This is what a project structure could look like:</p><pre><code class="lang-text"><code class="source-code prettyprint">lambda
+organization.</p><p>This is what a project structure could look like:</p><pre><code class="shell">lambda
 &#x251C;&#x2500;&#x2500; lambdas                         The Lambdas defined by the application
 |   &#x251C;&#x2500;&#x2500; my-nodejs-lambda            The name of this directory is the identifier of a Lambda
 |   |   &#x251C;&#x2500;&#x2500; config.json             The configuration of the Lambda (runtime, memory, timeout, execution role...)
@@ -475,8 +453,7 @@ organization.</p><p>This is what a project structure could look like:</p><pre><c
     |   &#x2514;&#x2500;&#x2500; index.js
     &#x2514;&#x2500;&#x2500; log
         &#x251C;&#x2500;&#x2500; package.json
-        &#x2514;&#x2500;&#x2500; index.js</code>
-</code></pre><p>Example of <code>config.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+        &#x2514;&#x2500;&#x2500; index.js</code></pre><p>Example of <code>config.json</code> file:</p><pre><code class="json">{
   &quot;params&quot;: {
     &quot;Timeout&quot;: 30,
     &quot;MemorySize&quot;: 256,
@@ -484,27 +461,24 @@ organization.</p><p>This is what a project structure could look like:</p><pre><c
     &quot;Runtime&quot;: &quot;nodejs6.10&quot;,
     &quot;Handler&quot;: &quot;index.handler&quot;
   }
-}</code>
-</code></pre><p>The <code>package.json</code> of a module or a Lambda can declare dependencies with other modules using file paths in the <code>dependencies</code>
-property:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+}</code></pre><p>The <code>package.json</code> of a module or a Lambda can declare dependencies with other modules using file paths in the <code>dependencies</code>
+property:</p><pre><code class="json">{
   &quot;name&quot;: &quot;data-access&quot;,
   &quot;version&quot;: &quot;0.0.0&quot;,
   &quot;dependencies&quot;: {
     &quot;log&quot;: &quot;../log&quot;
   }
-}</code>
-</code></pre><p>In this case, <code>require(&apos;log&apos;)</code> will load the module <code>log</code> installed in <code>lambda/modules/data-access/node_modules/log</code>.</p><p>It is recommended to use relative paths for portability.</p><p>It is recommended to use a recent version of <code>npm</code> to minimize the size of the Lambda packages and facilitate the
+}</code></pre><p>In this case, <code>require(&apos;log&apos;)</code> will load the module <code>log</code> installed in <code>lambda/modules/data-access/node_modules/log</code>.</p><p>It is recommended to use relative paths for portability.</p><p>It is recommended to use a recent version of <code>npm</code> to minimize the size of the Lambda packages and facilitate the
 configuration of nested dependencies. Indeed, <code>npm@2</code> can behave in an unexpected manner with nested dependencies when using
 relative file paths.</p><h2>Configuration</h2><p>These are <a href="/manual/installation/getting-started.html#project-configuration">Myrmex configuration keys</a> specific to to the
-<code>@myrmex/lambda</code> plugin.</p><h3>Default values</h3><p>Using <code>myrmex show-config</code> after installing the plugin, we can see the default configuration:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+<code>@myrmex/lambda</code> plugin.</p><h3>Default values</h3><p>Using <code>myrmex show-config</code> after installing the plugin, we can see the default configuration:</p><pre><code class="json">{
   &quot;lambda&quot;: {
     &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
     &quot;modulesPath&quot;: &quot;lambda/modules&quot;
   }
-}</code>
-</code></pre><h3><code>lambda.lambdasPath</code></h3><p>Path to the folder that contains Lambdas. Default value: <code>lambda/lambdas</code>.</p><h3><code>lambda.modulesPath</code></h3><p>Path to the folder that contains modules for Node.js Lambdas. Default value: <code>lambda/modules</code>.</p><h3><code>lambda.alias</code></h3><p>Set the alias applied when deploying Lambdas.</p><p>By setting this configuration, the <code>--alias</code> option of the <a href="#deploy-lambdas"><code>myrmex deploy-lambdas</code></a> command does not prompt
+}</code></pre><h3><code>lambda.lambdasPath</code></h3><p>Path to the folder that contains Lambdas. Default value: <code>lambda/lambdas</code>.</p><h3><code>lambda.modulesPath</code></h3><p>Path to the folder that contains modules for Node.js Lambdas. Default value: <code>lambda/modules</code>.</p><h3><code>lambda.alias</code></h3><p>Set the alias applied when deploying Lambdas.</p><p>By setting this configuration, the <code>--alias</code> option of the <a href="#deploy-lambdas"><code>myrmex deploy-lambdas</code></a> command does not prompt
 when not provided via the command line and the configured value is used as the default value.</p><p>Setting <code>lambda.alias</code> to an empty string disables the creation/update of an alias and the new version of the Lambda will
-only be available as <code>LATEST</code>.</p><h3>Example</h3><p>Using the <code>myrmex.json</code> file, the plugin configuration can be defined like this:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+only be available as <code>LATEST</code>.</p><h3>Example</h3><p>Using the <code>myrmex.json</code> file, the plugin configuration can be defined like this:</p><pre><code class="json">{
   &quot;name&quot;: &quot;A Myrmex project&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/lambda&quot;
@@ -516,56 +490,48 @@ only be available as <code>LATEST</code>.</p><h3>Example</h3><p>Using the <code>
       &quot;alias&quot;: &quot;&quot;
     }
   }
-}</code>
-</code></pre><h2>Commands</h2><h3>create-lambda</h3><pre><code><code class="source-code prettyprint">create-lambda [options] [identifier]
+}</code></pre><h2>Commands</h2><h3>create-lambda</h3><pre><code class="shell">create-lambda [options] [identifier]
 
   Options:
     -r, --runtime &lt;nodejs|nodejs4.3|nodejs6.10|python2.7|python3.6&gt;  select the runtime
     -t, --timeout &lt;timeout&gt;                                          select the timeout (in seconds)
     -m, --memory &lt;memory&gt;                                            select the memory (in MB)
     -d --dependencies &lt;modules-names&gt;                                select the project modules that must be included in the Lambda (only for nodejs runtimes)
-    --role &lt;role&gt;                                                    select the execution role (enter the ARN)</code>
-</code></pre><p>Create a new Lambda. By default the location of Lambdas is <code>lambda/lambdas/&lt;identifier&gt;/</code>.</p><h3>create-node-module</h3><p><em>For the Node.js runtime only.</em></p><pre><code><code class="source-code prettyprint">create-node-module [options] [name]
+    --role &lt;role&gt;                                                    select the execution role (enter the ARN)</code></pre><p>Create a new Lambda. By default the location of Lambdas is <code>lambda/lambdas/&lt;identifier&gt;/</code>.</p><h3>create-node-module</h3><p><em>For the Node.js runtime only.</em></p><pre><code class="shell">create-node-module [options] [name]
 
   Options:
-    -d, --dependencies &lt;dependent-modules&gt;  select the node modules that are dependencies of this new one</code>
-</code></pre><p>Prepare a new Node.js module. By default the location of modules is <code>lambda/modules/&lt;name&gt;/</code>.</p><p>The creation of nodes modules is just a suggestion to organize the code of a project. The idea is to maintain each component
+    -d, --dependencies &lt;dependent-modules&gt;  select the node modules that are dependencies of this new one</code></pre><p>Prepare a new Node.js module. By default the location of modules is <code>lambda/modules/&lt;name&gt;/</code>.</p><p>The creation of nodes modules is just a suggestion to organize the code of a project. The idea is to maintain each component
 of the application in its own node module to select only relevant components when deploying Lambdas.</p><p>Every Lambda can declare its modules dependencies using <a href="https://docs.npmjs.com/files/package.json#local-paths">local paths</a>
-in its <code>package.json</code> file. Every module can also declare dependencies to other modules that way.</p><p>When Myrmex deploys a Lambda, it executes <code>npm install</code> and the dependencies are installed in the <code>node_modules</code> folder.</p><h3>deploy-lambdas</h3><pre><code><code class="source-code prettyprint">deploy-lambdas [options] [lambda-identifiers...]
+in its <code>package.json</code> file. Every module can also declare dependencies to other modules that way.</p><p>When Myrmex deploys a Lambda, it executes <code>npm install</code> and the dependencies are installed in the <code>node_modules</code> folder.</p><h3>deploy-lambdas</h3><pre><code class="shell">deploy-lambdas [options] [lambda-identifiers...]
 
   Options:
     --all                            deploy all lambdas of the project
     -r, --region &lt;region&gt;            select the AWS region
     -e, --environment &lt;environment&gt;  select the environment
-    -a, --alias &lt;alias&gt;              select the alias to apply</code>
-</code></pre><p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a version
+    -a, --alias &lt;alias&gt;              select the alias to apply</code></pre><p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a version
 in Amazon Lambda and apply an alias. Setting the option to an empty string (<code>--alias &quot;&quot;</code>) will skip this.</p><blockquote>
 <p>When deploying Node.js Lambdas, it is recommended to have a recent version of npm installed (&gt;= 4)</p>
-</blockquote><h3>install-lambdas-locally</h3><pre><code><code class="source-code prettyprint">install-lambdas-locally [lambda-identifiers...]</code>
-</code></pre><p>Deletes the <code>node_modules</code> folder of one or several lambda and runs <code>npm install</code> to re-install it.</p><h3>test-lambda-locally</h3><pre><code><code class="source-code prettyprint">test-lambda-locally [options] [lambda-identifier]
+</blockquote><h3>install-lambdas-locally</h3><pre><code class="shell">install-lambdas-locally [lambda-identifiers...]</code></pre><p>Deletes the <code>node_modules</code> folder of one or several lambda and runs <code>npm install</code> to re-install it.</p><h3>test-lambda-locally</h3><pre><code class="shell">test-lambda-locally [options] [lambda-identifier]
 
   Options:
-    -e, --event &lt;event-name&gt;  Event example to use</code>
-</code></pre><p>Executes a Lambda locally. The event option allows to select the example object that will be passed as the first argument.
-Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the context
-object is passed as the second argument.</p><h3>test-lambda</h3><pre><code><code class="source-code prettyprint">test-lambda [options] [lambda-identifier]
+    -e, --event &lt;event-name&gt;  Event example to use</code></pre><p>Executes a Lambda locally. The event option allows to select the example object that will be passed as the first argument.
+Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the conshell
+object is passed as the second argument.</p><h3>test-lambda</h3><pre><code class="shell">test-lambda [options] [lambda-identifier]
 
   Options:
     --event &lt;event-name&gt;             Event example to use
     -r, --region &lt;region&gt;            select the AWS region
     -e, --environment &lt;environment&gt;  select the environment
-    -a, --alias &lt;alias&gt;              select the alias to test</code>
-</code></pre><p>Executes a Lambda deployed in AWS. The event option allows to select the example object that will be passed as the first
+    -a, --alias &lt;alias&gt;              select the alias to test</code></pre><p>Executes a Lambda deployed in AWS. The event option allows to select the example object that will be passed as the first
 argument. Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the
-context object is passed as the second argument.</p><p>Setting the option <code>--alias</code> to an empty string (<code>--alias &quot;&quot;</code>) will invoke the <code>LATEST</code> version of the Lambda.</p><h2>Integration with <code>@myrmex/api-gateway</code></h2><p><code>@myrmex/lambda</code> add some functionalities to  <code>@myrmex/api-gateway</code> when both are installed in the same project.</p><h3>Associate a Lambda with an API endpoint</h3><p>In the <a href="/manual/usage/api-gateway-plugin.html#project-anatomy"><code>spec.json</code></a> file that describes an endpoint, a new extension
-to Swagger is available to select a Lambda that must be used for the endpoint integration.</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+conshell object is passed as the second argument.</p><p>Setting the option <code>--alias</code> to an empty string (<code>--alias &quot;&quot;</code>) will invoke the <code>LATEST</code> version of the Lambda.</p><h2>Integration with <code>@myrmex/api-gateway</code></h2><p><code>@myrmex/lambda</code> add some functionalities to  <code>@myrmex/api-gateway</code> when both are installed in the same project.</p><h3>Associate a Lambda with an API endpoint</h3><p>In the <a href="/manual/usage/api-gateway-plugin.html#project-anatomy"><code>spec.json</code></a> file that describes an endpoint, a new extension
+to Swagger is available to select a Lambda that must be used for the endpoint integration.</p><pre><code class="json">{
   &quot;x-myrmex&quot;: {
     &quot;apis&quot;: [],
     &quot;lambda&quot;: &quot;lambda-identifier&quot;
   }
   ... rest of the endpoint specification
-}</code>
-</code></pre><h3>New option for <code>myrmex create-endpoint</code></h3><p>When calling <a href="/manual/usage/api-gateway-plugin.html#create-endpoint"><code>myrmex create-endpoint</code></a>, a new option
+}</code></pre><h3>New option for <code>myrmex create-endpoint</code></h3><p>When calling <a href="/manual/usage/api-gateway-plugin.html#create-endpoint"><code>myrmex create-endpoint</code></a>, a new option
 <code>--lambda &lt;lambda-identifier&gt;</code> is available. This option accepts the identifier of a Lambda managed by <code>@myrmex/lambda</code>.</p><p>If the option is not provided in the command line and the option <code>--integration</code> is set to <code>lambda</code> or <code>lambda-proxy</code>, a
 prompt will propose to select the appropriate Lambda in a list.</p><p>The value of <code>--lambda &lt;lambda-identifier&gt;</code> will be set in extension to Swagger described above.</p><h3>New options for <code>myrmex deploy-apis</code></h3><p>When calling <a href="/manual/usage/api-gateway-plugin.html#deploy-apis"><code>myrmex create-endpoint</code></a>, two new options are available:</p><h4><code>--deploy-lambdas &lt;all|partial|none&gt;</code></h4><p>The option <code>--deploy-lambdas &lt;all|partial|none&gt;</code> accepts three possible values:</p><ul>
 <li><code>all</code> will perform the deployment of all Lambdas defined in the Myrmex project before deploying the APIs.</li>
@@ -581,21 +547,19 @@ will appear to set the value the configured value is used as the default value.<
       <h1 data-ice="label" class="manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;"><span data-ice="label-inner">API Gateway Plugin</span></h1>
       <div class="manual-card">
         <div data-ice="card"><h1>API Gateway Plugin</h1><h2>Prerequisites</h2><p>To use the <code>@myrmex/api-gateway</code> plugin, it is necessary to have a minimal knowledge about <a href="https://aws.amazon.com/api-gateway/">Amazon API
-Gateway</a> and the <a href="http://swagger.io/specification/">Swagger v2.0</a> specification.</p><p><code>@myrmex/api-gateway</code> uses the API Gateway Import API feature.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/api-gateway</code>
-</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+Gateway</a> and the <a href="http://swagger.io/specification/">Swagger v2.0</a> specification.</p><p><code>@myrmex/api-gateway</code> uses the API Gateway Import API feature.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="shell">npm install @myrmex/api-gateway</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/api-gateway&quot;
   ]
-}</code>
-</code></pre><p>Once the plugin is installed and enabled, the <code>myrmex</code> command line will provide new sub-commands to manage and deploy APIs.</p><h2>Project anatomy</h2><p>By default, the content managed by <code>@myrmex/api-gateway</code> is located in an <code>api-gateway</code> directory in the root directory of the
+}</code></pre><p>Once the plugin is installed and enabled, the <code>myrmex</code> command line will provide new sub-commands to manage and deploy APIs.</p><h2>Project anatomy</h2><p>By default, the content managed by <code>@myrmex/api-gateway</code> is located in an <code>api-gateway</code> directory in the root directory of the
 project.</p><p>A project configuration is composed of a list of APIs and a list of endpoints. Each endpoint specification contains the list
 of APIs where it must be exposed. Therefore, an endpoint <code>GET /my-resource/{id}</code> can be exposed by a <code>mobile-app</code> API and a
 <code>back-office</code> API, while another endpoint <code>PUT /my-resource</code> can be exposed by the <code>back-office</code> API only. This allows to
 create different APIs for different purposes while sharing some functionalities.</p><p>The directory <code>api-gateway/apis</code> contains the API definitions. Each of its sub-directory has the name of an API identifier and
 contains a Swagger specification file (without the endpoints definitions).</p><p>The directory <code>api-gateway/endpoints</code> contains the endpoints definitions. The structure of its sub-directories represents url
 paths and HTTP methods. Each HTTP method directory contains the definition of an endpoint. An endpoint definition is composed
-of its Swagger specification in a <code>spec.json</code> file.</p><p>As an example is more easy to understand, that is what a project structure could looks like:</p><pre><code class="lang-text"><code class="source-code prettyprint">api-gateway
+of its Swagger specification in a <code>spec.json</code> file.</p><p>As an example is more easy to understand, that is what a project structure could looks like:</p><pre><code class="shell">api-gateway
 &#x251C;&#x2500;&#x2500; apis                              The APIs defined by the application
 |   &#x251C;&#x2500;&#x2500; back-office                   The name of this directory is the identifier of an API
 |   |   &#x2514;&#x2500;&#x2500; spec.json                 The API&apos;s Swagger specification (without endpoints definitions)
@@ -615,8 +579,7 @@ of its Swagger specification in a <code>spec.json</code> file.</p><p>As an examp
         |   &#x2514;&#x2500;&#x2500; spec.json
         &#x2514;&#x2500;&#x2500; resource-c
             &#x2514;&#x2500;&#x2500; GET
-                &#x2514;&#x2500;&#x2500; spec.json</code>
-</code></pre><p>This project contains 2 APIs:</p><ul>
+                &#x2514;&#x2500;&#x2500; spec.json</code></pre><p>This project contains 2 APIs:</p><ul>
 <li><code>back-office</code></li>
 <li><code>mobile-app</code></li>
 </ul><p>5 endpoints are available:</p><ul>
@@ -626,7 +589,7 @@ of its Swagger specification in a <code>spec.json</code> file.</p><p>As an examp
 <li><code>GET /resource-b</code></li>
 <li><code>GET /resource-b/resource-c</code></li>
 </ul><p>To associate an endpoint to one or more APIs, it is possible to enrich the endpoint specification (<code>spec.json</code> file) with a
-list of API identifiers, in a Myrmex extension to Swagger.</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+list of API identifiers, in a Myrmex extension to Swagger.</p><pre><code class="json">{
   &quot;x-myrmex&quot;: {
     &quot;apis&quot;: [
       &quot;back-office&quot;,
@@ -634,32 +597,28 @@ list of API identifiers, in a Myrmex extension to Swagger.</p><pre><code class="
     ]
   }
   ... rest of the endpoint specification
-}</code>
-</code></pre><p><code>@myrmex/api-gateway</code> uses the API Gateway Import API feature. Therefore, the configuration of AWS-specific authorization
+}</code></pre><p><code>@myrmex/api-gateway</code> uses the API Gateway Import API feature. Therefore, the configuration of AWS-specific authorization
 and API Gateway-specific API integrations is done with the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html">API Gateway extensions to
-Swagger</a>.</p><h2>Commands</h2><h3>create-api</h3><pre><code><code class="source-code prettyprint">create-api [options] [api-identifier]
+Swagger</a>.</p><h2>Commands</h2><h3>create-api</h3><pre><code class="shell">create-api [options] [api-identifier]
 
   Options:
     -t, --title &lt;title&gt;       The title of the API
-    -d, --desc &lt;description&gt;  A description of the API</code>
-</code></pre><p>Create a new API. By default the location of API definitions is <code>api-gateway/apis/&lt;api-dentifier&gt;/</code>. The API definition is a
+    -d, --desc &lt;description&gt;  A description of the API</code></pre><p>Create a new API. By default the location of API definitions is <code>api-gateway/apis/&lt;api-dentifier&gt;/</code>. The API definition is a
 file named <code>spec.json</code> that contains a <a href="http://swagger.io/specification/#swagger-object-14">Swagger object</a>. The command line
 will to create a simple base configuration. It is possible to write a full Swagger definition here, but the plugin
-<code>@myrmex/api-gateway</code> is designed to separate API definitions into pieces and generate full definitions when needed.</p><h3>create-model</h3><pre><code><code class="source-code prettyprint">create-model [name]</code>
-</code></pre><p>Create a new model. By default the location of models is <code>api-gateway/model/model.json</code>. Models can be referenced as input
-or output of API endpoints but are not mandatory.</p><h3>create-endpoint</h3><pre><code><code class="source-code prettyprint">create-endpoint [options] [resource-path] [http-method]
+<code>@myrmex/api-gateway</code> is designed to separate API definitions into pieces and generate full definitions when needed.</p><h3>create-model</h3><pre><code class="shell">create-model [name]</code></pre><p>Create a new model. By default the location of models is <code>api-gateway/model/model.json</code>. Models can be referenced as input
+or output of API endpoints but are not mandatory.</p><h3>create-endpoint</h3><pre><code class="shell">create-endpoint [options] [resource-path] [http-method]
 
   Options:
     -a, --apis &lt;api-identifiers&gt;          The identifiers of APIs that expose the endpoint separated by &quot;,&quot;
     -s, --summary &lt;endpoint summary&gt;      A short summary of what the operation does
     --auth &lt;authentication-type&gt;          The type of authentication used to call the endpoint (aws_iam|none)
     -i --integration &lt;integration-type&gt;   The type of integration (lambda|http|mock|aws-service)
-    -r, --role &lt;role&gt;                     select the role to invoke integration</code>
-</code></pre><p>Create a new endpoint. By default the location of endpoints definitions is
+    -r, --role &lt;role&gt;                     select the role to invoke integration</code></pre><p>Create a new endpoint. By default the location of endpoints definitions is
 <code>api-gateway/endpoints/&lt;resource-path&gt;/&lt;http-method&gt;/</code>. The endpoint definition is a file named <code>spec.json</code> that contains a
 <a href="http://swagger.io/specification/#path-item-object-32">Swagger path item object</a>. The command line will help to create a
 simple base configuration. Then, the developer can complete the definition using the Swagger specification and the <a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html">API
-Gateway extentions to Swagger</a>.</p><p>The definition of an endpoint can be added to one or more APIs using a Myrmex extention to Swagger:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+Gateway extentions to Swagger</a>.</p><p>The definition of an endpoint can be added to one or more APIs using a Myrmex extention to Swagger:</p><pre><code class="json">{
   &quot;x-myrmex&quot;: {
     &quot;apis&quot;: [
       &quot;&lt;api-identifier-a&gt;&quot;,
@@ -667,32 +626,28 @@ Gateway extentions to Swagger</a>.</p><p>The definition of an endpoint can be ad
     ]
   }
   ... rest of the endpoint specification
-}</code>
-</code></pre><h3>inspect-api</h3><pre><code><code class="source-code prettyprint">inspect-api [options] [api-identifier]
+}</code></pre><h3>inspect-api</h3><pre><code class="shell">inspect-api [options] [api-identifier]
 
   Options:
     -c, --colors                  highlight output
-    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code>
-</code></pre><p>Generate the Swagger definition of an API and print it. There are three different versions of the specification:</p><ul>
+    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code></pre><p>Generate the Swagger definition of an API and print it. There are three different versions of the specification:</p><ul>
 <li>The <code>doc</code> version only contains parts of the definitions that belong to the Swagger specification.</li>
 <li>The <code>aws</code> version is the definition that is sent to AWS API gateway when performing a deployment.</li>
 <li>The <code>complete</code> version contains everything that is defined in the project, including the Myrmex extensions to Swagger.</li>
-</ul><h3>inspect-endpoint</h3><pre><code><code class="source-code prettyprint">inspect-endpoint [options] [resource-path] [http-method]
+</ul><h3>inspect-endpoint</h3><pre><code class="shell">inspect-endpoint [options] [resource-path] [http-method]
 
   Options:
     -c, --colors                  highlight output
-    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code>
-</code></pre><p>Generate the Swagger definition of an endpoint and print it. There are three different versions of the specification:</p><ul>
+    -s, --spec-version &lt;version&gt;  select the type of specification to retrieve: doc|aws|complete</code></pre><p>Generate the Swagger definition of an endpoint and print it. There are three different versions of the specification:</p><ul>
 <li>The <code>doc</code> version only contains parts of the definitions that belong to the Swagger specification.</li>
 <li>The <code>aws</code> version is the definition that is sent to AWS API gateway when performing a deployment.</li>
 <li>The <code>complete</code> version contains everything that is defined in the project, including the Myrmex extensions to Swagger.</li>
-</ul><h3>deploy-apis</h3><pre><code><code class="source-code prettyprint">deploy-apis [options] [api-identifiers...]
+</ul><h3>deploy-apis</h3><pre><code class="shell">deploy-apis [options] [api-identifiers...]
 
   Options:
     -r, --region &lt;region&gt;            select the AWS region
     -e, --environment &lt;environment&gt;  select the environment
-    -s, --stage &lt;stage&gt;              select the API stage</code>
-</code></pre><p>Deploy one or more APIs in API Gateway. The <code>--environment</code> option is used as a prefix to the API name in API Gateway. It can
+    -s, --stage &lt;stage&gt;              select the API stage</code></pre><p>Deploy one or more APIs in API Gateway. The <code>--environment</code> option is used as a prefix to the API name in API Gateway. It can
 be useful to deploy APIs several time in the same AWS account. Values for <code>--environment</code> could be <code>PROD</code> or <code>DEV</code> or <code>JOHN</code>
 to be able to deploy the API for production, development or a developer environment.</p><blockquote>
 <p>The use of <code>--environment</code> can seem redundant with <code>--stage</code>, but when deploying an API Gateway stage, it is not to
@@ -707,15 +662,13 @@ API. Using <code>--environment</code> can allow several developers to use the te
 <div class="manual-card-wrap" data-ice="cards">
       <h1 data-ice="label" class="manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;"><span data-ice="label-inner">CORS Plugin</span></h1>
       <div class="manual-card">
-        <div data-ice="card"><h1>CORS Plugin</h1><h2>Prerequisites</h2><p>The <code>@myrmex/cors</code> plugin gives the possibility to easily define CORS configuration for the <code>@myrmex/api-gateway</code> plugin.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/cors</code>
-</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+        <div data-ice="card"><h1>CORS Plugin</h1><h2>Prerequisites</h2><p>The <code>@myrmex/cors</code> plugin gives the possibility to easily define CORS configuration for the <code>@myrmex/api-gateway</code> plugin.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="shell">npm install @myrmex/cors</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/api-gateway&quot;,
     &quot;@myrmex/cors&quot;
   ]
-}</code>
-</code></pre><p>The plugin does not provide new, commands but it allows to define CORS configuration at various levels in the project.</p><h2>Principle</h2><p>The plugin <code>@myrmex/cors</code> aims to simplify the configuration of CORS by consuming simple configuration files and
+}</code></pre><p>The plugin does not provide new, commands but it allows to define CORS configuration at various levels in the project.</p><h2>Principle</h2><p>The plugin <code>@myrmex/cors</code> aims to simplify the configuration of CORS by consuming simple configuration files and
 automatically creating OPTIONS http methods for APIs and adding http headers to endpoints.</p><p><code>@myrmex/cors</code> supports the pseudo http method <code>ANY</code> available in API Gateway to define DELETE, GET, HEAD, PATCH, POST and PUT
 method with a single configuration. <code>@myrmex/cors</code> uses it to apply the configuration correctly but it will not be present in
 http responses.</p><h2>Configuration</h2><p>There are four possible levels of configuration in this order of precedence:</p><ul>
@@ -723,7 +676,7 @@ http responses.</p><h2>Configuration</h2><p>There are four possible levels of co
 <li>API level configuration</li>
 <li>Resource path level configuration</li>
 <li>API resource path level configuration</li>
-</ul><h3>Global configuration</h3><p>The global configuration applies by default for all endpoints of all APIs.</p><p>Using <code>myrmex show-config</code>, it is possible to see the default values:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+</ul><h3>Global configuration</h3><p>The global configuration applies by default for all endpoints of all APIs.</p><p>Using <code>myrmex show-config</code>, it is possible to see the default values:</p><pre><code class="json">{
   &quot;apiGateway&quot;: {
     &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
     &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
@@ -734,10 +687,9 @@ http responses.</p><h2>Configuration</h2><p>There are four possible levels of co
     &quot;Access-Control-Allow-Headers&quot;: &quot;*&quot;,
     &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;
   }
-}</code>
-</code></pre><p>By default, all methods, all origins and all headers are allowed. This configuration allows to quickly experiment, but it
+}</code></pre><p>By default, all methods, all origins and all headers are allowed. This configuration allows to quickly experiment, but it
 can be overwritten to restrict the access to the maximum. For example, to allow the access to the APIs only for the domain
-<code>www.example.com</code>, it is possible to set this configuration in the file <code>myrmex.json</code> at the root of the project:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+<code>www.example.com</code>, it is possible to set this configuration in the file <code>myrmex.json</code> at the root of the project:</p><pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/api-gateway&quot;,
@@ -748,11 +700,10 @@ can be overwritten to restrict the access to the maximum. For example, to allow 
       &quot;Access-Control-Allow-Origin&quot;: &quot;https://www.example.com&quot;
     }
   }
-}</code>
-</code></pre><blockquote>
+}</code></pre><blockquote>
 <p>There are <a href="/manual/installation/getting-started.html#project-configuration">several ways</a> to set this kind of configuration
 in Myrmex.</p>
-</blockquote><p>The command <code>myrmex show-config</code> shows the new configuration:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+</blockquote><p>The command <code>myrmex show-config</code> shows the new configuration:</p><pre><code class="json">{
   &quot;apiGateway&quot;: {
     &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
     &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
@@ -763,10 +714,9 @@ in Myrmex.</p>
     &quot;Access-Control-Allow-Headers&quot;: &quot;*&quot;,
     &quot;Access-Control-Allow-Origin&quot;: &quot;https://www.example.com&quot;
   }
-}</code>
-</code></pre><h3>API level configuration</h3><p>To override the global configuration for a specific API, it is possible to use a Myrmex extension to Swagger in the
+}</code></pre><h3>API level configuration</h3><p>To override the global configuration for a specific API, it is possible to use a Myrmex extension to Swagger in the
 <code>spec.json</code> file of the API. If we want to configure an API that has the identifier <code>back-office</code> to accept request only from
-<a href="https://admin.example.com">https://admin.example.com</a>, we can complete the file <code>/api-gateway/apis/back-office/spec.json</code> like this:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+<a href="https://admin.example.com">https://admin.example.com</a>, we can complete the file <code>/api-gateway/apis/back-office/spec.json</code> like this:</p><pre><code class="json">{
   &quot;x-myrmex&quot;: {
     &quot;cors&quot;: {
       &quot;Access-Control-Allow-Origin&quot;: &quot;https://admin.example.com&quot;
@@ -777,17 +727,15 @@ in Myrmex.</p>
     &quot;title&quot;: &quot;my-api&quot;,
     &quot;description&quot;: &quot;An API built with Myrmex&quot;
   },
-}</code>
-</code></pre><p>This configuration will apply to all resource paths of the API.</p><h3>Resource path level configuration</h3><p>To define a specific configuration for a resource path, it is possible to create to create a <code>cors.json</code> file in the resource
+}</code></pre><p>This configuration will apply to all resource paths of the API.</p><h3>Resource path level configuration</h3><p>To define a specific configuration for a resource path, it is possible to create to create a <code>cors.json</code> file in the resource
 path.</p><p>To forbid the access to all http methods of the resource path <code>/my/resource/path</code>, we can create a file
-<code>/api-gateway/endpoints/my/resource/path/cors.json</code> with the following content:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+<code>/api-gateway/endpoints/my/resource/path/cors.json</code> with the following content:</p><pre><code class="json">{
   &quot;default&quot;: {
     &quot;Access-Control-Allow-Methods&quot;: &quot;&quot;
   }
-}</code>
-</code></pre><h3>API resource path level configuration</h3><p>The <code>cors.json</code> file at the resource path level accepts API specific configurations. Following the previous example, if we
+}</code></pre><h3>API resource path level configuration</h3><p>The <code>cors.json</code> file at the resource path level accepts API specific configurations. Following the previous example, if we
 want the API that has the identifier <code>back-office</code> to allow <code>GET</code> and <code>POST</code> request from <a href="https://admin.example.com">https://admin.example.com</a>, we can
-complete the file <code>/api-gateway/endpoints/my/resource/path/cors.json</code> like this:</p><pre><code class="lang-json"><code class="source-code prettyprint">{
+complete the file <code>/api-gateway/endpoints/my/resource/path/cors.json</code> like this:</p><pre><code class="json">{
   &quot;default&quot;: {
     &quot;Access-Control-Allow-Methods&quot;: &quot;&quot;
   },
@@ -795,8 +743,7 @@ complete the file <code>/api-gateway/endpoints/my/resource/path/cors.json</code>
     &quot;Access-Control-Allow-Methods&quot;: &quot;GET,POST&quot;,
     &quot;Access-Control-Allow-Origin&quot;: &quot;https://admin.example.com&quot;
   }
-}</code>
-</code></pre></div>
+}</code></pre></div>
         <a data-ice="link" href="manual/usage/cors-plugin.html"></a>
       </div>
     </div>
@@ -809,7 +756,7 @@ anyone, or it can be a project specific plugin.</p><p>Myrmex plugins can make us
 <li>Listen for events fired by other plugins</li>
 <li>Fire events that can be listened by other plugins</li>
 <li>Attach functions to the <em>Myrmex instance</em> (refered as <em>extensions</em>)</li>
-</ul><h3>Anatomy of a plugin</h3><p>A plugin is node module that exports an object that has to respect a specific structure to be used by the <em>Myrmex instance</em>.</p><p>Here is a quick overview of an object exported by a Myrmex plugin.</p><pre><code class="lang-javascript"><code class="source-code prettyprint">{
+</ul><h3>Anatomy of a plugin</h3><p>A plugin is node module that exports an object that has to respect a specific structure to be used by the <em>Myrmex instance</em>.</p><p>Here is a quick overview of an object exported by a Myrmex plugin.</p><pre><code class="javascript">{
   // An unique identifier that should be carefully chosen to not enter in conflict with other plugins
   name: `my-plugin-identifier`,
   version: `0.0.0`,
@@ -844,8 +791,7 @@ anyone, or it can be a project specific plugin.</p><p>Myrmex plugins can make us
     extensionNameA: function() {}
     extensionNameB: function() {}
   }
-}</code>
-</code></pre><h3>The Myrmex instance</h3><p>Before describing events and extensions, we should have a quick overview about the initialization of the <em>Myrmex instance</em> and
+}</code></pre><h3>The Myrmex instance</h3><p>Before describing events and extensions, we should have a quick overview about the initialization of the <em>Myrmex instance</em> and
 the registration of plugins.</p><h4>Initialization by the Myrmex command line</h4><p>When the Myrmex command line is called. It checks if it is called from a Myrmex project by searching for a <code>package.json</code> file
 containing a dependency to <code>@myrmex/core</code> in the current path.</p><p>Once a <code>@myrmex/core</code> module have been found, the Myrmex command line loads it and receives an object: the <em>Myrmex instance</em>.</p><p>The Myrmex command line then loads the project configuration (including the list of plugins) and applies it to the <em>Myrmex
 instance</em>. Each plugin is loaded and registered in the <em>Myrmex instance</em>.</p><h4>Registration of plugins</h4><p>When the <em>Myrmex instance</em> registers a plugin, it basically performs three operations:</p><ul>
@@ -856,7 +802,7 @@ instance</em>. Each plugin is loaded and registered in the <em>Myrmex instance</
 instance</em>. It can be used to fire events or call <em>extensions</em> that have been provided by other plugins.</p><h3>Events mecanism</h3><p>The event mecanism of Myrmex is designed to allow code injection and works with asynchronous operations.</p><p>From the <em>event emitter</em> point of view, when the <em>Myrmex instance</em> fires an event, it returns a promise of an array containing
 the arguments of the event. These arguments have eventually been transformed by <em>event listeners</em>.</p><p>From the <em>event listener</em> point of view, when the listener function is called, it has the possibility to alter the parameters
 of the event. If the event listener has to perform asynchronous operations to alter theses parameters, it should return a
-Promise that resolves once the modification is done.</p><p>Therefore, an <em>emitter</em> can wait for all <em>listeners</em> to eventually alter the event parameters to continue its task.</p><p>Here is a dummy example:</p><pre><code class="lang-javascript"><code class="source-code prettyprint">// The Myrmex instance is accessible via the `myrmex` property of a plugin once it has been registered
+Promise that resolves once the modification is done.</p><p>Therefore, an <em>emitter</em> can wait for all <em>listeners</em> to eventually alter the event parameters to continue its task.</p><p>Here is a dummy example:</p><pre><code class="javascript">// The Myrmex instance is accessible via the `myrmex` property of a plugin once it has been registered
 const myrmex = require(&apos;./plugin-index.js&apos;).myrmex;
 
 // Create an event listener
@@ -889,8 +835,7 @@ myrmex.fire(&apos;MyEvent&apos;, eventArg1, eventArg2)
   //  {
   //    propA: &apos;original property&apos;
   //  }
-});</code>
-</code></pre><p>Using this mecanism, Myrmex plugins can create their own events and listen for other plugins events. Several plugins can
+});</code></pre><p>Using this mecanism, Myrmex plugins can create their own events and listen for other plugins events. Several plugins can
 listen for the same event and use and/or modify its arguments.</p><blockquote>
 <p>For example, before configuring the integration request of API endpoints, the <code>@myrmex/api-gateway</code> plugin fires and event
 that allows other plugins to be notified about it. Theses plugins have the opportunity to inject data in the event&apos;s argument
@@ -907,46 +852,34 @@ the registration of the plugin.</p><h3>Extensions</h3><p>@todo</p></div>
         <div data-ice="card"><h1>Deploying an Express application in Lambda</h1><blockquote>
 <p>This tutorial uses <code>express-generator</code> to quickly create a sample application. This sample application is not an API and serves static content but we do not
 recommend to do that in a real case scenario. You should use <code>Express</code> with API Gateway and Lambda only for APIs.</p>
-</blockquote><h2>Starting with an Express application</h2><p>We will start by creating a basic Express application following <a href="https://expressjs.com/en/starter/generator.html">the documentation</a>.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># Installation of express-generator
+</blockquote><h2>Starting with an Express application</h2><p>We will start by creating a basic Express application following <a href="https://expressjs.com/en/starter/generator.html">the documentation</a>.</p><pre><code class="shell"># Installation of express-generator
 npm install express-generator -g
 # Creation of a basic application
 express --view=pug express-app
 # Installation of dependencies
-cd express-app &amp;&amp; npm install</code>
-</code></pre><p>We start the application locally to check that everything works correctly.</p><pre><code class="lang-bash"><code class="source-code prettyprint">set DEBUG=express-app:* &amp; npm start</code>
-</code></pre><p>Visit <a href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a> to check that the application runs correctly locally.</p><h2>Adding Myrmex to the project</h2><p>Be sure that the Myrmex cli is installed.</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g myrmex</code>
-</code></pre><h3>Install Myrmex in the Express project</h3><pre><code class="lang-bash"><code class="source-code prettyprint"># For the prompt &quot;What is your project name?&quot;, leave it empty, so Myrmex will be installed in the same directory that Express
+cd express-app &amp;&amp; npm install</code></pre><p>We start the application locally to check that everything works correctly.</p><pre><code class="shell">set DEBUG=express-app:* &amp; npm start</code></pre><p>Visit <a href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a> to check that the application runs correctly locally.</p><h2>Adding Myrmex to the project</h2><p>Be sure that the Myrmex cli is installed.</p><pre><code class="shell">npm install -g myrmex</code></pre><h3>Install Myrmex in the Express project</h3><pre><code class="shell"># For the prompt &quot;What is your project name?&quot;, leave it empty, so Myrmex will be installed in the same directory that Express
 # We will need the plugins @myrmex/iam @myrmex/api-gateway and @myrmex/lambda
-myrmex new</code>
-</code></pre><p>Myrmex and its plugins will be installed in the section <code>devDependencies</code> of the file <code>package.json</code>.</p><h3>Creation of IAM roles</h3><p>We create two IAM roles: one to allow Lambda to write in cloudwatch and the other to allow API Gateway to invoke Lambda.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-role MyExpressAppLambdaExecution --model LambdaBasicExecutionRole
-myrmex create-role MyExpressAppLambdaInvocation --model APIGatewayLambdaInvocation</code>
-</code></pre><h3>Creation of the Lambda</h3><p>We create a new Lambda managed by Myrmex.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-lambda serverless-express --runtime nodejs6.10 --timeout 30 --memory 256 --role MyExpressAppLambdaExecution</code>
-</code></pre><p>We have to do a small alteration to the <code>package.json</code> of the Express application to tell node that <code>app.js</code> is the file that
-has to be loaded when <code>require()</code> is used.</p><pre><code class="lang-json"><code class="source-code prettyprint">// in /package.json
+myrmex new</code></pre><p>Myrmex and its plugins will be installed in the section <code>devDependencies</code> of the file <code>package.json</code>.</p><h3>Creation of IAM roles</h3><p>We create two IAM roles: one to allow Lambda to write in cloudwatch and the other to allow API Gateway to invoke Lambda.</p><pre><code class="shell">myrmex create-role MyExpressAppLambdaExecution --model LambdaBasicExecutionRole
+myrmex create-role MyExpressAppLambdaInvocation --model APIGatewayLambdaInvocation</code></pre><h3>Creation of the Lambda</h3><p>We create a new Lambda managed by Myrmex.</p><pre><code class="shell">myrmex create-lambda serverless-express --runtime nodejs6.10 --timeout 30 --memory 256 --role MyExpressAppLambdaExecution</code></pre><p>We have to do a small alteration to the <code>package.json</code> of the Express application to tell node that <code>app.js</code> is the file that
+has to be loaded when <code>require()</code> is used.</p><pre><code class="json">// in /package.json
 {
   &quot;name&quot;: &quot;express-app&quot;,
   &quot;version&quot;: &quot;0.0.0&quot;,
   &quot;main&quot;: &quot;app.js&quot;,
   ...
-}</code>
-</code></pre><p>In the <code>package.json</code> of the Lambda, we define the Express application as a dependency</p><pre><code class="lang-bash"><code class="source-code prettyprint"># in /lambda/lambdas/serverless-express
-npm install ../../.. --save</code>
-</code></pre><p><a href="https://github.com/awslabs/aws-serverless-express">aws-serverless-express</a> is a npm package that wrap an Express application
-to process requests from API Gateway with Lambda integration. We add it as a dependency of our Lambda.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># in /lambda/lambdas/serverless-express
-npm install aws-serverless-express --save</code>
-</code></pre><p>Then we can alter the code of <code>index.js</code> from the Lambda to correctly expose the handler.</p><pre><code class="lang-javascript"><code class="source-code prettyprint">// in /lambda/lambdas/serverless-express/index.js
+}</code></pre><p>In the <code>package.json</code> of the Lambda, we define the Express application as a dependency</p><pre><code class="shell"># in /lambda/lambdas/serverless-express
+npm install ../../.. --save</code></pre><p><a href="https://github.com/awslabs/aws-serverless-express">aws-serverless-express</a> is a npm package that wrap an Express application
+to process requests from API Gateway with Lambda integration. We add it as a dependency of our Lambda.</p><pre><code class="shell"># in /lambda/lambdas/serverless-express
+npm install aws-serverless-express --save</code></pre><p>Then we can alter the code of <code>index.js</code> from the Lambda to correctly expose the handler.</p><pre><code class="javascript">// in /lambda/lambdas/serverless-express/index.js
 &apos;use strict&apos;;
 const awsServerlessExpress = require(&apos;aws-serverless-express&apos;);
 const app = require(&apos;express-app&apos;);
 const server = awsServerlessExpress.createServer(app);
 
-exports.handler = (event, context) =&gt; awsServerlessExpress.proxy(server, event, context);</code>
-</code></pre><h3>Creation of the API</h3><p>We create an API with two endpoints using <code>ANY</code> method and Lambda proxy integration: one to handle the root url, and another
-for the rest.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-api serverless-express --title &quot;Serverless Express&quot; --desc &quot;An Express application served by API Gateway and Lambda&quot;
+exports.handler = (event, context) =&gt; awsServerlessExpress.proxy(server, event, context);</code></pre><h3>Creation of the API</h3><p>We create an API with two endpoints using <code>ANY</code> method and Lambda proxy integration: one to handle the root url, and another
+for the rest.</p><pre><code class="shell">myrmex create-api serverless-express --title &quot;Serverless Express&quot; --desc &quot;An Express application served by API Gateway and Lambda&quot;
 myrmex create-endpoint / ANY --apis serverless-express --summary &quot;Proxy to Lambda&quot; --auth none --integration lambda-proxy --lambda serverless-express --role MyExpressAppLambdaInvocation
-myrmex create-endpoint /{proxy+} ANY --apis serverless-express --summary &quot;Proxy to Lambda&quot; --auth none --integration lambda-proxy --lambda serverless-express --role MyExpressAppLambdaInvocation</code>
-</code></pre><h3>Deployment</h3><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex deploy-apis serverless-express --region us-east-1 --environment DEV --stage v0 --deploy-lambdas all --alias &quot;&quot;</code>
-</code></pre><p>The deployment messages will give you the url of the application. It will have the form
+myrmex create-endpoint /{proxy+} ANY --apis serverless-express --summary &quot;Proxy to Lambda&quot; --auth none --integration lambda-proxy --lambda serverless-express --role MyExpressAppLambdaInvocation</code></pre><h3>Deployment</h3><pre><code class="shell">myrmex deploy-apis serverless-express --region us-east-1 --environment DEV --stage v0 --deploy-lambdas all --alias &quot;&quot;</code></pre><p>The deployment messages will give you the url of the application. It will have the form
 <code>https://{your-api-id}.execute-api.us-east-1.amazonaws.com/v0</code>.
 You can test the root url and the url <code>https://{your-api-id}.execute-api.us-east-1.amazonaws.com/v0/users</code> that is also
 declared in the sample application generated by <code>express-generator</code>. You can also test some bad urls and observe that you
@@ -959,11 +892,8 @@ receive an error 404.</p></div>
       <div class="manual-card">
         <div data-ice="card"><h1>Creating Lambdas to inspect their execution environment</h1><h2>Creation of three Lambdas sharing the same code</h2><blockquote>
 <p>The code generated by this example is available <a href="https://github.com/myrmexjs/myrmex/tree/master/demo/lambda-profiling">here</a>.</p>
-</blockquote><p>Lets create a new Myrmex project.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex new lambda-profiling @myrmex/iam @myrmex/lambda
-cd lambda-profiling</code>
-</code></pre><p>We create a simple execution role for our Lambdas.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-role LambdaInspection --model LambdaBasicExecutionRole</code>
-</code></pre><p>We create a node module called <code>inspection</code>. It will inspect its own execution environment.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-node-module inspection</code>
-</code></pre><p>The <code>inspection</code> module is created in <code>lambda-profiling/lambda/modules/inspection</code> and only contain a <code>package.json</code> file for now.</p><p>Lets create an <code>index.js</code> file that exposes data from the <code>os</code> native module and the <code>process</code> global object in our module.</p><pre><code class="lang-javascript"><code class="source-code prettyprint">// lambda-profiling/lambda/modules/inspection/index.js
+</blockquote><p>Lets create a new Myrmex project.</p><pre><code class="shell">myrmex new lambda-profiling @myrmex/iam @myrmex/lambda
+cd lambda-profiling</code></pre><p>We create a simple execution role for our Lambdas.</p><pre><code class="shell">myrmex create-role LambdaInspection --model LambdaBasicExecutionRole</code></pre><p>We create a node module called <code>inspection</code>. It will inspect its own execution environment.</p><pre><code class="shell">myrmex create-node-module inspection</code></pre><p>The <code>inspection</code> module is created in <code>lambda-profiling/lambda/modules/inspection</code> and only contain a <code>package.json</code> file for now.</p><p>Lets create an <code>index.js</code> file that exposes data from the <code>os</code> native module and the <code>process</code> global object in our module.</p><pre><code class="javascript">// lambda-profiling/lambda/modules/inspection/index.js
 &apos;use strict&apos;;
 
 const os = require(&apos;os&apos;);
@@ -1000,11 +930,9 @@ module.exports = () =&gt; {
       config: process.config
     }
   };
-};</code>
-</code></pre><p>Now we create three Lambdas that will use the <code>inspection</code> module as a dependency. Their are configured with different memory values: 128MB, 512MB and 1536MB.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-lambda config-128 --runtime nodejs6.10 --timeout 30 --memory 128 --dependencies inspection --role LambdaInspection
+};</code></pre><p>Now we create three Lambdas that will use the <code>inspection</code> module as a dependency. Their are configured with different memory values: 128MB, 512MB and 1536MB.</p><pre><code class="shell">myrmex create-lambda config-128 --runtime nodejs6.10 --timeout 30 --memory 128 --dependencies inspection --role LambdaInspection
 myrmex create-lambda config-512 --runtime nodejs6.10 --timeout 30 --memory 512 --dependencies inspection --role LambdaInspection
-myrmex create-lambda config-1536 --runtime nodejs6.10 --timeout 30 --memory 1536 --dependencies inspection --role LambdaInspection</code>
-</code></pre><p>We alter the handler of the three Lambdas to call the <code>inspection</code> module, log its output (it will be visible in cloudwatch) and return it.</p><pre><code class="lang-javascript"><code class="source-code prettyprint">// lambda-profiling/lambda/lambdas/config-128/index.js
+myrmex create-lambda config-1536 --runtime nodejs6.10 --timeout 30 --memory 1536 --dependencies inspection --role LambdaInspection</code></pre><p>We alter the handler of the three Lambdas to call the <code>inspection</code> module, log its output (it will be visible in cloudwatch) and return it.</p><pre><code class="javascript">// lambda-profiling/lambda/lambdas/config-128/index.js
 // lambda-profiling/lambda/lambdas/config-512/index.js
 // lambda-profiling/lambda/lambdas/config-1536/index.js
 &apos;use strict&apos;;
@@ -1015,18 +943,14 @@ module.exports.handler = function(event, context, cb) {
   const inspect = inspection();
   console.log(JSON.stringify(inspect));
   cb(null, inspect);
-};</code>
-</code></pre><p>We can execute the lambdas locally to test them.</p><pre><code class="lang-bash"><code class="source-code prettyprint"># Install dependencies of the Lambdas
+};</code></pre><p>We can execute the lambdas locally to test them.</p><pre><code class="shell"># Install dependencies of the Lambdas
 myrmex install-lambdas-locally config-128 config-512 config-1536
 # Execute Lambdas locally
 myrmex test-lambda-locally config-128
 myrmex test-lambda-locally config-512
-myrmex test-lambda-locally config-1536</code>
-</code></pre><h2>Testing the Lambdas in AWS</h2><p>Lets deploy in AWS!</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex deploy-lambdas config-128 config-1536 config-512 --region us-east-1 --environment DEV --alias v0</code>
-</code></pre><p>Now we can execute the Lambdas in AWS using Myrmex, but you can also use the AWS console if you prefer.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex test-lambda config-128 --region us-east-1 --environment DEV --alias v0
+myrmex test-lambda-locally config-1536</code></pre><h2>Testing the Lambdas in AWS</h2><p>Lets deploy in AWS!</p><pre><code class="shell">myrmex deploy-lambdas config-128 config-1536 config-512 --region us-east-1 --environment DEV --alias v0</code></pre><p>Now we can execute the Lambdas in AWS using Myrmex, but you can also use the AWS console if you prefer.</p><pre><code class="shell">myrmex test-lambda config-128 --region us-east-1 --environment DEV --alias v0
 myrmex test-lambda config-512 --region us-east-1 --environment DEV --alias v0
-myrmex test-lambda config-1536 --region us-east-1 --environment DEV --alias v0</code>
-</code></pre><p>Check the result of the functions to have insights about the execution environment of Lambdas. Observe the variations
+myrmex test-lambda config-1536 --region us-east-1 --environment DEV --alias v0</code></pre><p>Check the result of the functions to have insights about the execution environment of Lambdas. Observe the variations
 when calling several times the same function.</p><blockquote>
 <blockquote>
 <blockquote>
@@ -1098,35 +1022,27 @@ useful for them.</p><table>
 data access. These are aspects of the application that do not rely on Myrmex. They are implemented in <code>node.js</code> modules that
 could run in any execution environment.</p><h2>The creation of the application with Myrmex</h2><p>For each command used in the following sections, it is possible to see its documentation using <code>myrmex &lt;command&gt; -h</code>. Note
 that the Myrmex cli itself only contains the command <code>myrmex new</code>. Other commands are injected by Myrmex plugins when the
-cli is executed in the project folder.</p><h3>Initialization of the project</h3><p>We create a new Myrmex project named <code>planet-express</code>.</p><pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g @myrmex/cli
+cli is executed in the project folder.</p><h3>Initialization of the project</h3><p>We create a new Myrmex project named <code>planet-express</code>.</p><pre><code class="shell">npm install -g @myrmex/cli
 myrmex new planet-express @myrmex/iam @myrmex/api-gateway @myrmex/lambda
-cd planet-express</code>
-</code></pre><h3>Creation of the Lambda containing the application logic</h3><p>We are free to use as many Lambdas as we want in a Myrmex project. For example, we could associate one specific Lambda for each endpoint. But the
+cd planet-express</code></pre><h3>Creation of the Lambda containing the application logic</h3><p>We are free to use as many Lambdas as we want in a Myrmex project. For example, we could associate one specific Lambda for each endpoint. But the
 <em>Planet Express</em> development team choose to put all the logic of the application in one single Lambda. Parameters provided by API Gateway will allow
 the lambda to know which portions of code to execute.</p><blockquote>
 <p>The implementation of the Lambda and of the modules is out of the scope of this tutorial. We will create them and leave them empty. This will give
 an overview of the structure of a Myrmex project and show the integration of Lambdas with API Gateway. Myrmex helps you to organize and deploy serverless
 projects, but it does not interfere about how you write Node.js code.</p>
 </blockquote><h4>Creation of the Lambda&apos;s execution role</h4><p>The Lambda needs to be associated to an IAM role that defines its authorizations in AWS. It could be authorized to access DynamoDB, RDS or S3 depending on the
-implementation of the application. For now, we use a role that allows the Lambda to write logs in CloudWatch.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-role PlanetExpressLambdaExecution --model LambdaBasicExecutionRole</code>
-</code></pre><h4>Creation of node modules that can be packaged in the Lambda</h4><p>Myrmex allows the creation of node modules that can be embedded in the package of the Lambda. The development team decided that they will need two modules:</p><ul>
+implementation of the application. For now, we use a role that allows the Lambda to write logs in CloudWatch.</p><pre><code class="shell">myrmex create-role PlanetExpressLambdaExecution --model LambdaBasicExecutionRole</code></pre><h4>Creation of node modules that can be packaged in the Lambda</h4><p>Myrmex allows the creation of node modules that can be embedded in the package of the Lambda. The development team decided that they will need two modules:</p><ul>
 <li>A logging module that should allow to write logs in various backends (Cloudfront, S3, a database, etc ...)</li>
 <li>A module that manage the access to the application data (DynamoDB, Sequelize, mongoose, etc ...)</li>
 </ul><p>The data access module uses the logging module. We indicate this dependency so that if a Lambda requires the data access module, it will include the logging
-module in its package too.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-node-module log
-myrmex create-node-module data-access --dependencies log</code>
-</code></pre><p>The implementation of the modules will not be detailed here, but they are &quot;common&quot; <code>node.js</code> modules that could be used in any execution environment.</p><h4>Creation of a Lambda</h4><p>We create a Lambda, specifying its configuration and its dependencies.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-lambda api-generic --runtime nodejs6.10 --timeout 20 --memory 256 --role PlanetExpressLambdaExecution --dependencies data-access,log</code>
-</code></pre><h3>Creation of the endpoints and APIs</h3><p>Now that we have a Lambda able to perform the operations needed by our application, we can define the endpoints that
-integrate with it and expose them in various APIs.</p><h4>Creation of the APIs</h4><p>We create one API for each type of client application.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-api back-office --title &quot;Back Office&quot; --desc &quot;Planet Express API for Back Office&quot;
+module in its package too.</p><pre><code class="shell">myrmex create-node-module log
+myrmex create-node-module data-access --dependencies log</code></pre><p>The implementation of the modules will not be detailed here, but they are &quot;common&quot; <code>node.js</code> modules that could be used in any execution environment.</p><h4>Creation of a Lambda</h4><p>We create a Lambda, specifying its configuration and its dependencies.</p><pre><code class="shell">myrmex create-lambda api-generic --runtime nodejs6.10 --timeout 20 --memory 256 --role PlanetExpressLambdaExecution --dependencies data-access,log</code></pre><h3>Creation of the endpoints and APIs</h3><p>Now that we have a Lambda able to perform the operations needed by our application, we can define the endpoints that
+integrate with it and expose them in various APIs.</p><h4>Creation of the APIs</h4><p>We create one API for each type of client application.</p><pre><code class="shell">myrmex create-api back-office --title &quot;Back Office&quot; --desc &quot;Planet Express API for Back Office&quot;
 myrmex create-api sender      --title &quot;Sender&quot;      --desc &quot;Planet Express API for sender application&quot;
-myrmex create-api recipient   --title &quot;Recipient&quot;   --desc &quot;Planet Express API for recipient application&quot;</code>
-</code></pre><h4>Creation of the invocation role</h4><p>The API endpoints need to be associated to an IAM role that allows to invoke the Lambda.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-role PlanetExpressLambdaInvocation -m APIGatewayLambdaInvocation</code>
-</code></pre><h4>Creation of the endpoints</h4><p>We create the four endpoints and associate them to the APIs that have to expose them.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex create-endpoint /delivery/{id} get --apis back-office,recipient,sender --summary &quot;View a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
+myrmex create-api recipient   --title &quot;Recipient&quot;   --desc &quot;Planet Express API for recipient application&quot;</code></pre><h4>Creation of the invocation role</h4><p>The API endpoints need to be associated to an IAM role that allows to invoke the Lambda.</p><pre><code class="shell">myrmex create-role PlanetExpressLambdaInvocation -m APIGatewayLambdaInvocation</code></pre><h4>Creation of the endpoints</h4><p>We create the four endpoints and associate them to the APIs that have to expose them.</p><pre><code class="shell">myrmex create-endpoint /delivery/{id} get --apis back-office,recipient,sender --summary &quot;View a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
 myrmex create-endpoint /delivery/{id} patch --apis back-office --summary &quot;Update a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
 myrmex create-endpoint /delivery post --apis back-office,sender --summary &quot;Create a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
-myrmex create-endpoint /delivery/{id} delete --apis back-office,recipient --summary &quot;Delete a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic</code>
-</code></pre><h3>Deployment</h3><p>We deploy the stage <code>v0</code> of the three APIs on the <code>DEV</code> environment.</p><pre><code class="lang-bash"><code class="source-code prettyprint">myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --environment DEV --deploy-lambdas all --alias &quot;&quot;</code>
-</code></pre><h2>Altogether</h2><pre><code class="lang-bash"><code class="source-code prettyprint">npm install -g @myrmex/cli
+myrmex create-endpoint /delivery/{id} delete --apis back-office,recipient --summary &quot;Delete a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic</code></pre><h3>Deployment</h3><p>We deploy the stage <code>v0</code> of the three APIs on the <code>DEV</code> environment.</p><pre><code class="shell">myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --environment DEV --deploy-lambdas all --alias &quot;&quot;</code></pre><h2>Altogether</h2><pre><code class="shell">npm install -g @myrmex/cli
 myrmex new planet-express @myrmex/iam @myrmex/api-gateway @myrmex/lambda
 cd planet-express
 
@@ -1148,8 +1064,7 @@ myrmex create-endpoint /delivery/{id} patch --apis back-office --summary &quot;U
 myrmex create-endpoint /delivery post --apis back-office,sender --summary &quot;Create a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
 myrmex create-endpoint /delivery/{id} delete --apis back-office,recipient --summary &quot;Delete a delivery&quot; --integration lambda-proxy --auth none --role PlanetExpressLambdaInvocation --lambda api-generic
 
-myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --environment DEV --deploy-lambdas all --alias &quot;&quot;</code>
-</code></pre></div>
+myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --environment DEV --deploy-lambdas all --alias &quot;&quot;</code></pre></div>
         <a data-ice="link" href="manual/example/planet-express.html"></a>
       </div>
     </div>
@@ -1177,7 +1092,7 @@ myrmex deploy-apis back-office sender recipient --region us-east-1 --stage v0 --
 
 <script src="script/search_index.js"></script>
 <script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></head>
 <script src="script/inherited-summary.js"></script>
 <script src="script/test-summary.js"></script>
 <script src="script/inner-link.js"></script>

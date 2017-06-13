@@ -5,16 +5,17 @@
   <base data-ice="baseUrl" href="../../">
   <title data-ice="title">Usage</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow-night.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   
   
   <script src="script/manual.js"></script>
 <link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<link rel="icon" type="image/png" sizes="32x32" href="manual/asset/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="manual/asset/favicon-16x16.png">
 <body class="layout-container manual-root" data-ice="rootContainer">
 
-<header>
+<header><a href="./index.html" class="myrmex-home">Myrmex</a>
   <a href="./">Home</a>
   
   <a href="identifiers.html">Reference</a>
@@ -174,17 +175,15 @@
 <p>The <code>@myrmex/cors</code> plugin gives the possibility to easily define CORS configuration for the <code>@myrmex/api-gateway</code> plugin.</p>
 <h2 id="installation">Installation</h2>
 <p>Install the npm module in a Myrmex project:</p>
-<pre><code class="lang-bash"><code class="source-code prettyprint">npm install @myrmex/cors</code>
-</code></pre>
+<pre><code class="shell">npm install @myrmex/cors</code></pre>
 <p>Then enable the plugin in the <code>myrmex.json</code> file:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/api-gateway&quot;,
     &quot;@myrmex/cors&quot;
   ]
-}</code>
-</code></pre>
+}</code></pre>
 <p>The plugin does not provide new, commands but it allows to define CORS configuration at various levels in the project.</p>
 <h2 id="principle">Principle</h2>
 <p>The plugin <code>@myrmex/cors</code> aims to simplify the configuration of CORS by consuming simple configuration files and
@@ -203,7 +202,7 @@ http responses.</p>
 <h3 id="global-configuration">Global configuration</h3>
 <p>The global configuration applies by default for all endpoints of all APIs.</p>
 <p>Using <code>myrmex show-config</code>, it is possible to see the default values:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;apiGateway&quot;: {
     &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
     &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
@@ -214,12 +213,11 @@ http responses.</p>
     &quot;Access-Control-Allow-Headers&quot;: &quot;*&quot;,
     &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 <p>By default, all methods, all origins and all headers are allowed. This configuration allows to quickly experiment, but it
 can be overwritten to restrict the access to the maximum. For example, to allow the access to the APIs only for the domain
 <code>www.example.com</code>, it is possible to set this configuration in the file <code>myrmex.json</code> at the root of the project:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/api-gateway&quot;,
@@ -230,14 +228,13 @@ can be overwritten to restrict the access to the maximum. For example, to allow 
       &quot;Access-Control-Allow-Origin&quot;: &quot;https://www.example.com&quot;
     }
   }
-}</code>
-</code></pre>
+}</code></pre>
 <blockquote>
 <p>There are <a href="/manual/installation/getting-started.html#project-configuration">several ways</a> to set this kind of configuration
 in Myrmex.</p>
 </blockquote>
 <p>The command <code>myrmex show-config</code> shows the new configuration:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;apiGateway&quot;: {
     &quot;apisPath&quot;: &quot;api-gateway/apis&quot;,
     &quot;endpointsPath&quot;: &quot;api-gateway/endpoints&quot;,
@@ -248,13 +245,12 @@ in Myrmex.</p>
     &quot;Access-Control-Allow-Headers&quot;: &quot;*&quot;,
     &quot;Access-Control-Allow-Origin&quot;: &quot;https://www.example.com&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 <h3 id="api-level-configuration">API level configuration</h3>
 <p>To override the global configuration for a specific API, it is possible to use a Myrmex extension to Swagger in the
 <code>spec.json</code> file of the API. If we want to configure an API that has the identifier <code>back-office</code> to accept request only from
 <a href="https://admin.example.com">https://admin.example.com</a>, we can complete the file <code>/api-gateway/apis/back-office/spec.json</code> like this:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;x-myrmex&quot;: {
     &quot;cors&quot;: {
       &quot;Access-Control-Allow-Origin&quot;: &quot;https://admin.example.com&quot;
@@ -265,25 +261,23 @@ in Myrmex.</p>
     &quot;title&quot;: &quot;my-api&quot;,
     &quot;description&quot;: &quot;An API built with Myrmex&quot;
   },
-}</code>
-</code></pre>
+}</code></pre>
 <p>This configuration will apply to all resource paths of the API.</p>
 <h3 id="resource-path-level-configuration">Resource path level configuration</h3>
 <p>To define a specific configuration for a resource path, it is possible to create to create a <code>cors.json</code> file in the resource
 path.</p>
 <p>To forbid the access to all http methods of the resource path <code>/my/resource/path</code>, we can create a file
 <code>/api-gateway/endpoints/my/resource/path/cors.json</code> with the following content:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;default&quot;: {
     &quot;Access-Control-Allow-Methods&quot;: &quot;&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 <h3 id="api-resource-path-level-configuration">API resource path level configuration</h3>
 <p>The <code>cors.json</code> file at the resource path level accepts API specific configurations. Following the previous example, if we
 want the API that has the identifier <code>back-office</code> to allow <code>GET</code> and <code>POST</code> request from <a href="https://admin.example.com">https://admin.example.com</a>, we can
 complete the file <code>/api-gateway/endpoints/my/resource/path/cors.json</code> like this:</p>
-<pre><code class="lang-json"><code class="source-code prettyprint">{
+<pre><code class="json">{
   &quot;default&quot;: {
     &quot;Access-Control-Allow-Methods&quot;: &quot;&quot;
   },
@@ -291,8 +285,7 @@ complete the file <code>/api-gateway/endpoints/my/resource/path/cors.json</code>
     &quot;Access-Control-Allow-Methods&quot;: &quot;GET,POST&quot;,
     &quot;Access-Control-Allow-Origin&quot;: &quot;https://admin.example.com&quot;
   }
-}</code>
-</code></pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -303,7 +296,7 @@ complete the file <code>/api-gateway/endpoints/my/resource/path/cors.json</code>
 
 <script src="script/search_index.js"></script>
 <script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
+<script>hljs.initHighlightingOnLoad();</script></head>
 <script src="script/inherited-summary.js"></script>
 <script src="script/test-summary.js"></script>
 <script src="script/inner-link.js"></script>
