@@ -55,7 +55,7 @@
 <div data-ice="manual" data-toc-name="usage">
     <ul class="manual-toc">
       
-    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html" data-ice="link">IAM plugin</a></li>
+    <li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html" data-ice="link">IAM plugin</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#prerequisites" data-ice="link">Prerequisites</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#installation" data-ice="link">Installation</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#commands" data-ice="link">Commands</a></li>
@@ -65,6 +65,12 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#deploy-roles" data-ice="link">deploy-roles</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#definition-of-iam-policies" data-ice="link">Definition of IAM policies</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#definition-of-iam-roles" data-ice="link">Definition of IAM roles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#integration-with-myrmex-api-gateway-" data-ice="link">Integration with @myrmex/api-gateway</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#simplify-the-association-of-an-api-endpoint-with-its-invocation-role" data-ice="link">Simplify the association of an API endpoint with its invocation role</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#new-behavior-for-the-option-role-role-of-myrmex-create-endpoint-" data-ice="link">New behavior for the option --role &lt;role&gt; of myrmex create-endpoint</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#integration-with-myrmex-lambda-" data-ice="link">Integration with @myrmex/lambda</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#simplify-the-association-of-a-lambda-with-its-execution-role" data-ice="link">Simplify the association of a Lambda with its execution role</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#new-behavior-for-the-option-role-role-of-myrmex-create-lambda-" data-ice="link">New behavior for the option --role &lt;role&gt; of myrmex create-lambda</a></li>
 <li data-ice="manualNav" class="indent-h2" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#hooks-and-extensions" data-ice="link">Hooks and extensions</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#hooks" data-ice="link">Hooks</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/iam-plugin.html"><a href="manual/usage/iam-plugin.html#extensions" data-ice="link">Extensions</a></li>
@@ -342,7 +348,7 @@ replaced by a javascript file that exposes the desired configuration.</p><p>For 
       </div>
     </div>
 <div class="manual-card-wrap" data-ice="cards">
-      <h1 data-ice="label" class="manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;"><span data-ice="label-inner">IAM plugin</span></h1>
+      <h1 data-ice="label" class="manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;&#x25A0;"><span data-ice="label-inner">IAM plugin</span></h1>
       <div class="manual-card">
         <div data-ice="card"><h1>IAM plugin</h1><p>The IAM plugin allows to define and deploy AWS policies and roles. It can be used to avoid referencing IAM roles ARNs and
 simplify the configuration of other plugins.</p><h2>Prerequisites</h2><p>To use the <code>@myrmex/iam</code> plugin, it is necessary to have a minimal knowledge about <a href="https://aws.amazon.com/iam/">AWS Identity and Access Management</a>.</p><p>An AWS user or role that uses the plugin <code>@myrmex/iam</code> must have access to IAM administration. The AWS policy <code>IAMFullAccess</code>
@@ -399,7 +405,24 @@ combinations with the <em>environment</em> and the <em>stage</em> options:</p><u
 <li><code>&lt;environment&gt;_&lt;identifier&gt;_&lt;stage&gt;</code></li>
 <li><code>&lt;environment&gt;_&lt;identifier&gt;</code></li>
 <li><code>&lt;identifier&gt;</code></li>
-</ul><p>The <em>inline-policies</em> section contains a list of AIM policy definitions associated to the role.</p><p>The <em>trust-relationship</em> section contains the policy that describe the trusted entities that can assume the role</p><h2>Hooks and extensions</h2><h3>Hooks</h3><p><code>beforePoliciesLoad()</code></p><p><code>beforePolicyLoad(definitionFilePath, name)</code></p><p><code>afterPolicyLoad(policy)</code></p><p><code>afterPoliciesLoad(policies)</code></p><p><code>beforeRolesLoad()</code></p><p><code>beforeRoleLoad(definitionFilePath, name)</code></p><p><code>afterRoleLoad(role)</code></p><p><code>afterRolesLoad(roles)</code></p><p><code>beforeDeployPolicy(policy)</code></p><p><code>beforeDeployRole(role)</code></p><h3>Extensions</h3><p><code>myrmex.call(&apos;iam:getRoles&apos;)</code> returns the roles managed in the current Myrmex project.</p><p><code>myrmex.call(&apos;iam:getAWSRole&apos;)</code> returns the roles available in AWS.</p><p><code>myrmex.call(&apos;iam:retrieveRoleArn&apos;, identifier, context)</code> retrieve the ARN of an IAM role using its identifier. Tries
+</ul><p>The <em>inline-policies</em> section contains a list of AIM policy definitions associated to the role.</p><p>The <em>trust-relationship</em> section contains the policy that describe the trusted entities that can assume the role</p><h2>Integration with <code>@myrmex/api-gateway</code></h2><p><code>@myrmex/iam</code> add some functionalities to  <code>@myrmex/api-gateway</code> when both are installed in the same project.</p><h3>Simplify the association of an API endpoint with its invocation role</h3><p>In the <a href="/manual/usage/api-gateway-plugin.html#project-anatomy"><code>spec.json</code></a> file that describes an endpoint, the invocation
+role is configured via the [API Gateway extension to Swagger]
+(<a href="http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration.html">http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration.html</a>) using the
+property <code>credentials</code>. It accepts the ARN of an IAM role. Using <code>@myrmex/iam</code>, it is also possible configure this property
+using the identifier of a role defined in the Myrmex project or the name of a role deployed in AWS.</p><h3>New behavior for the option <code>--role &lt;role&gt;</code> of <code>myrmex create-endpoint</code></h3><p>This option normally accepts the ARN of a role. With the plugin <code>@myrmex/iam</code>, it also accepts the identifier of an role
+defined in the Myrmex project or the name of a role deployed in AWS.</p><p>If the option is not provided in the command line, a prompt will propose three option to set the value:</p><ul>
+<li>Select a role managed by the plugin @myrmex/iam</li>
+<li>Select a role in your AWS account</li>
+<li>Enter the value manually</li>
+</ul><h2>Integration with <code>@myrmex/lambda</code></h2><p><code>@myrmex/iam</code> add some functionalities to  <code>@myrmex/lambda</code> when both are installed in the same project.</p><h3>Simplify the association of a Lambda with its execution role</h3><p>In the <a href="https://myrmx.github.io/manual/usage/lambda-plugin.html#project-anatomy"><code>config.json</code></a> file that describes the
+configuration of a Lambda, the invocation role is configured via the using the property <code>params.role</code>. It accepts the ARN of
+an IAM role. Using <code>@myrmex/iam</code>, it is also possible configure this property using the identifier of a role defined in the
+Myrmex project or the name of a role deployed in AWS.</p><h3>New behavior for the option <code>--role &lt;role&gt;</code> of <code>myrmex create-lambda</code></h3><p>This option normally accepts the ARN of a role. With the plugin <code>@myrmex/iam</code>, it also accepts the identifier of an role
+defined in the Myrmex project or the name of a role deployed in AWS.</p><p>If the option is not provided in the command line, a prompt will propose three option to set the value:</p><ul>
+<li>Select a role managed by the plugin @myrmex/iam</li>
+<li>Select a role in your AWS account</li>
+<li>Enter the value manually</li>
+</ul><h2>Hooks and extensions</h2><h3>Hooks</h3><p><code>beforePoliciesLoad()</code></p><p><code>beforePolicyLoad(definitionFilePath, name)</code></p><p><code>afterPolicyLoad(policy)</code></p><p><code>afterPoliciesLoad(policies)</code></p><p><code>beforeRolesLoad()</code></p><p><code>beforeRoleLoad(definitionFilePath, name)</code></p><p><code>afterRoleLoad(role)</code></p><p><code>afterRolesLoad(roles)</code></p><p><code>beforeDeployPolicy(policy)</code></p><p><code>beforeDeployRole(role)</code></p><h3>Extensions</h3><p><code>myrmex.call(&apos;iam:getRoles&apos;)</code> returns the roles managed in the current Myrmex project.</p><p><code>myrmex.call(&apos;iam:getAWSRole&apos;)</code> returns the roles available in AWS.</p><p><code>myrmex.call(&apos;iam:retrieveRoleArn&apos;, identifier, context)</code> retrieve the ARN of an IAM role using its identifier. Tries
 combinations with the <code>environment</code> and the <code>stage</code> properties of the <code>context</code> parameter in this order:</p><ul>
 <li><code>&lt;environment&gt;_&lt;identifier&gt;_&lt;stage&gt;</code></li>
 <li><code>&lt;environment&gt;_&lt;identifier&gt;</code></li>
@@ -431,7 +454,15 @@ The content of the <code>params</code> property is used as the argument of the f
 <li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#createFunction-property"><code>createFunction()</code></a></li>
 <li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionCode-property"><code>updateFunctionCode()</code></a></li>
 <li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionConfiguration-property"><code>updateFunctionConfiguration()</code></a></li>
-</ul><p>By default, for the Node.js runtime, the directory <code>lambda/modules</code> contains the node modules of the project. For example,
+</ul><p>Example of <code>config.json</code> file:</p><pre><code class="json">{
+  &quot;params&quot;: {
+    &quot;Timeout&quot;: 10,
+    &quot;MemorySize&quot;: &quot;256&quot;,
+    &quot;Runtime&quot;: &quot;nodejs6.10&quot;,
+    &quot;Handler&quot;: &quot;index.handler&quot;,
+    &quot;Role&quot;: &quot;arn:aws:iam::012345678901:role/LambdaBasicExecution&quot;
+  }
+}</code></pre><p>By default, for the Node.js runtime, the directory <code>lambda/modules</code> contains the node modules of the project. For example,
 some of these modules could be named <code>log</code>, or <code>data-access</code> or <code>authorization</code> etc...</p><p>Each module should have a clear responsibility so that each Lambda can embed only the code it needs. This is a recommendation
 but the developer is free to organize the code as he want. The Lambda plugin does not force you to use a specific project
 organization.</p><p>This is what a project structure could look like:</p><pre><code class="shell">lambda
