@@ -22,7 +22,7 @@
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
-  <a data-ice="repoURL" href="https://github.com/myrmx/myrmex" class="repo-url-github">Repository</a>
+  <a data-ice="repoURL" href="https://github.com/myrmex-org/myrmex" class="repo-url-github">Repository</a>
   <div class="search-box">
   <span>
     <img src="./image/search.png">
@@ -173,10 +173,10 @@
 
 <div class="content" data-ice="content"><div class="github-markdown">
   <div class="manual-user-index" data-ice="manualUserIndex"><p><img src="manual/asset/myrmex.png?style=centerme" alt="Myrmex Logo"></p>
-<p><a href="https://travis-ci.org/myrmx/myrmex"><img src="https://travis-ci.org/myrmx/myrmex.svg" alt="Build Status"></a>
-<a href="https://www.codacy.com/app/alexisno/myrmex?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=myrmx/myrmex&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/249a9410043a43dca599d29f53a7bf98" alt="Codacy Badge"></a>
-<a href="https://codecov.io/gh/myrmx/myrmex"><img src="https://codecov.io/gh/myrmx/myrmex/branch/master/graph/badge.svg" alt="Codecov"></a>
-<a href="https://snyk.io/test/github/myrmx/myrmex?targetFile=packages%2Fmyrmex%2Fpackage.json"><img src="https://snyk.io/test/github/myrmx/myrmex/badge.svg?targetFile=packages%2Fmyrmex%2Fpackage.json" alt="Known Vulnerabilities"></a></p>
+<p><a href="https://travis-ci.org/myrmex-org/myrmex"><img src="https://travis-ci.org/myrmex-org/myrmex.svg" alt="Build Status"></a>
+<a href="https://www.codacy.com/app/alexisno/myrmex?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=myrmex-org/myrmex&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/249a9410043a43dca599d29f53a7bf98" alt="Codacy Badge"></a>
+<a href="https://codecov.io/gh/myrmex-org/myrmex"><img src="https://codecov.io/gh/myrmex-org/myrmex/branch/master/graph/badge.svg" alt="Codecov"></a>
+<a href="https://snyk.io/test/github/myrmex-org/myrmex?targetFile=packages%2Fmyrmex%2Fpackage.json"><img src="https://snyk.io/test/github/myrmex-org/myrmex/badge.svg?targetFile=packages%2Fmyrmex%2Fpackage.json" alt="Known Vulnerabilities"></a></p>
 </div>
 
   <p class="manual-badge" data-ice="manualBadge"><img src="./manual-badge.svg"></p>
@@ -414,7 +414,7 @@ defined in the Myrmex project or the name of a role deployed in AWS.</p><p>If th
 <li>Select a role managed by the plugin @myrmex/iam</li>
 <li>Select a role in your AWS account</li>
 <li>Enter the value manually</li>
-</ul><h2>Integration with <code>@myrmex/lambda</code></h2><p><code>@myrmex/iam</code> add some functionalities to  <code>@myrmex/lambda</code> when both are installed in the same project.</p><h3>Simplify the association of a Lambda with its execution role</h3><p>In the <a href="https://myrmx.github.io/manual/usage/lambda-plugin.html#project-anatomy"><code>config.json</code></a> file that describes the
+</ul><h2>Integration with <code>@myrmex/lambda</code></h2><p><code>@myrmex/iam</code> add some functionalities to  <code>@myrmex/lambda</code> when both are installed in the same project.</p><h3>Simplify the association of a Lambda with its execution role</h3><p>In the <a href="https://myrmex-org.github.io/manual/usage/lambda-plugin.html#project-anatomy"><code>config.json</code></a> file that describes the
 configuration of a Lambda, the invocation role is configured via the using the property <code>params.role</code>. It accepts the ARN of
 an IAM role. Using <code>@myrmex/iam</code>, it is also possible configure this property using the identifier of a role defined in the
 Myrmex project or the name of a role deployed in AWS.</p><h3>New behavior for the option <code>--role &lt;role&gt;</code> of <code>myrmex create-lambda</code></h3><p>This option normally accepts the ARN of a role. With the plugin <code>@myrmex/iam</code>, it also accepts the identifier of an role

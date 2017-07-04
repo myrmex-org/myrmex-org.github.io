@@ -330,6 +330,18 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
+    "packages/api-gateway/coverage/lcov-report/prettify.js",
+    "file/packages/api-gateway/coverage/lcov-report/prettify.js.html",
+    "packages/api-gateway/coverage/lcov-report/prettify.js",
+    "file"
+  ],
+  [
+    "packages/api-gateway/coverage/lcov-report/sorter.js",
+    "file/packages/api-gateway/coverage/lcov-report/sorter.js.html",
+    "packages/api-gateway/coverage/lcov-report/sorter.js",
+    "file"
+  ],
+  [
     "packages/api-gateway/src/api.js",
     "file/packages/api-gateway/src/api.js.html",
     "packages/api-gateway/src/api.js",
@@ -486,6 +498,18 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "packages/cli/coverage/lcov-report/prettify.js",
+    "file/packages/cli/coverage/lcov-report/prettify.js.html",
+    "packages/cli/coverage/lcov-report/prettify.js",
+    "file"
+  ],
+  [
+    "packages/cli/coverage/lcov-report/sorter.js",
+    "file/packages/cli/coverage/lcov-report/sorter.js.html",
+    "packages/cli/coverage/lcov-report/sorter.js",
+    "file"
+  ],
+  [
     "packages/cli/src/cli/cheers.js",
     "file/packages/cli/src/cli/cheers.js.html",
     "packages/cli/src/cli/cheers.js",
@@ -618,6 +642,18 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "packages/core/coverage/lcov-report/prettify.js",
+    "file/packages/core/coverage/lcov-report/prettify.js.html",
+    "packages/core/coverage/lcov-report/prettify.js",
+    "file"
+  ],
+  [
+    "packages/core/coverage/lcov-report/sorter.js",
+    "file/packages/core/coverage/lcov-report/sorter.js.html",
+    "packages/core/coverage/lcov-report/sorter.js",
+    "file"
+  ],
+  [
     "packages/core/src/lib/log.js",
     "file/packages/core/src/lib/log.js.html",
     "packages/core/src/lib/log.js",
@@ -642,6 +678,18 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "packages/cors/coverage/lcov-report/prettify.js",
+    "file/packages/cors/coverage/lcov-report/prettify.js.html",
+    "packages/cors/coverage/lcov-report/prettify.js",
+    "file"
+  ],
+  [
+    "packages/cors/coverage/lcov-report/sorter.js",
+    "file/packages/cors/coverage/lcov-report/sorter.js.html",
+    "packages/cors/coverage/lcov-report/sorter.js",
+    "file"
+  ],
+  [
     "packages/cors/src/hooks/after-add-endpoints-to-api.js",
     "file/packages/cors/src/hooks/after-add-endpoints-to-api.js.html",
     "packages/cors/src/hooks/after-add-endpoints-to-api.js",
@@ -657,6 +705,18 @@ window.esdocSearchIndex = [
     "packages/cors/test/__bootstrap.test.js",
     "file/packages/cors/test/__bootstrap.test.js.html",
     "packages/cors/test/__bootstrap.test.js",
+    "file"
+  ],
+  [
+    "packages/iam/coverage/lcov-report/prettify.js",
+    "file/packages/iam/coverage/lcov-report/prettify.js.html",
+    "packages/iam/coverage/lcov-report/prettify.js",
+    "file"
+  ],
+  [
+    "packages/iam/coverage/lcov-report/sorter.js",
+    "file/packages/iam/coverage/lcov-report/sorter.js.html",
+    "packages/iam/coverage/lcov-report/sorter.js",
     "file"
   ],
   [
@@ -759,6 +819,18 @@ window.esdocSearchIndex = [
     "packages/iam/test/role.test.js",
     "file/packages/iam/test/role.test.js.html",
     "packages/iam/test/role.test.js",
+    "file"
+  ],
+  [
+    "packages/lambda/coverage/lcov-report/prettify.js",
+    "file/packages/lambda/coverage/lcov-report/prettify.js.html",
+    "packages/lambda/coverage/lcov-report/prettify.js",
+    "file"
+  ],
+  [
+    "packages/lambda/coverage/lcov-report/sorter.js",
+    "file/packages/lambda/coverage/lcov-report/sorter.js.html",
+    "packages/lambda/coverage/lcov-report/sorter.js",
     "file"
   ],
   [
@@ -957,6 +1029,36 @@ window.esdocSearchIndex = [
     "packages/lambda/test/lambda.test.js",
     "file/packages/lambda/test/lambda.test.js.html",
     "packages/lambda/test/lambda.test.js",
+    "file"
+  ],
+  [
+    "packages/packager/coverage/lcov-report/prettify.js",
+    "file/packages/packager/coverage/lcov-report/prettify.js.html",
+    "packages/packager/coverage/lcov-report/prettify.js",
+    "file"
+  ],
+  [
+    "packages/packager/coverage/lcov-report/sorter.js",
+    "file/packages/packager/coverage/lcov-report/sorter.js.html",
+    "packages/packager/coverage/lcov-report/sorter.js",
+    "file"
+  ],
+  [
+    "packages/packager/src/hooks/build-lambda-package.js",
+    "file/packages/packager/src/hooks/build-lambda-package.js.html",
+    "packages/packager/src/hooks/build-lambda-package.js",
+    "file"
+  ],
+  [
+    "packages/packager/src/index.js",
+    "file/packages/packager/src/index.js.html",
+    "packages/packager/src/index.js",
+    "file"
+  ],
+  [
+    "packages/packager/test/__bootstrap.test.js",
+    "file/packages/packager/test/__bootstrap.test.js.html",
+    "packages/packager/test/__bootstrap.test.js",
     "file"
   ]
 ]

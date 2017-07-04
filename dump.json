@@ -2,6 +2,54 @@
   {
     "__docId__": 0,
     "kind": "file",
+    "name": "packages/api-gateway/coverage/lcov-report/prettify.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/api-gateway/coverage/lcov-report/prettify.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 1,
+    "kind": "file",
+    "name": "packages/api-gateway/coverage/lcov-report/sorter.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/api-gateway/coverage/lcov-report/sorter.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 2,
+    "kind": "variable",
+    "name": "addSorting",
+    "memberof": "packages/api-gateway/coverage/lcov-report/sorter.js",
+    "static": true,
+    "longname": "packages/api-gateway/coverage/lcov-report/sorter.js~addSorting",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/api-gateway/coverage/lcov-report/sorter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 3,
+    "kind": "file",
     "name": "packages/api-gateway/src/api.js",
     "content": "",
     "static": true,
@@ -11,7 +59,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 1,
+    "__docId__": 4,
     "kind": "variable",
     "name": "AWS",
     "memberof": "packages/api-gateway/src/api.js",
@@ -37,7 +85,7 @@
     }
   },
   {
-    "__docId__": 2,
+    "__docId__": 5,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/api-gateway/src/api.js",
@@ -63,7 +111,7 @@
     }
   },
   {
-    "__docId__": 3,
+    "__docId__": 6,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/src/api.js",
@@ -89,7 +137,7 @@
     }
   },
   {
-    "__docId__": 4,
+    "__docId__": 7,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/src/api.js",
@@ -115,7 +163,7 @@
     }
   },
   {
-    "__docId__": 5,
+    "__docId__": 8,
     "kind": "function",
     "name": "Api",
     "memberof": "packages/api-gateway/src/api.js",
@@ -149,7 +197,7 @@
     ]
   },
   {
-    "__docId__": 6,
+    "__docId__": 9,
     "kind": "function",
     "name": "init",
     "memberof": "packages/api-gateway/src/api.js",
@@ -180,7 +228,7 @@
     }
   },
   {
-    "__docId__": 7,
+    "__docId__": 10,
     "kind": "function",
     "name": "getIdentifier",
     "memberof": "packages/api-gateway/src/api.js",
@@ -211,7 +259,7 @@
     }
   },
   {
-    "__docId__": 8,
+    "__docId__": 11,
     "kind": "function",
     "name": "toString",
     "memberof": "packages/api-gateway/src/api.js",
@@ -242,7 +290,7 @@
     }
   },
   {
-    "__docId__": 9,
+    "__docId__": 12,
     "kind": "function",
     "name": "getSpec",
     "memberof": "packages/api-gateway/src/api.js",
@@ -273,7 +321,7 @@
     }
   },
   {
-    "__docId__": 10,
+    "__docId__": 13,
     "kind": "function",
     "name": "doesExposeEndpoint",
     "memberof": "packages/api-gateway/src/api.js",
@@ -315,7 +363,7 @@
     }
   },
   {
-    "__docId__": 11,
+    "__docId__": 14,
     "kind": "function",
     "name": "addEndpoints",
     "memberof": "packages/api-gateway/src/api.js",
@@ -367,7 +415,7 @@
     }
   },
   {
-    "__docId__": 12,
+    "__docId__": 15,
     "kind": "function",
     "name": "addEndpoint",
     "memberof": "packages/api-gateway/src/api.js",
@@ -419,7 +467,7 @@
     }
   },
   {
-    "__docId__": 13,
+    "__docId__": 16,
     "kind": "function",
     "name": "getEndpoints",
     "memberof": "packages/api-gateway/src/api.js",
@@ -450,7 +498,7 @@
     }
   },
   {
-    "__docId__": 14,
+    "__docId__": 17,
     "kind": "function",
     "name": "generateSpec",
     "memberof": "packages/api-gateway/src/api.js",
@@ -502,7 +550,7 @@
     }
   },
   {
-    "__docId__": 15,
+    "__docId__": 18,
     "kind": "function",
     "name": "publish",
     "memberof": "packages/api-gateway/src/api.js",
@@ -546,7 +594,7 @@
     }
   },
   {
-    "__docId__": 16,
+    "__docId__": 19,
     "kind": "function",
     "name": "deploy",
     "memberof": "packages/api-gateway/src/api.js",
@@ -590,7 +638,7 @@
     }
   },
   {
-    "__docId__": 17,
+    "__docId__": 20,
     "kind": "function",
     "name": "findInApiGateway",
     "memberof": "packages/api-gateway/src/api.js",
@@ -662,7 +710,7 @@
     }
   },
   {
-    "__docId__": 18,
+    "__docId__": 21,
     "kind": "function",
     "name": "_findIdentificationInName",
     "memberof": "packages/api-gateway/src/api.js",
@@ -704,7 +752,7 @@
     }
   },
   {
-    "__docId__": 19,
+    "__docId__": 22,
     "kind": "function",
     "name": "_createInApiGateway",
     "memberof": "packages/api-gateway/src/api.js",
@@ -756,7 +804,7 @@
     }
   },
   {
-    "__docId__": 20,
+    "__docId__": 23,
     "kind": "function",
     "name": "_updateInApiGateway",
     "memberof": "packages/api-gateway/src/api.js",
@@ -818,7 +866,7 @@
     }
   },
   {
-    "__docId__": 21,
+    "__docId__": 24,
     "kind": "function",
     "name": "cleanSpecForApiGateway",
     "memberof": "packages/api-gateway/src/api.js",
@@ -860,7 +908,7 @@
     }
   },
   {
-    "__docId__": 22,
+    "__docId__": 25,
     "kind": "function",
     "name": "cleanSpecForDoc",
     "memberof": "packages/api-gateway/src/api.js",
@@ -902,7 +950,7 @@
     }
   },
   {
-    "__docId__": 23,
+    "__docId__": 26,
     "kind": "function",
     "name": "applyCredentialsARNs",
     "memberof": "packages/api-gateway/src/api.js",
@@ -938,7 +986,7 @@
     }
   },
   {
-    "__docId__": 24,
+    "__docId__": 27,
     "kind": "file",
     "name": "packages/api-gateway/src/aws-policies.js",
     "content": "",
@@ -949,7 +997,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 25,
+    "__docId__": 28,
     "kind": "file",
     "name": "packages/api-gateway/src/cli/create-api.js",
     "content": "",
@@ -960,7 +1008,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 26,
+    "__docId__": 29,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/api-gateway/src/cli/create-api.js",
@@ -986,7 +1034,7 @@
     }
   },
   {
-    "__docId__": 27,
+    "__docId__": 30,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/api-gateway/src/cli/create-api.js",
@@ -1012,7 +1060,7 @@
     }
   },
   {
-    "__docId__": 28,
+    "__docId__": 31,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/api-gateway/src/cli/create-api.js",
@@ -1038,7 +1086,7 @@
     }
   },
   {
-    "__docId__": 29,
+    "__docId__": 32,
     "kind": "variable",
     "name": "mkdirpAsync",
     "memberof": "packages/api-gateway/src/cli/create-api.js",
@@ -1064,7 +1112,7 @@
     }
   },
   {
-    "__docId__": 30,
+    "__docId__": 33,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/src/cli/create-api.js",
@@ -1090,7 +1138,7 @@
     }
   },
   {
-    "__docId__": 31,
+    "__docId__": 34,
     "kind": "file",
     "name": "packages/api-gateway/src/cli/create-endpoint.js",
     "content": "",
@@ -1101,7 +1149,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 32,
+    "__docId__": 35,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/api-gateway/src/cli/create-endpoint.js",
@@ -1127,7 +1175,7 @@
     }
   },
   {
-    "__docId__": 33,
+    "__docId__": 36,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/src/cli/create-endpoint.js",
@@ -1153,7 +1201,7 @@
     }
   },
   {
-    "__docId__": 34,
+    "__docId__": 37,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/api-gateway/src/cli/create-endpoint.js",
@@ -1179,7 +1227,7 @@
     }
   },
   {
-    "__docId__": 35,
+    "__docId__": 38,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/api-gateway/src/cli/create-endpoint.js",
@@ -1205,7 +1253,7 @@
     }
   },
   {
-    "__docId__": 36,
+    "__docId__": 39,
     "kind": "variable",
     "name": "mkdirpAsync",
     "memberof": "packages/api-gateway/src/cli/create-endpoint.js",
@@ -1231,7 +1279,7 @@
     }
   },
   {
-    "__docId__": 37,
+    "__docId__": 40,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/src/cli/create-endpoint.js",
@@ -1257,7 +1305,7 @@
     }
   },
   {
-    "__docId__": 38,
+    "__docId__": 41,
     "kind": "file",
     "name": "packages/api-gateway/src/cli/create-model.js",
     "content": "",
@@ -1268,7 +1316,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 39,
+    "__docId__": 42,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/api-gateway/src/cli/create-model.js",
@@ -1294,7 +1342,7 @@
     }
   },
   {
-    "__docId__": 40,
+    "__docId__": 43,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/api-gateway/src/cli/create-model.js",
@@ -1320,7 +1368,7 @@
     }
   },
   {
-    "__docId__": 41,
+    "__docId__": 44,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/api-gateway/src/cli/create-model.js",
@@ -1346,7 +1394,7 @@
     }
   },
   {
-    "__docId__": 42,
+    "__docId__": 45,
     "kind": "variable",
     "name": "mkdirpAsync",
     "memberof": "packages/api-gateway/src/cli/create-model.js",
@@ -1372,7 +1420,7 @@
     }
   },
   {
-    "__docId__": 43,
+    "__docId__": 46,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/src/cli/create-model.js",
@@ -1398,7 +1446,7 @@
     }
   },
   {
-    "__docId__": 44,
+    "__docId__": 47,
     "kind": "file",
     "name": "packages/api-gateway/src/cli/deploy-apis.js",
     "content": "",
@@ -1409,7 +1457,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 45,
+    "__docId__": 48,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/src/cli/deploy-apis.js",
@@ -1435,7 +1483,7 @@
     }
   },
   {
-    "__docId__": 46,
+    "__docId__": 49,
     "kind": "variable",
     "name": "Table",
     "memberof": "packages/api-gateway/src/cli/deploy-apis.js",
@@ -1461,7 +1509,7 @@
     }
   },
   {
-    "__docId__": 47,
+    "__docId__": 50,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/src/cli/deploy-apis.js",
@@ -1487,7 +1535,7 @@
     }
   },
   {
-    "__docId__": 48,
+    "__docId__": 51,
     "kind": "file",
     "name": "packages/api-gateway/src/cli/inspect-api.js",
     "content": "",
@@ -1498,7 +1546,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 49,
+    "__docId__": 52,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/src/cli/inspect-api.js",
@@ -1524,7 +1572,7 @@
     }
   },
   {
-    "__docId__": 50,
+    "__docId__": 53,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/src/cli/inspect-api.js",
@@ -1550,7 +1598,7 @@
     }
   },
   {
-    "__docId__": 51,
+    "__docId__": 54,
     "kind": "file",
     "name": "packages/api-gateway/src/cli/inspect-endpoint.js",
     "content": "",
@@ -1561,7 +1609,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 52,
+    "__docId__": 55,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/src/cli/inspect-endpoint.js",
@@ -1587,7 +1635,7 @@
     }
   },
   {
-    "__docId__": 53,
+    "__docId__": 56,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/src/cli/inspect-endpoint.js",
@@ -1613,7 +1661,7 @@
     }
   },
   {
-    "__docId__": 54,
+    "__docId__": 57,
     "kind": "file",
     "name": "packages/api-gateway/src/endpoint.js",
     "content": "",
@@ -1624,7 +1672,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 55,
+    "__docId__": 58,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -1650,7 +1698,7 @@
     }
   },
   {
-    "__docId__": 56,
+    "__docId__": 59,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -1676,7 +1724,7 @@
     }
   },
   {
-    "__docId__": 57,
+    "__docId__": 60,
     "kind": "function",
     "name": "Endpoint",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -1730,7 +1778,7 @@
     ]
   },
   {
-    "__docId__": 58,
+    "__docId__": 61,
     "kind": "function",
     "name": "toString",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -1761,7 +1809,7 @@
     }
   },
   {
-    "__docId__": 59,
+    "__docId__": 62,
     "kind": "function",
     "name": "getMethod",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -1792,7 +1840,7 @@
     }
   },
   {
-    "__docId__": 60,
+    "__docId__": 63,
     "kind": "function",
     "name": "getResourcePath",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -1823,7 +1871,7 @@
     }
   },
   {
-    "__docId__": 61,
+    "__docId__": 64,
     "kind": "function",
     "name": "getReferencedModels",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -1854,7 +1902,7 @@
     }
   },
   {
-    "__docId__": 62,
+    "__docId__": 65,
     "kind": "function",
     "name": "getSpec",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -1885,7 +1933,7 @@
     }
   },
   {
-    "__docId__": 63,
+    "__docId__": 66,
     "kind": "function",
     "name": "generateSpec",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -1927,7 +1975,7 @@
     }
   },
   {
-    "__docId__": 64,
+    "__docId__": 67,
     "kind": "function",
     "name": "cleanSpecForApiGateway",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -1969,7 +2017,7 @@
     }
   },
   {
-    "__docId__": 65,
+    "__docId__": 68,
     "kind": "function",
     "name": "cleanSpecForDoc",
     "memberof": "packages/api-gateway/src/endpoint.js",
@@ -2011,7 +2059,7 @@
     }
   },
   {
-    "__docId__": 66,
+    "__docId__": 69,
     "kind": "file",
     "name": "packages/api-gateway/src/index.js",
     "content": "",
@@ -2022,7 +2070,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 67,
+    "__docId__": 70,
     "kind": "variable",
     "name": "file",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2048,7 +2096,7 @@
     }
   },
   {
-    "__docId__": 68,
+    "__docId__": 71,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2074,7 +2122,7 @@
     }
   },
   {
-    "__docId__": 69,
+    "__docId__": 72,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2100,7 +2148,7 @@
     }
   },
   {
-    "__docId__": 70,
+    "__docId__": 73,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2126,7 +2174,7 @@
     }
   },
   {
-    "__docId__": 71,
+    "__docId__": 74,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2152,7 +2200,7 @@
     }
   },
   {
-    "__docId__": 72,
+    "__docId__": 75,
     "kind": "function",
     "name": "loadApis",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2183,7 +2231,7 @@
     }
   },
   {
-    "__docId__": 73,
+    "__docId__": 76,
     "kind": "function",
     "name": "loadApi",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2235,7 +2283,7 @@
     }
   },
   {
-    "__docId__": 74,
+    "__docId__": 77,
     "kind": "function",
     "name": "loadEndpoints",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2266,7 +2314,7 @@
     }
   },
   {
-    "__docId__": 75,
+    "__docId__": 78,
     "kind": "function",
     "name": "loadEndpoint",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2328,7 +2376,7 @@
     }
   },
   {
-    "__docId__": 76,
+    "__docId__": 79,
     "kind": "function",
     "name": "loadModels",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2359,7 +2407,7 @@
     }
   },
   {
-    "__docId__": 77,
+    "__docId__": 80,
     "kind": "function",
     "name": "loadModel",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2401,7 +2449,7 @@
     }
   },
   {
-    "__docId__": 78,
+    "__docId__": 81,
     "kind": "function",
     "name": "loadIntegrations",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2463,7 +2511,7 @@
     }
   },
   {
-    "__docId__": 79,
+    "__docId__": 82,
     "kind": "function",
     "name": "findApi",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2505,7 +2553,7 @@
     }
   },
   {
-    "__docId__": 80,
+    "__docId__": 83,
     "kind": "function",
     "name": "findEndpoint",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2557,7 +2605,7 @@
     }
   },
   {
-    "__docId__": 81,
+    "__docId__": 84,
     "kind": "function",
     "name": "findModel",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2599,7 +2647,7 @@
     }
   },
   {
-    "__docId__": 82,
+    "__docId__": 85,
     "kind": "function",
     "name": "registerCommands",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2637,7 +2685,7 @@
     }
   },
   {
-    "__docId__": 83,
+    "__docId__": 86,
     "kind": "function",
     "name": "getPolicies",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2668,7 +2716,7 @@
     }
   },
   {
-    "__docId__": 84,
+    "__docId__": 87,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2694,7 +2742,7 @@
     }
   },
   {
-    "__docId__": 85,
+    "__docId__": 88,
     "kind": "function",
     "name": "mergeSpecsFiles",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2746,7 +2794,7 @@
     }
   },
   {
-    "__docId__": 86,
+    "__docId__": 89,
     "kind": "function",
     "name": "loadIntegrationTemplate",
     "memberof": "packages/api-gateway/src/index.js",
@@ -2788,7 +2836,7 @@
     }
   },
   {
-    "__docId__": 87,
+    "__docId__": 90,
     "kind": "file",
     "name": "packages/api-gateway/src/model.js",
     "content": "",
@@ -2799,7 +2847,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 88,
+    "__docId__": 91,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/src/model.js",
@@ -2825,7 +2873,7 @@
     }
   },
   {
-    "__docId__": 89,
+    "__docId__": 92,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/src/model.js",
@@ -2851,7 +2899,7 @@
     }
   },
   {
-    "__docId__": 90,
+    "__docId__": 93,
     "kind": "function",
     "name": "Model",
     "memberof": "packages/api-gateway/src/model.js",
@@ -2885,7 +2933,7 @@
     ]
   },
   {
-    "__docId__": 91,
+    "__docId__": 94,
     "kind": "function",
     "name": "toString",
     "memberof": "packages/api-gateway/src/model.js",
@@ -2916,7 +2964,7 @@
     }
   },
   {
-    "__docId__": 92,
+    "__docId__": 95,
     "kind": "function",
     "name": "getName",
     "memberof": "packages/api-gateway/src/model.js",
@@ -2954,7 +3002,7 @@
     }
   },
   {
-    "__docId__": 93,
+    "__docId__": 96,
     "kind": "function",
     "name": "getSpec",
     "memberof": "packages/api-gateway/src/model.js",
@@ -2985,7 +3033,7 @@
     }
   },
   {
-    "__docId__": 94,
+    "__docId__": 97,
     "kind": "function",
     "name": "getChildModels",
     "memberof": "packages/api-gateway/src/model.js",
@@ -3016,7 +3064,7 @@
     }
   },
   {
-    "__docId__": 95,
+    "__docId__": 98,
     "kind": "function",
     "name": "getNestedModelsList",
     "memberof": "packages/api-gateway/src/model.js",
@@ -3041,7 +3089,7 @@
     }
   },
   {
-    "__docId__": 96,
+    "__docId__": 99,
     "kind": "file",
     "name": "packages/api-gateway/test/__bootstrap.test.js",
     "content": "",
@@ -3052,7 +3100,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 97,
+    "__docId__": 100,
     "kind": "function",
     "name": "testRequire",
     "memberof": "packages/api-gateway/test/__bootstrap.test.js",
@@ -3088,7 +3136,7 @@
     }
   },
   {
-    "__docId__": 98,
+    "__docId__": 101,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/__bootstrap.test.js",
@@ -3114,7 +3162,7 @@
     }
   },
   {
-    "__docId__": 99,
+    "__docId__": 102,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/api-gateway/test/__bootstrap.test.js",
@@ -3140,7 +3188,7 @@
     }
   },
   {
-    "__docId__": 100,
+    "__docId__": 103,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/test/__bootstrap.test.js",
@@ -3166,7 +3214,7 @@
     }
   },
   {
-    "__docId__": 101,
+    "__docId__": 104,
     "kind": "variable",
     "name": "myrmex",
     "memberof": "packages/api-gateway/test/__bootstrap.test.js",
@@ -3192,7 +3240,7 @@
     }
   },
   {
-    "__docId__": 102,
+    "__docId__": 105,
     "kind": "variable",
     "name": "nodeApiGatewayPlugin",
     "memberof": "packages/api-gateway/test/__bootstrap.test.js",
@@ -3218,7 +3266,7 @@
     }
   },
   {
-    "__docId__": 103,
+    "__docId__": 106,
     "kind": "file",
     "name": "packages/api-gateway/test/api.test.js",
     "content": "",
@@ -3229,7 +3277,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 104,
+    "__docId__": 107,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/api.test.js",
@@ -3255,7 +3303,7 @@
     }
   },
   {
-    "__docId__": 105,
+    "__docId__": 108,
     "kind": "variable",
     "name": "Api",
     "memberof": "packages/api-gateway/test/api.test.js",
@@ -3281,7 +3329,7 @@
     }
   },
   {
-    "__docId__": 106,
+    "__docId__": 109,
     "kind": "variable",
     "name": "Endpoint",
     "memberof": "packages/api-gateway/test/api.test.js",
@@ -3307,7 +3355,7 @@
     }
   },
   {
-    "__docId__": 107,
+    "__docId__": 110,
     "kind": "variable",
     "name": "AWS",
     "memberof": "packages/api-gateway/test/api.test.js",
@@ -3333,7 +3381,7 @@
     }
   },
   {
-    "__docId__": 108,
+    "__docId__": 111,
     "kind": "file",
     "name": "packages/api-gateway/test/cli/create-api.test.js",
     "content": "",
@@ -3344,7 +3392,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 109,
+    "__docId__": 112,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/cli/create-api.test.js",
@@ -3370,7 +3418,7 @@
     }
   },
   {
-    "__docId__": 110,
+    "__docId__": 113,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/test/cli/create-api.test.js",
@@ -3396,7 +3444,7 @@
     }
   },
   {
-    "__docId__": 111,
+    "__docId__": 114,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/api-gateway/test/cli/create-api.test.js",
@@ -3422,7 +3470,7 @@
     }
   },
   {
-    "__docId__": 112,
+    "__docId__": 115,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/api-gateway/test/cli/create-api.test.js",
@@ -3448,7 +3496,7 @@
     }
   },
   {
-    "__docId__": 113,
+    "__docId__": 116,
     "kind": "file",
     "name": "packages/api-gateway/test/cli/create-endpoint.test.js",
     "content": "",
@@ -3459,7 +3507,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 114,
+    "__docId__": 117,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/cli/create-endpoint.test.js",
@@ -3485,7 +3533,7 @@
     }
   },
   {
-    "__docId__": 115,
+    "__docId__": 118,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/test/cli/create-endpoint.test.js",
@@ -3511,7 +3559,7 @@
     }
   },
   {
-    "__docId__": 116,
+    "__docId__": 119,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/api-gateway/test/cli/create-endpoint.test.js",
@@ -3537,7 +3585,7 @@
     }
   },
   {
-    "__docId__": 117,
+    "__docId__": 120,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/api-gateway/test/cli/create-endpoint.test.js",
@@ -3563,7 +3611,7 @@
     }
   },
   {
-    "__docId__": 118,
+    "__docId__": 121,
     "kind": "file",
     "name": "packages/api-gateway/test/cli/create-model.test.js",
     "content": "",
@@ -3574,7 +3622,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 119,
+    "__docId__": 122,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/cli/create-model.test.js",
@@ -3600,7 +3648,7 @@
     }
   },
   {
-    "__docId__": 120,
+    "__docId__": 123,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/test/cli/create-model.test.js",
@@ -3626,7 +3674,7 @@
     }
   },
   {
-    "__docId__": 121,
+    "__docId__": 124,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/api-gateway/test/cli/create-model.test.js",
@@ -3652,7 +3700,7 @@
     }
   },
   {
-    "__docId__": 122,
+    "__docId__": 125,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/api-gateway/test/cli/create-model.test.js",
@@ -3678,7 +3726,7 @@
     }
   },
   {
-    "__docId__": 123,
+    "__docId__": 126,
     "kind": "file",
     "name": "packages/api-gateway/test/cli/deploy-apis.test.js",
     "content": "",
@@ -3689,7 +3737,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 124,
+    "__docId__": 127,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/cli/deploy-apis.test.js",
@@ -3715,7 +3763,7 @@
     }
   },
   {
-    "__docId__": 125,
+    "__docId__": 128,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/test/cli/deploy-apis.test.js",
@@ -3741,7 +3789,7 @@
     }
   },
   {
-    "__docId__": 126,
+    "__docId__": 129,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/api-gateway/test/cli/deploy-apis.test.js",
@@ -3767,7 +3815,7 @@
     }
   },
   {
-    "__docId__": 127,
+    "__docId__": 130,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/api-gateway/test/cli/deploy-apis.test.js",
@@ -3793,7 +3841,7 @@
     }
   },
   {
-    "__docId__": 128,
+    "__docId__": 131,
     "kind": "file",
     "name": "packages/api-gateway/test/cli/inspect-api.test.js",
     "content": "",
@@ -3804,7 +3852,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 129,
+    "__docId__": 132,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/cli/inspect-api.test.js",
@@ -3830,7 +3878,7 @@
     }
   },
   {
-    "__docId__": 130,
+    "__docId__": 133,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/test/cli/inspect-api.test.js",
@@ -3856,7 +3904,7 @@
     }
   },
   {
-    "__docId__": 131,
+    "__docId__": 134,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/api-gateway/test/cli/inspect-api.test.js",
@@ -3882,7 +3930,7 @@
     }
   },
   {
-    "__docId__": 132,
+    "__docId__": 135,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/api-gateway/test/cli/inspect-api.test.js",
@@ -3908,7 +3956,7 @@
     }
   },
   {
-    "__docId__": 133,
+    "__docId__": 136,
     "kind": "file",
     "name": "packages/api-gateway/test/cli/inspect-endpoint.test.js",
     "content": "",
@@ -3919,7 +3967,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 134,
+    "__docId__": 137,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/cli/inspect-endpoint.test.js",
@@ -3945,7 +3993,7 @@
     }
   },
   {
-    "__docId__": 135,
+    "__docId__": 138,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/api-gateway/test/cli/inspect-endpoint.test.js",
@@ -3971,7 +4019,7 @@
     }
   },
   {
-    "__docId__": 136,
+    "__docId__": 139,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/api-gateway/test/cli/inspect-endpoint.test.js",
@@ -3997,7 +4045,7 @@
     }
   },
   {
-    "__docId__": 137,
+    "__docId__": 140,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/api-gateway/test/cli/inspect-endpoint.test.js",
@@ -4023,7 +4071,7 @@
     }
   },
   {
-    "__docId__": 138,
+    "__docId__": 141,
     "kind": "file",
     "name": "packages/api-gateway/test/endpoint.test.js",
     "content": "",
@@ -4034,7 +4082,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 139,
+    "__docId__": 142,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/endpoint.test.js",
@@ -4060,7 +4108,7 @@
     }
   },
   {
-    "__docId__": 140,
+    "__docId__": 143,
     "kind": "variable",
     "name": "Endpoint",
     "memberof": "packages/api-gateway/test/endpoint.test.js",
@@ -4086,7 +4134,7 @@
     }
   },
   {
-    "__docId__": 141,
+    "__docId__": 144,
     "kind": "file",
     "name": "packages/api-gateway/test/index.test.js",
     "content": "",
@@ -4097,7 +4145,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 142,
+    "__docId__": 145,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/index.test.js",
@@ -4123,7 +4171,7 @@
     }
   },
   {
-    "__docId__": 143,
+    "__docId__": 146,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/test/index.test.js",
@@ -4149,7 +4197,7 @@
     }
   },
   {
-    "__docId__": 144,
+    "__docId__": 147,
     "kind": "file",
     "name": "packages/api-gateway/test/model.test.js",
     "content": "",
@@ -4160,7 +4208,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 145,
+    "__docId__": 148,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/api-gateway/test/model.test.js",
@@ -4186,7 +4234,7 @@
     }
   },
   {
-    "__docId__": 146,
+    "__docId__": 149,
     "kind": "variable",
     "name": "Model",
     "memberof": "packages/api-gateway/test/model.test.js",
@@ -4212,7 +4260,7 @@
     }
   },
   {
-    "__docId__": 147,
+    "__docId__": 150,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/api-gateway/test/model.test.js",
@@ -4238,7 +4286,7 @@
     }
   },
   {
-    "__docId__": 148,
+    "__docId__": 151,
     "kind": "file",
     "name": "packages/api-gateway/test-assets/endpoints/delivery/DELETE/index.js",
     "content": "",
@@ -4249,7 +4297,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 149,
+    "__docId__": 152,
     "kind": "file",
     "name": "packages/api-gateway/test-assets/endpoints/delivery/GET/index.js",
     "content": "",
@@ -4260,7 +4308,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 150,
+    "__docId__": 153,
     "kind": "file",
     "name": "packages/api-gateway/test-assets/endpoints/delivery/PATCH/index.js",
     "content": "",
@@ -4271,7 +4319,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 151,
+    "__docId__": 154,
     "kind": "file",
     "name": "packages/api-gateway/test-assets/endpoints/delivery/PUT/index.js",
     "content": "",
@@ -4282,7 +4330,55 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 152,
+    "__docId__": 155,
+    "kind": "file",
+    "name": "packages/cli/coverage/lcov-report/prettify.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/cli/coverage/lcov-report/prettify.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 156,
+    "kind": "file",
+    "name": "packages/cli/coverage/lcov-report/sorter.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/cli/coverage/lcov-report/sorter.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 157,
+    "kind": "variable",
+    "name": "addSorting",
+    "memberof": "packages/cli/coverage/lcov-report/sorter.js",
+    "static": true,
+    "longname": "packages/cli/coverage/lcov-report/sorter.js~addSorting",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/cli/coverage/lcov-report/sorter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 158,
     "kind": "file",
     "name": "packages/cli/src/cli/cheers.js",
     "content": "",
@@ -4293,7 +4389,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 153,
+    "__docId__": 159,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cli/src/cli/cheers.js",
@@ -4319,7 +4415,7 @@
     }
   },
   {
-    "__docId__": 154,
+    "__docId__": 160,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/cli/src/cli/cheers.js",
@@ -4345,7 +4441,7 @@
     }
   },
   {
-    "__docId__": 155,
+    "__docId__": 161,
     "kind": "variable",
     "name": "figlet",
     "memberof": "packages/cli/src/cli/cheers.js",
@@ -4371,7 +4467,7 @@
     }
   },
   {
-    "__docId__": 156,
+    "__docId__": 162,
     "kind": "variable",
     "name": "cheers",
     "memberof": "packages/cli/src/cli/cheers.js",
@@ -4397,7 +4493,7 @@
     }
   },
   {
-    "__docId__": 157,
+    "__docId__": 163,
     "kind": "variable",
     "name": "latinFonts",
     "memberof": "packages/cli/src/cli/cheers.js",
@@ -4423,7 +4519,7 @@
     }
   },
   {
-    "__docId__": 158,
+    "__docId__": 164,
     "kind": "file",
     "name": "packages/cli/src/cli/disable-default.js",
     "content": "",
@@ -4434,7 +4530,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 159,
+    "__docId__": 165,
     "kind": "file",
     "name": "packages/cli/src/cli/figlet/lib/figlet.js",
     "content": "",
@@ -4445,7 +4541,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 160,
+    "__docId__": 166,
     "kind": "variable",
     "name": "figlet",
     "memberof": "packages/cli/src/cli/figlet/lib/figlet.js",
@@ -4471,7 +4567,7 @@
     }
   },
   {
-    "__docId__": 161,
+    "__docId__": 167,
     "kind": "file",
     "name": "packages/cli/src/cli/figlet/lib/node-figlet.js",
     "content": "",
@@ -4482,7 +4578,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 162,
+    "__docId__": 168,
     "kind": "variable",
     "name": "figlet",
     "memberof": "packages/cli/src/cli/figlet/lib/node-figlet.js",
@@ -4508,7 +4604,7 @@
     }
   },
   {
-    "__docId__": 163,
+    "__docId__": 169,
     "kind": "function",
     "name": "loadFont",
     "memberof": "packages/cli/src/cli/figlet/lib/node-figlet.js",
@@ -4545,7 +4641,7 @@
     ]
   },
   {
-    "__docId__": 164,
+    "__docId__": 170,
     "kind": "function",
     "name": "loadFontSync",
     "memberof": "packages/cli/src/cli/figlet/lib/node-figlet.js",
@@ -4581,7 +4677,7 @@
     }
   },
   {
-    "__docId__": 165,
+    "__docId__": 171,
     "kind": "function",
     "name": "fonts",
     "memberof": "packages/cli/src/cli/figlet/lib/node-figlet.js",
@@ -4612,7 +4708,7 @@
     ]
   },
   {
-    "__docId__": 166,
+    "__docId__": 172,
     "kind": "function",
     "name": "fontsSync",
     "memberof": "packages/cli/src/cli/figlet/lib/node-figlet.js",
@@ -4641,7 +4737,7 @@
     }
   },
   {
-    "__docId__": 167,
+    "__docId__": 173,
     "kind": "file",
     "name": "packages/cli/src/cli/new.js",
     "content": "",
@@ -4652,7 +4748,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 168,
+    "__docId__": 174,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/cli/src/cli/new.js",
@@ -4678,7 +4774,7 @@
     }
   },
   {
-    "__docId__": 169,
+    "__docId__": 175,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/cli/src/cli/new.js",
@@ -4704,7 +4800,7 @@
     }
   },
   {
-    "__docId__": 170,
+    "__docId__": 176,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/cli/src/cli/new.js",
@@ -4730,7 +4826,7 @@
     }
   },
   {
-    "__docId__": 171,
+    "__docId__": 177,
     "kind": "variable",
     "name": "exec",
     "memberof": "packages/cli/src/cli/new.js",
@@ -4756,7 +4852,7 @@
     }
   },
   {
-    "__docId__": 172,
+    "__docId__": 178,
     "kind": "file",
     "name": "packages/cli/src/cli/show-config.js",
     "content": "",
@@ -4767,7 +4863,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 173,
+    "__docId__": 179,
     "kind": "file",
     "name": "packages/cli/src/commander-help-override.js",
     "content": "",
@@ -4778,7 +4874,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 174,
+    "__docId__": 180,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cli/src/commander-help-override.js",
@@ -4804,7 +4900,7 @@
     }
   },
   {
-    "__docId__": 175,
+    "__docId__": 181,
     "kind": "function",
     "name": "exports",
     "memberof": "packages/cli/src/commander-help-override.js",
@@ -4829,7 +4925,7 @@
     }
   },
   {
-    "__docId__": 176,
+    "__docId__": 182,
     "kind": "function",
     "name": "humanReadableArgName",
     "memberof": "packages/cli/src/commander-help-override.js",
@@ -4871,7 +4967,7 @@
     }
   },
   {
-    "__docId__": 177,
+    "__docId__": 183,
     "kind": "file",
     "name": "packages/cli/src/load-project.js",
     "content": "",
@@ -4882,7 +4978,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 178,
+    "__docId__": 184,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/cli/src/load-project.js",
@@ -4908,7 +5004,7 @@
     }
   },
   {
-    "__docId__": 179,
+    "__docId__": 185,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/cli/src/load-project.js",
@@ -4934,7 +5030,7 @@
     }
   },
   {
-    "__docId__": 180,
+    "__docId__": 186,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cli/src/load-project.js",
@@ -4960,7 +5056,7 @@
     }
   },
   {
-    "__docId__": 181,
+    "__docId__": 187,
     "kind": "function",
     "name": "exports",
     "memberof": "packages/cli/src/load-project.js",
@@ -4996,7 +5092,7 @@
     }
   },
   {
-    "__docId__": 182,
+    "__docId__": 188,
     "kind": "function",
     "name": "getProjectRootDirectory",
     "memberof": "packages/cli/src/load-project.js",
@@ -5009,7 +5105,7 @@
     "importPath": "myrmex/packages/cli/src/load-project.js",
     "importStyle": null,
     "description": "Check if the script is called from a myrmex project and return the root directory",
-    "lineNumber": 55,
+    "lineNumber": 59,
     "params": [],
     "return": {
       "nullable": null,
@@ -5022,7 +5118,7 @@
     }
   },
   {
-    "__docId__": 183,
+    "__docId__": 189,
     "kind": "function",
     "name": "getMyrmexInstance",
     "memberof": "packages/cli/src/load-project.js",
@@ -5035,7 +5131,7 @@
     "importPath": "myrmex/packages/cli/src/load-project.js",
     "importStyle": null,
     "description": "Load the @myrmex/core module installed in the project",
-    "lineNumber": 85,
+    "lineNumber": 89,
     "params": [],
     "return": {
       "nullable": null,
@@ -5047,7 +5143,7 @@
     }
   },
   {
-    "__docId__": 184,
+    "__docId__": 190,
     "kind": "function",
     "name": "getConfig",
     "memberof": "packages/cli/src/load-project.js",
@@ -5060,7 +5156,7 @@
     "importPath": "myrmex/packages/cli/src/load-project.js",
     "importStyle": null,
     "description": "Check if the directory in which the command is launched contains a myrmex.json configuration file and return it",
-    "lineNumber": 102,
+    "lineNumber": 106,
     "params": [],
     "return": {
       "nullable": null,
@@ -5072,7 +5168,7 @@
     }
   },
   {
-    "__docId__": 185,
+    "__docId__": 191,
     "kind": "file",
     "name": "packages/cli/src/test/__bootstrap.test.js",
     "content": "",
@@ -5083,7 +5179,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 186,
+    "__docId__": 192,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/cli/src/test/__bootstrap.test.js",
@@ -5109,7 +5205,7 @@
     }
   },
   {
-    "__docId__": 187,
+    "__docId__": 193,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/cli/src/test/__bootstrap.test.js",
@@ -5135,7 +5231,7 @@
     }
   },
   {
-    "__docId__": 188,
+    "__docId__": 194,
     "kind": "function",
     "name": "testRequire",
     "memberof": "packages/cli/src/test/__bootstrap.test.js",
@@ -5171,7 +5267,7 @@
     }
   },
   {
-    "__docId__": 189,
+    "__docId__": 195,
     "kind": "file",
     "name": "packages/cli/src/test/cli/cheers.test.js",
     "content": "",
@@ -5182,7 +5278,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 190,
+    "__docId__": 196,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cli/src/test/cli/cheers.test.js",
@@ -5208,7 +5304,7 @@
     }
   },
   {
-    "__docId__": 191,
+    "__docId__": 197,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cli/src/test/cli/cheers.test.js",
@@ -5234,7 +5330,7 @@
     }
   },
   {
-    "__docId__": 192,
+    "__docId__": 198,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/cli/src/test/cli/cheers.test.js",
@@ -5260,7 +5356,7 @@
     }
   },
   {
-    "__docId__": 193,
+    "__docId__": 199,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/cli/src/test/cli/cheers.test.js",
@@ -5286,7 +5382,7 @@
     }
   },
   {
-    "__docId__": 194,
+    "__docId__": 200,
     "kind": "file",
     "name": "packages/cli/src/test/cli/disable-default.test.js",
     "content": "",
@@ -5297,7 +5393,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 195,
+    "__docId__": 201,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cli/src/test/cli/disable-default.test.js",
@@ -5323,7 +5419,7 @@
     }
   },
   {
-    "__docId__": 196,
+    "__docId__": 202,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cli/src/test/cli/disable-default.test.js",
@@ -5349,7 +5445,7 @@
     }
   },
   {
-    "__docId__": 197,
+    "__docId__": 203,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/cli/src/test/cli/disable-default.test.js",
@@ -5375,7 +5471,7 @@
     }
   },
   {
-    "__docId__": 198,
+    "__docId__": 204,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/cli/src/test/cli/disable-default.test.js",
@@ -5401,7 +5497,7 @@
     }
   },
   {
-    "__docId__": 199,
+    "__docId__": 205,
     "kind": "file",
     "name": "packages/cli/src/test/cli/new.test.js",
     "content": "",
@@ -5412,7 +5508,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 200,
+    "__docId__": 206,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cli/src/test/cli/new.test.js",
@@ -5438,7 +5534,7 @@
     }
   },
   {
-    "__docId__": 201,
+    "__docId__": 207,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cli/src/test/cli/new.test.js",
@@ -5464,7 +5560,7 @@
     }
   },
   {
-    "__docId__": 202,
+    "__docId__": 208,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/cli/src/test/cli/new.test.js",
@@ -5490,7 +5586,7 @@
     }
   },
   {
-    "__docId__": 203,
+    "__docId__": 209,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/cli/src/test/cli/new.test.js",
@@ -5516,7 +5612,7 @@
     }
   },
   {
-    "__docId__": 204,
+    "__docId__": 210,
     "kind": "file",
     "name": "packages/cli/src/test/command-help-override.test.js",
     "content": "",
@@ -5527,7 +5623,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 205,
+    "__docId__": 211,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cli/src/test/command-help-override.test.js",
@@ -5553,7 +5649,7 @@
     }
   },
   {
-    "__docId__": 206,
+    "__docId__": 212,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/cli/src/test/command-help-override.test.js",
@@ -5579,7 +5675,7 @@
     }
   },
   {
-    "__docId__": 207,
+    "__docId__": 213,
     "kind": "variable",
     "name": "commandHelpOverride",
     "memberof": "packages/cli/src/test/command-help-override.test.js",
@@ -5605,7 +5701,7 @@
     }
   },
   {
-    "__docId__": 208,
+    "__docId__": 214,
     "kind": "file",
     "name": "packages/cli/src/test/load-project.test.js",
     "content": "",
@@ -5616,7 +5712,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 209,
+    "__docId__": 215,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/cli/src/test/load-project.test.js",
@@ -5642,7 +5738,7 @@
     }
   },
   {
-    "__docId__": 210,
+    "__docId__": 216,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/cli/src/test/load-project.test.js",
@@ -5668,7 +5764,7 @@
     }
   },
   {
-    "__docId__": 211,
+    "__docId__": 217,
     "kind": "variable",
     "name": "exec",
     "memberof": "packages/cli/src/test/load-project.test.js",
@@ -5694,7 +5790,7 @@
     }
   },
   {
-    "__docId__": 212,
+    "__docId__": 218,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cli/src/test/load-project.test.js",
@@ -5720,7 +5816,7 @@
     }
   },
   {
-    "__docId__": 213,
+    "__docId__": 219,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/cli/src/test/load-project.test.js",
@@ -5746,7 +5842,7 @@
     }
   },
   {
-    "__docId__": 214,
+    "__docId__": 220,
     "kind": "variable",
     "name": "loadProject",
     "memberof": "packages/cli/src/test/load-project.test.js",
@@ -5772,7 +5868,7 @@
     }
   },
   {
-    "__docId__": 215,
+    "__docId__": 221,
     "kind": "file",
     "name": "packages/cli/test/__bootstrap.test.js",
     "content": "",
@@ -5783,7 +5879,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 216,
+    "__docId__": 222,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/cli/test/__bootstrap.test.js",
@@ -5809,7 +5905,7 @@
     }
   },
   {
-    "__docId__": 217,
+    "__docId__": 223,
     "kind": "function",
     "name": "testRequire",
     "memberof": "packages/cli/test/__bootstrap.test.js",
@@ -5845,7 +5941,7 @@
     }
   },
   {
-    "__docId__": 218,
+    "__docId__": 224,
     "kind": "file",
     "name": "packages/cli/test/cli/disable-default.test.js",
     "content": "",
@@ -5856,7 +5952,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 219,
+    "__docId__": 225,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cli/test/cli/disable-default.test.js",
@@ -5882,7 +5978,7 @@
     }
   },
   {
-    "__docId__": 220,
+    "__docId__": 226,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cli/test/cli/disable-default.test.js",
@@ -5908,7 +6004,7 @@
     }
   },
   {
-    "__docId__": 221,
+    "__docId__": 227,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/cli/test/cli/disable-default.test.js",
@@ -5934,7 +6030,7 @@
     }
   },
   {
-    "__docId__": 222,
+    "__docId__": 228,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/cli/test/cli/disable-default.test.js",
@@ -5960,7 +6056,7 @@
     }
   },
   {
-    "__docId__": 223,
+    "__docId__": 229,
     "kind": "file",
     "name": "packages/cli/test/cli/new.test.js",
     "content": "",
@@ -5971,7 +6067,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 224,
+    "__docId__": 230,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cli/test/cli/new.test.js",
@@ -5997,7 +6093,7 @@
     }
   },
   {
-    "__docId__": 225,
+    "__docId__": 231,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cli/test/cli/new.test.js",
@@ -6023,7 +6119,7 @@
     }
   },
   {
-    "__docId__": 226,
+    "__docId__": 232,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/cli/test/cli/new.test.js",
@@ -6049,7 +6145,7 @@
     }
   },
   {
-    "__docId__": 227,
+    "__docId__": 233,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/cli/test/cli/new.test.js",
@@ -6075,7 +6171,7 @@
     }
   },
   {
-    "__docId__": 228,
+    "__docId__": 234,
     "kind": "file",
     "name": "packages/cli/test/cli/please.test.js",
     "content": "",
@@ -6086,7 +6182,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 229,
+    "__docId__": 235,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cli/test/cli/please.test.js",
@@ -6112,7 +6208,7 @@
     }
   },
   {
-    "__docId__": 230,
+    "__docId__": 236,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cli/test/cli/please.test.js",
@@ -6138,7 +6234,7 @@
     }
   },
   {
-    "__docId__": 231,
+    "__docId__": 237,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/cli/test/cli/please.test.js",
@@ -6164,7 +6260,7 @@
     }
   },
   {
-    "__docId__": 232,
+    "__docId__": 238,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/cli/test/cli/please.test.js",
@@ -6190,7 +6286,7 @@
     }
   },
   {
-    "__docId__": 233,
+    "__docId__": 239,
     "kind": "file",
     "name": "packages/cli/test/command-help-override.test.js",
     "content": "",
@@ -6201,7 +6297,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 234,
+    "__docId__": 240,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cli/test/command-help-override.test.js",
@@ -6227,7 +6323,7 @@
     }
   },
   {
-    "__docId__": 235,
+    "__docId__": 241,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/cli/test/command-help-override.test.js",
@@ -6253,7 +6349,7 @@
     }
   },
   {
-    "__docId__": 236,
+    "__docId__": 242,
     "kind": "variable",
     "name": "commandHelpOverride",
     "memberof": "packages/cli/test/command-help-override.test.js",
@@ -6279,7 +6375,7 @@
     }
   },
   {
-    "__docId__": 237,
+    "__docId__": 243,
     "kind": "file",
     "name": "packages/cli/test/load-project.test.js",
     "content": "",
@@ -6290,7 +6386,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 238,
+    "__docId__": 244,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/cli/test/load-project.test.js",
@@ -6316,7 +6412,7 @@
     }
   },
   {
-    "__docId__": 239,
+    "__docId__": 245,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/cli/test/load-project.test.js",
@@ -6342,7 +6438,7 @@
     }
   },
   {
-    "__docId__": 240,
+    "__docId__": 246,
     "kind": "variable",
     "name": "exec",
     "memberof": "packages/cli/test/load-project.test.js",
@@ -6368,7 +6464,7 @@
     }
   },
   {
-    "__docId__": 241,
+    "__docId__": 247,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cli/test/load-project.test.js",
@@ -6394,7 +6490,7 @@
     }
   },
   {
-    "__docId__": 242,
+    "__docId__": 248,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/cli/test/load-project.test.js",
@@ -6420,7 +6516,7 @@
     }
   },
   {
-    "__docId__": 243,
+    "__docId__": 249,
     "kind": "variable",
     "name": "loadProject",
     "memberof": "packages/cli/test/load-project.test.js",
@@ -6446,7 +6542,7 @@
     }
   },
   {
-    "__docId__": 244,
+    "__docId__": 250,
     "kind": "file",
     "name": "packages/cli/test-assets/plugins/hello.js",
     "content": "",
@@ -6457,7 +6553,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 245,
+    "__docId__": 251,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/cli/test-assets/plugins/hello.js",
@@ -6483,7 +6579,7 @@
     }
   },
   {
-    "__docId__": 246,
+    "__docId__": 252,
     "kind": "file",
     "name": "packages/cli/test-assets/plugins/world/index.js",
     "content": "",
@@ -6494,7 +6590,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 247,
+    "__docId__": 253,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/cli/test-assets/plugins/world/index.js",
@@ -6520,7 +6616,55 @@
     }
   },
   {
-    "__docId__": 248,
+    "__docId__": 254,
+    "kind": "file",
+    "name": "packages/core/coverage/lcov-report/prettify.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/core/coverage/lcov-report/prettify.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 255,
+    "kind": "file",
+    "name": "packages/core/coverage/lcov-report/sorter.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/core/coverage/lcov-report/sorter.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 256,
+    "kind": "variable",
+    "name": "addSorting",
+    "memberof": "packages/core/coverage/lcov-report/sorter.js",
+    "static": true,
+    "longname": "packages/core/coverage/lcov-report/sorter.js~addSorting",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/core/coverage/lcov-report/sorter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 257,
     "kind": "file",
     "name": "packages/core/src/lib/log.js",
     "content": "",
@@ -6531,7 +6675,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 249,
+    "__docId__": 258,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/core/src/lib/log.js",
@@ -6557,7 +6701,7 @@
     }
   },
   {
-    "__docId__": 250,
+    "__docId__": 259,
     "kind": "variable",
     "name": "bunyan",
     "memberof": "packages/core/src/lib/log.js",
@@ -6583,7 +6727,7 @@
     }
   },
   {
-    "__docId__": 251,
+    "__docId__": 260,
     "kind": "variable",
     "name": "eol",
     "memberof": "packages/core/src/lib/log.js",
@@ -6609,7 +6753,7 @@
     }
   },
   {
-    "__docId__": 252,
+    "__docId__": 261,
     "kind": "variable",
     "name": "stderrStream",
     "memberof": "packages/core/src/lib/log.js",
@@ -6635,7 +6779,7 @@
     }
   },
   {
-    "__docId__": 253,
+    "__docId__": 262,
     "kind": "variable",
     "name": "fileStream",
     "memberof": "packages/core/src/lib/log.js",
@@ -6661,7 +6805,7 @@
     }
   },
   {
-    "__docId__": 254,
+    "__docId__": 263,
     "kind": "variable",
     "name": "log",
     "memberof": "packages/core/src/lib/log.js",
@@ -6687,7 +6831,7 @@
     }
   },
   {
-    "__docId__": 255,
+    "__docId__": 264,
     "kind": "file",
     "name": "packages/core/src/lib/myrmex.js",
     "content": "",
@@ -6698,7 +6842,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 256,
+    "__docId__": 265,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/core/src/lib/myrmex.js",
@@ -6724,7 +6868,7 @@
     }
   },
   {
-    "__docId__": 257,
+    "__docId__": 266,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/core/src/lib/myrmex.js",
@@ -6750,7 +6894,7 @@
     }
   },
   {
-    "__docId__": 258,
+    "__docId__": 267,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/core/src/lib/myrmex.js",
@@ -6776,7 +6920,7 @@
     }
   },
   {
-    "__docId__": 259,
+    "__docId__": 268,
     "kind": "variable",
     "name": "Pebo",
     "memberof": "packages/core/src/lib/myrmex.js",
@@ -6802,7 +6946,7 @@
     }
   },
   {
-    "__docId__": 260,
+    "__docId__": 269,
     "kind": "variable",
     "name": "log",
     "memberof": "packages/core/src/lib/myrmex.js",
@@ -6828,7 +6972,7 @@
     }
   },
   {
-    "__docId__": 261,
+    "__docId__": 270,
     "kind": "class",
     "name": "Myrmex",
     "memberof": "packages/core/src/lib/myrmex.js",
@@ -6846,7 +6990,7 @@
     ]
   },
   {
-    "__docId__": 262,
+    "__docId__": 271,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -6866,7 +7010,7 @@
     "params": []
   },
   {
-    "__docId__": 263,
+    "__docId__": 272,
     "kind": "member",
     "name": "log",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -6889,7 +7033,7 @@
     }
   },
   {
-    "__docId__": 264,
+    "__docId__": 273,
     "kind": "member",
     "name": "config",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -6912,7 +7056,7 @@
     }
   },
   {
-    "__docId__": 265,
+    "__docId__": 274,
     "kind": "member",
     "name": "plugins",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -6935,7 +7079,7 @@
     }
   },
   {
-    "__docId__": 266,
+    "__docId__": 275,
     "kind": "member",
     "name": "extensions",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -6958,7 +7102,7 @@
     }
   },
   {
-    "__docId__": 267,
+    "__docId__": 276,
     "kind": "member",
     "name": "fire",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -6981,7 +7125,7 @@
     }
   },
   {
-    "__docId__": 268,
+    "__docId__": 277,
     "kind": "method",
     "name": "registerPlugin",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -7020,7 +7164,7 @@
     }
   },
   {
-    "__docId__": 269,
+    "__docId__": 278,
     "kind": "method",
     "name": "isPluginRegistered",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -7059,7 +7203,7 @@
     }
   },
   {
-    "__docId__": 270,
+    "__docId__": 279,
     "kind": "method",
     "name": "getPlugin",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -7098,7 +7242,7 @@
     }
   },
   {
-    "__docId__": 271,
+    "__docId__": 280,
     "kind": "method",
     "name": "getVersions",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -7124,7 +7268,7 @@
     }
   },
   {
-    "__docId__": 272,
+    "__docId__": 281,
     "kind": "method",
     "name": "call",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -7146,7 +7290,7 @@
     }
   },
   {
-    "__docId__": 273,
+    "__docId__": 282,
     "kind": "method",
     "name": "init",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -7175,7 +7319,7 @@
     }
   },
   {
-    "__docId__": 274,
+    "__docId__": 283,
     "kind": "member",
     "name": "config",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -7198,7 +7342,7 @@
     }
   },
   {
-    "__docId__": 275,
+    "__docId__": 284,
     "kind": "method",
     "name": "getConfig",
     "memberof": "packages/core/src/lib/myrmex.js~Myrmex",
@@ -7231,7 +7375,7 @@
     }
   },
   {
-    "__docId__": 276,
+    "__docId__": 285,
     "kind": "variable",
     "name": "myrmex",
     "memberof": "packages/core/src/lib/myrmex.js",
@@ -7257,7 +7401,7 @@
     }
   },
   {
-    "__docId__": 277,
+    "__docId__": 286,
     "kind": "file",
     "name": "packages/core/test/__bootstrap.test.js",
     "content": "",
@@ -7268,7 +7412,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 278,
+    "__docId__": 287,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/core/test/__bootstrap.test.js",
@@ -7294,7 +7438,7 @@
     }
   },
   {
-    "__docId__": 279,
+    "__docId__": 288,
     "kind": "function",
     "name": "testRequire",
     "memberof": "packages/core/test/__bootstrap.test.js",
@@ -7330,7 +7474,7 @@
     }
   },
   {
-    "__docId__": 280,
+    "__docId__": 289,
     "kind": "file",
     "name": "packages/core/test/lib/lager.test.js",
     "content": "",
@@ -7341,7 +7485,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 281,
+    "__docId__": 290,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/core/test/lib/lager.test.js",
@@ -7367,7 +7511,7 @@
     }
   },
   {
-    "__docId__": 282,
+    "__docId__": 291,
     "kind": "variable",
     "name": "myrmex",
     "memberof": "packages/core/test/lib/lager.test.js",
@@ -7393,7 +7537,55 @@
     }
   },
   {
-    "__docId__": 283,
+    "__docId__": 292,
+    "kind": "file",
+    "name": "packages/cors/coverage/lcov-report/prettify.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/cors/coverage/lcov-report/prettify.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 293,
+    "kind": "file",
+    "name": "packages/cors/coverage/lcov-report/sorter.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/cors/coverage/lcov-report/sorter.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 294,
+    "kind": "variable",
+    "name": "addSorting",
+    "memberof": "packages/cors/coverage/lcov-report/sorter.js",
+    "static": true,
+    "longname": "packages/cors/coverage/lcov-report/sorter.js~addSorting",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/cors/coverage/lcov-report/sorter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 295,
     "kind": "file",
     "name": "packages/cors/src/hooks/after-add-endpoints-to-api.js",
     "content": "",
@@ -7404,7 +7596,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 284,
+    "__docId__": 296,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/cors/src/hooks/after-add-endpoints-to-api.js",
@@ -7430,7 +7622,7 @@
     }
   },
   {
-    "__docId__": 285,
+    "__docId__": 297,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cors/src/hooks/after-add-endpoints-to-api.js",
@@ -7456,7 +7648,7 @@
     }
   },
   {
-    "__docId__": 286,
+    "__docId__": 298,
     "kind": "variable",
     "name": "baseSpec",
     "memberof": "packages/cors/src/hooks/after-add-endpoints-to-api.js",
@@ -7482,7 +7674,7 @@
     }
   },
   {
-    "__docId__": 287,
+    "__docId__": 299,
     "kind": "function",
     "name": "createOptionsEndpoint",
     "memberof": "packages/cors/src/hooks/after-add-endpoints-to-api.js",
@@ -7530,7 +7722,7 @@
     }
   },
   {
-    "__docId__": 288,
+    "__docId__": 300,
     "kind": "function",
     "name": "updateEndpoints",
     "memberof": "packages/cors/src/hooks/after-add-endpoints-to-api.js",
@@ -7567,7 +7759,7 @@
     ]
   },
   {
-    "__docId__": 289,
+    "__docId__": 301,
     "kind": "file",
     "name": "packages/cors/src/index.js",
     "content": "",
@@ -7578,7 +7770,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 290,
+    "__docId__": 302,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/cors/src/index.js",
@@ -7604,7 +7796,7 @@
     }
   },
   {
-    "__docId__": 291,
+    "__docId__": 303,
     "kind": "file",
     "name": "packages/cors/test/__bootstrap.test.js",
     "content": "",
@@ -7615,7 +7807,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 292,
+    "__docId__": 304,
     "kind": "function",
     "name": "testRequire",
     "memberof": "packages/cors/test/__bootstrap.test.js",
@@ -7651,7 +7843,7 @@
     }
   },
   {
-    "__docId__": 293,
+    "__docId__": 305,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/cors/test/__bootstrap.test.js",
@@ -7677,7 +7869,7 @@
     }
   },
   {
-    "__docId__": 294,
+    "__docId__": 306,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/cors/test/__bootstrap.test.js",
@@ -7703,7 +7895,7 @@
     }
   },
   {
-    "__docId__": 295,
+    "__docId__": 307,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/cors/test/__bootstrap.test.js",
@@ -7729,7 +7921,7 @@
     }
   },
   {
-    "__docId__": 296,
+    "__docId__": 308,
     "kind": "variable",
     "name": "myrmex",
     "memberof": "packages/cors/test/__bootstrap.test.js",
@@ -7755,7 +7947,7 @@
     }
   },
   {
-    "__docId__": 297,
+    "__docId__": 309,
     "kind": "variable",
     "name": "nodeApiGatewayPlugin",
     "memberof": "packages/cors/test/__bootstrap.test.js",
@@ -7781,7 +7973,55 @@
     }
   },
   {
-    "__docId__": 298,
+    "__docId__": 310,
+    "kind": "file",
+    "name": "packages/iam/coverage/lcov-report/prettify.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/iam/coverage/lcov-report/prettify.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 311,
+    "kind": "file",
+    "name": "packages/iam/coverage/lcov-report/sorter.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/iam/coverage/lcov-report/sorter.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 312,
+    "kind": "variable",
+    "name": "addSorting",
+    "memberof": "packages/iam/coverage/lcov-report/sorter.js",
+    "static": true,
+    "longname": "packages/iam/coverage/lcov-report/sorter.js~addSorting",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/iam/coverage/lcov-report/sorter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 313,
     "kind": "file",
     "name": "packages/iam/src/cli/create-policy.js",
     "content": "",
@@ -7792,7 +8032,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 299,
+    "__docId__": 314,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/iam/src/cli/create-policy.js",
@@ -7818,7 +8058,7 @@
     }
   },
   {
-    "__docId__": 300,
+    "__docId__": 315,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/iam/src/cli/create-policy.js",
@@ -7844,7 +8084,7 @@
     }
   },
   {
-    "__docId__": 301,
+    "__docId__": 316,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/iam/src/cli/create-policy.js",
@@ -7870,7 +8110,7 @@
     }
   },
   {
-    "__docId__": 302,
+    "__docId__": 317,
     "kind": "variable",
     "name": "mkdirpAsync",
     "memberof": "packages/iam/src/cli/create-policy.js",
@@ -7896,7 +8136,7 @@
     }
   },
   {
-    "__docId__": 303,
+    "__docId__": 318,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/iam/src/cli/create-policy.js",
@@ -7922,7 +8162,7 @@
     }
   },
   {
-    "__docId__": 304,
+    "__docId__": 319,
     "kind": "file",
     "name": "packages/iam/src/cli/create-role.js",
     "content": "",
@@ -7933,7 +8173,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 305,
+    "__docId__": 320,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/iam/src/cli/create-role.js",
@@ -7959,7 +8199,7 @@
     }
   },
   {
-    "__docId__": 306,
+    "__docId__": 321,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/src/cli/create-role.js",
@@ -7985,7 +8225,7 @@
     }
   },
   {
-    "__docId__": 307,
+    "__docId__": 322,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/iam/src/cli/create-role.js",
@@ -8011,7 +8251,7 @@
     }
   },
   {
-    "__docId__": 308,
+    "__docId__": 323,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/iam/src/cli/create-role.js",
@@ -8037,7 +8277,7 @@
     }
   },
   {
-    "__docId__": 309,
+    "__docId__": 324,
     "kind": "variable",
     "name": "mkdirpAsync",
     "memberof": "packages/iam/src/cli/create-role.js",
@@ -8063,7 +8303,7 @@
     }
   },
   {
-    "__docId__": 310,
+    "__docId__": 325,
     "kind": "variable",
     "name": "ncpAsync",
     "memberof": "packages/iam/src/cli/create-role.js",
@@ -8089,7 +8329,7 @@
     }
   },
   {
-    "__docId__": 311,
+    "__docId__": 326,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/iam/src/cli/create-role.js",
@@ -8115,7 +8355,7 @@
     }
   },
   {
-    "__docId__": 312,
+    "__docId__": 327,
     "kind": "file",
     "name": "packages/iam/src/cli/deploy-policies.js",
     "content": "",
@@ -8126,7 +8366,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 313,
+    "__docId__": 328,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/iam/src/cli/deploy-policies.js",
@@ -8152,7 +8392,7 @@
     }
   },
   {
-    "__docId__": 314,
+    "__docId__": 329,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/src/cli/deploy-policies.js",
@@ -8178,7 +8418,7 @@
     }
   },
   {
-    "__docId__": 315,
+    "__docId__": 330,
     "kind": "variable",
     "name": "Table",
     "memberof": "packages/iam/src/cli/deploy-policies.js",
@@ -8204,7 +8444,7 @@
     }
   },
   {
-    "__docId__": 316,
+    "__docId__": 331,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/iam/src/cli/deploy-policies.js",
@@ -8230,7 +8470,7 @@
     }
   },
   {
-    "__docId__": 317,
+    "__docId__": 332,
     "kind": "function",
     "name": "formatHrTime",
     "memberof": "packages/iam/src/cli/deploy-policies.js",
@@ -8266,7 +8506,7 @@
     }
   },
   {
-    "__docId__": 318,
+    "__docId__": 333,
     "kind": "file",
     "name": "packages/iam/src/cli/deploy-roles.js",
     "content": "",
@@ -8277,7 +8517,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 319,
+    "__docId__": 334,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/iam/src/cli/deploy-roles.js",
@@ -8303,7 +8543,7 @@
     }
   },
   {
-    "__docId__": 320,
+    "__docId__": 335,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/src/cli/deploy-roles.js",
@@ -8329,7 +8569,7 @@
     }
   },
   {
-    "__docId__": 321,
+    "__docId__": 336,
     "kind": "variable",
     "name": "Table",
     "memberof": "packages/iam/src/cli/deploy-roles.js",
@@ -8355,7 +8595,7 @@
     }
   },
   {
-    "__docId__": 322,
+    "__docId__": 337,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/iam/src/cli/deploy-roles.js",
@@ -8381,7 +8621,7 @@
     }
   },
   {
-    "__docId__": 323,
+    "__docId__": 338,
     "kind": "function",
     "name": "formatHrTime",
     "memberof": "packages/iam/src/cli/deploy-roles.js",
@@ -8417,7 +8657,7 @@
     }
   },
   {
-    "__docId__": 324,
+    "__docId__": 339,
     "kind": "file",
     "name": "packages/iam/src/helper.js",
     "content": "",
@@ -8428,7 +8668,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 325,
+    "__docId__": 340,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/iam/src/helper.js",
@@ -8454,7 +8694,7 @@
     }
   },
   {
-    "__docId__": 326,
+    "__docId__": 341,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/src/helper.js",
@@ -8480,7 +8720,7 @@
     }
   },
   {
-    "__docId__": 327,
+    "__docId__": 342,
     "kind": "variable",
     "name": "AWS",
     "memberof": "packages/iam/src/helper.js",
@@ -8506,7 +8746,7 @@
     }
   },
   {
-    "__docId__": 328,
+    "__docId__": 343,
     "kind": "function",
     "name": "getPolicyByName",
     "memberof": "packages/iam/src/helper.js",
@@ -8554,7 +8794,7 @@
     }
   },
   {
-    "__docId__": 329,
+    "__docId__": 344,
     "kind": "function",
     "name": "retrievePolicyArn",
     "memberof": "packages/iam/src/helper.js",
@@ -8616,7 +8856,7 @@
     }
   },
   {
-    "__docId__": 330,
+    "__docId__": 345,
     "kind": "function",
     "name": "retrieveAWSRoles",
     "memberof": "packages/iam/src/helper.js",
@@ -8645,7 +8885,7 @@
     }
   },
   {
-    "__docId__": 331,
+    "__docId__": 346,
     "kind": "function",
     "name": "retrieveRoleArn",
     "memberof": "packages/iam/src/helper.js",
@@ -8691,7 +8931,7 @@
     }
   },
   {
-    "__docId__": 332,
+    "__docId__": 347,
     "kind": "function",
     "name": "findAndDeployPolicy",
     "memberof": "packages/iam/src/helper.js",
@@ -8733,7 +8973,7 @@
     }
   },
   {
-    "__docId__": 333,
+    "__docId__": 348,
     "kind": "file",
     "name": "packages/iam/src/hooks/create-command.js",
     "content": "",
@@ -8744,7 +8984,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 334,
+    "__docId__": 349,
     "kind": "function",
     "name": "hook",
     "memberof": "packages/iam/src/hooks/create-command.js",
@@ -8775,7 +9015,7 @@
     ]
   },
   {
-    "__docId__": 335,
+    "__docId__": 350,
     "kind": "file",
     "name": "packages/iam/src/index.js",
     "content": "",
@@ -8786,7 +9026,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 336,
+    "__docId__": 351,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/iam/src/index.js",
@@ -8812,7 +9052,7 @@
     }
   },
   {
-    "__docId__": 337,
+    "__docId__": 352,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/src/index.js",
@@ -8838,7 +9078,7 @@
     }
   },
   {
-    "__docId__": 338,
+    "__docId__": 353,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/iam/src/index.js",
@@ -8864,7 +9104,7 @@
     }
   },
   {
-    "__docId__": 339,
+    "__docId__": 354,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/iam/src/index.js",
@@ -8890,7 +9130,7 @@
     }
   },
   {
-    "__docId__": 340,
+    "__docId__": 355,
     "kind": "variable",
     "name": "helper",
     "memberof": "packages/iam/src/index.js",
@@ -8916,7 +9156,7 @@
     }
   },
   {
-    "__docId__": 341,
+    "__docId__": 356,
     "kind": "function",
     "name": "loadPolicies",
     "memberof": "packages/iam/src/index.js",
@@ -8941,7 +9181,7 @@
     }
   },
   {
-    "__docId__": 342,
+    "__docId__": 357,
     "kind": "function",
     "name": "loadPolicy",
     "memberof": "packages/iam/src/index.js",
@@ -8993,7 +9233,7 @@
     }
   },
   {
-    "__docId__": 343,
+    "__docId__": 358,
     "kind": "function",
     "name": "findPolicies",
     "memberof": "packages/iam/src/index.js",
@@ -9029,7 +9269,7 @@
     }
   },
   {
-    "__docId__": 344,
+    "__docId__": 359,
     "kind": "function",
     "name": "loadRoles",
     "memberof": "packages/iam/src/index.js",
@@ -9060,7 +9300,7 @@
     }
   },
   {
-    "__docId__": 345,
+    "__docId__": 360,
     "kind": "function",
     "name": "loadRole",
     "memberof": "packages/iam/src/index.js",
@@ -9112,7 +9352,7 @@
     }
   },
   {
-    "__docId__": 346,
+    "__docId__": 361,
     "kind": "function",
     "name": "findRoles",
     "memberof": "packages/iam/src/index.js",
@@ -9154,7 +9394,7 @@
     }
   },
   {
-    "__docId__": 347,
+    "__docId__": 362,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/iam/src/index.js",
@@ -9180,7 +9420,7 @@
     }
   },
   {
-    "__docId__": 348,
+    "__docId__": 363,
     "kind": "file",
     "name": "packages/iam/src/policy.js",
     "content": "",
@@ -9191,7 +9431,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 349,
+    "__docId__": 364,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/iam/src/policy.js",
@@ -9217,7 +9457,7 @@
     }
   },
   {
-    "__docId__": 350,
+    "__docId__": 365,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/src/policy.js",
@@ -9243,7 +9483,7 @@
     }
   },
   {
-    "__docId__": 351,
+    "__docId__": 366,
     "kind": "variable",
     "name": "AWS",
     "memberof": "packages/iam/src/policy.js",
@@ -9269,7 +9509,7 @@
     }
   },
   {
-    "__docId__": 352,
+    "__docId__": 367,
     "kind": "variable",
     "name": "iamHelper",
     "memberof": "packages/iam/src/policy.js",
@@ -9295,7 +9535,7 @@
     }
   },
   {
-    "__docId__": 353,
+    "__docId__": 368,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/iam/src/policy.js",
@@ -9321,7 +9561,7 @@
     }
   },
   {
-    "__docId__": 354,
+    "__docId__": 369,
     "kind": "function",
     "name": "Policy",
     "memberof": "packages/iam/src/policy.js",
@@ -9365,7 +9605,7 @@
     ]
   },
   {
-    "__docId__": 355,
+    "__docId__": 370,
     "kind": "function",
     "name": "getName",
     "memberof": "packages/iam/src/policy.js",
@@ -9396,7 +9636,7 @@
     }
   },
   {
-    "__docId__": 356,
+    "__docId__": 371,
     "kind": "function",
     "name": "deploy",
     "memberof": "packages/iam/src/policy.js",
@@ -9438,7 +9678,7 @@
     }
   },
   {
-    "__docId__": 357,
+    "__docId__": 372,
     "kind": "function",
     "name": "create",
     "memberof": "packages/iam/src/policy.js",
@@ -9500,7 +9740,7 @@
     }
   },
   {
-    "__docId__": 358,
+    "__docId__": 373,
     "kind": "function",
     "name": "updateIfNeeded",
     "memberof": "packages/iam/src/policy.js",
@@ -9562,7 +9802,7 @@
     }
   },
   {
-    "__docId__": 359,
+    "__docId__": 374,
     "kind": "function",
     "name": "update",
     "memberof": "packages/iam/src/policy.js",
@@ -9624,7 +9864,7 @@
     }
   },
   {
-    "__docId__": 360,
+    "__docId__": 375,
     "kind": "function",
     "name": "createPolicyVersion",
     "memberof": "packages/iam/src/policy.js",
@@ -9676,7 +9916,7 @@
     }
   },
   {
-    "__docId__": 361,
+    "__docId__": 376,
     "kind": "file",
     "name": "packages/iam/src/role.js",
     "content": "",
@@ -9687,7 +9927,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 362,
+    "__docId__": 377,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/iam/src/role.js",
@@ -9713,12 +9953,12 @@
     }
   },
   {
-    "__docId__": 363,
+    "__docId__": 378,
     "kind": "variable",
-    "name": "AWS",
+    "name": "_",
     "memberof": "packages/iam/src/role.js",
     "static": true,
-    "longname": "packages/iam/src/role.js~AWS",
+    "longname": "packages/iam/src/role.js~_",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/iam/src/role.js",
@@ -9739,18 +9979,18 @@
     }
   },
   {
-    "__docId__": 364,
+    "__docId__": 379,
     "kind": "variable",
-    "name": "iamHelper",
+    "name": "AWS",
     "memberof": "packages/iam/src/role.js",
     "static": true,
-    "longname": "packages/iam/src/role.js~iamHelper",
+    "longname": "packages/iam/src/role.js~AWS",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/iam/src/role.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 5,
     "undocument": true,
     "unknown": [
       {
@@ -9765,12 +10005,12 @@
     }
   },
   {
-    "__docId__": 365,
+    "__docId__": 380,
     "kind": "variable",
-    "name": "plugin",
+    "name": "iamHelper",
     "memberof": "packages/iam/src/role.js",
     "static": true,
-    "longname": "packages/iam/src/role.js~plugin",
+    "longname": "packages/iam/src/role.js~iamHelper",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/iam/src/role.js",
@@ -9791,7 +10031,33 @@
     }
   },
   {
-    "__docId__": 366,
+    "__docId__": 381,
+    "kind": "variable",
+    "name": "plugin",
+    "memberof": "packages/iam/src/role.js",
+    "static": true,
+    "longname": "packages/iam/src/role.js~plugin",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/iam/src/role.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 382,
     "kind": "function",
     "name": "Role",
     "memberof": "packages/iam/src/role.js",
@@ -9804,7 +10070,7 @@
     "importPath": "myrmex/packages/iam/src/role.js",
     "importStyle": null,
     "description": "Constructor function",
-    "lineNumber": 15,
+    "lineNumber": 16,
     "params": [
       {
         "nullable": null,
@@ -9839,7 +10105,7 @@
     ]
   },
   {
-    "__docId__": 367,
+    "__docId__": 383,
     "kind": "function",
     "name": "getName",
     "memberof": "packages/iam/src/role.js",
@@ -9852,7 +10118,7 @@
     "importPath": "myrmex/packages/iam/src/role.js",
     "importStyle": null,
     "description": "Returns the name of the role",
-    "lineNumber": 25,
+    "lineNumber": 26,
     "params": [],
     "return": {
       "nullable": null,
@@ -9864,7 +10130,7 @@
     }
   },
   {
-    "__docId__": 368,
+    "__docId__": 384,
     "kind": "function",
     "name": "getDescription",
     "memberof": "packages/iam/src/role.js",
@@ -9877,7 +10143,7 @@
     "importPath": "myrmex/packages/iam/src/role.js",
     "importStyle": null,
     "description": "Returns the name of the role",
-    "lineNumber": 34,
+    "lineNumber": 35,
     "params": [],
     "return": {
       "nullable": null,
@@ -9889,7 +10155,7 @@
     }
   },
   {
-    "__docId__": 369,
+    "__docId__": 385,
     "kind": "function",
     "name": "deploy",
     "memberof": "packages/iam/src/role.js",
@@ -9902,7 +10168,7 @@
     "importPath": "myrmex/packages/iam/src/role.js",
     "importStyle": null,
     "description": "Deploy the role in AWS",
-    "lineNumber": 44,
+    "lineNumber": 45,
     "unknown": [
       {
         "tagName": "@returns",
@@ -9931,7 +10197,7 @@
     }
   },
   {
-    "__docId__": 370,
+    "__docId__": 386,
     "kind": "function",
     "name": "create",
     "memberof": "packages/iam/src/role.js",
@@ -9944,7 +10210,7 @@
     "importPath": "myrmex/packages/iam/src/role.js",
     "importStyle": null,
     "description": "Create a new role in AWS",
-    "lineNumber": 92,
+    "lineNumber": 93,
     "unknown": [
       {
         "tagName": "@returns",
@@ -9993,7 +10259,7 @@
     }
   },
   {
-    "__docId__": 371,
+    "__docId__": 387,
     "kind": "function",
     "name": "update",
     "memberof": "packages/iam/src/role.js",
@@ -10006,7 +10272,7 @@
     "importPath": "myrmex/packages/iam/src/role.js",
     "importStyle": null,
     "description": "",
-    "lineNumber": 115,
+    "lineNumber": 116,
     "unknown": [
       {
         "tagName": "@returns",
@@ -10055,7 +10321,7 @@
     }
   },
   {
-    "__docId__": 372,
+    "__docId__": 388,
     "kind": "function",
     "name": "attachPolicies",
     "memberof": "packages/iam/src/role.js",
@@ -10068,7 +10334,7 @@
     "importPath": "myrmex/packages/iam/src/role.js",
     "importStyle": null,
     "description": "[attachPolicies description]",
-    "lineNumber": 135,
+    "lineNumber": 136,
     "unknown": [
       {
         "tagName": "@returns",
@@ -10117,7 +10383,7 @@
     }
   },
   {
-    "__docId__": 373,
+    "__docId__": 389,
     "kind": "function",
     "name": "attachManagedPolicy",
     "memberof": "packages/iam/src/role.js",
@@ -10130,7 +10396,7 @@
     "importPath": "myrmex/packages/iam/src/role.js",
     "importStyle": null,
     "description": "[attachManagedPolicy description]",
-    "lineNumber": 148,
+    "lineNumber": 160,
     "unknown": [
       {
         "tagName": "@returnsPromise",
@@ -10166,7 +10432,79 @@
     }
   },
   {
-    "__docId__": 374,
+    "__docId__": 390,
+    "kind": "function",
+    "name": "putInlinePolicy",
+    "memberof": "packages/iam/src/role.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/iam/src/role.js~putInlinePolicy",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/iam/src/role.js",
+    "importStyle": null,
+    "description": "[putInlinePolicy description]",
+    "lineNumber": 183,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "Promise"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "awsIAM",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "policyDocument",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "policyName",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "roleName",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "Promise"
+    }
+  },
+  {
+    "__docId__": 391,
     "kind": "file",
     "name": "packages/iam/test/__bootstrap.test.js",
     "content": "",
@@ -10177,7 +10515,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 375,
+    "__docId__": 392,
     "kind": "function",
     "name": "testRequire",
     "memberof": "packages/iam/test/__bootstrap.test.js",
@@ -10213,7 +10551,7 @@
     }
   },
   {
-    "__docId__": 376,
+    "__docId__": 393,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/iam/test/__bootstrap.test.js",
@@ -10239,7 +10577,7 @@
     }
   },
   {
-    "__docId__": 377,
+    "__docId__": 394,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/iam/test/__bootstrap.test.js",
@@ -10265,7 +10603,7 @@
     }
   },
   {
-    "__docId__": 378,
+    "__docId__": 395,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/test/__bootstrap.test.js",
@@ -10291,7 +10629,7 @@
     }
   },
   {
-    "__docId__": 379,
+    "__docId__": 396,
     "kind": "variable",
     "name": "myrmex",
     "memberof": "packages/iam/test/__bootstrap.test.js",
@@ -10317,7 +10655,7 @@
     }
   },
   {
-    "__docId__": 380,
+    "__docId__": 397,
     "kind": "variable",
     "name": "iamPlugin",
     "memberof": "packages/iam/test/__bootstrap.test.js",
@@ -10343,7 +10681,7 @@
     }
   },
   {
-    "__docId__": 381,
+    "__docId__": 398,
     "kind": "file",
     "name": "packages/iam/test/cli/create-policy.test.js",
     "content": "",
@@ -10354,7 +10692,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 382,
+    "__docId__": 399,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/iam/test/cli/create-policy.test.js",
@@ -10380,7 +10718,7 @@
     }
   },
   {
-    "__docId__": 383,
+    "__docId__": 400,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/test/cli/create-policy.test.js",
@@ -10406,7 +10744,7 @@
     }
   },
   {
-    "__docId__": 384,
+    "__docId__": 401,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/iam/test/cli/create-policy.test.js",
@@ -10432,7 +10770,7 @@
     }
   },
   {
-    "__docId__": 385,
+    "__docId__": 402,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/iam/test/cli/create-policy.test.js",
@@ -10458,7 +10796,7 @@
     }
   },
   {
-    "__docId__": 386,
+    "__docId__": 403,
     "kind": "file",
     "name": "packages/iam/test/cli/create-role.test.js",
     "content": "",
@@ -10469,7 +10807,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 387,
+    "__docId__": 404,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/iam/test/cli/create-role.test.js",
@@ -10495,7 +10833,7 @@
     }
   },
   {
-    "__docId__": 388,
+    "__docId__": 405,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/test/cli/create-role.test.js",
@@ -10521,7 +10859,7 @@
     }
   },
   {
-    "__docId__": 389,
+    "__docId__": 406,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/iam/test/cli/create-role.test.js",
@@ -10547,7 +10885,7 @@
     }
   },
   {
-    "__docId__": 390,
+    "__docId__": 407,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/iam/test/cli/create-role.test.js",
@@ -10573,7 +10911,7 @@
     }
   },
   {
-    "__docId__": 391,
+    "__docId__": 408,
     "kind": "file",
     "name": "packages/iam/test/cli/deploy-policies.test.js",
     "content": "",
@@ -10584,7 +10922,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 392,
+    "__docId__": 409,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/iam/test/cli/deploy-policies.test.js",
@@ -10610,7 +10948,7 @@
     }
   },
   {
-    "__docId__": 393,
+    "__docId__": 410,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/test/cli/deploy-policies.test.js",
@@ -10636,7 +10974,7 @@
     }
   },
   {
-    "__docId__": 394,
+    "__docId__": 411,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/iam/test/cli/deploy-policies.test.js",
@@ -10662,7 +11000,7 @@
     }
   },
   {
-    "__docId__": 395,
+    "__docId__": 412,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/iam/test/cli/deploy-policies.test.js",
@@ -10688,7 +11026,7 @@
     }
   },
   {
-    "__docId__": 396,
+    "__docId__": 413,
     "kind": "file",
     "name": "packages/iam/test/cli/deploy-roles.test.js",
     "content": "",
@@ -10699,7 +11037,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 397,
+    "__docId__": 414,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/iam/test/cli/deploy-roles.test.js",
@@ -10725,7 +11063,7 @@
     }
   },
   {
-    "__docId__": 398,
+    "__docId__": 415,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/iam/test/cli/deploy-roles.test.js",
@@ -10751,7 +11089,7 @@
     }
   },
   {
-    "__docId__": 399,
+    "__docId__": 416,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/iam/test/cli/deploy-roles.test.js",
@@ -10777,7 +11115,7 @@
     }
   },
   {
-    "__docId__": 400,
+    "__docId__": 417,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/iam/test/cli/deploy-roles.test.js",
@@ -10803,7 +11141,7 @@
     }
   },
   {
-    "__docId__": 401,
+    "__docId__": 418,
     "kind": "file",
     "name": "packages/iam/test/index.test.js",
     "content": "",
@@ -10814,7 +11152,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 402,
+    "__docId__": 419,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/iam/test/index.test.js",
@@ -10840,7 +11178,7 @@
     }
   },
   {
-    "__docId__": 403,
+    "__docId__": 420,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/iam/test/index.test.js",
@@ -10866,7 +11204,7 @@
     }
   },
   {
-    "__docId__": 404,
+    "__docId__": 421,
     "kind": "file",
     "name": "packages/iam/test/policy.test.js",
     "content": "",
@@ -10877,7 +11215,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 405,
+    "__docId__": 422,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/iam/test/policy.test.js",
@@ -10903,7 +11241,7 @@
     }
   },
   {
-    "__docId__": 406,
+    "__docId__": 423,
     "kind": "variable",
     "name": "Policy",
     "memberof": "packages/iam/test/policy.test.js",
@@ -10929,7 +11267,7 @@
     }
   },
   {
-    "__docId__": 407,
+    "__docId__": 424,
     "kind": "variable",
     "name": "AWS",
     "memberof": "packages/iam/test/policy.test.js",
@@ -10955,7 +11293,7 @@
     }
   },
   {
-    "__docId__": 408,
+    "__docId__": 425,
     "kind": "file",
     "name": "packages/iam/test/role.test.js",
     "content": "",
@@ -10966,7 +11304,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 409,
+    "__docId__": 426,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/iam/test/role.test.js",
@@ -10992,7 +11330,7 @@
     }
   },
   {
-    "__docId__": 410,
+    "__docId__": 427,
     "kind": "variable",
     "name": "Role",
     "memberof": "packages/iam/test/role.test.js",
@@ -11018,7 +11356,7 @@
     }
   },
   {
-    "__docId__": 411,
+    "__docId__": 428,
     "kind": "variable",
     "name": "AWS",
     "memberof": "packages/iam/test/role.test.js",
@@ -11044,7 +11382,55 @@
     }
   },
   {
-    "__docId__": 412,
+    "__docId__": 429,
+    "kind": "file",
+    "name": "packages/lambda/coverage/lcov-report/prettify.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/lambda/coverage/lcov-report/prettify.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 430,
+    "kind": "file",
+    "name": "packages/lambda/coverage/lcov-report/sorter.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/lambda/coverage/lcov-report/sorter.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 431,
+    "kind": "variable",
+    "name": "addSorting",
+    "memberof": "packages/lambda/coverage/lcov-report/sorter.js",
+    "static": true,
+    "longname": "packages/lambda/coverage/lcov-report/sorter.js~addSorting",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/lambda/coverage/lcov-report/sorter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 432,
     "kind": "file",
     "name": "packages/lambda/src/aws-policies.js",
     "content": "",
@@ -11055,7 +11441,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 413,
+    "__docId__": 433,
     "kind": "file",
     "name": "packages/lambda/src/cli/create-lambda.js",
     "content": "",
@@ -11066,12 +11452,12 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 414,
+    "__docId__": 434,
     "kind": "variable",
-    "name": "Promise",
+    "name": "_",
     "memberof": "packages/lambda/src/cli/create-lambda.js",
     "static": true,
-    "longname": "packages/lambda/src/cli/create-lambda.js~Promise",
+    "longname": "packages/lambda/src/cli/create-lambda.js~_",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/lambda/src/cli/create-lambda.js",
@@ -11092,12 +11478,12 @@
     }
   },
   {
-    "__docId__": 415,
+    "__docId__": 435,
     "kind": "variable",
-    "name": "_",
+    "name": "path",
     "memberof": "packages/lambda/src/cli/create-lambda.js",
     "static": true,
-    "longname": "packages/lambda/src/cli/create-lambda.js~_",
+    "longname": "packages/lambda/src/cli/create-lambda.js~path",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/lambda/src/cli/create-lambda.js",
@@ -11118,18 +11504,18 @@
     }
   },
   {
-    "__docId__": 416,
+    "__docId__": 436,
     "kind": "variable",
-    "name": "path",
+    "name": "fs",
     "memberof": "packages/lambda/src/cli/create-lambda.js",
     "static": true,
-    "longname": "packages/lambda/src/cli/create-lambda.js~path",
+    "longname": "packages/lambda/src/cli/create-lambda.js~fs",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/lambda/src/cli/create-lambda.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 5,
     "undocument": true,
     "unknown": [
       {
@@ -11144,12 +11530,12 @@
     }
   },
   {
-    "__docId__": 417,
+    "__docId__": 437,
     "kind": "variable",
-    "name": "fs",
+    "name": "plugin",
     "memberof": "packages/lambda/src/cli/create-lambda.js",
     "static": true,
-    "longname": "packages/lambda/src/cli/create-lambda.js~fs",
+    "longname": "packages/lambda/src/cli/create-lambda.js~plugin",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/lambda/src/cli/create-lambda.js",
@@ -11170,85 +11556,7 @@
     }
   },
   {
-    "__docId__": 418,
-    "kind": "variable",
-    "name": "mkdirpAsync",
-    "memberof": "packages/lambda/src/cli/create-lambda.js",
-    "static": true,
-    "longname": "packages/lambda/src/cli/create-lambda.js~mkdirpAsync",
-    "access": null,
-    "export": false,
-    "importPath": "myrmex/packages/lambda/src/cli/create-lambda.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 8,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 419,
-    "kind": "variable",
-    "name": "ncpAsync",
-    "memberof": "packages/lambda/src/cli/create-lambda.js",
-    "static": true,
-    "longname": "packages/lambda/src/cli/create-lambda.js~ncpAsync",
-    "access": null,
-    "export": false,
-    "importPath": "myrmex/packages/lambda/src/cli/create-lambda.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 420,
-    "kind": "variable",
-    "name": "plugin",
-    "memberof": "packages/lambda/src/cli/create-lambda.js",
-    "static": true,
-    "longname": "packages/lambda/src/cli/create-lambda.js~plugin",
-    "access": null,
-    "export": false,
-    "importPath": "myrmex/packages/lambda/src/cli/create-lambda.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 11,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 421,
+    "__docId__": 438,
     "kind": "function",
     "name": "initNodeJs",
     "memberof": "packages/lambda/src/cli/create-lambda.js",
@@ -11261,7 +11569,7 @@
     "importPath": "myrmex/packages/lambda/src/cli/create-lambda.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 230,
+    "lineNumber": 226,
     "undocument": true,
     "unknown": [
       {
@@ -11290,7 +11598,7 @@
     }
   },
   {
-    "__docId__": 422,
+    "__docId__": 439,
     "kind": "function",
     "name": "initPython",
     "memberof": "packages/lambda/src/cli/create-lambda.js",
@@ -11303,7 +11611,7 @@
     "importPath": "myrmex/packages/lambda/src/cli/create-lambda.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 251,
+    "lineNumber": 247,
     "undocument": true,
     "unknown": [
       {
@@ -11332,7 +11640,7 @@
     }
   },
   {
-    "__docId__": 423,
+    "__docId__": 440,
     "kind": "file",
     "name": "packages/lambda/src/cli/create-node-module.js",
     "content": "",
@@ -11343,7 +11651,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 424,
+    "__docId__": 441,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/lambda/src/cli/create-node-module.js",
@@ -11369,7 +11677,7 @@
     }
   },
   {
-    "__docId__": 425,
+    "__docId__": 442,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/src/cli/create-node-module.js",
@@ -11395,7 +11703,7 @@
     }
   },
   {
-    "__docId__": 426,
+    "__docId__": 443,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/lambda/src/cli/create-node-module.js",
@@ -11421,7 +11729,7 @@
     }
   },
   {
-    "__docId__": 427,
+    "__docId__": 444,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/lambda/src/cli/create-node-module.js",
@@ -11447,7 +11755,7 @@
     }
   },
   {
-    "__docId__": 428,
+    "__docId__": 445,
     "kind": "variable",
     "name": "mkdirpAsync",
     "memberof": "packages/lambda/src/cli/create-node-module.js",
@@ -11473,7 +11781,7 @@
     }
   },
   {
-    "__docId__": 429,
+    "__docId__": 446,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/lambda/src/cli/create-node-module.js",
@@ -11499,7 +11807,7 @@
     }
   },
   {
-    "__docId__": 430,
+    "__docId__": 447,
     "kind": "file",
     "name": "packages/lambda/src/cli/deploy-lambdas.js",
     "content": "",
@@ -11510,7 +11818,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 431,
+    "__docId__": 448,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/src/cli/deploy-lambdas.js",
@@ -11536,7 +11844,7 @@
     }
   },
   {
-    "__docId__": 432,
+    "__docId__": 449,
     "kind": "variable",
     "name": "genReportsTable",
     "memberof": "packages/lambda/src/cli/deploy-lambdas.js",
@@ -11562,7 +11870,7 @@
     }
   },
   {
-    "__docId__": 433,
+    "__docId__": 450,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/lambda/src/cli/deploy-lambdas.js",
@@ -11588,7 +11896,7 @@
     }
   },
   {
-    "__docId__": 434,
+    "__docId__": 451,
     "kind": "file",
     "name": "packages/lambda/src/cli/install-lambdas-locally.js",
     "content": "",
@@ -11599,7 +11907,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 435,
+    "__docId__": 452,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/src/cli/install-lambdas-locally.js",
@@ -11625,7 +11933,7 @@
     }
   },
   {
-    "__docId__": 436,
+    "__docId__": 453,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/lambda/src/cli/install-lambdas-locally.js",
@@ -11651,7 +11959,7 @@
     }
   },
   {
-    "__docId__": 437,
+    "__docId__": 454,
     "kind": "file",
     "name": "packages/lambda/src/cli/templates/index.js",
     "content": "",
@@ -11662,7 +11970,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 438,
+    "__docId__": 455,
     "kind": "function",
     "name": "handler",
     "memberof": "packages/lambda/src/cli/templates/index.js",
@@ -11705,7 +12013,7 @@
     ]
   },
   {
-    "__docId__": 439,
+    "__docId__": 456,
     "kind": "file",
     "name": "packages/lambda/src/cli/test-lambda-locally.js",
     "content": "",
@@ -11716,7 +12024,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 440,
+    "__docId__": 457,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/src/cli/test-lambda-locally.js",
@@ -11742,7 +12050,7 @@
     }
   },
   {
-    "__docId__": 441,
+    "__docId__": 458,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/lambda/src/cli/test-lambda-locally.js",
@@ -11768,7 +12076,7 @@
     }
   },
   {
-    "__docId__": 442,
+    "__docId__": 459,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/lambda/src/cli/test-lambda-locally.js",
@@ -11794,7 +12102,7 @@
     }
   },
   {
-    "__docId__": 443,
+    "__docId__": 460,
     "kind": "file",
     "name": "packages/lambda/src/cli/test-lambda.js",
     "content": "",
@@ -11805,7 +12113,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 444,
+    "__docId__": 461,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/src/cli/test-lambda.js",
@@ -11831,7 +12139,7 @@
     }
   },
   {
-    "__docId__": 445,
+    "__docId__": 462,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/lambda/src/cli/test-lambda.js",
@@ -11857,7 +12165,7 @@
     }
   },
   {
-    "__docId__": 446,
+    "__docId__": 463,
     "kind": "file",
     "name": "packages/lambda/src/hooks/create-command.js",
     "content": "",
@@ -11868,7 +12176,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 447,
+    "__docId__": 464,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/src/hooks/create-command.js",
@@ -11894,7 +12202,7 @@
     }
   },
   {
-    "__docId__": 448,
+    "__docId__": 465,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/lambda/src/hooks/create-command.js",
@@ -11920,7 +12228,7 @@
     }
   },
   {
-    "__docId__": 449,
+    "__docId__": 466,
     "kind": "variable",
     "name": "loadIntegrationHook",
     "memberof": "packages/lambda/src/hooks/create-command.js",
@@ -11946,7 +12254,7 @@
     }
   },
   {
-    "__docId__": 450,
+    "__docId__": 467,
     "kind": "function",
     "name": "hook",
     "memberof": "packages/lambda/src/hooks/create-command.js",
@@ -11988,7 +12296,7 @@
     }
   },
   {
-    "__docId__": 451,
+    "__docId__": 468,
     "kind": "file",
     "name": "packages/lambda/src/hooks/load-integration.js",
     "content": "",
@@ -11999,7 +12307,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 452,
+    "__docId__": 469,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/lambda/src/hooks/load-integration.js",
@@ -12025,7 +12333,7 @@
     }
   },
   {
-    "__docId__": 453,
+    "__docId__": 470,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/src/hooks/load-integration.js",
@@ -12051,7 +12359,7 @@
     }
   },
   {
-    "__docId__": 454,
+    "__docId__": 471,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/lambda/src/hooks/load-integration.js",
@@ -12077,7 +12385,7 @@
     }
   },
   {
-    "__docId__": 455,
+    "__docId__": 472,
     "kind": "variable",
     "name": "genReportsTable",
     "memberof": "packages/lambda/src/hooks/load-integration.js",
@@ -12103,7 +12411,7 @@
     }
   },
   {
-    "__docId__": 456,
+    "__docId__": 473,
     "kind": "variable",
     "name": "deployMode",
     "memberof": "packages/lambda/src/hooks/load-integration.js",
@@ -12129,7 +12437,7 @@
     }
   },
   {
-    "__docId__": 457,
+    "__docId__": 474,
     "kind": "variable",
     "name": "alias",
     "memberof": "packages/lambda/src/hooks/load-integration.js",
@@ -12155,7 +12463,7 @@
     }
   },
   {
-    "__docId__": 458,
+    "__docId__": 475,
     "kind": "function",
     "name": "setDeployMode",
     "memberof": "packages/lambda/src/hooks/load-integration.js",
@@ -12186,7 +12494,7 @@
     ]
   },
   {
-    "__docId__": 459,
+    "__docId__": 476,
     "kind": "function",
     "name": "setAlias",
     "memberof": "packages/lambda/src/hooks/load-integration.js",
@@ -12217,7 +12525,7 @@
     ]
   },
   {
-    "__docId__": 460,
+    "__docId__": 477,
     "kind": "function",
     "name": "hook",
     "memberof": "packages/lambda/src/hooks/load-integration.js",
@@ -12271,7 +12579,7 @@
     }
   },
   {
-    "__docId__": 461,
+    "__docId__": 478,
     "kind": "file",
     "name": "packages/lambda/src/index.js",
     "content": "",
@@ -12282,7 +12590,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 462,
+    "__docId__": 479,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/lambda/src/index.js",
@@ -12308,7 +12616,7 @@
     }
   },
   {
-    "__docId__": 463,
+    "__docId__": 480,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/lambda/src/index.js",
@@ -12334,7 +12642,7 @@
     }
   },
   {
-    "__docId__": 464,
+    "__docId__": 481,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/lambda/src/index.js",
@@ -12360,7 +12668,7 @@
     }
   },
   {
-    "__docId__": 465,
+    "__docId__": 482,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/src/index.js",
@@ -12386,7 +12694,7 @@
     }
   },
   {
-    "__docId__": 466,
+    "__docId__": 483,
     "kind": "function",
     "name": "loadLambdas",
     "memberof": "packages/lambda/src/index.js",
@@ -12411,7 +12719,7 @@
     }
   },
   {
-    "__docId__": 467,
+    "__docId__": 484,
     "kind": "function",
     "name": "loadLambda",
     "memberof": "packages/lambda/src/index.js",
@@ -12463,7 +12771,7 @@
     }
   },
   {
-    "__docId__": 468,
+    "__docId__": 485,
     "kind": "function",
     "name": "loadModules",
     "memberof": "packages/lambda/src/index.js",
@@ -12488,7 +12796,7 @@
     }
   },
   {
-    "__docId__": 469,
+    "__docId__": 486,
     "kind": "function",
     "name": "loadNodeModule",
     "memberof": "packages/lambda/src/index.js",
@@ -12534,7 +12842,7 @@
     }
   },
   {
-    "__docId__": 470,
+    "__docId__": 487,
     "kind": "function",
     "name": "findLambda",
     "memberof": "packages/lambda/src/index.js",
@@ -12576,7 +12884,7 @@
     }
   },
   {
-    "__docId__": 471,
+    "__docId__": 488,
     "kind": "function",
     "name": "findNodeModule",
     "memberof": "packages/lambda/src/index.js",
@@ -12618,7 +12926,7 @@
     }
   },
   {
-    "__docId__": 472,
+    "__docId__": 489,
     "kind": "function",
     "name": "getPolicies",
     "memberof": "packages/lambda/src/index.js",
@@ -12649,7 +12957,7 @@
     }
   },
   {
-    "__docId__": 473,
+    "__docId__": 490,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/lambda/src/index.js",
@@ -12670,12 +12978,12 @@
     ],
     "type": {
       "types": [
-        "{\"name\": string, \"version\": *, \"config\": *, \"hooks\": *, \"extensions\": *, \"loadModules\": *, \"loadLambdas\": *, \"findNodeModule\": *, \"findLambda\": *, \"getPolicies\": *}"
+        "{\"name\": string, \"version\": *, \"config\": *, \"hooks\": *, \"extensions\": *, \"loadLambdas\": *, \"loadModules\": *, \"loadLambda\": *, \"loadNodeModule\": *, \"findLambda\": *, \"findNodeModule\": *, \"getPolicies\": *}"
       ]
     }
   },
   {
-    "__docId__": 474,
+    "__docId__": 491,
     "kind": "file",
     "name": "packages/lambda/src/integration-data-injector.js",
     "content": "",
@@ -12686,7 +12994,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 475,
+    "__docId__": 492,
     "kind": "function",
     "name": "LambdaIntegrationDataInjector",
     "memberof": "packages/lambda/src/integration-data-injector.js",
@@ -12720,7 +13028,7 @@
     ]
   },
   {
-    "__docId__": 476,
+    "__docId__": 493,
     "kind": "function",
     "name": "applyToEndpoint",
     "memberof": "packages/lambda/src/integration-data-injector.js",
@@ -12762,7 +13070,7 @@
     }
   },
   {
-    "__docId__": 477,
+    "__docId__": 494,
     "kind": "file",
     "name": "packages/lambda/src/lambda-runtime/nodejs-context-mock.js",
     "content": "",
@@ -12773,7 +13081,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 478,
+    "__docId__": 495,
     "kind": "file",
     "name": "packages/lambda/src/lambda-runtime/nodejs.js",
     "content": "",
@@ -12784,12 +13092,12 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 479,
+    "__docId__": 496,
     "kind": "variable",
-    "name": "path",
+    "name": "util",
     "memberof": "packages/lambda/src/lambda-runtime/nodejs.js",
     "static": true,
-    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~path",
+    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~util",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/lambda/src/lambda-runtime/nodejs.js",
@@ -12810,12 +13118,12 @@
     }
   },
   {
-    "__docId__": 480,
+    "__docId__": 497,
     "kind": "variable",
-    "name": "Promise",
+    "name": "path",
     "memberof": "packages/lambda/src/lambda-runtime/nodejs.js",
     "static": true,
-    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~Promise",
+    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~path",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/lambda/src/lambda-runtime/nodejs.js",
@@ -12836,12 +13144,12 @@
     }
   },
   {
-    "__docId__": 481,
+    "__docId__": 498,
     "kind": "variable",
-    "name": "rimraf",
+    "name": "fs",
     "memberof": "packages/lambda/src/lambda-runtime/nodejs.js",
     "static": true,
-    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~rimraf",
+    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~fs",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/lambda/src/lambda-runtime/nodejs.js",
@@ -12862,12 +13170,12 @@
     }
   },
   {
-    "__docId__": 482,
+    "__docId__": 499,
     "kind": "variable",
-    "name": "exec",
+    "name": "Promise",
     "memberof": "packages/lambda/src/lambda-runtime/nodejs.js",
     "static": true,
-    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~exec",
+    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~Promise",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/lambda/src/lambda-runtime/nodejs.js",
@@ -12888,12 +13196,12 @@
     }
   },
   {
-    "__docId__": 483,
+    "__docId__": 500,
     "kind": "variable",
-    "name": "nodejsContextMock",
+    "name": "exec",
     "memberof": "packages/lambda/src/lambda-runtime/nodejs.js",
     "static": true,
-    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~nodejsContextMock",
+    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~exec",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/lambda/src/lambda-runtime/nodejs.js",
@@ -12914,7 +13222,33 @@
     }
   },
   {
-    "__docId__": 484,
+    "__docId__": 501,
+    "kind": "variable",
+    "name": "nodejsContextMock",
+    "memberof": "packages/lambda/src/lambda-runtime/nodejs.js",
+    "static": true,
+    "longname": "packages/lambda/src/lambda-runtime/nodejs.js~nodejsContextMock",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/lambda/src/lambda-runtime/nodejs.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 502,
     "kind": "function",
     "name": "executeLocally",
     "memberof": "packages/lambda/src/lambda-runtime/nodejs.js",
@@ -12927,7 +13261,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda-runtime/nodejs.js",
     "importStyle": null,
     "description": "Returns the result of a local execution",
-    "lineNumber": 13,
+    "lineNumber": 14,
     "unknown": [
       {
         "tagName": "@returns",
@@ -12964,7 +13298,7 @@
     }
   },
   {
-    "__docId__": 485,
+    "__docId__": 503,
     "kind": "function",
     "name": "installLocally",
     "memberof": "packages/lambda/src/lambda-runtime/nodejs.js",
@@ -12977,7 +13311,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda-runtime/nodejs.js",
     "importStyle": null,
     "description": "Install the lambda dependencies",
-    "lineNumber": 39,
+    "lineNumber": 72,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13002,7 +13336,7 @@
     }
   },
   {
-    "__docId__": 486,
+    "__docId__": 504,
     "kind": "file",
     "name": "packages/lambda/src/lambda-runtime/python.js",
     "content": "",
@@ -13013,7 +13347,59 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 487,
+    "__docId__": 505,
+    "kind": "variable",
+    "name": "Promise",
+    "memberof": "packages/lambda/src/lambda-runtime/python.js",
+    "static": true,
+    "longname": "packages/lambda/src/lambda-runtime/python.js~Promise",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/lambda/src/lambda-runtime/python.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 506,
+    "kind": "variable",
+    "name": "exec",
+    "memberof": "packages/lambda/src/lambda-runtime/python.js",
+    "static": true,
+    "longname": "packages/lambda/src/lambda-runtime/python.js~exec",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/lambda/src/lambda-runtime/python.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 507,
     "kind": "function",
     "name": "executeLocally",
     "memberof": "packages/lambda/src/lambda-runtime/python.js",
@@ -13026,7 +13412,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda-runtime/python.js",
     "importStyle": null,
     "description": "Returns the result of a local execution",
-    "lineNumber": 7,
+    "lineNumber": 10,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13057,7 +13443,7 @@
     }
   },
   {
-    "__docId__": 488,
+    "__docId__": 508,
     "kind": "function",
     "name": "installLocally",
     "memberof": "packages/lambda/src/lambda-runtime/python.js",
@@ -13070,7 +13456,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda-runtime/python.js",
     "importStyle": null,
     "description": "Install the lambda dependencies",
-    "lineNumber": 14,
+    "lineNumber": 38,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13095,7 +13481,7 @@
     }
   },
   {
-    "__docId__": 489,
+    "__docId__": 509,
     "kind": "file",
     "name": "packages/lambda/src/lambda.js",
     "content": "",
@@ -13106,7 +13492,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 490,
+    "__docId__": 510,
     "kind": "variable",
     "name": "os",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13132,7 +13518,7 @@
     }
   },
   {
-    "__docId__": 491,
+    "__docId__": 511,
     "kind": "variable",
     "name": "fs",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13158,7 +13544,7 @@
     }
   },
   {
-    "__docId__": 492,
+    "__docId__": 512,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13184,7 +13570,7 @@
     }
   },
   {
-    "__docId__": 493,
+    "__docId__": 513,
     "kind": "variable",
     "name": "AWS",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13210,7 +13596,7 @@
     }
   },
   {
-    "__docId__": 494,
+    "__docId__": 514,
     "kind": "variable",
     "name": "archiver",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13236,7 +13622,7 @@
     }
   },
   {
-    "__docId__": 495,
+    "__docId__": 515,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13262,7 +13648,7 @@
     }
   },
   {
-    "__docId__": 496,
+    "__docId__": 516,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13288,7 +13674,7 @@
     }
   },
   {
-    "__docId__": 497,
+    "__docId__": 517,
     "kind": "variable",
     "name": "IntegrationDataInjector",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13314,7 +13700,7 @@
     }
   },
   {
-    "__docId__": 498,
+    "__docId__": 518,
     "kind": "variable",
     "name": "plugin",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13340,7 +13726,7 @@
     }
   },
   {
-    "__docId__": 499,
+    "__docId__": 519,
     "kind": "variable",
     "name": "runtimeMethods",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13366,7 +13752,7 @@
     }
   },
   {
-    "__docId__": 500,
+    "__docId__": 520,
     "kind": "variable",
     "name": "runtimes",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13392,7 +13778,7 @@
     }
   },
   {
-    "__docId__": 501,
+    "__docId__": 521,
     "kind": "function",
     "name": "Lambda",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13426,7 +13812,7 @@
     ]
   },
   {
-    "__docId__": 502,
+    "__docId__": 522,
     "kind": "function",
     "name": "getIdentifier",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13457,7 +13843,7 @@
     }
   },
   {
-    "__docId__": 503,
+    "__docId__": 523,
     "kind": "function",
     "name": "toString",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13488,20 +13874,51 @@
     }
   },
   {
-    "__docId__": 504,
+    "__docId__": 524,
     "kind": "function",
-    "name": "getFsPath",
+    "name": "getPackageJson",
     "memberof": "packages/lambda/src/lambda.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "packages/lambda/src/lambda.js~getFsPath",
+    "longname": "packages/lambda/src/lambda.js~getPackageJson",
     "access": null,
     "export": false,
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
-    "description": "Returns the lambda location on the file system",
-    "lineNumber": 75,
+    "description": "Returns the content of the package.json file of the lambda",
+    "lineNumber": 76,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object}"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 525,
+    "kind": "function",
+    "name": "getRuntime",
+    "memberof": "packages/lambda/src/lambda.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/lambda/src/lambda.js~getRuntime",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/lambda/src/lambda.js",
+    "importStyle": null,
+    "description": "Returns the lambda runtime",
+    "lineNumber": 84,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13519,7 +13936,38 @@
     }
   },
   {
-    "__docId__": 505,
+    "__docId__": 526,
+    "kind": "function",
+    "name": "getFsPath",
+    "memberof": "packages/lambda/src/lambda.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/lambda/src/lambda.js~getFsPath",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/lambda/src/lambda.js",
+    "importStyle": null,
+    "description": "Returns the lambda location on the file system",
+    "lineNumber": 92,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 527,
     "kind": "function",
     "name": "getEventExamples",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13532,7 +13980,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Returns the list of event examples",
-    "lineNumber": 83,
+    "lineNumber": 100,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13550,7 +13998,7 @@
     }
   },
   {
-    "__docId__": 506,
+    "__docId__": 528,
     "kind": "function",
     "name": "loadEventExample",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13563,7 +14011,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Returns an event examples",
-    "lineNumber": 110,
+    "lineNumber": 127,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13588,7 +14036,7 @@
     }
   },
   {
-    "__docId__": 507,
+    "__docId__": 529,
     "kind": "function",
     "name": "executeLocally",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13601,7 +14049,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Returns the result of a local execution",
-    "lineNumber": 118,
+    "lineNumber": 135,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13626,7 +14074,7 @@
     }
   },
   {
-    "__docId__": 508,
+    "__docId__": 530,
     "kind": "function",
     "name": "execute",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13639,7 +14087,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Returns the result of am execution in AWS",
-    "lineNumber": 126,
+    "lineNumber": 143,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13676,7 +14124,7 @@
     }
   },
   {
-    "__docId__": 509,
+    "__docId__": 531,
     "kind": "function",
     "name": "getIntegrationDataInjector",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13689,7 +14137,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Returns an integration data injector for the API Gateway plugin",
-    "lineNumber": 146,
+    "lineNumber": 163,
     "params": [
       {
         "nullable": null,
@@ -13722,7 +14170,7 @@
     }
   },
   {
-    "__docId__": 510,
+    "__docId__": 532,
     "kind": "function",
     "name": "deploy",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13735,7 +14183,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Deploys the lambda in AWS",
-    "lineNumber": 171,
+    "lineNumber": 188,
     "params": [
       {
         "nullable": null,
@@ -13768,7 +14216,7 @@
     }
   },
   {
-    "__docId__": 511,
+    "__docId__": 533,
     "kind": "function",
     "name": "installLocally",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13781,7 +14229,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Install the lambda dependencies",
-    "lineNumber": 216,
+    "lineNumber": 233,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13799,7 +14247,7 @@
     }
   },
   {
-    "__docId__": 512,
+    "__docId__": 534,
     "kind": "function",
     "name": "buildPackage",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13811,15 +14259,21 @@
     "export": false,
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
-    "description": "Create a zip package for a lambda and provide it's content in a buffer",
-    "lineNumber": 227,
+    "description": "Create a zip package for a lambda and provide it's content in an object following the definition of the AWS SDK\nmethods createFunction() and updateFunctionCode()\nhttp://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#createFunction-property\nhttp://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionCode-property\n{\n  S3Bucket: \"myBucket\",\n  S3Key: \"myKey\",\n  S3ObjectVersion: \"1\",\n  ZipFile: <Binary String>\n}",
+    "lineNumber": 253,
     "unknown": [
       {
         "tagName": "@returns",
-        "tagValue": "{Promise<Buffer>}"
+        "tagValue": "{Promise<Object>}"
       }
     ],
     "params": [
+      {
+        "name": "context",
+        "types": [
+          "*"
+        ]
+      },
       {
         "name": "report",
         "types": [
@@ -13830,14 +14284,45 @@
     "return": {
       "nullable": null,
       "types": [
-        "Promise<Buffer>"
+        "Promise<Object>"
       ],
       "spread": false,
       "description": ""
     }
   },
   {
-    "__docId__": 513,
+    "__docId__": 535,
+    "kind": "function",
+    "name": "_buildPackage",
+    "memberof": "packages/lambda/src/lambda.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/lambda/src/lambda.js~_buildPackage",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/lambda/src/lambda.js",
+    "importStyle": null,
+    "description": "Fallback package creation if no plugin implement the hook \"buildLambdaPackage\"\nCreate a zip package for a lambda and provide it's content in an object following the definition of the AWS SDK\nmethods createFunction() and updateFunctionCode()\n{\n  ZipFile: <Buffer>\n}",
+    "lineNumber": 281,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object>}"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 536,
     "kind": "function",
     "name": "isDeployed",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13850,7 +14335,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Check if the Lambda already exists in AWS",
-    "lineNumber": 265,
+    "lineNumber": 315,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13875,7 +14360,7 @@
     }
   },
   {
-    "__docId__": 514,
+    "__docId__": 537,
     "kind": "function",
     "name": "create",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13888,7 +14373,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Create the lambda in AWS",
-    "lineNumber": 281,
+    "lineNumber": 331,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13925,7 +14410,7 @@
     }
   },
   {
-    "__docId__": 515,
+    "__docId__": 538,
     "kind": "function",
     "name": "update",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13938,7 +14423,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Update the lambda in AWS",
-    "lineNumber": 308,
+    "lineNumber": 358,
     "unknown": [
       {
         "tagName": "@returns",
@@ -13975,7 +14460,7 @@
     }
   },
   {
-    "__docId__": 516,
+    "__docId__": 539,
     "kind": "function",
     "name": "publishVersion",
     "memberof": "packages/lambda/src/lambda.js",
@@ -13988,7 +14473,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "Create a new version of the lambda",
-    "lineNumber": 343,
+    "lineNumber": 390,
     "unknown": [
       {
         "tagName": "@returns",
@@ -14013,7 +14498,7 @@
     }
   },
   {
-    "__docId__": 517,
+    "__docId__": 540,
     "kind": "function",
     "name": "setAlias",
     "memberof": "packages/lambda/src/lambda.js",
@@ -14026,7 +14511,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "[setAlias description]",
-    "lineNumber": 356,
+    "lineNumber": 403,
     "params": [
       {
         "nullable": null,
@@ -14066,7 +14551,7 @@
     }
   },
   {
-    "__docId__": 518,
+    "__docId__": 541,
     "kind": "function",
     "name": "aliasExists",
     "memberof": "packages/lambda/src/lambda.js",
@@ -14079,7 +14564,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "[aliasExists description]",
-    "lineNumber": 388,
+    "lineNumber": 435,
     "params": [
       {
         "nullable": null,
@@ -14112,7 +14597,7 @@
     }
   },
   {
-    "__docId__": 519,
+    "__docId__": 542,
     "kind": "function",
     "name": "createAlias",
     "memberof": "packages/lambda/src/lambda.js",
@@ -14125,7 +14610,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "[createAlias description]",
-    "lineNumber": 410,
+    "lineNumber": 457,
     "params": [
       {
         "nullable": null,
@@ -14168,7 +14653,7 @@
     }
   },
   {
-    "__docId__": 520,
+    "__docId__": 543,
     "kind": "function",
     "name": "updateAlias",
     "memberof": "packages/lambda/src/lambda.js",
@@ -14181,7 +14666,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": "[updateAlias description]",
-    "lineNumber": 426,
+    "lineNumber": 473,
     "params": [
       {
         "nullable": null,
@@ -14224,7 +14709,7 @@
     }
   },
   {
-    "__docId__": 521,
+    "__docId__": 544,
     "kind": "function",
     "name": "retrieveRoleArn",
     "memberof": "packages/lambda/src/lambda.js",
@@ -14237,7 +14722,7 @@
     "importPath": "myrmex/packages/lambda/src/lambda.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 439,
+    "lineNumber": 486,
     "undocument": true,
     "unknown": [
       {
@@ -14266,7 +14751,7 @@
     }
   },
   {
-    "__docId__": 522,
+    "__docId__": 545,
     "kind": "file",
     "name": "packages/lambda/src/node-module.js",
     "content": "",
@@ -14277,7 +14762,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 523,
+    "__docId__": 546,
     "kind": "function",
     "name": "NodeModule",
     "memberof": "packages/lambda/src/node-module.js",
@@ -14331,7 +14816,7 @@
     ]
   },
   {
-    "__docId__": 524,
+    "__docId__": 547,
     "kind": "function",
     "name": "getName",
     "memberof": "packages/lambda/src/node-module.js",
@@ -14362,7 +14847,7 @@
     }
   },
   {
-    "__docId__": 525,
+    "__docId__": 548,
     "kind": "function",
     "name": "getFsPath",
     "memberof": "packages/lambda/src/node-module.js",
@@ -14393,7 +14878,7 @@
     }
   },
   {
-    "__docId__": 526,
+    "__docId__": 549,
     "kind": "file",
     "name": "packages/lambda/src/tools/generate-reports-table.js",
     "content": "",
@@ -14404,7 +14889,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 527,
+    "__docId__": 550,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/src/tools/generate-reports-table.js",
@@ -14430,7 +14915,7 @@
     }
   },
   {
-    "__docId__": 528,
+    "__docId__": 551,
     "kind": "variable",
     "name": "Table",
     "memberof": "packages/lambda/src/tools/generate-reports-table.js",
@@ -14456,7 +14941,7 @@
     }
   },
   {
-    "__docId__": 529,
+    "__docId__": 552,
     "kind": "function",
     "name": "formatHrTime",
     "memberof": "packages/lambda/src/tools/generate-reports-table.js",
@@ -14492,7 +14977,7 @@
     }
   },
   {
-    "__docId__": 530,
+    "__docId__": 553,
     "kind": "file",
     "name": "packages/lambda/test/__bootstrap.test.js",
     "content": "",
@@ -14503,7 +14988,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 531,
+    "__docId__": 554,
     "kind": "function",
     "name": "testRequire",
     "memberof": "packages/lambda/test/__bootstrap.test.js",
@@ -14539,7 +15024,7 @@
     }
   },
   {
-    "__docId__": 532,
+    "__docId__": 555,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/lambda/test/__bootstrap.test.js",
@@ -14565,7 +15050,7 @@
     }
   },
   {
-    "__docId__": 533,
+    "__docId__": 556,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/lambda/test/__bootstrap.test.js",
@@ -14591,7 +15076,7 @@
     }
   },
   {
-    "__docId__": 534,
+    "__docId__": 557,
     "kind": "variable",
     "name": "Promise",
     "memberof": "packages/lambda/test/__bootstrap.test.js",
@@ -14617,7 +15102,7 @@
     }
   },
   {
-    "__docId__": 535,
+    "__docId__": 558,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/test/__bootstrap.test.js",
@@ -14643,7 +15128,7 @@
     }
   },
   {
-    "__docId__": 536,
+    "__docId__": 559,
     "kind": "variable",
     "name": "myrmex",
     "memberof": "packages/lambda/test/__bootstrap.test.js",
@@ -14669,7 +15154,7 @@
     }
   },
   {
-    "__docId__": 537,
+    "__docId__": 560,
     "kind": "variable",
     "name": "nodeLambdaPlugin",
     "memberof": "packages/lambda/test/__bootstrap.test.js",
@@ -14695,7 +15180,7 @@
     }
   },
   {
-    "__docId__": 538,
+    "__docId__": 561,
     "kind": "file",
     "name": "packages/lambda/test/cli/create-lambda.test.js",
     "content": "",
@@ -14706,7 +15191,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 539,
+    "__docId__": 562,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/test/cli/create-lambda.test.js",
@@ -14732,7 +15217,7 @@
     }
   },
   {
-    "__docId__": 540,
+    "__docId__": 563,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/lambda/test/cli/create-lambda.test.js",
@@ -14758,7 +15243,7 @@
     }
   },
   {
-    "__docId__": 541,
+    "__docId__": 564,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/lambda/test/cli/create-lambda.test.js",
@@ -14784,7 +15269,7 @@
     }
   },
   {
-    "__docId__": 542,
+    "__docId__": 565,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/lambda/test/cli/create-lambda.test.js",
@@ -14810,7 +15295,7 @@
     }
   },
   {
-    "__docId__": 543,
+    "__docId__": 566,
     "kind": "file",
     "name": "packages/lambda/test/cli/create-node-module.test.js",
     "content": "",
@@ -14821,7 +15306,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 544,
+    "__docId__": 567,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/test/cli/create-node-module.test.js",
@@ -14847,7 +15332,7 @@
     }
   },
   {
-    "__docId__": 545,
+    "__docId__": 568,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/lambda/test/cli/create-node-module.test.js",
@@ -14873,7 +15358,7 @@
     }
   },
   {
-    "__docId__": 546,
+    "__docId__": 569,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/lambda/test/cli/create-node-module.test.js",
@@ -14899,7 +15384,7 @@
     }
   },
   {
-    "__docId__": 547,
+    "__docId__": 570,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/lambda/test/cli/create-node-module.test.js",
@@ -14925,7 +15410,7 @@
     }
   },
   {
-    "__docId__": 548,
+    "__docId__": 571,
     "kind": "file",
     "name": "packages/lambda/test/cli/deploy-lambdas.test.js",
     "content": "",
@@ -14936,7 +15421,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 549,
+    "__docId__": 572,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/test/cli/deploy-lambdas.test.js",
@@ -14962,7 +15447,7 @@
     }
   },
   {
-    "__docId__": 550,
+    "__docId__": 573,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/lambda/test/cli/deploy-lambdas.test.js",
@@ -14988,7 +15473,7 @@
     }
   },
   {
-    "__docId__": 551,
+    "__docId__": 574,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/lambda/test/cli/deploy-lambdas.test.js",
@@ -15014,7 +15499,7 @@
     }
   },
   {
-    "__docId__": 552,
+    "__docId__": 575,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/lambda/test/cli/deploy-lambdas.test.js",
@@ -15040,7 +15525,7 @@
     }
   },
   {
-    "__docId__": 553,
+    "__docId__": 576,
     "kind": "file",
     "name": "packages/lambda/test/cli/install-lambdas-locally.test.js",
     "content": "",
@@ -15051,7 +15536,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 554,
+    "__docId__": 577,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/test/cli/install-lambdas-locally.test.js",
@@ -15077,7 +15562,7 @@
     }
   },
   {
-    "__docId__": 555,
+    "__docId__": 578,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/lambda/test/cli/install-lambdas-locally.test.js",
@@ -15103,7 +15588,7 @@
     }
   },
   {
-    "__docId__": 556,
+    "__docId__": 579,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/lambda/test/cli/install-lambdas-locally.test.js",
@@ -15129,7 +15614,7 @@
     }
   },
   {
-    "__docId__": 557,
+    "__docId__": 580,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/lambda/test/cli/install-lambdas-locally.test.js",
@@ -15155,7 +15640,7 @@
     }
   },
   {
-    "__docId__": 558,
+    "__docId__": 581,
     "kind": "file",
     "name": "packages/lambda/test/cli/test-lambda-locally.test.js",
     "content": "",
@@ -15166,7 +15651,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 559,
+    "__docId__": 582,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/test/cli/test-lambda-locally.test.js",
@@ -15192,7 +15677,7 @@
     }
   },
   {
-    "__docId__": 560,
+    "__docId__": 583,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/lambda/test/cli/test-lambda-locally.test.js",
@@ -15218,7 +15703,7 @@
     }
   },
   {
-    "__docId__": 561,
+    "__docId__": 584,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/lambda/test/cli/test-lambda-locally.test.js",
@@ -15244,7 +15729,7 @@
     }
   },
   {
-    "__docId__": 562,
+    "__docId__": 585,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/lambda/test/cli/test-lambda-locally.test.js",
@@ -15270,7 +15755,7 @@
     }
   },
   {
-    "__docId__": 563,
+    "__docId__": 586,
     "kind": "file",
     "name": "packages/lambda/test/cli/test-lambda.test.js",
     "content": "",
@@ -15281,7 +15766,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 564,
+    "__docId__": 587,
     "kind": "variable",
     "name": "_",
     "memberof": "packages/lambda/test/cli/test-lambda.test.js",
@@ -15307,7 +15792,7 @@
     }
   },
   {
-    "__docId__": 565,
+    "__docId__": 588,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/lambda/test/cli/test-lambda.test.js",
@@ -15333,7 +15818,7 @@
     }
   },
   {
-    "__docId__": 566,
+    "__docId__": 589,
     "kind": "variable",
     "name": "cmd",
     "memberof": "packages/lambda/test/cli/test-lambda.test.js",
@@ -15359,7 +15844,7 @@
     }
   },
   {
-    "__docId__": 567,
+    "__docId__": 590,
     "kind": "variable",
     "name": "icli",
     "memberof": "packages/lambda/test/cli/test-lambda.test.js",
@@ -15385,7 +15870,7 @@
     }
   },
   {
-    "__docId__": 568,
+    "__docId__": 591,
     "kind": "file",
     "name": "packages/lambda/test/index.test.js",
     "content": "",
@@ -15396,7 +15881,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 569,
+    "__docId__": 592,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/lambda/test/index.test.js",
@@ -15422,7 +15907,7 @@
     }
   },
   {
-    "__docId__": 570,
+    "__docId__": 593,
     "kind": "variable",
     "name": "nodeLambdaPlugin",
     "memberof": "packages/lambda/test/index.test.js",
@@ -15448,7 +15933,7 @@
     }
   },
   {
-    "__docId__": 571,
+    "__docId__": 594,
     "kind": "file",
     "name": "packages/lambda/test/integration-data-injector.test.js",
     "content": "",
@@ -15459,7 +15944,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 572,
+    "__docId__": 595,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/lambda/test/integration-data-injector.test.js",
@@ -15485,7 +15970,7 @@
     }
   },
   {
-    "__docId__": 573,
+    "__docId__": 596,
     "kind": "variable",
     "name": "Lambda",
     "memberof": "packages/lambda/test/integration-data-injector.test.js",
@@ -15511,7 +15996,7 @@
     }
   },
   {
-    "__docId__": 574,
+    "__docId__": 597,
     "kind": "variable",
     "name": "IntegrationDataInjector",
     "memberof": "packages/lambda/test/integration-data-injector.test.js",
@@ -15537,7 +16022,7 @@
     }
   },
   {
-    "__docId__": 575,
+    "__docId__": 598,
     "kind": "file",
     "name": "packages/lambda/test/lambda.test.js",
     "content": "",
@@ -15548,7 +16033,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 576,
+    "__docId__": 599,
     "kind": "variable",
     "name": "path",
     "memberof": "packages/lambda/test/lambda.test.js",
@@ -15574,7 +16059,7 @@
     }
   },
   {
-    "__docId__": 577,
+    "__docId__": 600,
     "kind": "variable",
     "name": "assert",
     "memberof": "packages/lambda/test/lambda.test.js",
@@ -15600,7 +16085,7 @@
     }
   },
   {
-    "__docId__": 578,
+    "__docId__": 601,
     "kind": "variable",
     "name": "AWS",
     "memberof": "packages/lambda/test/lambda.test.js",
@@ -15626,7 +16111,7 @@
     }
   },
   {
-    "__docId__": 579,
+    "__docId__": 602,
     "kind": "variable",
     "name": "Lambda",
     "memberof": "packages/lambda/test/lambda.test.js",
@@ -15652,7 +16137,7 @@
     }
   },
   {
-    "__docId__": 580,
+    "__docId__": 603,
     "kind": "file",
     "name": "packages/lambda/test-assets/lambdas/callback-lambda/lambda.js",
     "content": "",
@@ -15663,7 +16148,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 581,
+    "__docId__": 604,
     "kind": "variable",
     "name": "dataAccess",
     "memberof": "packages/lambda/test-assets/lambdas/callback-lambda/lambda.js",
@@ -15689,7 +16174,7 @@
     }
   },
   {
-    "__docId__": 582,
+    "__docId__": 605,
     "kind": "function",
     "name": "handler",
     "memberof": "packages/lambda/test-assets/lambdas/callback-lambda/lambda.js",
@@ -15732,7 +16217,7 @@
     ]
   },
   {
-    "__docId__": 583,
+    "__docId__": 606,
     "kind": "file",
     "name": "packages/lambda/test-assets/lambdas/context-lambda/lambda.js",
     "content": "",
@@ -15743,7 +16228,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 584,
+    "__docId__": 607,
     "kind": "function",
     "name": "handler",
     "memberof": "packages/lambda/test-assets/lambdas/context-lambda/lambda.js",
@@ -15786,7 +16271,7 @@
     ]
   },
   {
-    "__docId__": 585,
+    "__docId__": 608,
     "kind": "file",
     "name": "packages/lambda/test-assets/lambdas/empty-lambda/lambda.js",
     "content": "",
@@ -15797,7 +16282,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 586,
+    "__docId__": 609,
     "kind": "function",
     "name": "handler",
     "memberof": "packages/lambda/test-assets/lambdas/empty-lambda/lambda.js",
@@ -15840,7 +16325,7 @@
     ]
   },
   {
-    "__docId__": 587,
+    "__docId__": 610,
     "kind": "file",
     "name": "packages/lambda/test-assets/modules/data-access/index.js",
     "content": "",
@@ -15851,7 +16336,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 588,
+    "__docId__": 611,
     "kind": "variable",
     "name": "log",
     "memberof": "packages/lambda/test-assets/modules/data-access/index.js",
@@ -15877,7 +16362,7 @@
     }
   },
   {
-    "__docId__": 589,
+    "__docId__": 612,
     "kind": "file",
     "name": "packages/lambda/test-assets/modules/log/index.js",
     "content": "",
@@ -15888,7 +16373,870 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 591,
+    "__docId__": 613,
+    "kind": "file",
+    "name": "packages/packager/coverage/lcov-report/prettify.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/packager/coverage/lcov-report/prettify.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 614,
+    "kind": "file",
+    "name": "packages/packager/coverage/lcov-report/sorter.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/packager/coverage/lcov-report/sorter.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 615,
+    "kind": "variable",
+    "name": "addSorting",
+    "memberof": "packages/packager/coverage/lcov-report/sorter.js",
+    "static": true,
+    "longname": "packages/packager/coverage/lcov-report/sorter.js~addSorting",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/coverage/lcov-report/sorter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 616,
+    "kind": "file",
+    "name": "packages/packager/src/hooks/build-lambda-package.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 617,
+    "kind": "variable",
+    "name": "os",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~os",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 618,
+    "kind": "variable",
+    "name": "path",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~path",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 619,
+    "kind": "variable",
+    "name": "Promise",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~Promise",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 620,
+    "kind": "variable",
+    "name": "exec",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~exec",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 621,
+    "kind": "variable",
+    "name": "fs",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~fs",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 622,
+    "kind": "variable",
+    "name": "archiver",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~archiver",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 623,
+    "kind": "variable",
+    "name": "AWS",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~AWS",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 624,
+    "kind": "variable",
+    "name": "plugin",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~plugin",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 625,
+    "kind": "variable",
+    "name": "s3",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~s3",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 626,
+    "kind": "variable",
+    "name": "DEPENDENCIES_DIR_NAME",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~DEPENDENCIES_DIR_NAME",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 627,
+    "kind": "variable",
+    "name": "managedRuntimes",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~managedRuntimes",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 628,
+    "kind": "function",
+    "name": "exports",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~exports",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "lambda",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "context",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "codeParams",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 629,
+    "kind": "variable",
+    "name": "exclusions",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~exclusions",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 78,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "string[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 630,
+    "kind": "function",
+    "name": "copyFilter",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~copyFilter",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 79,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "src",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 631,
+    "kind": "function",
+    "name": "prepareSources",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~prepareSources",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 89,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "modulePath",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "sourcesPath",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "runtime",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 632,
+    "kind": "function",
+    "name": "install",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~install",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 138,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "sourcesPath",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "runtime",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 633,
+    "kind": "function",
+    "name": "archive",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~archive",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 164,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "origPath",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "archivePath",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 634,
+    "kind": "function",
+    "name": "putObject",
+    "memberof": "packages/packager/src/hooks/build-lambda-package.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/packager/src/hooks/build-lambda-package.js~putObject",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/hooks/build-lambda-package.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 189,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 635,
+    "kind": "file",
+    "name": "packages/packager/src/index.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/packager/src/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 636,
+    "kind": "variable",
+    "name": "plugin",
+    "memberof": "packages/packager/src/index.js",
+    "static": true,
+    "longname": "packages/packager/src/index.js~plugin",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"name\": string, \"version\": *, \"config\": *, \"hooks\": *, \"extensions\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 637,
+    "kind": "file",
+    "name": "packages/packager/test/__bootstrap.test.js",
+    "content": "",
+    "static": true,
+    "longname": "packages/packager/test/__bootstrap.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 638,
+    "kind": "function",
+    "name": "testRequire",
+    "memberof": "packages/packager/test/__bootstrap.test.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "packages/packager/test/__bootstrap.test.js~testRequire",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/test/__bootstrap.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "name",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 639,
+    "kind": "variable",
+    "name": "assert",
+    "memberof": "packages/packager/test/__bootstrap.test.js",
+    "static": true,
+    "longname": "packages/packager/test/__bootstrap.test.js~assert",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/test/__bootstrap.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 640,
+    "kind": "variable",
+    "name": "path",
+    "memberof": "packages/packager/test/__bootstrap.test.js",
+    "static": true,
+    "longname": "packages/packager/test/__bootstrap.test.js~path",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/test/__bootstrap.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 641,
+    "kind": "variable",
+    "name": "Promise",
+    "memberof": "packages/packager/test/__bootstrap.test.js",
+    "static": true,
+    "longname": "packages/packager/test/__bootstrap.test.js~Promise",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/test/__bootstrap.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 642,
+    "kind": "variable",
+    "name": "_",
+    "memberof": "packages/packager/test/__bootstrap.test.js",
+    "static": true,
+    "longname": "packages/packager/test/__bootstrap.test.js~_",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/test/__bootstrap.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 643,
+    "kind": "variable",
+    "name": "myrmex",
+    "memberof": "packages/packager/test/__bootstrap.test.js",
+    "static": true,
+    "longname": "packages/packager/test/__bootstrap.test.js~myrmex",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/test/__bootstrap.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 644,
+    "kind": "variable",
+    "name": "packagerPlugin",
+    "memberof": "packages/packager/test/__bootstrap.test.js",
+    "static": true,
+    "longname": "packages/packager/test/__bootstrap.test.js~packagerPlugin",
+    "access": null,
+    "export": false,
+    "importPath": "myrmex/packages/packager/test/__bootstrap.test.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 646,
     "kind": "external",
     "name": "Infinity",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
@@ -15900,7 +17248,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 592,
+    "__docId__": 647,
     "kind": "external",
     "name": "NaN",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
@@ -15912,7 +17260,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 593,
+    "__docId__": 648,
     "kind": "external",
     "name": "undefined",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
@@ -15924,7 +17272,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 594,
+    "__docId__": 649,
     "kind": "external",
     "name": "null",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
@@ -15936,7 +17284,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 595,
+    "__docId__": 650,
     "kind": "external",
     "name": "Object",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
@@ -15948,7 +17296,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 596,
+    "__docId__": 651,
     "kind": "external",
     "name": "object",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
@@ -15960,7 +17308,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 597,
+    "__docId__": 652,
     "kind": "external",
     "name": "Function",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
@@ -15972,7 +17320,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 598,
+    "__docId__": 653,
     "kind": "external",
     "name": "function",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
@@ -15984,7 +17332,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 599,
+    "__docId__": 654,
     "kind": "external",
     "name": "Boolean",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
@@ -15996,7 +17344,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 600,
+    "__docId__": 655,
     "kind": "external",
     "name": "boolean",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
@@ -16008,7 +17356,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 601,
+    "__docId__": 656,
     "kind": "external",
     "name": "Symbol",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
@@ -16020,7 +17368,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 602,
+    "__docId__": 657,
     "kind": "external",
     "name": "Error",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
@@ -16032,7 +17380,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 603,
+    "__docId__": 658,
     "kind": "external",
     "name": "EvalError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
@@ -16044,7 +17392,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 604,
+    "__docId__": 659,
     "kind": "external",
     "name": "InternalError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
@@ -16056,7 +17404,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 605,
+    "__docId__": 660,
     "kind": "external",
     "name": "RangeError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
@@ -16068,7 +17416,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 606,
+    "__docId__": 661,
     "kind": "external",
     "name": "ReferenceError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
@@ -16080,7 +17428,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 607,
+    "__docId__": 662,
     "kind": "external",
     "name": "SyntaxError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
@@ -16092,7 +17440,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 608,
+    "__docId__": 663,
     "kind": "external",
     "name": "TypeError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
@@ -16104,7 +17452,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 609,
+    "__docId__": 664,
     "kind": "external",
     "name": "URIError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
@@ -16116,7 +17464,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 610,
+    "__docId__": 665,
     "kind": "external",
     "name": "Number",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
@@ -16128,7 +17476,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 611,
+    "__docId__": 666,
     "kind": "external",
     "name": "number",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
@@ -16140,7 +17488,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 612,
+    "__docId__": 667,
     "kind": "external",
     "name": "Date",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
@@ -16152,7 +17500,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 613,
+    "__docId__": 668,
     "kind": "external",
     "name": "String",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
@@ -16164,7 +17512,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 614,
+    "__docId__": 669,
     "kind": "external",
     "name": "string",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
@@ -16176,7 +17524,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 615,
+    "__docId__": 670,
     "kind": "external",
     "name": "RegExp",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
@@ -16188,7 +17536,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 616,
+    "__docId__": 671,
     "kind": "external",
     "name": "Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
@@ -16200,7 +17548,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 617,
+    "__docId__": 672,
     "kind": "external",
     "name": "Int8Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
@@ -16212,7 +17560,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 618,
+    "__docId__": 673,
     "kind": "external",
     "name": "Uint8Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
@@ -16224,7 +17572,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 619,
+    "__docId__": 674,
     "kind": "external",
     "name": "Uint8ClampedArray",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
@@ -16236,7 +17584,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 620,
+    "__docId__": 675,
     "kind": "external",
     "name": "Int16Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
@@ -16248,7 +17596,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 621,
+    "__docId__": 676,
     "kind": "external",
     "name": "Uint16Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
@@ -16260,7 +17608,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 622,
+    "__docId__": 677,
     "kind": "external",
     "name": "Int32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
@@ -16272,7 +17620,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 623,
+    "__docId__": 678,
     "kind": "external",
     "name": "Uint32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
@@ -16284,7 +17632,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 624,
+    "__docId__": 679,
     "kind": "external",
     "name": "Float32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
@@ -16296,7 +17644,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 625,
+    "__docId__": 680,
     "kind": "external",
     "name": "Float64Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
@@ -16308,7 +17656,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 626,
+    "__docId__": 681,
     "kind": "external",
     "name": "Map",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
@@ -16320,7 +17668,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 627,
+    "__docId__": 682,
     "kind": "external",
     "name": "Set",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
@@ -16332,7 +17680,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 628,
+    "__docId__": 683,
     "kind": "external",
     "name": "WeakMap",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
@@ -16344,7 +17692,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 629,
+    "__docId__": 684,
     "kind": "external",
     "name": "WeakSet",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
@@ -16356,7 +17704,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 630,
+    "__docId__": 685,
     "kind": "external",
     "name": "ArrayBuffer",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
@@ -16368,7 +17716,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 631,
+    "__docId__": 686,
     "kind": "external",
     "name": "DataView",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
@@ -16380,7 +17728,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 632,
+    "__docId__": 687,
     "kind": "external",
     "name": "JSON",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
@@ -16392,7 +17740,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 633,
+    "__docId__": 688,
     "kind": "external",
     "name": "Promise",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
@@ -16404,7 +17752,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 634,
+    "__docId__": 689,
     "kind": "external",
     "name": "Generator",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
@@ -16416,7 +17764,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 635,
+    "__docId__": 690,
     "kind": "external",
     "name": "GeneratorFunction",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
@@ -16428,7 +17776,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 636,
+    "__docId__": 691,
     "kind": "external",
     "name": "Reflect",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
@@ -16440,7 +17788,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 637,
+    "__docId__": 692,
     "kind": "external",
     "name": "Proxy",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
@@ -16453,7 +17801,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 639,
+    "__docId__": 694,
     "kind": "external",
     "name": "CanvasRenderingContext2D",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
@@ -16465,7 +17813,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 640,
+    "__docId__": 695,
     "kind": "external",
     "name": "DocumentFragment",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
@@ -16477,7 +17825,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 641,
+    "__docId__": 696,
     "kind": "external",
     "name": "Element",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
@@ -16489,7 +17837,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 642,
+    "__docId__": 697,
     "kind": "external",
     "name": "Event",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
@@ -16501,7 +17849,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 643,
+    "__docId__": 698,
     "kind": "external",
     "name": "Node",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
@@ -16513,7 +17861,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 644,
+    "__docId__": 699,
     "kind": "external",
     "name": "NodeList",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
@@ -16525,7 +17873,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 645,
+    "__docId__": 700,
     "kind": "external",
     "name": "XMLHttpRequest",
     "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
@@ -16537,7 +17885,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 646,
+    "__docId__": 701,
     "kind": "external",
     "name": "AudioContext",
     "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
