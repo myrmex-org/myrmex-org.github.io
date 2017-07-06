@@ -1060,5 +1060,17 @@ window.esdocSearchIndex = [
     "file/packages/packager/test/__bootstrap.test.js.html",
     "packages/packager/test/__bootstrap.test.js",
     "file"
+  ],
+  [
+    "packages/packager/test/hooks/build-lambda-package.test.js",
+    "file/packages/packager/test/hooks/build-lambda-package.test.js.html",
+    "packages/packager/test/hooks/build-lambda-package.test.js",
+    "file"
+  ],
+  [
+    "packages/packager/test/index.test.js",
+    "file/packages/packager/test/index.test.js.html",
+    "packages/packager/test/index.test.js",
+    "file"
   ]
 ]

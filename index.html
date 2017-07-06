@@ -117,6 +117,16 @@
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-level-configuration" data-ice="link">API level configuration</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#resource-path-level-configuration" data-ice="link">Resource path level configuration</a></li>
 <li data-ice="manualNav" class="indent-h3" data-link="manual/usage/cors-plugin.html"><a href="manual/usage/cors-plugin.html#api-resource-path-level-configuration" data-ice="link">API resource path level configuration</a></li>
+<li data-ice="manualNav" class="indent-h1 manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;" data-link="manual/usage/packager.html"><a href="manual/usage/packager.html" data-ice="link">Packager plugin</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/packager.html"><a href="manual/usage/packager.html#why-" data-ice="link">Why ?</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/packager.html"><a href="manual/usage/packager.html#how-it-works" data-ice="link">How it works</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/packager.html"><a href="manual/usage/packager.html#prerequisites" data-ice="link">Prerequisites</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/packager.html"><a href="manual/usage/packager.html#installation" data-ice="link">Installation</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/usage/packager.html"><a href="manual/usage/packager.html#configuration" data-ice="link">Configuration</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/packager.html"><a href="manual/usage/packager.html#default-values" data-ice="link">Default values</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/packager.html"><a href="manual/usage/packager.html#-packager-bucket-" data-ice="link">packager.bucket</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/packager.html"><a href="manual/usage/packager.html#-packager-docker-usesudo-" data-ice="link">packager.docker.useSudo</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/usage/packager.html"><a href="manual/usage/packager.html#-packager-docker-showstdout-" data-ice="link">packager.docker.showStdout</a></li>
 </ul>
   </div>
 <div data-ice="manual" data-toc-name="advanced">
@@ -350,8 +360,8 @@ replaced by a javascript file that exposes the desired configuration.</p><p>For 
 <div class="manual-card-wrap" data-ice="cards">
       <h1 data-ice="label" class="manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;&#x25A0;"><span data-ice="label-inner">IAM plugin</span></h1>
       <div class="manual-card">
-        <div data-ice="card"><h1>IAM plugin</h1><p>The IAM plugin allows to define and deploy AWS policies and roles. It can be used to avoid referencing IAM roles ARNs and
-simplify the configuration of other plugins.</p><h2>Prerequisites</h2><p>To use the <code>@myrmex/iam</code> plugin, it is necessary to have a minimal knowledge about <a href="https://aws.amazon.com/iam/">AWS Identity and Access Management</a>.</p><p>An AWS user or role that uses the plugin <code>@myrmex/iam</code> must have access to IAM administration. The AWS policy <code>IAMFullAccess</code>
+        <div data-ice="card"><h1>IAM plugin</h1><p>The <code>@myrmex/iam</code> plugin allows to define and deploy AWS policies and roles. It can be used to avoid referencing IAM
+roles ARNs and simplify the configuration of other plugins.</p><h2>Prerequisites</h2><p>To use the <code>@myrmex/iam</code> plugin, it is necessary to have a minimal knowledge about <a href="https://aws.amazon.com/iam/">AWS Identity and Access Management</a>.</p><p>An AWS user or role that uses the plugin <code>@myrmex/iam</code> must have access to IAM administration. The AWS policy <code>IAMFullAccess</code>
 gives all necessary permissions.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="shell">npm install @myrmex/iam --save-dev</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="json">{
   &quot;name&quot;: &quot;my-app&quot;,
   &quot;plugins&quot;: [
@@ -434,7 +444,7 @@ combinations with the <code>environment</code> and the <code>stage</code> proper
 <div class="manual-card-wrap" data-ice="cards">
       <h1 data-ice="label" class="manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;&#x25A0;&#x25A0;"><span data-ice="label-inner">Lambda plugin</span></h1>
       <div class="manual-card">
-        <div data-ice="card"><h1>Lambda plugin</h1><p>The Lambda plugin allows to define and deploy Lambdas. It should work with any runtime but has been tested mostly with
+        <div data-ice="card"><h1>Lambda plugin</h1><p>The <code>@myrmex/lambda</code> plugin allows to define and deploy Lambdas. It should work with any runtime but has been tested mostly with
 Node.js and secondly with Python.</p><h2>Prerequisites</h2><p>To use the <code>@myrmex/lambda</code> plugin, it is necessary to have a minimal knowledge about
 <a href="https://aws.amazon.com/lambda/">AWS Lambda</a>.</p><p>An AWS user or role that uses the plugin <code>@myrmex/lambda</code> must have access to Lambda administration. The AWS policy
 <code>AWSLambdaFullAccess</code> gives all necessary permissions.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="shell">npm install @myrmex/lambda</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="json">{
@@ -442,15 +452,15 @@ Node.js and secondly with Python.</p><h2>Prerequisites</h2><p>To use the <code>@
   &quot;plugins&quot;: [
     &quot;@myrmex/lambda&quot;
   ]
-}</code></pre><p>Once the plugin is installed and enabled in the project, the <code>myrmex</code> command line will provide new sub-commands to manage and
-deploy Lambdas.</p><h2>Project anatomy</h2><p>By default, the content managed by the Lambda plugin is located in an <code>lambda</code> directory in the root directory of the
-project.</p><p>Out of the box, for the Node.js runtime, the Lambda plugin allows to separate the definition of Lambdas from the logic of the
-application by providing a specific place to write node modules but it is not mandatory to use it. <code>@myrmex/lambda</code> helps to
-define and deploy Lambdas but the developer is responsible of the implementation of the application. Other plugins built on
-top of the Lambda plugin may be more opinionated.</p><p>The directory <code>lambda/lambdas</code> contains the Lambdas definitions. For each of its sub-directory is considered as a
-Lambda definition. It must contains a <code>config.json</code> file and the code of the Lambda. The name of the subdirectory is used
-as the Lambda identifier.</p><p>The <code>config.json</code> file allows to define the runtime, the timeout, the memory, the role and other properties of the Lambda.
-The content of the <code>params</code> property is used as the argument of the following methods from the AWS SDK:</p><ul>
+}</code></pre><p>Once the plugin is installed and enabled in the project, the <code>myrmex</code> command line will provide new sub-commands to
+manage and deploy Lambdas.</p><h2>Project anatomy</h2><p>By default, the content managed by the Lambda plugin is located in an <code>lambda</code> directory in the root directory of the
+project.</p><p>Out of the box, for the Node.js runtime, the Lambda plugin allows to separate the definition of Lambdas from the logic
+of the application by providing a specific place to write node modules but it is not mandatory to use it.
+<code>@myrmex/lambda</code> helps to define and deploy Lambdas but the developer is responsible of the implementation of the
+application. Other plugins built on top of the Lambda plugin may be more opinionated.</p><p>The directory <code>lambda/lambdas</code> contains the Lambdas definitions. For each of its sub-directory is considered as a
+Lambda definition. It must contains a <code>config.json</code> file and the code of the Lambda. The name of the subdirectory is
+used as the Lambda identifier.</p><p>The <code>config.json</code> file allows to define the runtime, the timeout, the memory, the role and other properties of the
+Lambda. The content of the <code>params</code> property is used as the argument of the following methods from the AWS SDK:</p><ul>
 <li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#createFunction-property"><code>createFunction()</code></a></li>
 <li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionCode-property"><code>updateFunctionCode()</code></a></li>
 <li><a href="http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Lambda.html#updateFunctionConfiguration-property"><code>updateFunctionConfiguration()</code></a></li>
@@ -462,10 +472,10 @@ The content of the <code>params</code> property is used as the argument of the f
     &quot;Handler&quot;: &quot;index.handler&quot;,
     &quot;Role&quot;: &quot;arn:aws:iam::012345678901:role/LambdaBasicExecution&quot;
   }
-}</code></pre><p>By default, for the Node.js runtime, the directory <code>lambda/modules</code> contains the node modules of the project. For example,
-some of these modules could be named <code>log</code>, or <code>data-access</code> or <code>authorization</code> etc...</p><p>Each module should have a clear responsibility so that each Lambda can embed only the code it needs. This is a recommendation
-but the developer is free to organize the code as he want. The Lambda plugin does not force you to use a specific project
-organization.</p><p>This is what a project structure could look like:</p><pre><code class="shell">lambda
+}</code></pre><p>By default, for the Node.js runtime, the directory <code>lambda/modules</code> contains the node modules of the project. For
+example, some of these modules could be named <code>log</code>, or <code>data-access</code> or <code>authorization</code> etc...</p><p>Each module should have a clear responsibility so that each Lambda can embed only the code it needs. This is a
+recommendation but the developer is free to organize the code as he want. The Lambda plugin does not force you to use a
+specific project organization.</p><p>This is what a project structure could look like:</p><pre><code class="shell">lambda
 &#x251C;&#x2500;&#x2500; lambdas                         The Lambdas defined by the application
 |   &#x251C;&#x2500;&#x2500; my-nodejs-lambda            The name of this directory is the identifier of a Lambda
 |   |   &#x251C;&#x2500;&#x2500; config.json             The configuration of the Lambda (runtime, memory, timeout, execution role...)
@@ -493,24 +503,24 @@ organization.</p><p>This is what a project structure could look like:</p><pre><c
     &quot;Runtime&quot;: &quot;nodejs6.10&quot;,
     &quot;Handler&quot;: &quot;index.handler&quot;
   }
-}</code></pre><p>The <code>package.json</code> of a module or a Lambda can declare dependencies with other modules using file paths in the <code>dependencies</code>
-property:</p><pre><code class="json">{
+}</code></pre><p>The <code>package.json</code> of a module or a Lambda can declare dependencies with other modules using file paths in the
+<code>dependencies</code> property:</p><pre><code class="json">{
   &quot;name&quot;: &quot;data-access&quot;,
   &quot;version&quot;: &quot;0.0.0&quot;,
   &quot;dependencies&quot;: {
     &quot;log&quot;: &quot;../log&quot;
   }
 }</code></pre><p>In this case, <code>require(&apos;log&apos;)</code> will load the module <code>log</code> installed in <code>lambda/modules/data-access/node_modules/log</code>.</p><p>It is recommended to use relative paths for portability.</p><p>It is recommended to use a recent version of <code>npm</code> to minimize the size of the Lambda packages and facilitate the
-configuration of nested dependencies. Indeed, <code>npm@2</code> can behave in an unexpected manner with nested dependencies when using
-relative file paths.</p><h2>Configuration</h2><p>These are <a href="/manual/installation/getting-started.html#project-configuration">Myrmex configuration keys</a> specific to to the
-<code>@myrmex/lambda</code> plugin.</p><h3>Default values</h3><p>Using <code>myrmex show-config</code> after installing the plugin, we can see the default configuration:</p><pre><code class="json">{
+configuration of nested dependencies. Indeed, <code>npm@2</code> can behave in an unexpected manner with nested dependencies when
+using relative file paths.</p><h2>Configuration</h2><p>These are <a href="/manual/installation/getting-started.html#project-configuration">Myrmex configuration keys</a> specific to to
+the <code>@myrmex/lambda</code> plugin.</p><h3>Default values</h3><p>Using <code>myrmex show-config</code> after installing the plugin, we can see the default configuration:</p><pre><code class="json">{
   &quot;lambda&quot;: {
     &quot;lambdasPath&quot;: &quot;lambda/lambdas&quot;,
     &quot;modulesPath&quot;: &quot;lambda/modules&quot;
   }
-}</code></pre><h3><code>lambda.lambdasPath</code></h3><p>Path to the folder that contains Lambdas. Default value: <code>lambda/lambdas</code>.</p><h3><code>lambda.modulesPath</code></h3><p>Path to the folder that contains modules for Node.js Lambdas. Default value: <code>lambda/modules</code>.</p><h3><code>lambda.alias</code></h3><p>Set the alias applied when deploying Lambdas.</p><p>By setting this configuration, the <code>--alias</code> option of the <a href="#deploy-lambdas"><code>myrmex deploy-lambdas</code></a> command does not prompt
-when not provided via the command line and the configured value is used as the default value.</p><p>Setting <code>lambda.alias</code> to an empty string disables the creation/update of an alias and the new version of the Lambda will
-only be available as <code>LATEST</code>.</p><h3>Example</h3><p>Using the <code>myrmex.json</code> file, the plugin configuration can be defined like this:</p><pre><code class="json">{
+}</code></pre><h3><code>lambda.lambdasPath</code></h3><p>Path to the folder that contains Lambdas. Default value: <code>lambda/lambdas</code>.</p><h3><code>lambda.modulesPath</code></h3><p>Path to the folder that contains modules for Node.js Lambdas. Default value: <code>lambda/modules</code>.</p><h3><code>lambda.alias</code></h3><p>Set the alias applied when deploying Lambdas.</p><p>By setting this configuration, the <code>--alias</code> option of the <a href="#deploy-lambdas"><code>myrmex deploy-lambdas</code></a> command does not
+prompt when not provided via the command line and the configured value is used as the default value.</p><p>Setting <code>lambda.alias</code> to an empty string disables the creation/update of an alias and the new version of the Lambda
+will only be available as <code>LATEST</code>.</p><h3>Example</h3><p>Using the <code>myrmex.json</code> file, the plugin configuration can be defined like this:</p><pre><code class="json">{
   &quot;name&quot;: &quot;A Myrmex project&quot;,
   &quot;plugins&quot;: [
     &quot;@myrmex/lambda&quot;
@@ -532,32 +542,36 @@ only be available as <code>LATEST</code>.</p><h3>Example</h3><p>Using the <code>
     --role &lt;role&gt;                                                    select the execution role (enter the ARN)</code></pre><p>Create a new Lambda. By default the location of Lambdas is <code>lambda/lambdas/&lt;identifier&gt;/</code>.</p><h3>create-node-module</h3><p><em>For the Node.js runtime only.</em></p><pre><code class="shell">create-node-module [options] [name]
 
   Options:
-    -d, --dependencies &lt;dependent-modules&gt;  select the node modules that are dependencies of this new one</code></pre><p>Prepare a new Node.js module. By default the location of modules is <code>lambda/modules/&lt;name&gt;/</code>.</p><p>The creation of nodes modules is just a suggestion to organize the code of a project. The idea is to maintain each component
-of the application in its own node module to select only relevant components when deploying Lambdas.</p><p>Every Lambda can declare its modules dependencies using <a href="https://docs.npmjs.com/files/package.json#local-paths">local paths</a>
-in its <code>package.json</code> file. Every module can also declare dependencies to other modules that way.</p><p>When Myrmex deploys a Lambda, it executes <code>npm install</code> and the dependencies are installed in the <code>node_modules</code> folder.</p><h3>deploy-lambdas</h3><pre><code class="shell">deploy-lambdas [options] [lambda-identifiers...]
+    -d, --dependencies &lt;dependent-modules&gt;  select the node modules that are dependencies of this new one</code></pre><p>Prepare a new Node.js module. By default the location of modules is <code>lambda/modules/&lt;name&gt;/</code>.</p><p>The creation of nodes modules is just a suggestion to organize the code of a project. The idea is to maintain each
+component of the application in its own node module to select only relevant components when deploying Lambdas.</p><p>Every Lambda can declare its modules dependencies using
+<a href="https://docs.npmjs.com/files/package.json#local-paths">local paths</a> in its <code>package.json</code> file. Every module can also
+declare dependencies to other modules that way.</p><p>When Myrmex deploys a Lambda, it executes <code>npm install</code> and the dependencies are installed in the <code>node_modules</code> folder.</p><h3>deploy-lambdas</h3><pre><code class="shell">deploy-lambdas [options] [lambda-identifiers...]
 
   Options:
     --all                            deploy all lambdas of the project
     -r, --region &lt;region&gt;            select the AWS region
     -e, --environment &lt;environment&gt;  select the environment
-    -a, --alias &lt;alias&gt;              select the alias to apply</code></pre><p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a version
-in Amazon Lambda and apply an alias. Setting the option to an empty string (<code>--alias &quot;&quot;</code>) will skip this.</p><blockquote>
-<p>When deploying Node.js Lambdas, it is recommended to have a recent version of npm installed (&gt;= 4)</p>
+    -a, --alias &lt;alias&gt;              select the alias to apply</code></pre><p>Deploy one or more Lambdas in AWS. The <code>--environment</code> option is used as a prefix. The <code>--alias</code> option will publish a
+version in Amazon Lambda and apply an alias. Setting the option to an empty string (<code>--alias &quot;&quot;</code>) will skip this.</p><blockquote>
+<p>When deploying Node.js Lambdas, it is recommended to use npm4 to optimize the size of the packages and avoid the
+resolution of local dependencies with symbolic links (behavior of npm5).</p>
+<p>When deploying Lambdas with C/C++ bindings and/or to be sure to create packages with the correct runtime, use the
+plugin <a href="/manual/usage/packager.html"><code>@myrmex/packager</code></a></p>
 </blockquote><h3>install-lambdas-locally</h3><pre><code class="shell">install-lambdas-locally [lambda-identifiers...]</code></pre><p>Deletes the <code>node_modules</code> folder of one or several lambda and runs <code>npm install</code> to re-install it.</p><h3>test-lambda-locally</h3><pre><code class="shell">test-lambda-locally [options] [lambda-identifier]
 
   Options:
-    -e, --event &lt;event-name&gt;  Event example to use</code></pre><p>Executes a Lambda locally. The event option allows to select the example object that will be passed as the first argument.
-Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the conshell
-object is passed as the second argument.</p><h3>test-lambda</h3><pre><code class="shell">test-lambda [options] [lambda-identifier]
+    -e, --event &lt;event-name&gt;  Event example to use</code></pre><p>Executes a Lambda locally. The event option allows to select the example object that will be passed as the first
+argument. Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock
+of the conshell object is passed as the second argument.</p><h3>test-lambda</h3><pre><code class="shell">test-lambda [options] [lambda-identifier]
 
   Options:
     --event &lt;event-name&gt;             Event example to use
     -r, --region &lt;region&gt;            select the AWS region
     -e, --environment &lt;environment&gt;  select the environment
     -a, --alias &lt;alias&gt;              select the alias to test</code></pre><p>Executes a Lambda deployed in AWS. The event option allows to select the example object that will be passed as the first
-argument. Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock of the
-conshell object is passed as the second argument.</p><p>Setting the option <code>--alias</code> to an empty string (<code>--alias &quot;&quot;</code>) will invoke the <code>LATEST</code> version of the Lambda.</p><h2>Integration with <code>@myrmex/api-gateway</code></h2><p><code>@myrmex/lambda</code> add some functionalities to  <code>@myrmex/api-gateway</code> when both are installed in the same project.</p><h3>Associate a Lambda with an API endpoint</h3><p>In the <a href="/manual/usage/api-gateway-plugin.html#project-anatomy"><code>spec.json</code></a> file that describes an endpoint, a new extension
-to Swagger is available to select a Lambda that must be used for the endpoint integration.</p><pre><code class="json">{
+argument. Example objects are defined in json files in <code>lambda/lambdas/&lt;identifier&gt;/events/&lt;event-name&gt;.json</code>. A mock
+of the conshell object is passed as the second argument.</p><p>Setting the option <code>--alias</code> to an empty string (<code>--alias &quot;&quot;</code>) will invoke the <code>LATEST</code> version of the Lambda.</p><h2>Integration with <code>@myrmex/api-gateway</code></h2><p><code>@myrmex/lambda</code> add some functionalities to  <code>@myrmex/api-gateway</code> when both are installed in the same project.</p><h3>Associate a Lambda with an API endpoint</h3><p>In the <a href="/manual/usage/api-gateway-plugin.html#project-anatomy"><code>spec.json</code></a> file that describes an endpoint, a new
+extension to Swagger is available to select a Lambda that must be used for the endpoint integration.</p><pre><code class="json">{
   &quot;x-myrmex&quot;: {
     &quot;apis&quot;: [],
     &quot;lambda&quot;: &quot;lambda-identifier&quot;
@@ -565,13 +579,15 @@ to Swagger is available to select a Lambda that must be used for the endpoint in
   ... rest of the endpoint specification
 }</code></pre><h3>New option for <code>myrmex create-endpoint</code></h3><p>When calling <a href="/manual/usage/api-gateway-plugin.html#create-endpoint"><code>myrmex create-endpoint</code></a>, a new option
 <code>--lambda &lt;lambda-identifier&gt;</code> is available. This option accepts the identifier of a Lambda managed by <code>@myrmex/lambda</code>.</p><p>If the option is not provided in the command line and the option <code>--integration</code> is set to <code>lambda</code> or <code>lambda-proxy</code>, a
-prompt will propose to select the appropriate Lambda in a list.</p><p>The value of <code>--lambda &lt;lambda-identifier&gt;</code> will be set in extension to Swagger described above.</p><h3>New options for <code>myrmex deploy-apis</code></h3><p>When calling <a href="/manual/usage/api-gateway-plugin.html#deploy-apis"><code>myrmex create-endpoint</code></a>, two new options are available:</p><h4><code>--deploy-lambdas &lt;all|partial|none&gt;</code></h4><p>The option <code>--deploy-lambdas &lt;all|partial|none&gt;</code> accepts three possible values:</p><ul>
+prompt will propose to select the appropriate Lambda in a list.</p><p>The value of <code>--lambda &lt;lambda-identifier&gt;</code> will be set in extension to Swagger described above.</p><h3>New options for <code>myrmex deploy-apis</code></h3><p>When calling <a href="/manual/usage/api-gateway-plugin.html#deploy-apis"><code>myrmex create-endpoint</code></a>, two new options are
+available:</p><h4><code>--deploy-lambdas &lt;all|partial|none&gt;</code></h4><p>The option <code>--deploy-lambdas &lt;all|partial|none&gt;</code> accepts three possible values:</p><ul>
 <li><code>all</code> will perform the deployment of all Lambdas defined in the Myrmex project before deploying the APIs.</li>
-<li><code>partial</code> will perform the deployment of all Lambdas that are associated to deployed endpoints before deploying the APIs.</li>
-<li><code>none</code> will not deploy any Lambda, but it will retrieve the ARNs of all Lambdas that are associated to deployed endpoints.
-So these Lambda have to be already deployed with the appropriate alias.</li>
-</ul><h4><code>--alias &lt;alias&gt;</code></h4><p>The option <code>--alias &lt;alias&gt;</code> allows to select the Lambda alias that will be integrated with endpoints.</p><p>If the <a href="#-lambda-alias-"><code>lambda.alias</code></a> configuration is set and the option is not provided via the command line, no prompt
-will appear to set the value the configured value is used as the default value.</p></div>
+<li><code>partial</code> will perform the deployment of all Lambdas that are associated to deployed endpoints before deploying the
+APIs.</li>
+<li><code>none</code> will not deploy any Lambda, but it will retrieve the ARNs of all Lambdas that are associated to deployed
+endpoints. So these Lambda have to be already deployed with the appropriate alias.</li>
+</ul><h4><code>--alias &lt;alias&gt;</code></h4><p>The option <code>--alias &lt;alias&gt;</code> allows to select the Lambda alias that will be integrated with endpoints.</p><p>If the <a href="#-lambda-alias-"><code>lambda.alias</code></a> configuration is set and the option is not provided via the command line, no
+prompt will appear to set the value the configured value is used as the default value.</p></div>
         <a data-ice="link" href="manual/usage/lambda-plugin.html"></a>
       </div>
     </div>
@@ -777,6 +793,40 @@ complete the file <code>/api-gateway/endpoints/my/resource/path/cors.json</code>
   }
 }</code></pre></div>
         <a data-ice="link" href="manual/usage/cors-plugin.html"></a>
+      </div>
+    </div>
+<div class="manual-card-wrap" data-ice="cards">
+      <h1 data-ice="label" class="manual-color manual-color-usage" data-section-count="&#x25A0;&#x25A0;&#x25A0;"><span data-ice="label-inner">Packager plugin</span></h1>
+      <div class="manual-card">
+        <div data-ice="card"><h1>Packager plugin</h1><h2>Why ?</h2><p>When installing Node.js and python dependencies to create a package for Lambda, some modules may not be compatible with
+the execution environment of Amazon Lambda, because of differences of version of Node.js, python or GCC when modules
+have C++ bindings. The <code>@myrmex/packager</code> plugin helps to prevent this problem.</p><h2>How it works</h2><p>A common solution to this problem is to create the packages on a EC2 instance using an Amazon Linux AMI. To avoid
+having to use a server to deploy serverless application, <code>@myrmex/packager</code> uses the Docker image
+<a href="https://github.com/myrmex-org/docker-lambda-packager"><code>myrmex/lambda-packager</code></a> based on the
+<a href="https://hub.docker.com/_/amazonlinux/">Amazon Linux image</a>. The image <code>myrmex/lambda-packager</code> comes with all Node.js
+and python runtimes supported by Amazon Lambda and GCC.</p><p>When the plugin <code>@myrmex/lambda</code> deploys a Lambda, <code>@myrmex/packager</code> takes in charge the creation of the package by
+executing <code>docker run myrmex/lambda-packager</code> with appropriates parameters.</p><h2>Prerequisites</h2><p>To use the <code>@myrmex/packager</code> plugin, it is necessary to have <a href="https://www.docker.com/">Docker</a> installed on the
+environment that perform the deployment of Lambdas.</p><h2>Installation</h2><p>Install the npm module in a Myrmex project:</p><pre><code class="shell">npm install @myrmex/packager</code></pre><p>Then enable the plugin in the <code>myrmex.json</code> file:</p><pre><code class="json">{
+  &quot;name&quot;: &quot;my-app&quot;,
+  &quot;plugins&quot;: [
+    &quot;@myrmex/lambda&quot;
+    &quot;@myrmex/packager&quot;
+  ]
+}</code></pre><p>Once the plugin is installed and enabled in the project, the <code>@myrmex/lambda</code> plugin will use it to create packages
+when deploying Node.js and python Lambdas.</p><h2>Configuration</h2><p>These are <a href="/manual/installation/getting-started.html#project-configuration">Myrmex configuration keys</a> specific to to
+the <code>@myrmex/packager</code> plugin.</p><h3>Default values</h3><p>Using <code>myrmex show-config</code> after installing the plugin, we can see the default configuration:</p><pre><code class="json">{
+  &quot;packager&quot;: {
+    &quot;bucket&quot;: null,
+    &quot;docker&quot;: {
+      &quot;useSudo&quot;: false,
+      &quot;showStdout&quot;: false
+    }
+  }
+}</code></pre><h3><code>packager.bucket</code></h3><p>Name of the S3 bucket where the packages will be uploaded. If it does not exists, <code>@myrmex/packager</code> will try to create
+it. If this configuration key is not provided, <code>@myrmex/packager</code> will directly upload the packages to Lambda without
+using S3.</p><h3><code>packager.docker.useSudo</code></h3><p>If set to <code>true</code>, <code>@myrmex/packager</code> will use <code>sudo</code> to execute <code>docker run</code>. Alternatively, it is possible to
+<a href="https://docs.docker.com/engine/installation/linux/linux-postinstall/">manage Docker as a non-root user </a> using a group.</p><h3><code>packager.docker.showStdout</code></h3><p>It set to <code>true</code>, the output of <code>docker run</code> will be diplayed in the terminal.</p></div>
+        <a data-ice="link" href="manual/usage/packager.html"></a>
       </div>
     </div>
 <div class="manual-card-wrap" data-ice="cards">
